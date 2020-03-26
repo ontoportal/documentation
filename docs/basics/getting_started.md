@@ -5,7 +5,7 @@ layout: default
 
 ### VMWare Virtual Appliance
 
-To obtain the VMWare Virtual Appliance, contact OntoPortal Support to initiate your request. 
+To obtain the VMWare Virtual Appliance, contact OntoPortal Support to initiate your request.
 You'll then be asked privately for your BioPortal account username, project goals, and reason for preferring the local installation.
 
 If you don't have a BioPortal account, you can create one at: http://bit.ly/bioportal-account.
