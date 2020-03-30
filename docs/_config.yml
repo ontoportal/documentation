@@ -2,23 +2,24 @@
 title: OntoPortal Installation Documentation
 version: 0.0.1
 email: jgraybeal@stanford.edu
-description: How to install the OntoPortal Virtual Appliance
+description: Installing the OntoPortal Virtual Appliance
 baseurl: "/installation" # the subpath of your site, e.g. /blog
 url: "https://installation.github.io" # the base hostname & protocol for your site
 twitter_username: ontoportal
 github_username:  ontoportal
-ontoportal_version: OntoPortal Appliance 3.0
+opva: OntoPortal Virtual Appliance
+opva_version: OntoPortal Virtual Appliance 3.0
 
 # Build settings
 markdown: kramdown
 
 collections:
-  menus:
+  installing:
     output: true
     permalink: menus/:title/
-  views:
-    output: true
-    permalink: views/:title/
-  preferences:
-    output: true
-    permalink: preferences/:title/
+#  maintaining:
+#    output: true
+#    permalink: views/:title/
+#  contributing:
+#    output: true
+#    permalink: preferences/:title/
