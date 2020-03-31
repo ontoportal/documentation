@@ -19,7 +19,7 @@ markdown: kramdown
 collections:
   steps:
     output: true
-    permalink: installing/:title/
+    permalink: steps/:title/
 #  ontologies:
 #    output: true
 #    permalink: ontologies/:title/
