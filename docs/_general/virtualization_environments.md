@@ -6,6 +6,7 @@ weight: 90
 ---
 
 OntoPortal OVF works in Virtualization environments such as VMware, VirtualBox, KVM, and Xen.
+Instructions for each of these are provided below.
 
 ## VMware
 You can use VMware's ovftool to convert the appliance to work with your VMware product. 
@@ -24,7 +25,7 @@ First, convert the OVF to VMX format as mentioned in the VMware section above.
 Next, ensure that the kvm-qemu-img RPM (or qemu-kvm DEB) is installed. 
 Then, convert the [new] VMDKs (from the VMX conversion step) to raw disk images via the following command:
 
-`for disk in `ls -1 *.vmdk`; do diskbase=`basename $disk .vmdk`; qemu-img convert -O raw ${diskbase}.vmdk ${diskbase}.img; done`
+`for disk in \`ls -1 \*.vmdk; do diskbase=\`basename $disk .vmdk\`; qemu-img convert -O raw ${diskbase}.vmdk ${diskbase}.img; done`
 
 Create /etc/libvirt/qemu/ncbo-appliance.xml with the following contents:
 ```
