@@ -4,13 +4,19 @@ layout: default
 
 <div class="home">
 
-  <h1 class="page-heading">{{site.title}}</h1>
+  <h1 class="page-heading">Welcome</h1>
 
   This is the official documentation for {{site.opva_version}}.  You can find
   information about the {{site.opva}} installation process including descriptions
   of the <a href="steps">installation steps</a> as well as <a href="ontologies">managing ontologies</a>.
-
-
+  
+  The {{site.opva}} is provided by the Stanford Center for Biomedical Informatics Research and the {{site.opa}}.
+  The documentation for the current release {{site.release_version}} focuses on the intallation of the Appliance.
+  In coming months we will add documentation on how to use the {{site.opva}}, 
+  and information about the {{site.opa}}—how it collaborates to maintain the Appliance and how you can help.
+  
+  You are welcome to make pull requests for improvements to this documentation, 
+  or to submit your questions to the support list at {{site.opva_support}}.
 
   {% assign sorted_pages = (site.pages | sort: 'sortingIndex') %}
   {% for page in sorted_pages %}
