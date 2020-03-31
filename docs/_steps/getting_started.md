@@ -17,6 +17,7 @@ The download is provided as a zip archive containing several files. One of these
 
 You can supply the hostname (machine name) for the virtual machine during the deployment process. 
 Documentation will refer to this hostname as 'example'.
+
 ## Change default passwords
 
 Operating System
@@ -38,10 +39,10 @@ You can also SSH to the machine using the username 'ec2-user' and your Amazon pr
 
 ## General Instruction
 
-Virtual Appliance Web UI can be accessed at `http://{ip_address_of_appliance}`. 
-You can get IP address of the Appliance by using the following command in the terminal `ip addr show eth0`
+The Appliance Web UI can be accessed at `http://{ip_address_of_appliance}`. 
+You can get the IP address of the Appliance by using the following command in the terminal: `ip addr show eth0`.
 
-Add an ontology using the OntoPortal Admin User here: `http://{ip_address_of_appliance}/ontologies/new`
+Add an ontology using the OntoPortal Admin User at `http://{ip_address_of_appliance}/ontologies/new`.
 The ncbo_cron project is configured to automatically process new ontologies every 5 minutes 
 (see documentation for enabling the scheduler). 
 
