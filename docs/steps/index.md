@@ -13,7 +13,7 @@ The standard {{site.opva}} steps are described in more detail below, beginning w
 Steps that are specific to a target platform will contain that platform name.
 
 <div>
-{% assign sorted_steps = (site.steps | sort: 'title') %}
+{% assign sorted_steps = (site.steps | sort: 'weight') %}
 
 {% for step in sorted_steps %}
 
@@ -21,9 +21,7 @@ Steps that are specific to a target platform will contain that platform name.
 		<div style="font-weight: bold;">
 			<a href="{{site.baseurl}}{{step.url}}">{{step.title}}</a>
 		</div>
-		<div style="color: gray; font-size: smaller;">
-			{{step.menuPath}}
-		</div>
+
 		<div>
 				{{step.description}}
 		</div>
