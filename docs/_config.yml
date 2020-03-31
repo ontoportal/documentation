@@ -7,8 +7,11 @@ baseurl: "/installation" # the subpath of your site, e.g. /blog
 url: "https://installation.github.io" # the base hostname & protocol for your site
 twitter_username: ontoportal
 github_username:  ontoportal
+support_email: support@ontoportal.org
 opva: OntoPortal Virtual Appliance
 opva_version: OntoPortal Virtual Appliance 3.0
+release_version: Release 3.0
+opa: OntoPortal Alliance
 
 # Build settings
 markdown: kramdown
@@ -16,10 +19,10 @@ markdown: kramdown
 collections:
   installing:
     output: true
-    permalink: menus/:title/
-#  maintaining:
-#    output: true
-#    permalink: views/:title/
+    permalink: installing/:title/
+  ontologies:
+    output: true
+    permalink: ontologies/:title/
 #  contributing:
 #    output: true
 #    permalink: preferences/:title/
