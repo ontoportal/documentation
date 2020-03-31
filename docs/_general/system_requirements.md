@@ -3,6 +3,7 @@ title: System Requirements
 layout: default
 description: Resources you need to run the Virtual Appliance
 weight: 10
+status: Preliminary
 ---
 
 ## System Requirements

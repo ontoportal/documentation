@@ -3,6 +3,7 @@ title: Getting Started
 layout: default
 description: Displays a list of individuals that are instances of the selected class
 weight: 10
+status: Preliminary
 ---
 
 ## VMWare Virtual Appliance

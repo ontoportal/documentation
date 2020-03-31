@@ -3,6 +3,7 @@ title: Introduction
 layout: default
 description: Description of the OntoPortal Virtual Appliance
 weight: 0
+status: Preliminary
 ---
 
 The OntoPortal Virtual Appliance is a copy of the BioPortal software 

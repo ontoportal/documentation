@@ -3,6 +3,7 @@ title: Virtualization Environments
 layout: default
 description: How to use the OVF image with your virtualization software
 weight: 90
+status: Preliminary
 ---
 
 OntoPortal OVF works in Virtualization environments such as VMware, VirtualBox, KVM, and Xen.
