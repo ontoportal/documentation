@@ -1,9 +1,11 @@
 ---
 title: Getting Started
 layout: default
+description: Displays a list of individuals that are instances of the selected class
+weight: 10
 ---
 
-### VMWare Virtual Appliance
+## VMWare Virtual Appliance
 
 To obtain the VMWare Virtual Appliance, contact OntoPortal Support to initiate your request.
 You'll then be asked privately for your BioPortal account username, project goals, and reason for preferring the local installation.
@@ -15,7 +17,7 @@ The download is provided as a zip archive containing several files. One of these
 
 You can supply the hostname (machine name) for the virtual machine during the deployment process. 
 Documentation will refer to this hostname as 'example'.
-### Change default passwords
+## Change default passwords
 
 Operating System
 * Username: root
@@ -24,7 +26,7 @@ OntoPortal Admin User
 * Username: admin
 * Password: changeme
 
-### Amazon AWS AMI
+## Amazon AWS AMI
 
 For users who want to run their OntoPortal instance on Amazon Web Services, 
 an Amazon Machine Instance (AMI) is available on the BioOntology AWS Market Place. 
@@ -34,7 +36,7 @@ Once the instance is running, enter the public DNS provided by Amazon into your 
 The default application administrator is 'admin' and the initial password is the Instance ID. 
 You can also SSH to the machine using the username 'ec2-user' and your Amazon private key.
 
-### General Instruction
+## General Instruction
 
 Virtual Appliance Web UI can be accessed at http://{ip_address_of_appliance}. 
 You can get IP address of the Appliance by using the following command in the terminal 'ip addr show eth0'
