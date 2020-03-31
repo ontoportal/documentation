@@ -38,17 +38,19 @@ You can also SSH to the machine using the username 'ec2-user' and your Amazon pr
 
 ## General Instruction
 
-Virtual Appliance Web UI can be accessed at http://{ip_address_of_appliance}. 
-You can get IP address of the Appliance by using the following command in the terminal 'ip addr show eth0'
+Virtual Appliance Web UI can be accessed at `http://{ip_address_of_appliance}`. 
+You can get IP address of the Appliance by using the following command in the terminal `ip addr show eth0`
 
-Add an ontology using the OntoPortal Admin User here: http://{ip_address_of_appliance}/ontologies/new
-The ncbo_cron project is configured to automatically process new ontologies every 5 minutes (see documentation for enabling the scheduler). 
-This processing includes:
+Add an ontology using the OntoPortal Admin User here: `http://{ip_address_of_appliance}/ontologies/new`
+The ncbo_cron project is configured to automatically process new ontologies every 5 minutes 
+(see documentation for enabling the scheduler). 
+
+The ontology processing includes:
 * Parsing any new, unparsed ontologies
 * Calculating a set of metrics for these ontologies
 * Indexing these ontologies for use with search
 * Processing the ontology for use with the annotator
 
 REST services are available at the following location:
-* http://{ip_address_of_appliance}:8080
-* http://{ip_address_of_appliance}:8080/documentation
+* `http://{ip_address_of_appliance}:8080`
+* `http://{ip_address_of_appliance}:8080/documentation`
