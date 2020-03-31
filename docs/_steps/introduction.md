@@ -1,3 +1,10 @@
+---
+title: Introduction
+layout: default
+description: Description of the OntoPortal Virtual Appliance
+weight: 0
+---
+
 The OntoPortal Virtual Appliance is a copy of the BioPortal software 
 that you can run on your own Linux system. 
 You can install it following the instructions in this manual, 
