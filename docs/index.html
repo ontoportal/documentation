@@ -6,23 +6,23 @@ layout: default
 
   <h1 class="page-heading">Welcome</h1>
 
-  This is the official documentation for {{site.opva_version}}.  You can find
-  information about the {{site.opva}} installation process including descriptions
-  of the <a href="steps">installation steps</a> as well as <a href="ontologies">managing ontologies</a>.
+  <div>This is the official documentation for {{site.opva_version}}.  You can find
+    <a href="general">general information</a> about the {{site.opva}},
+    information about the {{site.opva}} installation process including descriptions
+    of the <a href="steps">installation steps</a> as well as <a href="ontologies">managing ontologies</a>.</div>
   
-  The {{site.opva}} is provided by the Stanford Center for Biomedical Informatics Research and the {{site.opa}}.
-  The documentation for the current release {{site.release_version}} focuses on the intallation of the Appliance.
-  In coming months we will add documentation on how to use the {{site.opva}}, 
-  and information about the {{site.opa}}—how it collaborates to maintain the Appliance and how you can help.
+  <div>The {{site.opva}} is provided by the Stanford Center for Biomedical Informatics Research and the {{site.opa}}.
+    The documentation for the current release {{site.release_version}} focuses on the intallation of the Appliance.
+    In coming months we will add documentation on how to use the {{site.opva}}, 
+    and information about the {{site.opa}}—how it collaborates to maintain the Appliance and how you can help.</div>
   
-  You are welcome to make pull requests for improvements to this documentation, 
-  or to submit your questions to the support list at {{site.support_emai}}.
-  
-  <hr/>
+  <div> You are welcome to make pull requests for improvements to this documentation, 
+    or to submit your questions to the support list at {{site.support_emai}}.</div>
 
   {% assign sorted_pages = (site.pages | sort: 'sortingIndex') %}
   {% for page in sorted_pages %}
     {% if page.main %}
+    <br/>
     <div class="main-page">
       <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
       {%if page.description%}
