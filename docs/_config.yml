@@ -23,9 +23,9 @@ collections:
   steps:
     output: true
     permalink: steps/:title/
-#  ontologies:
-#    output: true
-#    permalink: ontologies/:title/
+  ontologies:
+    output: true
+    permalink: ontologies/:title/
 #  contributing:
 #    output: true
 #    permalink: preferences/:title/
