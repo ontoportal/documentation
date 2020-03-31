@@ -1,0 +1,10 @@
+.DS_Store
+
+_site
+
+.idea
+*.iml
+
+.sass*
+
+.jekyll-metadata
