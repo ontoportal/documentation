@@ -6,16 +6,16 @@ sortingIndex: C
 description: Key steps to install the OntoPortal Appliance
 ---
 
-<h1>Views</h1>
+<h1>Installation Steps</h1>
 
-The Protégé user interface is made up of tabs that contain views.  The standard {{site.protver}} views are described in more detail below.  Most of the views have a <b><a href="{{site.baseurl}}/view-look-and-feel">common look and feel</a></b> and consist of lists of sections containing items that pertain to the current selected class, property or individual.
-Most of the views that are available in the {{site.protver}} are described below.
-We also have a <a href="https://www.youtube.com/watch?v=JObQC-L2piA">video</a> that demonstrates how to add a view to a tab. 
+Installing OntoPortal software requires a number of steps, which may vary depending on your target platform.  
+The standard {{site.opva}} steps are described in more detail below, beginning with an overview of the Appiance.
+Steps that are specific to a target platform will contain that platform name.
 
 <div>
 {% assign sorted_steps = (site.steps | sort: 'title') %}
 
-{% for view in sorted_steps %}
+{% for step in sorted_steps %}
 
 	<div style="padding: 10px;">
 		<div style="font-weight: bold;">
