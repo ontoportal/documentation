@@ -2,87 +2,32 @@
 title: Installing OntoPortal
 layout: default
 main: true
-sortingIndex: D
+sortingIndex: C
 description: Key steps to install the OntoPortal Appliance
 ---
 
-# Menu Items
+<h1>Views</h1>
 
-<div style="border-bottom: 1px solid #f0f0f0; padding-bottom: 10px; margin-bottom: 10px;">
-	<div>
-		Filter by menu:
-		<select id="menuFilter"></select>
-	</div>
-</div>
-
-<script>
-	var menuUtil = (function() {
-		var menus = [];
-		menus.push("");
-		$("#menuFilter").on("change", function(e) {
-			var selectedMenu = $("#menuFilter").find(":selected").text();
-			if (selectedMenu === "") {
-				$(".menu-item").show(400);
-			} else {
-				$(".menu-item[data-parent!=" + selectedMenu + "]").hide(400);
-				$("[data-parent=" + selectedMenu + "]").show(400);
-			}
-		});
-
-
-		return {
-			addMenu: function(menu) {
-				if ($.inArray(menu, menus) === -1) {
-					menus.push(menu);
-				}
-			},
-			getMenus: function() {
-				return menus;
-			},
-			installMenus: function() {
-				var selectElement = $("#menuFilter");
-				for (var i = 0; i < menus.length; i++) {
-					var menu = menus[i];
-					$("<option/>", {
-						value: menu,
-						html: menu
-					}).appendTo(selectElement);
-				}
-			}
-		};
-	})();
-</script>
+The Protégé user interface is made up of tabs that contain views.  The standard {{site.protver}} views are described in more detail below.  Most of the views have a <b><a href="{{site.baseurl}}/view-look-and-feel">common look and feel</a></b> and consist of lists of sections containing items that pertain to the current selected class, property or individual.
+Most of the views that are available in the {{site.protver}} are described below.
+We also have a <a href="https://www.youtube.com/watch?v=JObQC-L2piA">video</a> that demonstrates how to add a view to a tab. 
 
 <div>
-	{% assign sorted_menus = (site.menus | sort: 'title') %} {% for menu in sorted_menus %}
-	<script>
-		menuUtil.addMenu("{{menu.parent}}")
-	</script>
-	<div class="menu-item" data-parent="{{menu.parent}}" style="padding-top: 10px; padding-bottom: 30px;">
+{% assign sorted_steps = (site.steps | sort: 'title') %}
+
+{% for view in sorted_steps %}
+
+	<div style="padding: 10px;">
 		<div style="font-weight: bold;">
-			{{menu.title}} {% if menu.accelerator %}
-			<span style="font-weight: 300; font-size: 12px; color: gray;">
-				<span style="padding: 0 0 10px 10px">
-					Windows: <span class="accelerator">Ctrl-{{menu.accelerator  | replace: 'Shift', '&#x21E7;'}}</span>
-			</span>
-			<span style="padding: 0 0 10px 10px">
-					Mac: <span class="accelerator">&#x2318;{{menu.accelerator  | replace: 'Shift', '&#x21E7;'}}</span>
-			</span>
-			</span>
-			{% endif %}
-			<div style="font-size: smaller; color: gray; font-weight: 300;">
-				{{menu.parent}} > {{menu.title}}
-			</div>
+			<a href="{{site.baseurl}}{{step.url}}">{{step.title}}</a>
 		</div>
-
+		<div style="color: gray; font-size: smaller;">
+			{{step.menuPath}}
+		</div>
 		<div>
-			{{menu.content}}
+				{{step.description}}
 		</div>
-
 	</div>
-	{% endfor %}
-</div>
+{% endfor %}
 
-<script>
-	menuUtil.installMenus();
-</script>
+</div>
