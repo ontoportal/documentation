@@ -17,6 +17,9 @@ opa: OntoPortal Alliance
 markdown: kramdown
 
 collections:
+  general:
+    output: true
+    permalink: general/:title/
   steps:
     output: true
     permalink: steps/:title/
