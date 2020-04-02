@@ -1,12 +1,12 @@
 ---
-title: Managing Operations
+title: Routine Operations
 layout: default
-description: Keeping the OntoPortal system working smoothly
+description: Performing routine tasks in the OntoPortal system
 weight: 50
 status: In progress
 ---
 
-# General Instruction
+# Routine Operations
 
 ## Web User Interface
 

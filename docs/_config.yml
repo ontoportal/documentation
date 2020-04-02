@@ -26,6 +26,6 @@ collections:
   ontologies:
     output: true
     permalink: ontologies/:title/
-#  contributing:
-#    output: true
-#    permalink: preferences/:title/
+  management:
+    output: true
+    permalink: management/:title/
