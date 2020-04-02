@@ -2,7 +2,7 @@
 title: Routine Operations
 layout: default
 description: Performing routine tasks in the OntoPortal system
-weight: 50
+weight: 10
 status: In progress
 ---
 

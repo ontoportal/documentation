@@ -2,7 +2,7 @@
 title: Branding Customizations
 layout: default
 description: Configuring OntoPortal for your own project
-weight: 40
+weight: 50
 status: In progress
 ---
 

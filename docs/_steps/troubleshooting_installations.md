@@ -12,7 +12,7 @@ Here we describe how to troubleshoot issues with your installation of the Applia
 As with all the troubleshooting sections, 
 this section will be enhanced based on experiences with the deployed OntoPortal systems.
 
-For troubleshooting ontology submissions, see the <a href="../../ontologies/troubleshooting_installations">Troubleshooting Submissions</a> section.
+For troubleshooting ontology submissions, see the <a href="../../ontologies/troubleshooting_submissions">Troubleshooting Submissions</a> section.
 
 For troubleshooting system operations, see the <a href="../../management/troubleshooting_operations">Troubleshooting Operations</a> section.
 
