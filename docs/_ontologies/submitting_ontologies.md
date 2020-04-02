@@ -28,10 +28,9 @@ The first metadata form asks about characterists of the ontology.
 Once this form is complete, the user is prompted for information about 
 the first _submission_ (version) of the ontology.
 
-
 ## As an OntoPortal user with the API
 
-[to be provided]
+[tbp]
 
 ## Manually using the Ruby console
 
@@ -52,8 +51,21 @@ annotator.create_term_cache_for_submission(logger, submission)
 annotator.generate_dictionary_file()
 ```
 
+## How do I know if an ontology has parsed?
 
+The OntoPortal Web UI will cache old information about ontologies for 60 seconds. After parsing is complete, just refresh the ontology summary page to see the status for the most recent submission listed under the "Submissions" table.
 
+In addition, you can look at the REST service directly, which will always give you the most updated information. To do this, visit the following URL:
 
+* `http://{your_appliance_ip_or_domain_name}:8080/ontologies/{ontology_acronym}/latest_submission?include=all`
 
+You can look for the submissionStatus attribute to get the status
+
+## Is there a log file for parsing?
+
+Parsing progress is logged in the ontology submission repository folder: `/srv/ncbo/repository/{ontology acronym}/{submission id}
+
+For further information about ontology parsing, 
+please see <a href="parseable_ontologies">Parseable Ontologies</a>
+and <a href="Troubleshooting Submissions">Troubleshooting Submissions</a>
 
