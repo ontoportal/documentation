@@ -24,7 +24,7 @@ The overall transaction can take a few working days, depending on resource avail
 The download is provided as a zip archive containing several files. 
 One of these is an Open Virtualization Format (OVF) file 
 that you may need to 
-<a href="virtualization_environment">convert for your virtualization environment</a>.
+<a href="../virtualization_environment">convert for your virtualization environment</a>.
 
 ## Amazon AWS AMI
 
