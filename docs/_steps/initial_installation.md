@@ -2,7 +2,7 @@
 title: Initial Installation
 layout: default
 description: First steps to install your appliance
-weight: 10
+weight: 20
 status: In progress
 ---
 

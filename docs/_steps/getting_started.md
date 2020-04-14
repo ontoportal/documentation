@@ -1,7 +1,7 @@
 ---
 title: Getting Started
 layout: default
-description: Displays a list of individuals that are instances of the selected class
+description: First steps toward installing the Virtual Appliance
 weight: 10
 status: In Progress
 ---
