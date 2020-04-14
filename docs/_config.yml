@@ -1,6 +1,6 @@
 # Site settings
 title: OntoPortal Installation Documentation
-version: 0.0.1
+version: 0.3.0
 email: jgraybeal@stanford.edu
 description: Installing the OntoPortal Virtual Appliance
 baseurl: "/installation" # the subpath of your site, e.g. /blog
@@ -10,7 +10,7 @@ github_username:  ontoportal
 support_email: support@ontoportal.org
 opva: OntoPortal Virtual Appliance
 opva_version: OntoPortal Virtual Appliance 3.0
-release_version: Release 3.0
+release_version: Release 3.0.0
 opa: OntoPortal Alliance
 
 # Build settings
