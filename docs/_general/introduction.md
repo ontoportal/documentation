@@ -32,14 +32,15 @@ and can be obtained by contacting us following the <a href="../../steps/getting_
 The following software is included on the image as of v3.0:
 
 * Ontologies API (REST service)
-* Annotator
+* Annotator and AnnotatorPlus
 * Ontology Recommender
 * OntoPortal Web User Interface, including
   * ontology browser
-  * Annotator and Recommender
+  * Annotator, AnnotatorPlus, and Recommender
   * ontology tree visualization
   * graph visualization with BioMixer 
   * widgets
+  * Administrator interface
 * API services
 
 ## What else?

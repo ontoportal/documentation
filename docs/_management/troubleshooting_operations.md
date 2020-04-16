@@ -16,7 +16,13 @@ For troubleshooting installations, see the <a href="../../steps/troubleshooting_
 
 For troubleshooting ontology submissions, see the <a href="../../ontologies/troubleshooting_submissions">Troubleshooting Submissions</a> section.
 
-## 
+## System slow or dead
+
+_To be provided._
+
+## System producing incorrect results
+
+_To be provided._
 
 
 
