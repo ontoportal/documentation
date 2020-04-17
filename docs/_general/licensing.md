@@ -21,7 +21,7 @@ Companies who wish to deploy the Virtual Appliance,
 and individuals working on commercial products, 
 are asked to contact us
 (for example, by registering at our [OntoPortal License Server](https://license.ontoportal.org) to discuss the licensing terms.
-Your registration will be visible only to persons responsible for licensing 
+Your registration request will be visible only to persons responsible for licensing 
 the OntoPortal Virtual Appliance.
 
 Any Allegrograph software shipped with the Appliance 
