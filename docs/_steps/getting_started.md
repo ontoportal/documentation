@@ -8,32 +8,58 @@ status: In Progress
 
 # Getting Started
 
+There are several activities involved in getting your own copy of the 
+{{site.opva}} up and running with a registered license:
+* Download (or deployment via AMI)
+* Initial startup
+* Registration process, including
+   * Submission of Appliance ID
+   * Validation of your Appliance by entering the license certificate
+
+The first steps are outlined below, with subsequent steps in other pages.
+Note that the Registration process can start before or in parallel with
+the Download and Initial startup; you just need the Appliance ID
+(obtained during the system startup) to complete the Registration process
+and obtain the license for validation in your Appliance.
+
+We'd appreciate your registration before you even download the {{opva}}, 
+or in parallel with that step. 
+However, you can download and evaluate the appliance, 
+and then choose whether or not you fill out the registration form.
+
+After the OntoPortal operations team has approved your completed registration,
+you will have access to your license certificate. 
+Copy this certificate and paste it into your Appliance 
+in order to complete the installation process.
+
 ## Obtaining the OntoPortal Virtual Appliance
 
-*(Needs rewrite for registration process)*
+### VMWare Version
 
-To obtain the VMWare Virtual Appliance, 
-contact OntoPortal Support to initiate your request.
-You'll then be asked privately for your BioPortal account username, project goals, and reason for preferring the local installation.
+To obtain the VMWare Virtual Appliance in an Open Virtualization Format (OVF), 
+you will need a BioPortal account.
+If you don't have a BioPortal account, you can create one at http://bit.ly/bioportal-account.
 
-If you don't have a BioPortal account, you can create one at: http://bit.ly/bioportal-account.
-If your email doesn't include your organization or other means of identifying you, 
-we will ask for that as well.
-The overall transaction can take a few working days, depending on resource availability.
+Log in to BioPortal and then visit the [Virtual Appliance page](https://bioportal.bioontology.org/virtual_appliance). 
+You will see the download on this page.
 
 The download is provided as a zip archive containing several files. 
-One of these is an Open Virtualization Format (OVF) file 
-that you may need to 
-<a href="../virtualization_environments">convert for your virtualization environment</a>.
+Unpack the files using a zip unpacking tool for your operating system.
 
-## Amazon AWS AMI
+One of the files in the download is an Open Virtualization Format (OVF) file .
+You may need to 
+<a href="../virtualization_environments">convert this file 
+for your virtualization environment</a>.
 
-For users who want to run their OntoPortal instance on Amazon Web Services, 
+### Amazon AWS AMI
+
+For users who want to run their OntoPortal instance on Amazon Web Service cloud, 
 an Amazon Machine Instance (AMI) is available on the BioOntology AWS Market Place. 
 
+## Next steps
 
-Once the instance is running, enter the public DNS provided by Amazon into your browser to access BioPortal web interface. 
-The default application administrator is 'admin' and the initial password is the Instance ID. 
-You can also SSH to the machine using the username 'ec2-user' and your Amazon private key.
+After installing a Virtual Appliance following the above steps,
+proceed to the <a href="../initial_installation">Initial Installation</a> step.
 
-
+You may also wish to begin registering your Appliance, 
+as described in the <a href="../registration">Registration Process</a> step.

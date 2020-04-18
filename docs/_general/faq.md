@@ -2,7 +2,7 @@
 title: Frequently Asked Questions (FAQ)
 layout: default
 description: Various common questions about the Appliance
-weight: 90
+weight: 80
 status: Preliminary
 ---
 

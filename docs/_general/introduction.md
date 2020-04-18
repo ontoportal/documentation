@@ -55,6 +55,7 @@ Licenses are provided free to individual users for their own research,
 and to non-profit and educational institutions. 
 See our <a href="../licensing">licensing page</a> for more information. 
 
-The rest of this manual describes how you can obtain, install, configure, and maintain the OntoPortal Virtual Appliance for your own purposes.
+The rest of this manual describes how you can obtain, install, configure, 
+and maintain the OntoPortal Virtual Appliance for your own purposes.
 
 

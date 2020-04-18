@@ -34,7 +34,7 @@ group.save
 ### How do I add or change slices?
 
 A slice presents a view of OntoPortal that only contains
-ontologies tagged with that slide.
+ontologies tagged with that slice.
 
 There is no user interface to perform this task. 
 Slices can be added using a console 
@@ -57,7 +57,14 @@ slice.save
 
 ## Deleting an ontology
 
-Deleting can be done using a console after logging into the Appliance as the ontoportal user.
+_verify_
+
+You can delete an ontology on the Admin page (as the admin user). 
+Click on the row (or rows) of the ontology you want to delete,
+select the Group Action "Delete ontology", and press the Execute button.
+
+Deleting also can be done using a console 
+after logging into the Appliance as the ontoportal user.
 
 # from the bash shell:
 ```

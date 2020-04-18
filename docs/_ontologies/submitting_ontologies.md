@@ -10,7 +10,7 @@ status: Preliminary
 
 You can add an ontology using the OntoPortal Admin User at `http://{ip_address_of_appliance}/ontologies/new`.
 The ncbo_cron project is configured to automatically process any new ontologies 
-every 5 minutes (see documentation for enabling the scheduler). 
+every 5 minutes (see the <a href="../../steps/initial_installation">documentation for enabling the scheduler</a>). 
 
 The ontology processing includes:
 * Parsing any new, unparsed ontologies
@@ -30,7 +30,7 @@ the first _submission_ (version) of the ontology.
 
 ## As an OntoPortal user with the API
 
-[tbp]
+_To be provided._
 
 ## Manually using the Ruby console
 
