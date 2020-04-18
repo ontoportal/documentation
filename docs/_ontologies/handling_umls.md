@@ -136,7 +136,7 @@ but we will just use it to populate a SQL database
 * Open the populate_mysql_db.sh script and change the first lines with your MySQL credentials:
   * `MYSQL_HOME=/usr user=<username> password=<password> db_name=umls2015ab`
   * (note: for MYSQL_HOME it adds "/bin/mysql" to find the mysql bin)
-* Then run ``./populate_mysql_db.sh`
+* Then run `./populate_mysql_db.sh`
 
 ### Generate RDF from MySQL
 
