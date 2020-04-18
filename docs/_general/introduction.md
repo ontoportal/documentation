@@ -25,7 +25,7 @@ The OntoPortal Virtual Appliance image contains a pre-installed, pre-configured 
 of the OntoPortal open source software running on a Linux operating system.
 
 It is available as a VMWare Virtual Appliance OVF, as well as an Amazon Web Service AMI, 
-and can be obtained by contacting us following the <a href="../../steps/getting_started">Getting Started</a> section in this manual.
+and can be obtained by following the <a href="../../steps/getting_started">Getting Started</a> section in this manual.
 
 ## What's included?
 
@@ -42,6 +42,9 @@ The following software is included on the image as of v3.0:
   * widgets
   * Administrator interface
 * API services
+* RDF stores
+  * 4store
+  * Allegrograph 
 
 ## What else?
 
@@ -50,7 +53,7 @@ This software is provided by the <a href="https://bmir.stanford.edu">Stanford Ce
 To use this software, you must have a license. 
 Licenses are provided free to individual users for their own research,
 and to non-profit and educational institutions. 
-See our <a href="../../general/licensing">licensing page</a> for more information. 
+See our <a href="../licensing">licensing page</a> for more information. 
 
 The rest of this manual describes how you can obtain, install, configure, and maintain the OntoPortal Virtual Appliance for your own purposes.
 
