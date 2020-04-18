@@ -54,7 +54,7 @@ you will receive another email notification containing a link to access your lic
 
 ## Obtaining and entering the license certificate
 
-You can visit the <a href="https://license.ontoportal.org>License Registration page</a>
+You can visit the <a href="https://license.ontoportal.org">License Registration page</a>
 to see the status of your license request(s), or to copy the issued license certificate.
 The page will show all the licenses issued for your BioPortal account,
 including licenses that are expired. 

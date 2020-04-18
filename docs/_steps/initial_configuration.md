@@ -27,11 +27,11 @@ The ncbo_cron project is configured to automatically process new ontologies ever
 
 _To be provided._
 
-## Enable emails
+## Enabling emails
 
-To enable emails for lost passwords, notes, and ontology processing, 
+To let the system send emails for lost passwords, notes, and ontology processing reports, 
 you need to provide a valid mail server (smtp) configuration. 
-The configuration should be provided in the /srv/ncbo/ontologies_api/current/config/environments/production.rb file.
+The configuration should be provided in the `/srv/ncbo/ontologies_api/current/config/environments/production.rb` file.
 
 Here are the available settings:
 

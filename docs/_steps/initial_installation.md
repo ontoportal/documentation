@@ -10,7 +10,7 @@ status: In progress
 
 You can supply the hostname (machine name) for the virtual machine 
 during the deployment process. 
-Our documentation refers to this hostname as 'appliance_hostname'.
+Our documentation refers to this hostname as 'my_appliance_hostname'.
 
 These steps start your appliance and set the Appliance ID. 
 After getting the Appliance ID, you will have the needed information
