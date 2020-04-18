@@ -22,7 +22,7 @@ the Download and Initial startup; you just need the Appliance ID
 (obtained during the system startup) to complete the Registration process
 and obtain the license for validation in your Appliance.
 
-We'd appreciate your registration before you even download the {{opva}}, 
+We'd appreciate your registration before you even download the {{site.opva}}, 
 or in parallel with that step. 
 However, you can download and evaluate the appliance, 
 and then choose whether or not you fill out the registration form.
@@ -32,7 +32,7 @@ you will have access to your license certificate.
 Copy this certificate and paste it into your Appliance 
 in order to complete the installation process.
 
-## Obtaining the OntoPortal Virtual Appliance
+## Obtaining the {{site.opva}}
 
 ### VMWare Version
 
