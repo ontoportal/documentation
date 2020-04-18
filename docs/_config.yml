@@ -1,9 +1,9 @@
 # Site settings
-title: OntoPortal Installation Documentation
-version: 0.3.0
+title: OntoPortal Administration Documentation
+version: 0.3.5
 email: jgraybeal@stanford.edu
-description: Installing the OntoPortal Virtual Appliance
-baseurl: "/installation" # the subpath of your site, e.g. /blog
+description: Administering the OntoPortal Virtual Appliance
+baseurl: "/administration" # the subpath of your site, e.g. /blog
 url: "https://ontoportal.github.io" # the base hostname & protocol for your site
 twitter_username: ontoportal
 github_username:  ontoportal
