@@ -8,8 +8,8 @@ status: In progress
 
 # Annotator Management
 
-Reference the <a href="../architecture">Architecture</a> page for a 
-diagram of the OntoPortal system components.
+Reference the <a href="{{site.baseurl}}/general/architecture_reference">Architecture</a> page 
+for a diagram of the OntoPortal system components.
 
 ## Basic operations
 
