@@ -4,6 +4,7 @@ version: 0.3.5
 email: jgraybeal@stanford.edu
 description: Administering the OntoPortal Virtual Appliance
 baseurl: "/administration" # the subpath of your site, e.g. /blog
+baseimgs: "/administration/assets/imgs" 
 url: "https://ontoportal.github.io" # the base hostname & protocol for your site
 twitter_username: ontoportal
 github_username:  ontoportal
