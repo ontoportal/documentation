@@ -1,7 +1,0 @@
-<div class="img">
-{%capture imageSrc%} {{site.baseurl}}/assets/views/{{include.src}}/{{include.src}}.png {% endcapture %}
-
-<a href="{{imageSrc}}">
-  <img src="{{imageSrc}}" align="right" style="padding-left: 10px; padding-bottom: 10px; max-width: 50%;"/>
-</a>
-</div>
