@@ -2,7 +2,7 @@
 title: Scheduled Maintenance
 layout: default
 description: OntoPortal tasks you might want to do every so often
-weight: 30
+weight: 40
 status: In progress
 ---
 
