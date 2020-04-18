@@ -12,8 +12,8 @@ If you want to migrate publicly visible ontologies
 from BioPortal or previous NCBO Virtual Appliance versions into a new Appliance, 
 you can do so via a script.
 
-The Programmatic migrations are not officially supported ("Ontologies can be manually downloaded and added using the Web UI") but we included a script 
-that can be used to importing ontologies.
+The programmatic migrations are not officially supported, but 
+the Appliance distribution includes a script that can be used to import ontologies.
 
 Go to
 ```
