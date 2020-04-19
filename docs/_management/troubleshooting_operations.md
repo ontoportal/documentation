@@ -22,7 +22,10 @@ For troubleshooting ontology submissions, see the <a href="{{site.baseurl}}/onto
 
 ### System slow or dead
 
-{color:red}_To be provided._{color}
+```diff
+- _To be provided._
++ _Testing_
+```
 
 ### System producing incorrect or inconsistent responses
 
