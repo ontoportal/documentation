@@ -23,17 +23,20 @@ For troubleshooting ontology submissions, see the <a href="{{site.baseurl}}/onto
 ### System slow or dead
 
 ```diff
-- _To be provided._
-+ _Testing_
+# To be provided.
 ```
 
 ### System producing incorrect or inconsistent responses
 
-_To be provided._
+```diff
+# To be provided.
+```
 
 ### User interface displaying error message instead of content
 
-_To be provided._
+```diff
+# To be provided.
+```
 
 ### Missing or odd search results
 
