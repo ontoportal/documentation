@@ -3,7 +3,7 @@ title: Submitting Ontologies
 layout: default
 description: How to submit ontology files to your repository
 weight: 10
-status: Preliminary
+status: Ready
 ---
 
 # Submitting Ontologies
@@ -28,9 +28,14 @@ The first metadata form asks about characterists of the ontology.
 Once this form is complete, the user is prompted for information about 
 the first _submission_ (version) of the ontology.
 
+Detailed information for submitting ontologies can be found online
+in the documentation found at your appliance at 
+`https://{my_appliance_hostname}/documentation`,
+or in the <a href="https://www.bioontology.org/wiki/BioPortal_Help#Submitting_an_ontology">BioPortal documentation on submissions</a>.
+
 ## As an OntoPortal user with the API
 
-_To be provided._
+Information on submitting ontologies via the API is provided at the <a href="http://data.bioontology.org/documentation#OntologySubmission">BioPortal API documentation on submissions</a>, or in your own OntoPortal installation's API documentation.
 
 ## Manually using the Ruby console
 
@@ -57,13 +62,13 @@ The OntoPortal Web UI will cache old information about ontologies for 60 seconds
 
 In addition, you can look at the REST service directly, which will always give you the most updated information. To do this, visit the following URL:
 
-* `http://{your_appliance_ip_or_domain_name}:8080/ontologies/{ontology_acronym}/latest_submission?include=all`
+`http://{your_appliance_ip_or_domain_name}:8080/ontologies/{ontology_acronym}/latest_submission?include=all`
 
 You can look for the submissionStatus attribute to get the status
 
 ## Is there a log file for parsing?
 
-Parsing progress is logged in the ontology submission repository folder: `/srv/ncbo/repository/{ontology acronym}/{submission id}
+Parsing progress is logged in the ontology submission repository folder: `/srv/ncbo/repository/{ontology acronym}/{submission id}`
 
 For further information about ontology parsing, 
 please see <a href="parseable_ontologies">Parseable Ontologies</a>

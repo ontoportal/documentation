@@ -11,7 +11,7 @@ status: In Progress
 There are several activities involved in getting your own copy of the 
 {{site.opva}} up and running with a registered license:
 * Obtaining the Appliance (by downloading or deploying it)
-* Initial startup
+* Initial startup, including installation and configuration steps
 * Registration process, including
    * Submission of Appliance ID
    * Validation of your Appliance by entering the license certificate
