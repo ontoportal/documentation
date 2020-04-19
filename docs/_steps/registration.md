@@ -3,7 +3,7 @@ title: Registration Process
 layout: default
 description: How to register your Appliance
 weight: 30
-status: In progress
+status: Ready
 ---
 
 # Registration Process
@@ -35,13 +35,19 @@ you must request a separate license for each Appliance.
 The license is associated to the Appliance ID for the Appliance, 
 which is unique for every Appliance.
 
-## Obtaining the Appliance ID
+## Obtaining and providing the Appliance ID
 
-_reference previous step?_
+To obtain your Appliance ID, visit the License tab 
+of the Administration page for your Appliance. 
+(This would be at the URL `http://{my-appliance-hostname}/admin#licensing`.)
+
+You can see the Appliance ID in text on that page. 
+Copy it for use in the next step.
 
 ### Entering Appliance ID and completing registration form
 
-Once you have the Appliance ID, put this information into your registration form.
+Once you have the Appliance ID, 
+put this information into your registration form.
 Once all required fields are complete, click on the Request License button.
 
 You should receive a notification by email that your request has been submitted.
@@ -54,16 +60,17 @@ you will receive another email notification containing a link to access your lic
 
 ## Obtaining and entering the license certificate
 
-You can visit the <a href="https://license.ontoportal.org">License Registration page</a>
+You can visit the <a href="https://license.ontoportal.org">License Registration site</a>
 to see the status of your license request(s), or to copy the issued license certificate.
-The page will show all the licenses issued for your BioPortal account,
+The page will show all the licenses issued under your BioPortal account name,
 including licenses that are expired. 
 The sorting and filtering controls let you find the most recent licenses,
 or only approved or pending license requests.
 
 Find the row that corresponds to your Appliance ID.
 If the license request is approved, you will be able to view the license certificate.
-Copy the license certificate using the Copy button or text copy.
+Copy the license certificate using the Copy button, or select and copy the text
+using your computer's Copy command.
 
 Go the Administrative page of your Virtual Appliance. 
 Click on the Licenses tab, and click on the Renew License button.

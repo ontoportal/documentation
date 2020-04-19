@@ -16,6 +16,10 @@ For troubleshooting ontology submissions, see the <a href="../../ontologies/trou
 
 For troubleshooting system operations, see the <a href="../../management/troubleshooting_operations">Troubleshooting Operations</a> section.
 
+## Nothing appears in the browser when accessing the UI
+
+_to be provided_
+
 ## 
 
 

@@ -18,7 +18,7 @@ to <a href="../registration">register your system and obtain a valid license</a>
 
 ## Initialize the Appliance installation
 
-_What happens here? And is this when it happens? And do we get an Appliance ID?_
+_What happens here? And is this when it happens?_
 
 ## Changing default passwords
 

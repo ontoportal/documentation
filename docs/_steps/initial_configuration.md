@@ -10,6 +10,17 @@ status: In progress
 
 These settings will configure your installation for your environment.
 
+## Replacing 4store with Allegrograph
+
+Your {{site.opva}} can use either 4store or (new with version 3.0) Allegrograph 
+as its RDF backend storage. 
+The 4store is the default RDF store for the system, as we have much more experience with it to date.
+
+If you want to use the Allegrograph RDF store
+instead of the default 4store RDF store,
+visit the <a href="allegrograph_configureation">Allegrograph Configuration</a>
+page before you begin adding ontologies.
+
 ## Adding ontologies
 
 The detailed process of submitting ontologies is described in the <a href="../../ontologies/submitting_ontologies">Submitting Ontologies</a> section

@@ -3,12 +3,13 @@ title: Virtualization Environments
 layout: default
 description: How to use the OVF image with your virtualization software
 weight: 90
-status: Preliminary
+status: Ready
 ---
 
 # Virtualization Environments
 
-OntoPortal OVF works in virtualization environments such as VMware, VirtualBox, KVM, and Xen.
+OntoPortal OVF works in virtualization environments such as 
+VMware, VirtualBox, KVM, and Xen.
 Instructions for each of these are provided below.
 
 ## VMware
@@ -92,6 +93,7 @@ Finally, make any necessary edits to the above file, and run:
 `virsh start ncbo-appliance`
 
 ### Xen
+
 First, convert the VMDKs to raw disk images as mentioned in the KVM section above.
 
 Create /etc/xen/ncbo-appliance.cfg with the following contents:
