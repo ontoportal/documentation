@@ -24,13 +24,15 @@ _What happens here? And is this when it happens?_
 
 Virtual Operating System
 * Username: root
-* Password: you are prompted to enter your virtual OS password on the first boot
+* Password: Ontoportal  -- you are prompted to enter your virtual OS password on the first boot
+
+For the AWS AMI, the root password is provided by the cloud administration process.
 
 OntoPortal Admin User
 * Username: admin
-* Password: changeme
+* Password: changemeNOW
 
-For the AWS AMI installation, The default application administrator is 'admin' and the initial password is the Appliance ID.
+For the AWS AMI installation, The default OntoPortal application administrator is 'admin' and the initial password is the AMI Instance ID.
 
 ## Accessing the system
 
