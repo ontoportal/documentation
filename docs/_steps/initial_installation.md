@@ -6,33 +6,67 @@ weight: 20
 status: In progress
 ---
 
+```diff
+- This page is not fully accurate and is being updated.
+```
+
 # General Instruction
 
 You can supply the hostname (machine name) for the virtual machine 
 during the deployment process. 
 Our documentation refers to this hostname as 'my_appliance_hostname'.
 
-These steps start your appliance and set the Appliance ID. 
-After getting the Appliance ID, you will have the needed information
-to <a href="../registration">register your system and obtain a valid license</a>.
+These steps start your Appliance and set the Appliance ID. 
 
-## Initialize the Appliance installation
+Once your Appliance is started, you can access it through your browser
+to get the Appliance ID, <a href="../registration">register your system and obtain a valid license</a>.
 
-_What happens here? And is this when it happens?_
+## Starting the appliance
+
+We assume you have downloaded or instantiated the appliance as described
+in <a href="../getting_started">Getting Started</a>.
+
+These instructions use as an example VirtualBox 6.1.4 running on MacOS.
+
+### Import the Appliance into your Virtual Machine
+
+Use the File > Import menu command to load your Appliance file.
+
+The results should look something like this 'vm 1' entry.
+
+<figure>
+  <img src="{{site.baseurl}}/assets/imgs/imported-virtual-appliance-in-virtualbox.png" style="width:80%"/>
+  <figcaption>Imported Appliance in VirtualBox</figcaption>
+</figure>
+
+When you press the Start button at the top, a window should open that shows the startop operations of the Appliance. Some details may be different in your Appliance if it is a different version.
+
+<figure>
+  <img src="{{site.baseurl}}/assets/imgs/appliance-startup-window.png" style="width:100%"/>
+  <figcaption>Appliance startup process</figcaption>
+</figure>
+
+
+
+
 
 ## Changing default passwords
+
+### VMWare deployment
 
 Virtual Operating System
 * Username: root
 * Password: Ontoportal  -- you are prompted to enter your virtual OS password on the first boot
 
-For the AWS AMI, the root password is provided by the cloud administration process.
-
 OntoPortal Admin User
 * Username: admin
 * Password: changemeNOW
 
-For the AWS AMI installation, The default OntoPortal application administrator is 'admin' and the initial password is the AMI Instance ID.
+### AWS AMI deployment
+
+For the AWS AMI, the Operating System root password is provided by the cloud administration process.
+
+For the AWS AMI, the default OntoPortal application administrator is 'admin' and the initial password is the AMI Instance ID.
 
 ## Accessing the system
 

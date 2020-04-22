@@ -1,69 +1,72 @@
 ---
-title: Initial Configuration
+title: Advanced Configuration
 layout: default
-description: Configuring settings after installation
-weight: 25
+description: Configuring more advanced settings
+weight: 28
 status: In progress
 ---
 
-# General Instruction
+# Overview
 
-These settings will configure your installation for your environment.
+This section offers more advanced information on reconfiguring
+your {{site.opva}} environment.
 
-## Replacing 4store with Allegrograph
+You may wish to defer these steps until after you register your system
+and confirm it runs well in your environment.
 
-Your {{site.opva}} can use either 4store or (new with version 3.0) Allegrograph 
-as its RDF backend storage. 
-The 4store is the default RDF store for the system, as we have much more experience with it to date.
+## Configuration introduction
 
-If you want to use the Allegrograph RDF store
-instead of the default 4store RDF store,
-visit the <a href="allegrograph_configureation">Allegrograph Configuration</a>
-page before you begin adding ontologies.
+Changing the configuration of appliance is a two step process:
+1. Modify any configuration files you want to change.
+1. Run deployment scripts to deploy application with updated configuration settings.
 
-## Adding ontologies
+Most of the minor configuration changes,
+such as setting the hostname URI, should be set in the configuration files
+located in the distribution at
+`/srv/ontoportal/virtual_appliance/appliance_config/site_config.rb`.
 
-The detailed process of submitting ontologies is described in the <a href="../../ontologies/submitting_ontologies">Submitting Ontologies</a> section
-of this manual.
+* For the Ontoportal UI:
+`/srv/ontoportal/virtual_appliance/appliance_config/bioportal_web_ui/config/bioportal_config_appliance.rb`
+* For API:
+`/srv/ontoportal/virtual_appliance/appliance_config/ontologies_api/config/environments/appliance.rb`
 
-###
+Please note that both of those files import the `site_config.rb` file.
 
-To start, you can add an ontology using the OntoPortal Admin User at `http://{ip_address_of_appliance}/ontologies/new`.
+## Deploying the code (running the Appliance)
 
-_why does this require the admin user?_
-
-### Enabling automated ontology parsing
-
-The ncbo_cron project is configured to automatically process new ontologies every 5 minutes To enable the schedule, do the following:
-
-_To be provided._
-
-## Enabling emails
-
-To let the system send emails for lost passwords, notes, and ontology processing reports, 
-you need to provide a valid mail server (smtp) configuration. 
-The configuration should be provided in the `/srv/ncbo/ontologies_api/current/config/environments/production.rb` file.
-
-Here are the available settings:
+Once the necessary configuration adjustments are made, 
+run the Appliance as follows:
 
 ```
- config.enable_notifications   = true # Set to 'true' to send emails
- config.email_sender           = "admin@example.org" # Default sender for emails
- config.email_disable_override = true # If this is set to 'false', all emails will be sent to the email configured in the 'email_override' setting
- config.email_override         = "admin@example.org"
- config.smtp_host              = "smtp.example.org"
- config.smtp_port              = 25
- config.smtp_auth_type         = :none # :none, :plain, :login, :cram_md5
- config.smtp_user              = "username" # only used if auth_type is not :none
- config.smtp_password          = "password" # only used if auth_type is not :none
- config.smtp_domain            = "example.org"
+sudo su - ontoportal /srv/ontoportal/virtual_appliance/deployment/
 ```
 
-Once you have changed your settings, you will need to restart the server 
-by running the command 
+## Updating the deployment scripts
+
+```diff
+- This section needs review/Update
 ```
-/sbin/service unicorn restart
-```
+
+This is an optional step. If you want to pull in the latest deployment scripts—
+these will enable deployment of the latest OntoPortal application code—
+and run the Appliance with them, perform the following steps. 
+
+### Update deployment environment
+`git pull` will pull in latest deployment scripts to enable deployment of latest compatible OntoPortal application code.
+
+### Set up deployment environment
+`sh setup_deploy_env.sh` gets latest compatible for the version of the appliance you are running UI and API code and installs necessary utilities for the deployment such as Capistrano.
+
+### Deploy the user interface:
+`./deploy_ui`
+Deploy API:
+`./deploy_api`
+Deploy ncbo_cron:
+`./deploy_ncbo_cron`
+
+## More advanced customization                                                                                                                                                                                                                                         
+
+It is possible to overwrite specific application files by simply dropping modified versions of those files in `/srv/ontoportal/virtual_appliance/appliance_config/bioportal_web_ui` and then running the deployment script. The deployment script will sync all files from configuration directory overwriting files in the directory from which application is deployed.
 
 ## Next step
 

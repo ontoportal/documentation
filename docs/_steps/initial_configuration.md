@@ -14,29 +14,26 @@ These settings will configure your installation for your environment.
 
 Your {{site.opva}} can use either 4store or (new with version 3.0) Allegrograph 
 as its RDF backend storage. 
-The 4store is the default RDF store for the system, as we have much more experience with it to date.
-
-If you want to use the Allegrograph RDF store
+We use 4store as the default RDF store for the system, as we have much more experience with it to date. If you want to use the Allegrograph RDF store
 instead of the default 4store RDF store,
-visit the <a href="allegrograph_configureation">Allegrograph Configuration</a>
+visit the <a href="../allegrograph_configuration">Allegrograph Configuration</a>
 page before you begin adding ontologies.
 
 ## Adding ontologies
 
-The detailed process of submitting ontologies is described in the <a href="../../ontologies/submitting_ontologies">Submitting Ontologies</a> section
-of this manual.
+The detailed ontology submission process is described in the <a href="../../ontologies/submitting_ontologies">Submitting Ontologies</a> section.
 
-###
-
-To start, you can add an ontology using the OntoPortal Admin User at `http://{ip_address_of_appliance}/ontologies/new`.
-
-_why does this require the admin user?_
+To start, since you don't have any non-administration accounts, you can add an ontology using the OntoPortal Admin User at `http://{ip_address_of_appliance}/ontologies/new`.
 
 ### Enabling automated ontology parsing
 
-The ncbo_cron project is configured to automatically process new ontologies every 5 minutes To enable the schedule, do the following:
+The ncbo_cron project is configured to automatically process new ontologies every 5 minutes To see the status, stop the scheduled activities, and restart the schedule (respectively), do the following:
 
-_To be provided._
+```
+sudo systemctl status ncbo_cron
+sudo systemctl stop ncbo_cron
+sudo systemctl start ncbo_cron
+```
 
 ## Enabling emails
 
