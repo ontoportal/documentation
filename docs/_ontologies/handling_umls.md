@@ -46,46 +46,64 @@ Please select UMLS as the format for these ontologies.
 
 To import UMLS ontologies, a local installation of the UMLS MySQL release needs to be available. Please refer to the UMLS documentation for instructions on how to install the UMLS MySQL distribution.
 
-### Install UMLS2RDF
+### Install umls2rdf
 
-UMLS2RDF is a Python script that connects to a UMLS MySQL installation and extracts the UMLS ontologies in a format that the Appliance can work with.
+umls2rdf is a Python script that connects to a UMLS MySQL installation and extracts the UMLS ontologies in a format that the Appliance can work with.
 
 First clone the github project:
+
+```
 git clone https://github.com/ncbo/umls2rdf/
+```
+
 Install the MySQL Python driver. We recommend to use pip for this:
+
+```
 pip install MySQL-python
+```
 
-### Configure UMLS2RDF
-UMLS2RDF has two configuration files:
+### Configure umls2rdf
 
-conf.py where the database configuration (host,name,user and password) needs to be specified. Also the output folder.
-umls.conf where one can specified the UMLS ontologies to be extracted. This is a comma separated file with the following 4 fields:
-SAB
-This is legacy. Any value works.
-Output file name.
-Conversion strategy. Accepted values (load_on_codes, load_on_cuis).
+umls2rdf has two configuration files:
 
-With load_on_codes the original source of the ontology will be used as strategy. The Class IDs will be constructed with the MRCONSO.CODE field. If load_on_cuis is selected then the strategy to transform the ontology will use CUIs to construct the Class IDs.
+* `conf.py` where the database configuration (host,name,user and password) needs to be specified. Also the output folder.
+* `umls.conf` where one can specified the UMLS ontologies to be extracted. This is a comma separated file with the following 4 fields:
+  * SAB: This is legacy. Any value works.
+  * Output file name.
+  * Conversion strategy: Accepted values are `load_on_codes`, `load_on_cuis`.
+    * With load_on_codes the original source of the ontology will be used as strategy. The Class IDs will be constructed with the MRCONSO.CODE field. 
+    * If load_on_cuis is selected then the strategy to transform the ontology will use CUIs to construct the Class IDs.
+    
+```diff
+- Only 3 fields specified above
+```
 
 In our configuration file, you can see the settings used by our production system. These are all the UMLS ontologies that are publicly available in BioPortal.
 
-### Run UMLS2RDF
+### Run umls2rdf
 
 Once the configuration files have the settings run the command:
 
+```
 python umls2rdf.py
+```
 
-Depending on how many ontologies are extracted the run time can range from a few minutes to four hours. This process is memory intensive and to transform the largest UMLS ontologies (i.e: SNOMED) one needs at least 16G RAM available.
+Depending on how many ontologies are extracted the run time can range from a few minutes to four hours. This process is memory intensive and to transform the largest UMLS ontologies (in particular, SNOMED) one needs at least 16G RAM available.
 
-### Upload files to the NCBO Virtual Appliance
-The output files will be located in the folder specified in conf.py. 
-Use the BioPortal Web form available in your appliance to submit the extracted ontologies, 
-or other upload approaches described in <a href="submitting_ontologies">Submitting Ontologies</a>. 
+### Upload files to the Virtual Appliance
+
+The output files will be located in the folder specified in `conf.py`. 
+To submit the extracted ontologies, 
+use the OntoPortal Web form available in your appliance, 
+or other upload approaches described in <a href="../submitting_ontologies">Submitting Ontologies</a>. 
+
 IMPORTANT: The specified ontology format in the submission process should be `UMLS`.
 
 ## Hardware Considerations
 
-NCBO dedicates a fair amount of resources (powerful servers) to handle a good portion of UMLS ontologies. Some of the UMLS ontologies contain millions of classes. To import the largest UMLS ontologies (e.g., RXNORM or SNOMEDCT) users will have to run the Appliance in a powerful dedicated environment with 8GB RAM and 5GB hard disk space available.
+The BioPortal system dedicates powerful servers to handle many of the UMLS ontologies; some of the ontologies contain millions of classes. 
+To import the largest UMLS ontologies (e.g., RXNORM or SNOMEDCT) users will have to run the Appliance in a powerful dedicated environment 
+with 8GB RAM and 5GB hard disk space available.
 
 ## Example Workflow
 

@@ -70,9 +70,23 @@ user.valid?
 user.save
 ```
 
-## Working with Redis
+## Stopping and starting services
 
-### stop/start services
+```diff
+- Check: Many of these services may now be controlled with 
+	sudo systemctl stop/start <service>
+```
+
+### The User Interface (front end)
+
+The two commands for this (your installation commands may be different) are:
+
+```
+sudo service nginx restart
+sudo service unicorn restart
+```
+
+### Redis
 
 ```
 service redis-<instance> stop

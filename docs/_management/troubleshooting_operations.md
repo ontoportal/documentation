@@ -12,7 +12,11 @@ Here we describe how to troubleshoot issues with system operations.
 As with all the troubleshooting sections, 
 this section will be enhanced based on experiences with the deployed OntoPortal systems.
 
-(Because of the complexity of troubleshooting, initially only limited troubleshooting information is available on this page.)
+Because of the complexity of troubleshooting, initially only limited troubleshooting information is available on this page. 
+The BMIR BioPortal team has a detailed troubleshooting guide 
+for cases where the system is severely misbehaving; 
+until we make part of this document, 
+contact us if you think you need this information.
 
 For troubleshooting installations, see the <a href="{{site.baseurl}}/steps/troubleshooting_installations">Troubleshooting Installations</a> section.
 

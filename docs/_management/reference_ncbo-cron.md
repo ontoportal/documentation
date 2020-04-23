@@ -28,7 +28,24 @@ grep 'ERROR' /var/lib/ncbo-deployer/ncbo_cron/logs/scheduler-pull.log
 grep -A20 'ERROR' /var/lib/ncbo-deployer/ncbo_cron/logs/scheduler-pull.log
 ```
 
-# Run Cron Job
+# Run ncbo-cron job
+
+## Default production job
+
+The production scheduler start command is something like:
+
+```
+bin/ncbo_cron -d -c "30 */4 * * *" -h "ncboprod-redis1" -l debug -f "00 17 *  * 4" -w "00 * * * *"
+```
+
+This does the following operations:
+* Pull runs every 4 hours at 30 min.
+* Flush of the graphs runs every friday at 5pm.
+* warms up long running queries every hour at 00 min.
+
+By default `ncbo_cron` will not process UMLS ontologies. To enable UMLS processing use `--enable-umls`. This option can trigger heavy parsing so it should be use with care.
+
+## More information about running ncbo-cron
 
 ```
 # See script to run the scheduler as a daemon in the bin folder:
@@ -117,4 +134,112 @@ bin/ncbo_cron -v -h ncboprod-redis1
 bin/ncbo_cron -a "http://data.bioontology.org/ontologies/WB-BT/submissions/88"
 bin/ncbo_cron -d -c "30 */4 * * *" -h "ncboprod-redis1" -f "00 17 *  * 4"
 bin/ncbo_cron -d -c "30 */4 * * *" -h "ncboprod-redis1" -l debug
+```
+
+# ncbo-cron scripts
+
+These scripts should be considered experimental until this text is removed. 
+Please use them at your own risk.
+
+```diff
+- Evaluate likely operational state of these scripts
+```
+
+## Connecting to ncbo-cron
+
+After connecting to your system with ssh, login as ncbo-deployer and go to the ncbo_cron project.
+
+```
+    sudo su - ncbo-deployer
+    cd /srv/ncbo/ncbo_cron/
+```
+    
+For easy access to above, start a `screen` session after the ssh connection, 
+then use `screen -r` to reconnect to the same login session every time.
+
+## The ncbo-cron scripts
+
+These scripts work on the most recent submission; not necessarily the latest 'ready' submisson.
+
+
+
+### Read-only scripts
+  
+* Script to run diagnostics on all ontologies (most recent submissions)
+
+```
+# Creates output files in logs/submission_status*
+./bin/ncbo_ontology_diagnostics.sh
+```
+
+* Report format for ontologies
+
+```
+./bin/ncbo_ontology_format -h
+```
+
+* Generic ontology inspector 
+
+```diff
+! This script was used by the diagnostics script; it was a work in progress, as of March 2014.
+```
+
+./bin/ncbo_ontology_inspector -h
+
+* Create/Update a ticket ontology submissions that fail to parse
+
+```diff
+- Not clear whether this script is currently suitable..
+```
+
+1. Log into ncbo_cron system (stage or prod) and run:
+        
+```
+$ sudo su - ncbo-deployer
+$ cd /srv/ncbo/ncbo_cron
+$ bundle exec ./bin/ncbo_ontology_inspector -p submissionStatus -o {ONT_ACRONYM} --get_parsing_logs
+```
+  
+Notes:
+* the last option '--get_parsing_logs' will retrieve the logs and post them to a JIRA issue automatically; the issue summary/title will be: "{ONT_ACRONYM} submission has ERROR_RDF"; the attachments and comments will indicate what submission fails to parse (and whether it is in stage or prod).
+* the automated JIRA update will reopen a resolved or closed issue (it will not create a new issue every time an ontology has a submission that fails to parse).
+* this option is not enabled by default in the daily diagnostics script; it could be, but if it were enabled it could duplicate data in JIRA every day until the ERROR_RDF status is fixed
+        
+2. Find the relevant JIRA issue by typing 'submission has ERROR_RDF' into the 'Quick Search' field at top right, i.e.
+
+```            https://bmir-jira.stanford.edu/issues/?jql=summary%20~%20%22submission%20has%20ERROR_RDF%22
+```
+
+The issue will contain comments and parsing logs (reported by the Jenkins user)
+
+## Read-Write scripts
+
+* Process an ontology 
+
+```
+./bin/ncbo_ontology_process -h
+```
+
+* Annotate an ontology
+
+```
+./bin/ncbo_ontology_annotate -h
+```
+
+* Calculate and save ontology index in SOLR (see option to index all ontologies)
+
+```
+./bin/ncbo_ontology_index -h
+```
+
+* Calculate and save ontology metrics
+
+```
+./bin/ncbo_ontology_metrics -h
+```
+
+* Generate a new annotation dictionary file (work in progress, as of March 2014)
+
+```
+./bin/ncbo_ontology_annotate_generate_dictionary -h
 ```
