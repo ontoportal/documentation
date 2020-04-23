@@ -7,14 +7,15 @@ status: In progress
 ---
 
 ```diff
-- This page is not fully accurate and is being updated.
+- This page is not complete and is being updated.
 ```
 
 # General Instruction
 
 You can supply the hostname (machine name) for the virtual machine 
 during the deployment process. 
-Our documentation refers to this hostname as 'my_appliance_hostname'.
+Our documentation refers to this hostname as 'my_appliance_hostname',
+in squiggly brackets (`{my_appliance_hostname}`) if in a command.
 
 These steps start your Appliance and set the Appliance ID. 
 
@@ -45,9 +46,6 @@ When you press the Start button at the top, a window should open that shows the 
   <img src="{{site.baseurl}}/assets/imgs/appliance-startup-window.png" style="width:100%"/>
   <figcaption>Appliance startup process</figcaption>
 </figure>
-
-
-
 
 
 ## Changing default passwords

@@ -3,7 +3,7 @@ title: ncbo-cron Reference
 layout: default
 description: Advanced information about ncbo-cron
 weight: 100
-status: In progress
+status: Preliminary
 ---
 
 # Introduction

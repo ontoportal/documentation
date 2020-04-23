@@ -21,7 +21,8 @@ to learn more about the capabilities of the BioPortal system.
 
 ## How is the Appliance packaged?
 
-The OntoPortal Virtual Appliance image contains a pre-installed, pre-configured version 
+The OntoPortal Virtual Appliance image contains 
+a pre-installed, pre-configured version 
 of the OntoPortal open source software running on a Linux operating system.
 
 It is available as a VMWare Virtual Appliance OVF, as well as an Amazon Web Service AMI, 
@@ -29,7 +30,7 @@ and can be obtained by following the <a href="../../steps/getting_started">Getti
 
 ## What's included?
 
-The following software is included on the image as of v3.0:
+The following software is included on the image as of version 3.0:
 
 * Ontologies API (REST service)
 * Annotator and AnnotatorPlus
@@ -39,7 +40,7 @@ The following software is included on the image as of v3.0:
   * Annotator, AnnotatorPlus, and Recommender
   * ontology tree visualization
   * graph visualization with BioMixer 
-  * widgets
+  * widgets deployable in other web sites
   * Administrator interface
 * API services
 * RDF stores

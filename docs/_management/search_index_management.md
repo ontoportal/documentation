@@ -3,7 +3,7 @@ title: Search Index Management
 layout: default
 description: Operations on the solr search index
 weight: 30
-status: In progress
+status: Ready
 ---
 
 # Search Index Management

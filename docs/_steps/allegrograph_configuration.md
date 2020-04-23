@@ -1,14 +1,15 @@
 ---
 title: Allegrograph Configuration
 layout: default
-description: Configuring settings after installation
+description: Configuring your system to run Allegrograph
 weight: 95
 status: Ready
 ---
 
 # Allegrograph Configuration
 
-These settings will configure your installation for your environment.
+These settings will configure your system to use Allegrograph RDF store 
+as its backend.
 
 ## Replacing 4store with Allegrograph
 
@@ -36,6 +37,9 @@ with the latest Allegrograph version.
 
 ### How to switch the Configuration
 
+The Allegrograph was shipped in the distribution pre-configured to support 
+the settings described here.
+
 Update the configuration file inside your Virtual Appliance (VA)
 
 	a) replace the following lines:
@@ -52,16 +56,19 @@ Update the configuration file inside your Virtual Appliance (VA)
 	    config.goo_path_data     = '/repositories/ontoportal/statements'
 	    config.goo_path_update   = '/repositories/ontoportal/statements'
 
-Restart your Virtual Appliance (see below). Your server is now pointing to AG as the backend.
-
+Restart your Virtual Appliance (see step 2 below). Your server is now pointing to Allegrograph as the backend. 
 
 ## Obtaining and starting Allegrograph
 
-1. If not already present in a current version, install the AllegroGraph (AG) server using the instructions on this page:
+### 1. Install Allegrograph
+
+If not already present in a current version, install the AllegroGraph (AG) server using the instructions on this page:
 
 `https://franz.com/agraph/support/documentation/current/server-installation.html`
 
 We recommend reviewing these instructions, which cover a number of different installation scenarios.
+
+### 2. Start Allegrograph
 
 An example from this page of commands to start and stop Allegrograph:
 
@@ -75,21 +82,25 @@ You can stop AllegroGraph by running:
 /sbin/service agraph stop 
 ```
 
-2. Once Allegrograph is running, navigate to the AG Admin console. By default it runs on port 10035:
+### 3. Navigate to Allegrograph console
+
+Once Allegrograph is running, navigate to the AG Admin console. By default it runs on port 10035:
 
 ```
 http://<your server name>:10035/#
 ```
 
-3. Under "Create new repository" type in a name for your new repository to be used for OntoPortal and click "Create". For Example: ontoportal
+### 4. Create your backend repository
 
-4. Once created, you should be able to navigate to your new repository via:
+Under "Create new repository" type in a name for your new repository to be used for OntoPortal and click "Create". For Example: ontoportal
+
+### 5. Navigate to your repository
+
+Once created, you should be able to navigate to your new repository via:
 
 ```
 	http://<your server name>:10035/#/repositories/ontoportal
 ```
 
 From this view, you can run SPARQL queries against your data, add or delete records, export the repository in a number of formats, and run reports on the use of your data store.
-	
-
 

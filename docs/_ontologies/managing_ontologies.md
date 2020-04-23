@@ -3,7 +3,7 @@ title: Managing Ontologies
 layout: default
 description: How to manage your repository's ontologies
 weight: 40
-status: Preliminary
+status: In Progress
 ---
 
 # Managing Ontologies 
@@ -102,11 +102,15 @@ ontology.delete
 
 # Working with caches
 
-## http caching
+## HTTP caching
 
 ### Clear entire cache
 
-Go to an ontologies_api project pointing at the infrastructure you want to clear the cache for (production, staging, etc) and run:
+Go to the administrator page and click on the button Clear HTTP Cache.
+
+OR
+
+Go to an ontologies_api project and run:
 
 ```
 rake cache:clear:production

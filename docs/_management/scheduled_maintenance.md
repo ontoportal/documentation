@@ -3,7 +3,7 @@ title: Scheduled Maintenance
 layout: default
 description: OntoPortal tasks you might want to do every so often
 weight: 20
-status: In progress
+status: Pending
 ---
 
 # Scheduled Maintenance
@@ -16,21 +16,29 @@ performing at suitable intervals to keep your system running smoothly.
 
 ### Reviewing content for spam
 
-_To be provided._
+```Diff
+! To be provided
+```
 
 ### Removing spam and spam users
 
-_To be provided._
+```Diff
+! To be provided
+```
 
 ## Curating content
 
 ### Old and empty content
 
-_To be provided._
+```Diff
+! To be provided
+```
 
 ### Non-parsing content
 
-_To be provided._
+```Diff
+! To be provided
+```
 
 
 

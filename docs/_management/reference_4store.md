@@ -3,7 +3,7 @@ title: 4store Reference
 layout: default
 description: Advanced information about 4store
 weight: 120
-status: In progress
+status: Preliminary
 ---
 
 # Introduction

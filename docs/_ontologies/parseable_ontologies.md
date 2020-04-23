@@ -3,7 +3,7 @@ title: Parseable Ontologies
 layout: default
 description: The types of ontologies that OntoPortal can handle
 weight: 60
-status: Pending
+status: Ready
 ---
 
 # Parseable Ontologies

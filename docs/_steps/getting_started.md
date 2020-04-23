@@ -3,7 +3,7 @@ title: Getting Started
 layout: default
 description: First steps toward installing the Virtual Appliance
 weight: 10
-status: In Progress
+status: Ready
 ---
 
 # Getting Started
@@ -34,7 +34,7 @@ in order to complete the installation process.
 ## Obtaining the {{site.opva}}
 
 The {{site.opva}} is available in a VMWare-compatible Open Virtualization Format (OVF),
-or a an Amazon Machine Instance (AMI) from Amazon Web Services (AWS).
+or as an Amazon Machine Instance (AMI) from Amazon Web Services (AWS).
 Each of the methods is described below.
 
 ### VMWare Version
@@ -58,7 +58,7 @@ for your virtualization environment</a>.
 ### Amazon AWS AMI
 
 For users who want to run their OntoPortal instance on Amazon Web Service cloud, 
-an Amazon Machine Instance (AMI) is available on the BioOntology AWS Market Place. 
+an Amazon Machine Instance (AMI) is available on the [BioOntology AWS Market Place](https://aws.amazon.com/marketplace/seller-profile/ref=dtl_pcp_sold_by?ie=UTF8&id=76948a46-8f8a-4a68-9a5c-3e3ff6b82d10). 
 
 ## Next steps
 

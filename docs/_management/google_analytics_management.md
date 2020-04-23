@@ -3,7 +3,7 @@ title: Google Analytics Management
 layout: default
 description: Setting up Google Analytics tracking for your Appliance
 weight: 50
-status: In progress
+status: Preliminary
 ---
 
 # Google Analytics Management

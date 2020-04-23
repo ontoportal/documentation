@@ -3,7 +3,7 @@ title: Initial Configuration
 layout: default
 description: Configuring settings after installation
 weight: 25
-status: In progress
+status: Ready
 ---
 
 # General Instruction

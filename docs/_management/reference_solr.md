@@ -3,7 +3,7 @@ title: Solr Reference
 layout: default
 description: Advanced information about Solr
 weight: 110
-status: In progress
+status: Preliminary
 ---
 
 # Introduction

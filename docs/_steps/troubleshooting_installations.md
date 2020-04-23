@@ -8,9 +8,11 @@ status: In progress
 
 # Troubleshooting Installations
 
-Here we describe how to troubleshoot issues with your installation of the Appliance. 
+Here we describe how to troubleshoot issues with your 
+installation of the Appliance. 
 As with all the troubleshooting sections, 
-this section will be enhanced based on experiences with the deployed OntoPortal systems.
+this section will be enhanced based on experiences 
+with the deployed OntoPortal systems.
 
 For troubleshooting ontology submissions, see the <a href="../../ontologies/troubleshooting_submissions">Troubleshooting Submissions</a> section.
 
@@ -18,8 +20,8 @@ For troubleshooting system operations, see the <a href="../../management/trouble
 
 ## Nothing appears in the browser when accessing the UI
 
-_to be provided_
-
-## 
+```Diff
+! To be provided
+```
 
 

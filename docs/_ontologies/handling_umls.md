@@ -3,7 +3,7 @@ title: Submitting UMLS Content
 layout: default
 description: How to submit UMLS content to your repository
 weight: 17
-status: Preliminary
+status: Ready
 ---
 
 # Submitting UMLS Content
@@ -31,6 +31,7 @@ Once you have converted UMLS to RDF, you will get Turtle (.ttl) files
 that can be uploaded using the BioPortal Web UI. 
 Please select UMLS as the format for these ontologies.
 
+```
 2 Install UMLS2RDF
 3 Configure UMLS2RDF
 4 Run UMLS2RDF
@@ -40,6 +41,7 @@ Please select UMLS as the format for these ontologies.
 7.1 Install UMLS using mmsys
 7.2 Load subset in MySQL
 7.3 Generate RDF from MySQL
+```
 
 
 ### Install UMLS MySQL
@@ -95,7 +97,8 @@ Depending on how many ontologies are extracted the run time can range from a few
 The output files will be located in the folder specified in `conf.py`. 
 To submit the extracted ontologies, 
 use the OntoPortal Web form available in your appliance, 
-or other upload approaches described in <a href="../submitting_ontologies">Submitting Ontologies</a>. 
+or other upload approaches described in 
+<a href="../submitting_ontologies">Submitting Ontologies</a>. 
 
 IMPORTANT: The specified ontology format in the submission process should be `UMLS`.
 
@@ -109,7 +112,7 @@ with 8GB RAM and 5GB hard disk space available.
 
 This workflow for importing UMLS data has been provided by Vincent Emonet. 
 It is provided here without testing by the OntoPortal team. 
-Descriptive comments are provided by Vincent.
+Descriptive comments throughout this section are provided by Vincent.
 
 This offers more details on how to generate UMLS turtle files. 
 It is simplified to provide the essentials needed to generate the RDF files you want. 

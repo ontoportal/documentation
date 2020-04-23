@@ -3,7 +3,7 @@ title: Monitoring Operations
 layout: default
 description: Ways to monitor the OntoPortal Appliance
 weight: 0
-status: Ready
+status: Preliminary
 ---
 
 # Monitoring Operations

@@ -3,7 +3,7 @@ title: Triple Store Rebuild Reference
 layout: default
 description: Advanced information about rebuilding the triple store
 weight: 130
-status: In progress
+status: Pending
 ---
 
 # Introduction
@@ -11,7 +11,7 @@ status: In progress
 This is an advanced reference document on rebuilding the triple store database.
 
 ```diff
-- Some of this information is outdated, an update is needed. The document is here to provide an outline to those interested.
+- Some of this information is outdated, an update is needed. This document is provided to provide an outline to those interested.
 ``` 
 
 ## ncbo-cron

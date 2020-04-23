@@ -57,7 +57,9 @@ This should report results if they exist, as it’s a wildcard search:
 - possibly following should use :8080 address
 ```
 
-    'http://data.{my-appliance-hostname}/search?q=*&ontologies=OBI'
+```
+http://data.{my-appliance-hostname}/search?q=*&ontologies=OBI
+```
 
 Also it's possible to look at SOLR directly; this gives you all acronyms in the index:
 
@@ -68,7 +70,7 @@ Also it's possible to look at SOLR directly; this gives you all acronyms in the 
 For more specific SOLR queries, the SOLR admin interface is available at:
 
 ```
-    'http://{my-appliance-hostname}:8080/solr/
+    http://{my-appliance-hostname}:8080/solr/
     http://{my-appliance-hostname}:8080/solr/
 ```
 
@@ -77,7 +79,7 @@ In those interfaces, use the 'Core Selector' to choose 'Collection1' (likely the
 To re-index an ontology, follow the instructions in [Search Index Management](../search_index_management)
 
 ```
-    https://github.com/ncbo/ncbo_cron/blob/master/bin/ncbo_ontology_index
+https://github.com/ncbo/ncbo_cron/blob/master/bin/ncbo_ontology_index
 ```
 
 ## Specific diagnostic errors

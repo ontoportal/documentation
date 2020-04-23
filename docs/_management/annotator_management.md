@@ -3,7 +3,7 @@ title: Annotator Management
 layout: default
 description: Operations on the solr search index
 weight: 40
-status: In progress
+status: Preliminary
 ---
 
 # Annotator Management
