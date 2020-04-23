@@ -45,6 +45,37 @@ the problem is likely a faulty index for that ontology.
 (Possibly the indexing of the last submission of the ontology was interrupted.)
 The fix is to re-index the ontology.
 
+#### Check for indexed acronyms
+
+This should report results if they exist, as it’s a wildcard search:
+
+```diff
+- possibly following should use :8080 address
+```
+
+    'http://data.{my-appliance-hostname}/search?q=*&ontologies=OBI'
+
+Also it's possible to look at SOLR directly; this gives you all acronyms in the index:
+
+```   http://{my-appliance-hostname}:8080/solr/select?q=&rows=0&facet=true&facet.limit=-1&facet.field=submissionAcronym
+    http://{my-appliance-hostname}:8080/solr/select?q=&rows=0&facet=true&facet.limit=-1&facet.field=submissionAcronym
+```
+
+For more specific SOLR queries, the SOLR admin interface is available at:
+
+```
+    'http://{my-appliance-hostname}:8080/solr/
+    http://{my-appliance-hostname}:8080/solr/
+```
+
+In those interfaces, use the 'Core Selector' to choose 'Collection1' (likely the only choice available).  In the 'Query' utility that appears, enter parameters such as 'q' text field entry: 'submissionAcronym:AERO'.
+
+To re-index an ontology, follow the instructions in [Search Index Management](../search_index_management)
+
+```
+    https://github.com/ncbo/ncbo_cron/blob/master/bin/ncbo_ontology_index
+```
+
 ## Specific diagnostic errors
 
 ### ontologies_report.json is missing
@@ -56,6 +87,12 @@ ontologies_report.json : No such file or directory
 To fix it, create an ontologies_report.json file at the following location: `/srv/reports/ontologies_report.json`
 
 The file has to be owned by ncbobp:ncbobp and to have permission 666
+
+## Advanced troubleshooting of specific systems
+
+### Troubleshooting ncbo_cron
+
+See [ncbo-cron Reference](../reference_ncbo-cron) for details.
 
 
 

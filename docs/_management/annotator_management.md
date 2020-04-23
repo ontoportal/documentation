@@ -11,6 +11,8 @@ status: In progress
 Reference the <a href="{{site.baseurl}}/general/architecture_reference">Architecture</a> page 
 for a diagram of the OntoPortal system components.
 
+See major section below for AnnotatorPlus information.
+
 ## Basic operations
 
 The annotator in OntoPortal analyses text files and 
@@ -171,3 +173,27 @@ which it should be since it is in the STY ontology):
 ```
 1882193402596741431	2	7	entity
 ```
+
+# AnnotatorPlus
+
+## Background
+
+The AnnotatorPlus is an Agroportal/SIFR service deployed as a proxy 
+on the OntoPortal system in order to serve AnnotatorPlus annotations. 
+It runs as a servlet on Tomcat 7.
+
+The core services are provided by http://services.data.bioportal.lirmmr.fr.
+
+## Bioportal Deployment
+
+```diff
+* This section needs review to confirm its accuracy (services included in 1 & 3?)
+```diff
+
+* The proxy is available at https://services.data.{my-appliance-hostname} 
+* The AnnotatorPlus is found at https://{my-appliance-hostname}/annotatorplus
+* The API is found at https://services.data.{my-appliance-hostname}:8080/annotatorplus
+ 
+AnnotatorPlus documentation has not been updated in the OntoPortal online documentation page at https://data.{my-appliance-hostname}/documentation.
+
+There is more detailed documentation in the [publication supplement](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5972606/bin/bty009_supplement_bioinf-2017-1427.r2-3.pdf)  which is pointed to by the [main paper about this capability](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5972606/).

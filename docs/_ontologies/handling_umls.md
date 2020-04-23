@@ -40,7 +40,6 @@ Please select UMLS as the format for these ontologies.
 7.1 Install UMLS using mmsys
 7.2 Load subset in MySQL
 7.3 Generate RDF from MySQL
-Install UMLS MySQL
 
 
 ### Install UMLS MySQL

@@ -25,7 +25,6 @@ The solr index is hosted by the tomcat on port 8082. To access it visit:
 ```
 http://{my-appliance-hostname}:8082/solr
 ```
-
 ### About the solr cores
 
 There are 2 index cores:
@@ -61,7 +60,15 @@ The following example performs the operation in core2:
 bin/ncbo_ontology_index -o STY,SNOMED -l logs/reindexing_STY_SNOMED.log -c http://{my-appliance-hostname}:8082/solr/core2
 ```
 
-_How does the reindexed ontology get into core1?_
+```diff
+- How does the reindexed ontology get into core1?
+```
+
+## Reinstalling solr
+
+Instructions for re-installing Solr can be found in the [Solr Reference](../reference_solr) page.
+
+
 
 
 
