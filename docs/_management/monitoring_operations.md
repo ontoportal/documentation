@@ -140,6 +140,15 @@ A useful ELK Stash dashboard is [4 store slow queries](http://ncbo-logstash1.sta
 
 Other logs useful for the OntoPortal software include:
 
-* 7. OpsView (http://opsview.com): offers integrated configuration and display of the Nagios system (among dozens of others that could be integrated). 
-* 8. awstats: API web traffic statistics
-* 9. cacti: _To be defined._
+#### 7. OpsView (http://opsview.com)
+
+Offers integrated configuration and display of the Nagios system 
+(among dozens of others that could be integrated). 
+
+#### 8. awstats
+
+API web traffic statistics.
+
+#### 9. cacti 
+
+_To be provided._
