@@ -20,6 +20,10 @@ For troubleshooting system operations, see the <a href="../../management/trouble
 
 ### With Protege
 
+If you open the ontology with the Protégé desktop application, 
+it will indicate any problems with the ontology.
+Since Protégé uses the same OWLAPI interface as OntoPortal,
+this is an excellent validation step to make sure your ontology parses correctly.
 
 ### With rapper
 
@@ -48,9 +52,9 @@ ERROR -- : Unable to create a new submission in OntologyPull:
 {:proc_naming=>{:duplicate=>"There is already a persistent resource with id `http://data.bioontology.org/ontologies/BIBLIOTEK-O/submissions/2`"}}
 ```
 
-...you need to manually delete the corresponding orphan graph entries from the triple store, as follows.
+... you need to manually delete the corresponding orphan graph entries from the triple store, as follows.
 
-### Check for the orphan records:
+### Check for the orphan records
 
 ```
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -61,13 +65,13 @@ SELECT * WHERE {
 } LIMIT 2000
 ```
 
-### Delete the orphan records:
+### Delete the orphan records
 
 ```
 curl -i -d 'update=DELETE+{+<http://data.bioontology.org/ontologies/GO/submissions/1558>+?p+?o+}+WHERE+{+<http://data.bioontology.org/ontologies/GO/submissions/1558>+?p+?o+}' 'http://ncboprod-4store1.stanford.edu:8080/update/'
 ```
 
-### Clear the GOO cache.
+### Clear the GOO cache
 
 Use the Clear GOO cache button on the Administrative page.
 
