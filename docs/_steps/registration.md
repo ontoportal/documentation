@@ -20,7 +20,7 @@ displaying a reminder to all users that registration will be needed.
 ## Filling out the registration form
 
 To fill out the registration form, 
-visit the <a href="https://license.ontoportal.org>License Registration page</a>.
+visit the <a href="https://license.ontoportal.org">License Registration page</a>.
 Log in using your BioPortal user name and password;
 the form will automatically complete your account information.
 You can complete all the information except the Appliance ID 
