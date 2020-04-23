@@ -19,7 +19,8 @@ There is no user interface to perform this task.
 Slices can be added using a console 
 after logging into the Appliance as the `ontoportal` user.
 
-# from the bash shell:
+From the bash shell:
+
 ```
 cd /srv/ncbo/ncbo_cron
 bin/ncbo_cron --console
@@ -44,7 +45,8 @@ after logging into the Appliance as the ontoportal user.
 * This answer needs review to confirm its accuracy
 ```diff
 
-# from the bash shell:
+From the bash shell:
+
 ```
 cd /srv/ncbo/ncbo_cron
 bin/ncbo_cron --console
@@ -91,7 +93,8 @@ select the Group Action "Delete ontology", and press the Execute button.
 Deleting also can be done using a console 
 after logging into the Appliance as the ontoportal user.
 
-# from the bash shell:
+From the bash shell:
+
 ```
 cd /srv/ncbo/ncbo_cron
 bin/ncbo_cron --console
