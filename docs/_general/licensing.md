@@ -3,7 +3,7 @@ title: Licensing
 layout: default
 description: How we license the Virtual Appliance
 weight: 40
-status: Pending
+status: Ready
 ---
 
 # License Terms
@@ -22,9 +22,9 @@ Licenses are provided free to the following users:
 Companies who wish to deploy the Virtual Appliance, 
 and individuals working on commercial products, 
 are asked to contact us
-(for example, by registering at our [OntoPortal License Server](https://license.ontoportal.org) to discuss the licensing terms.
-Your registration request will be visible only to persons responsible for licensing 
-the OntoPortal Virtual Appliance, who will contact you.
+(for example, by registering at our [OntoPortal License Server](https://license.ontoportal.org)) to discuss the licensing terms.
+Your registration request will be visible 
+only to  OntoPortal Virtual Appliance license managers, who will contact you.
 
 Any Allegrograph software shipped with the Appliance 
 is provided under its own licensing terms,

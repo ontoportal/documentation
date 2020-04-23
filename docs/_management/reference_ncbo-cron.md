@@ -28,7 +28,7 @@ grep 'ERROR' /var/lib/ncbo-deployer/ncbo_cron/logs/scheduler-pull.log
 grep -A20 'ERROR' /var/lib/ncbo-deployer/ncbo_cron/logs/scheduler-pull.log
 ```
 
-# Run ncbo-cron job
+# Run ncbo-cron jobs
 
 ## Default production job
 
@@ -42,6 +42,8 @@ This does the following operations:
 * Pull runs every 4 hours at 30 min.
 * Flush of the graphs runs every friday at 5pm.
 * warms up long running queries every hour at 00 min.
+
+See below for additional ncbo-cron invocations.
 
 By default `ncbo_cron` will not process UMLS ontologies. To enable UMLS processing use `--enable-umls`. This option can trigger heavy parsing so it should be use with care.
 
@@ -95,10 +97,11 @@ Usage: ncbo_cron [-p port] [-P file] [-d] [-k]
 -f FSCHED,                Delete class graphs of archive submissions
 	--flush-old-graphs
 -?, --help                Display this usage information.
+```
 
+## Example ncbo-cron Invocations
 
-## Example Cron Invocations
-
+```
 cd /var/lib/ncbo-deployer/ncbo_cron
 # Then run commands like the following:
 bin/ncbo_cron -a "http://data.bioontology.org/ontologies/WB-BT/submissions/88"
@@ -162,7 +165,6 @@ then use `screen -r` to reconnect to the same login session every time.
 These scripts work on the most recent submission; not necessarily the latest 'ready' submisson.
 
 
-
 ### Read-only scripts
   
 * Script to run diagnostics on all ontologies (most recent submissions)
@@ -207,7 +209,8 @@ Notes:
         
 2. Find the relevant JIRA issue by typing 'submission has ERROR_RDF' into the 'Quick Search' field at top right, i.e.
 
-```            https://bmir-jira.stanford.edu/issues/?jql=summary%20~%20%22submission%20has%20ERROR_RDF%22
+```
+https://bmir-jira.stanford.edu/issues/?jql=summary%20~%20%22submission%20has%20ERROR_RDF%22
 ```
 
 The issue will contain comments and parsing logs (reported by the Jenkins user)

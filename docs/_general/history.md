@@ -17,7 +17,8 @@ OntoPortal Virtual Appliance Release Notes (_to be provided_).
 
 ## NCBO Virtual Appliance (original release) (date unknown)
 
-_To be provided_.
+The first known work on the Virtual Appliance was October 25, 2010, with the [creation of the Category wiki page](https://www.bioontology.org/mediawiki/index.php?title=Category:NCBO_Virtual_Appliance&oldid=10295). 
+It appears the Appliance was mature as of this date.
 
 ## BioPortal Virtual Appliance Release 2.4 (April 2015)
 

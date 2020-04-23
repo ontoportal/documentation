@@ -3,7 +3,7 @@ title: Frequently Asked Questions (FAQ)
 layout: default
 description: Various common questions about the Appliance
 weight: 80
-status: Preliminary
+status: Ready
 ---
 
 # Frequently Asked Questions
@@ -25,4 +25,5 @@ is released using the license included with that software.
 
 The software used to package the OntoPortal system for distribution 
 is not publicly available. 
+Users must obtain a license to use the packaged system.
 Members of the {{site.opa}} have access to and maintain the packaging software.
