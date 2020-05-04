@@ -28,25 +28,37 @@ We assume you have downloaded or instantiated the appliance as described
 in <a href="../getting_started">Getting Started</a>.
 
 These instructions use as an example VirtualBox 6.1.4 running on MacOS.
+You will find similar operations in most virtual environment software.
 
 ### Import the Appliance into your Virtual Machine
 
 Use the File > Import menu command to load your Appliance file.
 
-The results should look something like this 'vm 1' entry.
+The results should look something like this 'vm' entry.
 
 <figure>
   <img src="{{site.baseurl}}/assets/imgs/imported-virtual-appliance-in-virtualbox.png" style="width:80%"/>
   <figcaption>Imported Appliance in VirtualBox</figcaption>
 </figure>
 
-When you press the Start button at the top, a window should open that shows the startop operations of the Appliance. Some details may be different in your Appliance if it is a different version.
+### Run the Appliance you just imported
+
+When you press the Start button at the top of the displayed window, 
+a console window should open that shows the virtual environment's
+command environment. 
+During this bootup sequence, the {{site.opva}} software also starts running,
+and you will see the output associated with startup of the Appliance.
+Some details may differ if you are running a different Appliance version.
 
 <figure>
   <img src="{{site.baseurl}}/assets/imgs/appliance-startup-window.png" style="width:100%"/>
   <figcaption>Appliance startup process</figcaption>
 </figure>
 
+Near the end of that process, the running Appliance displays its IP address 
+where it can be accessed on your computer. 
+Make a note of this address so you can use it in later steps,
+or follow the instructions under 'Accessing the system' to obtain it.
 
 ## Changing default passwords
 
@@ -54,7 +66,13 @@ When you press the Start button at the top, a window should open that shows the 
 
 Virtual Operating System
 * Username: root
-* Password: Ontoportal  -- you are prompted to enter your virtual OS password on the first boot
+* Password: Ontoportal  
+
+You are then prompted to enter your own virtual OS password on the first boot—
+first enter the default password when prompted, 
+then you will enter your own password twice. 
+If in the reset process you enter the wrong default password, 
+the entire sequence restarts.
 
 OntoPortal Admin User
 * Username: admin
@@ -68,42 +86,47 @@ For the AWS AMI, the default OntoPortal application administrator is 'admin' and
 
 ## Accessing the system
 
+We call the IP address for your virtual operating system
+the `{ip_address_of_appliance}` in the commands we list here.
+This is where you can access the {{site.opva}} running inside your Appliance. 
+
 ### Obtaining the IP address
 
-_THERE IS THIS_
+During the initial startup of the virtual environment and the OntoPortal application, the IP address was displayed as described above.
+If it is no longer on screen, you can obtain it with the following methods.
 
-You can get the IP address of the Appliance by using the following command 
-in the terminal: `ip addr show eth0`.
+To get the local IP address from the virtual environment terminal:
+```
+ip address show dev eth0 | awk '/inet / {print $2}' | cut -d/ -f1
+```
+(The command before the first pipe shows 
+all the information about ethernet port called `eth0`.)
 
-For the AWS AMI installation, the ip_address_of_appliance is 
+#### AWS AMI information
+
+For the AWS AMI installation, the IP address is 
 the public DNS provided by Amazon. 
+You can check for this address in your EC2 management console
+using the Public IP Addresses or Public DNS.
 
-_OR THERE IS THIS_
+#### Vmware Appliance information
 
-You can get IP address of the Appliance with the following methods:
+Check 'IP Addresses' on the summary page of the virtual environment. 
+Please note that Virtual Appliance does not come with vmware tools installed,
+so IP Address would not be displayed until those tools are installed.
 
-To get the local IP address from the terminal:
-```
-ip address show eth0 | awk '/inet / {print $2}' | cut -d/ -f1'
-```
+#### External IP address
 
-To get the external IP address from the terminal:
+If you want to obtain the external IP address for your computer from the terminal, 
+use this command:
 ```
 curl http://ipecho.net/plain; echo
 ```
 
-Vmware Appliance:
-Check 'IP Addresses' on the summary page of the appliance. Please note that Virtual Appliance does not come with vmware tools installed so IP Address would not be displayed until vmware tools are installed.
-
-Amazon AWS:
-use Public IP Addresses or Public DNS listed in your EC2 management console.
-
-_END_
-
 ### Accessing the web UI
 
-The Appliance Web UI can be accessed at `http://{ip_address_of_appliance}`. 
-
+From your computer's browser (not in the virtual environment), 
+the Appliance Web UI can be accessed at `http://{ip_address_of_appliance}`. 
 
 ### Accessing REST services
 
