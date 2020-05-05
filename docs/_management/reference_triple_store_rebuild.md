@@ -11,7 +11,8 @@ status: Pending
 This is an advanced reference document on rebuilding the triple store database.
 
 ```diff
-- Some of this information is outdated, an update is needed. This document is provided to provide an outline to those interested.
+- Some of this information is outdated, an update is needed. 
++ This document is provided to provide an outline to those interested.
 ``` 
 
 ## ncbo-cron
@@ -104,13 +105,14 @@ Check Notes section for additional tips on how to deal with problematic metadata
 * Location: 
 
 ```diff
-- This step's instructions are missing
+! This step's instructions are missing
 ```
 
 ## Reparse ontology content
 
 ```diff
-- FIXME.  we no longer use ncbo_migration to reparse ontologies.  New process involves using ncbo_cron to reparse all ontologies.  The following section is outdated.
+- FIXME.  we no longer use ncbo_migration to reparse ontologies. The following section is outdated.
+! New process involves using ncbo_cron to reparse all ontologies.
 ```
 
 outdated content:
@@ -254,7 +256,7 @@ At this point move the staging data back to production.
 * User:
 
 ```diff
-- Steps missing
+! To be provided.
 ```
 
 ## Perform metrics calculation

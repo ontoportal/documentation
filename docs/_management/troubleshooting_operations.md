@@ -54,7 +54,7 @@ The fix is to re-index the ontology.
 This should report results if they exist, as it’s a wildcard search:
 
 ```diff
-- possibly following should use :8080 address
+! possibly following link should use :8080 address
 ```
 
 ```
@@ -63,15 +63,14 @@ http://data.{my-appliance-hostname}/search?q=*&ontologies=OBI
 
 Also it's possible to look at SOLR directly; this gives you all acronyms in the index:
 
-```   http://{my-appliance-hostname}:8080/solr/select?q=&rows=0&facet=true&facet.limit=-1&facet.field=submissionAcronym
-    http://{my-appliance-hostname}:8080/solr/select?q=&rows=0&facet=true&facet.limit=-1&facet.field=submissionAcronym
+```
+http://{my-appliance-hostname}:8080/solr/select?q=&rows=0&facet=true&facet.limit=-1&facet.field=submissionAcronym
 ```
 
 For more specific SOLR queries, the SOLR admin interface is available at:
 
 ```
-    http://{my-appliance-hostname}:8080/solr/
-    http://{my-appliance-hostname}:8080/solr/
+http://{my-appliance-hostname}:8080/solr/
 ```
 
 In those interfaces, use the 'Core Selector' to choose 'Collection1' (likely the only choice available).  In the 'Query' utility that appears, enter parameters such as 'q' text field entry: 'submissionAcronym:AERO'.

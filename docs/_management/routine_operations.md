@@ -73,8 +73,9 @@ user.save
 ## Stopping and starting services
 
 ```diff
-- Check: Many of these services may now be controlled with 
-	sudo systemctl stop/start <service>
+- Confirm and fix: This is likely outdated.
+! Many of these services may now be controlled with 
+   _sudo systemctl stop/start <service>_
 ```
 
 ### The User Interface (front end)

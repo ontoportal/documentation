@@ -49,7 +49,7 @@ sudo su - ontoportal /srv/ontoportal/virtual_appliance/deployment/
 ## Updating the deployment scripts
 
 ```diff
-- This section needs review/Update
+- This section needs review and almost certainly an update
 ```
 
 This is an optional step. If you want to pull in the latest deployment scripts—

@@ -114,11 +114,11 @@ The available formats are:
 
 ### Examples
 
-```Diff
+```diff
 - Must do this! 
 ! To be provided: this (and needs review)
-+ The best way to do this is 
-# An interesting feature of this
++ The best way to do this is …
+# An interesting feature of this is …
 ```
 
 ## What else?

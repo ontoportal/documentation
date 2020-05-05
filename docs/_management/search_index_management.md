@@ -61,7 +61,7 @@ bin/ncbo_ontology_index -o STY,SNOMED -l logs/reindexing_STY_SNOMED.log -c http:
 ```
 
 ```diff
-- How does the reindexed ontology get into core1?
+! How does the reindexed ontology get into core1?
 ```
 
 ## Reinstalling solr

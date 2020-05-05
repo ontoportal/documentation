@@ -31,7 +31,8 @@ this is an excellent validation step to make sure your ontology parses correctly
 - Confirm this is possible on OntoPortal
 ```
 
-The following commands may help 
+The following commands may help diagnose an issue with ontology submission, 
+as they perform the transformation OntoPortal performs after the parsing has been performed.
 
 ```
 #transform the file into ntriples

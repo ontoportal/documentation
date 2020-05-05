@@ -77,7 +77,7 @@ umls2rdf has two configuration files:
     * If load_on_cuis is selected then the strategy to transform the ontology will use CUIs to construct the Class IDs.
     
 ```diff
-- Only 3 fields specified above
+! Only 3 fields specified above?
 ```
 
 In our configuration file, you can see the settings used by our production system. These are all the UMLS ontologies that are publicly available in BioPortal.

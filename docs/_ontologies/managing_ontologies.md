@@ -42,7 +42,7 @@ Categories and groups can be added using a console
 after logging into the Appliance as the ontoportal user.
 
 ```diff
-* This answer needs review to confirm its accuracy
+! This answer needs review to confirm its accuracy
 ```
 
 From the bash shell:
