@@ -55,11 +55,32 @@ There are two patterns for link referencing.
 
 Relative links use the position of the target document relative to the current document.
 When the target document is in the same directory as the current document, a relative link
-must use the parent as a reference.
+must use the parent as a reference, e.g., `href="../collocated_file_name"`, 
+otherwise the attempted resolution will be under the current file. 
 
+A second style is to use the entire path of the desired target, 
+using the site attributes to construct the absolution location, for example:
+```
+href="{{site.baseurl}}/general/architecture_reference"
+```
+This will resolve to the correct location of the site per the configuration file. 
+A similar pattern is used for the location of images, in case they should be moved:
+```
+href="{{site.baseurl}}/image_file_name"
+```
+
+(Jekyll expands the '/administration' at the beginning of those patterns 
+into the full URL of the site's administration directory.)
 
 ### Figures
 
+The pattern for a figure is as follows.
+```
+<figure>
+  <img src="{{site.baseimgs}}/ontoportal-architecture-ncbo-original.png" style="width:80%"/>
+  <figcaption>A simple component architecture of the OntoPortal system</figcaption>
+</figure>
+```
 
 ### Highlighted text
 
@@ -79,6 +100,7 @@ We use `diff` commenting to insert in-line comments for users to see.
 
 The key formats are:
 | Symbol | Effect | Used For |
+| - |   |  To Do |
 | ! |   |  To be provided |
 | * |   |   |
 | # |   |   |
@@ -87,8 +109,9 @@ The key formats are:
 
 ```Diff
 ! To be provided
-*
+* Must do this!
 #
+- check this out
 ```
 
 ## What else?
