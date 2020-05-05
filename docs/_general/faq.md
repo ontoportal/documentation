@@ -20,7 +20,7 @@ without also installing the core BioPortal software and ontologies.
 The OntoPortal source code delivered with the Virtual Appliance is released 
 under a 2-clause BSD license. 
 
-Software from other organizations, such as the Allegrograph graph database, 
+Software from other organizations, such as the AllegroGraph graph database, 
 is released using the license included with that software. 
 
 The software used to package the OntoPortal system for distribution 

@@ -45,7 +45,7 @@ The following software is included on the image as of version 3.0:
 * API services
 * RDF stores
   * 4store
-  * Allegrograph 
+  * AllegroGraph 
 
 ## What else?
 

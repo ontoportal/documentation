@@ -38,7 +38,7 @@ It contains a significant number of feature improvements and usability upgrades,
 and several adaptations targeting the deployers of public Appliance instances. 
 A major upgrade for further experimentation is the ability to test 
 a different RDF backend store, 
-as we offer Allegrograph compatibility for the first time in the 3.0 release.
+as we offer AllegroGraph compatibility for the first time in the 3.0 release.
 
 With the pending formal introduction of the [OntoPortal Alliance](https://ontoportalalliance.org),
 we created the [GitHub OntoPortal organization](https://github.com/ontoportal), 

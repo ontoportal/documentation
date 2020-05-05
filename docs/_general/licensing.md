@@ -21,14 +21,21 @@ Licenses are provided free to the following users:
 
 Companies who wish to deploy the Virtual Appliance, 
 and individuals working on commercial products, 
-are asked to contact us
-(for example, by registering at our [OntoPortal License Server](https://license.ontoportal.org)) to discuss the licensing terms.
+are asked to contact us to discuss the licensing terms.
+You can do so either by emailing our (public) 
+<a href="mailto:{{email-support}}">email support list</a>,
+or by pre-registering at our 
+[OntoPortal License Server](https://license.ontoportal.org). 
 Your registration request will be visible 
-only to  OntoPortal Virtual Appliance license managers, who will contact you.
+only to  OntoPortal Virtual Appliance license managers,
+who should take action within a working day.
+If there is a fee involved or you have provided a note with your request, 
+you will be contacted;
+otherwise we will simply issue the requested license.
 
-Any Allegrograph software shipped with the Appliance 
+Any AllegroGraph software shipped with the Appliance 
 is provided under its own licensing terms,
-which can be found at the [Allegrograph web site](https://allegrograph.com).
+which can be found at the [AllegroGraph web site](https://allegrograph.com).
 
 # License Implementation
 
@@ -43,37 +50,37 @@ before finalizing their license application.
 
 License certificates are obtained at the 
 [OntoPortal License Server](https://license.ontoportal.org]. 
-To obtain the final license certificate, the requestor must fill out a form,
-indicating the planned application type and provide the identifier (Appliance ID) 
-from their deployed system.
+To obtain the license certificate, the requestor must fill out a form
+on the license server which indicates the planned application type.
+In order to obtain the final license, the user
+must provide the Appliance ID identifier from their deployed system.
 Once the certificate is issued, its (encrypted) contents are 
 copied from the License Server 
 and pasted into a field in the `Licensing` tab 
 of the `Admin` page of OntoPortal software. 
 
-Whenever OntoPortal is operating, it checks for the existence of a current certificate.
+While OntoPortal operates, it checks for the existence of a current certificate.
 The certificate is validated by decrypting it 
 and confirming the correct Appliance ID and license end date, among other things.
-If the certificate is not present or is past its renewal, 
+If the certificate is not present, or has reached its expiration date, 
 an error message is displayed on each page.
-If the certificate will expire in the near future (currently a 30-day window),
-a warning message is displayed.
+If the certificate will expire within 30 days, a warning message is displayed.
 
 # Location of Open Source Software
 
 At this time, the source code provided as part of the 
 OntoPortal Virtual Appliance distribution
-is maintained in GitHub repositories under the BioPortal GitHub project 
-(https://github.com/ncbo). 
+is maintained in GitHub repositories under the 
+[BioPortal GitHub project](https://github.com/ncbo). 
 You are welcome to examine and reuse these repositories, 
 and can submit pull requests against them.
 
 Later in 2020, we plan for the [OntoPortal Alliance](https://ontoportal.org), 
-of which BMIR is a principal founding member, 
+of which BMIR is a principal and founding member, 
 to begin maintaining OntoPortal software in the dedicated 
-[OntoPortl GitHub project](https://github.com/ontoportal).
-We will make announcements on the OntoPortal Alliance web site as this content 
-becomes available. 
+[OntoPortal GitHub project](https://github.com/ontoportal).
+We will make announcements on the OntoPortal Alliance web site 
+as this content becomes available. 
 We expect the licensing approach for OntoPortal will not be affected by the
 OntoPortal Alliance support for the software.
 

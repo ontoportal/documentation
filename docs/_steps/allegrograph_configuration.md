@@ -1,19 +1,19 @@
 ---
-title: Allegrograph Configuration
+title: AllegroGraph Configuration
 layout: default
-description: Configuring your system to run Allegrograph
+description: Configuring your system to run AllegroGraph
 weight: 95
 status: Ready
 ---
 
-# Allegrograph Configuration
+# AllegroGraph Configuration
 
-These settings will configure your system to use Allegrograph RDF store 
+These settings will configure your system to use AllegroGraph RDF store 
 as its backend.
 
-## Replacing 4store with Allegrograph
+## Replacing 4store with AllegroGraph
 
-Your {{site.opva}} can use either 4store or (new with version 3.0) Allegrograph 
+Your {{site.opva}} can use either 4store or (new with version 3.0) AllegroGraph 
 as its RDF backend store. 
 The 4store is the default RDF store for the system, as we have much more experience with it to date. 
 
@@ -26,18 +26,18 @@ or be prepared to re-index your databases with each switch.
 
 ### What's included?
 
-We included a version of Allegrograph with your Appliance
+We included a version of AllegroGraph with your Appliance
 that is tested to work with this version of the Appliance.
-The included Allegrograph is not necessarily the most recent version of the Allegrograph software. 
+The included AllegroGraph is not necessarily the most recent version of the AllegroGraph software. 
 
-If you want to upgrade your Allegrograph software to the most recent version,
+If you want to upgrade your AllegroGraph software to the most recent version,
 you can obtain that from the Franz, Inc. website. 
 However, we can not guarantee the compatibility of the Appliance
-with the latest Allegrograph version.
+with the latest AllegroGraph version.
 
 ### How to switch the Configuration
 
-The Allegrograph was shipped in the distribution pre-configured to support 
+The AllegroGraph was shipped in the distribution pre-configured to support 
 the settings described here.
 
 Update the configuration file inside your Virtual Appliance (VA)
@@ -56,11 +56,11 @@ Update the configuration file inside your Virtual Appliance (VA)
 	    config.goo_path_data     = '/repositories/ontoportal/statements'
 	    config.goo_path_update   = '/repositories/ontoportal/statements'
 
-Restart your Virtual Appliance (see step 2 below). Your server is now pointing to Allegrograph as the backend. 
+Restart your Virtual Appliance (see step 2 below). Your server is now pointing to AllegroGraph as the backend. 
 
-## Obtaining and starting Allegrograph
+## Obtaining and starting AllegroGraph
 
-### 1. Install Allegrograph
+### 1. Install AllegroGraph
 
 If not already present in a current version, install the AllegroGraph (AG) server using the instructions on this page:
 
@@ -68,9 +68,9 @@ If not already present in a current version, install the AllegroGraph (AG) serve
 
 We recommend reviewing these instructions, which cover a number of different installation scenarios.
 
-### 2. Start Allegrograph
+### 2. Start AllegroGraph
 
-An example from this page of commands to start and stop Allegrograph:
+An example from this page of commands to start and stop AllegroGraph:
 
 ```
 Note that the last few lines of the script show how to start and stop AllegroGraph on your server. These lines will be similar to this example:
@@ -82,9 +82,9 @@ You can stop AllegroGraph by running:
 /sbin/service agraph stop 
 ```
 
-### 3. Navigate to Allegrograph console
+### 3. Navigate to AllegroGraph console
 
-Once Allegrograph is running, navigate to the AG Admin console. By default it runs on port 10035:
+Once AllegroGraph is running, navigate to the AG Admin console. By default it runs on port 10035:
 
 ```
 http://<your server name>:10035/#

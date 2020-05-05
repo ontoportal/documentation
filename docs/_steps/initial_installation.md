@@ -46,8 +46,13 @@ The results should look something like this 'vm' entry.
 When you press the Start button at the top of the displayed window, 
 a console window should open that shows the virtual environment's
 command environment. 
-During this bootup sequence, the {{site.opva}} software also starts running,
-and you will see the output associated with startup of the Appliance.
+
+At first you will see the virtual environment's log messages scrolling down 
+the screen, then a login prompt.
+
+Even if you do not try to log in at that point, the bootup sequence continues, 
+and the {{site.opva}} software also starts running.
+You will see the output associated with startup of the Appliance.
 Some details may differ if you are running a different Appliance version.
 
 <figure>
@@ -61,6 +66,13 @@ Make a note of this address so you can use it in later steps,
 or follow the instructions under 'Accessing the system' to obtain it.
 
 ## Changing default passwords
+
+You can enter a return key to see the prompt for your virtual environment.
+
+In VirtualBox, depending on your configuration of the system,
+it may behave 'oddly' in the way it captures the mouse once you enter keystrokes.
+Tap on the so-called "host key" (the left command key, in the Mac)
+to get the VirtualBox to release the mouse so you can select other windows.
 
 ### VMWare deployment
 
@@ -99,7 +111,7 @@ To get the local IP address from the virtual environment terminal:
 ```
 ip address show dev eth0 | awk '/inet / {print $2}' | cut -d/ -f1
 ```
-(The command before the first pipe shows 
+(The command before the first pipe, ending in 'eth0', shows 
 all the information about ethernet port called `eth0`.)
 
 #### AWS AMI information
@@ -117,11 +129,19 @@ so IP Address would not be displayed until those tools are installed.
 
 #### External IP address
 
-If you want to obtain the external IP address for your computer from the terminal, 
+If you want to obtain the external IP address for your computer 
+(how your computer is known to the outside network) from the terminal, 
 use this command:
 ```
 curl http://ipecho.net/plain; echo
 ```
+If your local IP is different than the external IP, 
+it means that your computer is installed 'behind' a network router, 
+and that you are sharing the external IP with at least one other device 
+(the router having its own IP address). 
+This is a common home networking configuration,
+and you do not need to worry about it 
+if you do not need other internet users to access your system.
 
 ### Accessing the web UI
 
@@ -139,8 +159,7 @@ REST services are available at the following location:
 For the AMS AWI installation, you can  SSH to the machine 
 using the username 'ec2-user' and your Amazon private key.
 
-
 ## Next step
 
 To configure your system's settings for your environment  
-proceed to the <a href="../initial_configuration">Initical Configuration</a> step.
+proceed to the <a href="../initial_configuration">Initial Configuration</a> step.
