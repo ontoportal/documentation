@@ -53,7 +53,7 @@ You will see the output associated with startup of the Appliance.
 Some details may differ if you are running a different Appliance version.
 
 <figure>
-  <img src="{{site.baseimgs}}/appliance-startup-window.png" style="width:100%"/>
+  <img src="{{site.baseimgs}}/appliance-startup-window.png" style="width:80%"/>
   <figcaption>Appliance startup process</figcaption>
 </figure>
 
