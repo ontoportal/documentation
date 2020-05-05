@@ -98,20 +98,24 @@ Bold is used sparingly to highly something particularly important.
 
 We use `diff` commenting to insert in-line comments for users to see.
 
+- issues, or must have content (red)
++ problem solved, or other notes (green)
+! needs review, or help wanted (orange)
+# to be added someday (gray) -- will keep in final docs
 The key formats are:
 | Symbol | Effect | Used For |
-| - |   |  To Do |
-| ! |   |  To be provided |
-| * |   |   |
-| # |   |   |
+| - | Red background |  To Do, Issue, Content Needed |
+| ! | Orange background  |  Needs Review, Help Wanted, To Be Provided |
+| + | Green background  | User Tip (stays), Problem Solved, Other Note (stays) |
+| # | Gray background  | Background Content (gray stays, once content added) |
 
 ### Examples
 
 ```Diff
-! To be provided
-* Must do this!
-#
-- check this out
+- Must do this! 
+! To be provided: this (and needs review)
++ The best way to do this is 
+# An interesting feature of this
 ```
 
 ## What else?
