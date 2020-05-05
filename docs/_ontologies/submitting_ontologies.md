@@ -72,5 +72,5 @@ Parsing progress is logged in the ontology submission repository folder: `/srv/n
 
 For further information about ontology parsing, 
 please see <a href="parseable_ontologies">Parseable Ontologies</a>
-and <a href="Troubleshooting Submissions">Troubleshooting Submissions</a>
+and <a href="troubleshooting_submissions">Troubleshooting Submissions</a>
 
