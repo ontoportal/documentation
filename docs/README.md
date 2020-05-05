@@ -66,8 +66,9 @@ href="{{site.baseurl}}/general/architecture_reference"
 This will resolve to the correct location of the site per the configuration file. 
 A similar pattern is used for the location of images, in case they should be moved:
 ```
-href="{{site.baseurl}}/image_file_name"
+src="{{site.baseimgs}}/image_file_name"
 ```
+See below for image formatting and captions.
 
 (Jekyll expands the '/administration' at the beginning of those patterns 
 into the full URL of the site's administration directory.)
@@ -97,12 +98,15 @@ Bold is used sparingly to highly something particularly important.
 ## Inserting visible comments
 
 We use `diff` commenting to insert in-line comments for users to see.
+To use this, put three backticks, followed immediately (no blank) by 'diff' 
+to specify the highlighting language.  
+Each line is then highlighted as a diff file would be.
+The closing 3 backticks follow the last line.
 
+The available formats are:
 
-
-The key formats are:
 | Symbol | Effect | Used For |
-| ~~~~~  | ~~~~~~ | ~~~~~~~~ |
+| ------ | ------ | -------- |
 | `-` | Red background | To Do, Issue, Content Needed |
 | `!` | Orange background  |  Needs Review, Help Wanted, To Be Provided |
 | `+` | Green background  | User Tip (stays), Problem Solved, Other Note (stays) |
