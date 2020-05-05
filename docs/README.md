@@ -13,7 +13,22 @@ This page describes key things to know about maintaining the Administration docu
 
 ## General approach using Jekyll
 
-A default CSS seems to be used that comes with the package.
+The markdown nominally supported for this documentation is kramdown
+(configured in the _config.yml page).
+
+A default CSS seems to be used that comes with the package. 
+So far there hasn't been time to make a more customized CSS work.
+
+
+Each of the top-level chapters in the documentation is a 'collection'. 
+Each collection has a main folder (e.g., 'general') 
+and a content folder prefixed with an underscore ('_general'). 
+Inside the main folder is the index page for that chapter;
+it contains introductory text, 
+and the jekyll code that organizes the presentation of the chapter's pages.
+
+In each collection, the order of the pages is driven by the value of the 'weight' 
+attribute—higher weights are lower in the ordered list presented to readers.
 
 ## Attribute expansion
 
@@ -27,12 +42,12 @@ For example, if we wanted to move the imgs folder elsewhere in the hierarchy,
 or the version number needed to be changed, 
 we can make the change in the _config.yml document to have it take effect site-wide.
 
-Attributes are also used within other patterns.
+Attributes are also used within other patterns (see next section).
 
-## Patterns
+## Style Manual and patterns
 
-There are several patterns used throughout that should work gracefully, 
-even if/when custom CSS is actually working and used.
+There are several styles and patterns used throughout the document. 
+Using these consistently for readability, and to make it easy to apply custom CSS.
 
 ### Link referencing
 
@@ -45,6 +60,18 @@ must use the parent as a reference.
 
 ### Figures
 
+
+### Highlighted text
+
+The document uses backticks (single back-apostrophes around an in-line string,
+or triple back-apostrophes before and after a block of text) for code, commands,
+and file names.
+
+References to specific terms are surrounded by 'plain single quotes'.
+
+Italics are used sparingly to indicate something unusual.
+
+Bold is used sparingly to highly something particularly important. 
 
 ## Inserting visible comments
 
