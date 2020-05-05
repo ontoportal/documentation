@@ -43,7 +43,7 @@ after logging into the Appliance as the ontoportal user.
 
 ```diff
 * This answer needs review to confirm its accuracy
-```diff
+```
 
 From the bash shell:
 
@@ -67,7 +67,7 @@ There is no user interface to perform this task.
 
 ```diff
 ! Why does GOO cache have to be enabled?
-```diff
+```
 
 #GOO CACHE must be enabled in settings.
 po = LinkedData::Models::Ontology.find("PO").first
