@@ -3,19 +3,16 @@ title: Initial Installation
 layout: default
 description: First steps to install your appliance
 weight: 20
-status: In progress
+status: Ready
 ---
 
-```diff
-- This page is not complete and is being updated.
-```
 
 # General Instruction
 
 You can supply the hostname (machine name) for the virtual machine 
 during the deployment process. 
 Our documentation refers to this hostname as 'my_appliance_hostname',
-in squiggly brackets (`{my_appliance_hostname}`) if in a command.
+in squiggly brackets (and `{my_appliance_hostname}` if in a command).
 
 These steps start your Appliance and set the Appliance ID. 
 
@@ -37,7 +34,7 @@ Use the File > Import menu command to load your Appliance file.
 The results should look something like this 'vm' entry.
 
 <figure>
-  <img src="{{site.baseurl}}/assets/imgs/imported-virtual-appliance-in-virtualbox.png" style="width:80%"/>
+  <img src="{{site.baseimgs}}/imported-virtual-appliance-in-virtualbox.png" style="width:80%"/>
   <figcaption>Imported Appliance in VirtualBox</figcaption>
 </figure>
 
@@ -56,7 +53,7 @@ You will see the output associated with startup of the Appliance.
 Some details may differ if you are running a different Appliance version.
 
 <figure>
-  <img src="{{site.baseurl}}/assets/imgs/appliance-startup-window.png" style="width:100%"/>
+  <img src="{{site.baseimgs}}/appliance-startup-window.png" style="width:100%"/>
   <figcaption>Appliance startup process</figcaption>
 </figure>
 

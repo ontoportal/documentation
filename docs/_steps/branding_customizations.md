@@ -38,7 +38,7 @@ where many elements adopt the parent color.
 (Note this screenshot reflects a pre-3.0-release interface technology.)
 
 <figure>
-  <img src="{{site.baseurl}}/assets/imgs/agroportal-color-scheme-2020.png" style="width:100%"/>
+  <img src="{{site.baseimgs}}/agroportal-color-scheme-2020.png" style="width:100%"/>
   <figcaption>An example of elements that can be colored for the theme</figcaption>
 </figure>
 
@@ -59,6 +59,6 @@ For example to add your own custom logo and change the color of the header.
 You may use the following OntoPortal logo if it helps. 
 (We will be adding some more logos, please contact us for details.)
 <figure>
-  <img src="{{site.baseurl}}/assets/imgs/OntoPortal-Logo-Circle.png"/>
+  <img src="{{site.baseimgs}}/OntoPortal-Logo-Circle.png"/>
   <figcaption>The OntoPortal logo</figcaption>
 </figure>
