@@ -26,6 +26,12 @@ There is a test page that you can use to see how the various widgets work.
 http://{my_appliance_ip_or_my_appliance_hostname}/test/widgets/form_autocomplete.html
 ```
 
+## OntoPortal Utilities
+
+OntoPortal offers a set of scripts for benchmarking and troubleshooting issues with your installation of OntoPortal. The source code and documenation is located here:
+
+https://github.com/ncbo/ontoportal_utilities
+
 ## Ontology API Tester
 
 ```Diff
