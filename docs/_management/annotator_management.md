@@ -190,10 +190,9 @@ The core services are provided by http://services.data.bioportal.lirmmr.fr.
 ! This section needs review to confirm its accuracy (services included in 1 & 3?)
 ```
 
-* The proxy is available at https://services.data.{my-appliance-hostname} 
-* The AnnotatorPlus is found at https://{my-appliance-hostname}/annotatorplus
-* The API is found at https://services.data.{my-appliance-hostname}:8080/annotatorplus
+* The AnnotatorPlus is found at http://{my-appliance-hostname}/annotatorplus
+* The API is found at http://{my-appliance-hostname}:8080/annotatorplus
  
-Note that the AnnotatorPlus documentation has not been updated in the OntoPortal online documentation page at https://data.{my-appliance-hostname}/documentation.
+Note that the AnnotatorPlus documentation has not been updated in the OntoPortal online documentation page at http://{my-appliance-hostname}:8080/documentation.
 
 There is more detailed documentation in the [publication supplement](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5972606/bin/bty009_supplement_bioinf-2017-1427.r2-3.pdf)  which is pointed to by the [main paper about this capability](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5972606/).
