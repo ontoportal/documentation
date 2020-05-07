@@ -74,7 +74,7 @@ to get the VirtualBox to release the mouse so you can select other windows.
 ### VMWare deployment
 
 Virtual Operating System
-* Username: root
+* Username: centos
 * Password: Ontoportal  
 
 You are then prompted to enter your own virtual OS password on the first boot—
@@ -89,9 +89,9 @@ OntoPortal Admin User
 
 ### AWS AMI deployment
 
-For the AWS AMI, the Operating System root password is provided by the cloud administration process.
+For the AWS AMI, the Operating System SSH login is centos
 
-For the AWS AMI, the default OntoPortal application administrator is 'admin' and the initial password is the AMI Instance ID.
+For the AWS AMI, the default OntoPortal application administrator is 'admin' and the initial password is the Instance ID of the ec2 instance.
 
 ## Accessing the system
 
@@ -154,7 +154,7 @@ REST services are available at the following location:
 ### Accessing the operating system via ssh
 
 For the AMS AWI installation, you can  SSH to the machine 
-using the username 'ec2-user' and your Amazon private key.
+using the username 'centos' and your Amazon private key.
 
 ## Next step
 
