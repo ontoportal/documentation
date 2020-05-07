@@ -30,7 +30,7 @@ look up the corresponding class information.
   * Then the dictionary.txt file is created from the annotator cache
 * To annotate text, the Annotator ruby lib (https://github.com/ncbo/ncbo_annotator):
   * The annotator calls mgrep on port 5555 
-  * Mgrep retrieves the mgrep ID (first column) from /srv/mgrep/dictionary/dictionary.txt 
+  * Mgrep retrieves the mgrep ID (first column) from /srv/ontoportal/data/mgrep/dictionary/dictionary.txt 
   * Redis use the mgrep ID to retrieve the class URI and other data (PREF or SYN, ontology URI)
 
 ## Operations
