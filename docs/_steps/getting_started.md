@@ -33,13 +33,13 @@ in order to complete the installation process.
 
 ## Obtaining the {{site.opva}}
 
-The {{site.opva}} is available in a VMWare-compatible Open Virtualization Format (OVF),
+The {{site.opva}} is available in a VMWare-compatible Open Virtual Appliance (OVA),
 or as an Amazon Machine Instance (AMI) from Amazon Web Services (AWS).
 Each of the methods is described below.
 
 ### VMWare Version
 
-To obtain the Appliance in an Open Virtualization Format (OVF), 
+To obtain the Appliance in an Open Virtual Appliance (OVA), 
 you will need a BioPortal account.
 If you don't have a BioPortal account, you can <a href="http://bit.ly/bioportal-account">create one</a>.
 
@@ -47,13 +47,7 @@ Once you have your BioPortal account, log in to BioPortal and then
 visit the [Virtual Appliance page](https://bioportal.bioontology.org/virtual_appliance). 
 You will see the download on this page.
 
-The download is provided as a zip archive containing several files. 
-Unpack the files using a zip unpacking tool for your operating system.
-
-One of the files in the download is an Open Virtualization Format (OVF) file.
-You may need to 
-<a href="../virtualization_environments">convert this file 
-for your virtualization environment</a>.
+OVA file can be deployed directly into your Virtualization Platform.
 
 ### Amazon AWS AMI
 
