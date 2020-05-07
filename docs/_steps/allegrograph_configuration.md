@@ -3,7 +3,7 @@ title: AllegroGraph Configuration
 layout: default
 description: Configuring your system to run AllegroGraph
 weight: 95
-status: Ready
+status: NOT READY
 ---
 
 # AllegroGraph Configuration
