@@ -14,10 +14,10 @@ is provided as open source content on a GitHub repository
 
 The *packaging* we use to create the Virtual Appliance is not open source,
 and to use this packaged appliance you must obtain a license. 
-Licenses are provided free to the following users:
-* individual users for their own research,
-* non-profit organizations, and 
-* educational institutions. 
+**Licenses are provided free to the following users**:
+* **individual users** for their own research,
+* **non-profit organizations**, and 
+* **educational institutions**. 
 
 Companies who wish to deploy the Virtual Appliance, 
 and individuals working on commercial products, 
