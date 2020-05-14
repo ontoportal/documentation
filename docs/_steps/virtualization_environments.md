@@ -9,8 +9,8 @@ status: Ready
 # Virtualization Environments
 
 OntoPortal OVF works in virtualization environments such as 
-VMware, VirtualBox, KVM
-Instructions for each of these are provided below.
+VMware and VirtualBox. It may also work with KVM, but this has not been tested with {{site.opva_version}}.
+Brief instructions for each of these are provided below.
 
 ## VMware
 You can import OVA Template from previously downloaded ova file or you can import it directly from the URL into your VMware product. 
