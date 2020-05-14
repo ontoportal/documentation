@@ -39,6 +39,8 @@ which can be found at the [AllegroGraph web site](https://allegrograph.com).
 
 # License Implementation
 
+(See above for all the people who get free licenses!)
+
 The OntoPortal Virtual Appliance requires a current license certificate 
 for licensed operation. Without a current certificate, 
 reminders appear at the top of most pages in the repository. 
@@ -49,7 +51,7 @@ and the user is expected to download and start the Appliance
 before finalizing their license application.
 
 License certificates are obtained at the 
-[OntoPortal License Server](https://license.ontoportal.org]. 
+[OntoPortal License Server](https://license.ontoportal.org). 
 To obtain the license certificate, the requestor must fill out a form
 on the license server which indicates the planned application type.
 In order to obtain the final license, the user
