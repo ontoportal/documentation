@@ -40,7 +40,7 @@ which should allow the machine to be used in a variety of environments.
 Another image is available as an Amazon Web Services Amazon Machine Instance,
 allowing for rapid deployment. 
 
-The operating system is CentOS 7.7 64-bit running:
+The operating system is CentOS 7.8 64-bit running:
 * Apache, Tomcat, memcached, redis (EPEL install)
 * MariaDB (EPEL install)
 * Solr 8.2
