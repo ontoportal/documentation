@@ -57,9 +57,8 @@ Some details may differ if you are running a different Appliance version.
   <figcaption>Appliance startup process</figcaption>
 </figure>
 
-Near the end of that process, the running Appliance displays its IP address 
-where it can be accessed on your computer. 
-Make a note of this address so you can use it in later steps,
+Near the end of that process, the running Appliance displays its initial IP address
+on the console screen.  Make a note of this address so you can use it in later steps,
 or follow the instructions under 'Accessing the system' to obtain it.
 
 ## Changing default passwords
@@ -121,8 +120,8 @@ using the Public IP Addresses or Public DNS.
 #### Vmware Appliance information
 
 Check 'IP Addresses' on the summary page of the virtual environment. 
-Please note that Virtual Appliance does not come with vmware tools installed,
-so IP Address would not be displayed until those tools are installed.
+Please note that Virtual Appliance comes with vmware guest tools installed,
+so IP Address should be displayed in the vm summary menu.
 
 #### External IP address
 
