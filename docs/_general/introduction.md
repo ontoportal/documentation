@@ -47,7 +47,7 @@ The following software is included on the image as of version 3.0:
   * 4store
   * AllegroGraph 
 * Application Stack:
-  * CentOS
+  * CentOS 7
   * Apache HTTPD server
   * Nginx
   * Tomcat
