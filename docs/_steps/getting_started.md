@@ -52,7 +52,7 @@ OVA file can be deployed directly into your Virtualization Platform.
 ### Amazon AWS AMI
 
 For users who want to run their OntoPortal instance on Amazon Web Service cloud, 
-an Amazon Machine Instance (AMI) is available on the [BioOntology AWS Market Place](https://aws.amazon.com/marketplace/seller-profile/ref=dtl_pcp_sold_by?ie=UTF8&id=76948a46-8f8a-4a68-9a5c-3e3ff6b82d10). 
+an Amazon Machine Instance (AMI) is available on the Publishing Pending [OntoPortal Alliance AWS Market Place(https://aws.amazon.com/marketplace/pp/B088NYWLSQ).
 
 ## Next steps
 
