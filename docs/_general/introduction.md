@@ -25,7 +25,7 @@ The OntoPortal Virtual Appliance image contains
 a pre-installed, pre-configured version 
 of the OntoPortal open source software running on a Linux operating system.
 
-It is available as a VMWare Virtual Appliance OVF, as well as an Amazon Web Service AMI, 
+It is available as a VMWare Virtual Appliance OVA, as well as an Amazon Web Service AMI, 
 and can be obtained by following the <a href="../../steps/getting_started">Getting Started</a> section in this manual.
 
 ## What's included?
@@ -46,6 +46,16 @@ The following software is included on the image as of version 3.0:
 * RDF stores
   * 4store
   * AllegroGraph 
+* Application Stack:
+  * CentOS
+  * Apache HTTPD server
+  * Nginx
+  * Tomcat
+  * Redis
+  * MariaDB
+  * Solr
+  * mgrep
+  * memcache
 
 ## What else?
 
