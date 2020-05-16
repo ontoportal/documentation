@@ -12,20 +12,20 @@ This is an advanced reference document on the ncbo-cron utility.
 
 # Debug Cron Job
 
-* The code is deployed to /srv/ncbo/ncbo_cron. 
+* The code is deployed to /srv/ontoportal/ncbo_cron. 
 * There is a log for the scheduler under logs/scheduler.log. 
   * Each ontology gets its own log under the ontology’s repo folder,
-  * /srv/ncbo/share/env/prod/repository/GO/1307/gene_ontology_edit.obo_parsing.log. 
+  * /srv/ontoportal/data/repository/STY/1/STY_parsing.log. 
   * This file name is output to the scheduler.log file when parsing starts.
 * Useful log file greps:
 
 ```
 # get a list of new ontology submissions
-grep 'new submission' /var/lib/ncbo-deployer/ncbo_cron/logs/scheduler-pull.log
+grep 'new submission' /srv/ontoportal/ncbo_cron/logs/scheduler-pull.log
 # get a list of errors
-grep 'ERROR' /var/lib/ncbo-deployer/ncbo_cron/logs/scheduler-pull.log
+grep 'ERROR' /srv/ontoportal/ncbo_cron/logs/scheduler-pull.log
 # get a list of errors with 20 lines of traceback for each
-grep -A20 'ERROR' /var/lib/ncbo-deployer/ncbo_cron/logs/scheduler-pull.log
+grep -A20 'ERROR' /srv/ontoportal/ncbo_cron/logs/scheduler-pull.log
 ```
 
 # Run ncbo-cron jobs
