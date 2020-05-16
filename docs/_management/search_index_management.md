@@ -17,20 +17,18 @@ The search index is maintained continuously in Solr.
 When an ontology is submitted, the ontology is re-indexed, 
 and the new index entries replace the existing index entries for that ontology.
 
-If the whole index becomes corrupted, all the ontologies must be re-indexed.
+Re-indexing of individual ontologies can be initiated via OntoPortal web Admin interface and it can also be done from linux command line interface.  If the whole index becomes corrupted or if solr schema is changed then all the ontologies must be re-indexed.
 
 ## Access to the solr index
-solr runs on port 8983; however, that port is blocked by local firewall so accessing it requires to do ssh port fowarding or port map if you are running appliance on your workstation. 
-```
-http://localhost:8983/solr
-```
+Solr should not be be access directly exept for troubleshooting or administrative purposes. 
+solr runs on port 8983 which is blocked by local firewall because it not inteded to be accessed directly.  Most of the typical solr administrative operation can be accomplished from the appliance console using solr API.  If you need to acces solr web admin interface from outside of the applince then you will need to set ssh port fowarding. 
+
 ### About the solr cores
 
 There are 4 index cores:
 * term_search_core1 is used for term searching operations
 * prop_search_core1 is used for propery searching operations
 * term_search_core2 and prop_search_core2 are secondary non-active cores which can be optionaly used for reindexing all ontologies from scratch without interrupting search operations in OntoPortal.
-
 
 
 ## Re-indexing
@@ -42,7 +40,7 @@ sudo su - ontoportal
 cd /srv/ontoportal/ncbo_cron
 bin/ncbo_ontology_index -a -l logs/reindexing_all.log
 ```
-Re-indexing of all ontologies process removes existing index and starts populating it from scratch.  During this time Appliance search operations will not work as expected because of the incomplete data until it is fully populated.  If you have a large ammount of ontologies and unable to take site down for maitanence then you have an option to re-index all ontologies using alternate core and swap cores after after re-indexing is complete.
+Re-indexing of all ontologies process deletes all data from the index and starts populating it from scratch.  During this time Appliance search operations will not work as expected because of the incomplete data until it is fully populated.  If you have a large ammount of ontologies and unable to take site down for maitanence then you have an option to re-index all ontologies using alternate core and swap cores after after re-indexing is complete.
 
 The first step is to re-index all ontologies using secondary core:
 ```
