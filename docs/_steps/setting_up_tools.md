@@ -12,6 +12,10 @@ In these instructions, replace the '{my_appliance_ip_or_my_appliance_hostname}' 
 
 ## Setting up the widgets
 
+```diff
+! Verify these instructions are still correct.
+```
+
 In addition to the existing widget instructions on your Appliance's Widgets tab, 
 you must include an additional Javascript variable 
 in order to have the widgets communicate with your instance of the Virtual Appliance.
@@ -28,18 +32,9 @@ http://{my_appliance_ip_or_my_appliance_hostname}/test/widgets/form_autocomplete
 
 ## OntoPortal Utilities
 
-OntoPortal offers a set of scripts for benchmarking and troubleshooting issues with your installation of OntoPortal. The source code and documenation is located here:
+OntoPortal offers a set of scripts for benchmarking and troubleshooting issues with your installation of OntoPortal. The source code and documentation is located here:
 
 https://github.com/ncbo/ontoportal_utilities
 
-## Ontology API Tester
-
-```Diff
-! To be provided
-```
-
-## Setting up ncbo-cron environment
-
-```Diff
-! To be provided
-```
+You may need to tweak the software to make it work in your environment, 
+for example if you need two different API keys to access two different systems.
