@@ -44,33 +44,44 @@ This allows the cache to be updated without interrupting the Annotator service.
 
 To get the prefix used by the annotator in Redis:
 ```
-redis-cli -h localhost -p 6379 
-
-  6379> get current_instance
+[ontoportal@appliance ~]$ redis-cli get current_instance
+"c1:"
 ```
 
 To change the prefix used by the annotator in Redis:
 ```
-6379> set current_instance "c1:"
+[ontoportal@appliance ~]$ redis-cli set current_instance "c2:"
 ```
 
 #### Totally clear the cache (optional)
-
+```diff
+! This section needs review.  
+! is this still applicable since we can automatically remove existing cache when generating cache with --remove-cache
+! if not then
+! to clear cache is it sufficient to remove c1:terms:* or do we need to clear c1:*?
+! if we remove c1:* then we would need to re-create current_instance which adds extra step 
+```
 Clearing the cache is not required each time, 
 but it can be useful if you have old annotations 
 (derived from concepts from deleted submissions) that won't go away.
 
-Clearing the cache will also delete the "current_instance", so you will have to set it.
-That means you may want to get the current prefix (described above) before you start.
 ```
-redis-cli -h localhost -p 6379 
+[ontoportal@appliance ~]$ redis-cli get current_instance
+"c1:"
+[ontoportal@appliance ~]$ redis-cli --scan --pattern c1:* | xargs redis-cli del
+(integer) 129
+```
+Clearing the cache will also delete the "current_instance", so you will have to set it:
+```
+[ontoportal@appliance ~]$ redis-cli set current_instance "c1:"
+OK
 
-  6379> flushall
-  6879> set current_instance "c1:"
 ```
 
 ### Set up configuration files
-
+```diff
+! This section needs review 
+```
 Running the generate cache cron job will create new entries in Redis 
 using the prefix defined in the config file with `annotator_redis_alt_prefix`
 
@@ -90,9 +101,11 @@ Annotator.config do |config|
 ```
 
 ### Generate the Redis cache and dictionary for all ontologies
-
+```diff
+! This section needs review 
+```
 The following ncbo_cron job will generate the annotator cache in Redis, 
-then generate the dictionary used by mgrep (in `/srv/mgrep/dictionary/dictionary.txt`).
+then generate the dictionary used by mgrep (in `/srv/ontoportal/data/mgrep/dictionary/dictionary.txt`).
 
 Be careful! It is using the _annotator_redis_alt_prefix_ to generate the cache, 
 but the Redis _current_instance_ to generate the dictionary.
@@ -100,20 +113,22 @@ So if you are doing a total refresh of the cache and dictionary
 (after a flushall for example) 
 you will have to define the same prefix in Redis current_instance and in config.annotator_redis_alt_prefix.
 
-Then run the following command from the ncbo_cron project (`/srv/ncbo/ncbo_cron`):
+Then run the following command from the ncbo_cron project (`/srv/ontoportal/ncbo_cron`):
 
 ```
-bin/ncbo_ontology_annotate_generate_cache -a -r -d -l logs/all_cache.log
+[ontoportal@appliance ncbo_cron]bin/ncbo_ontology_annotate_generate_cache -a -r -d -l logs/all_cache.log
 ```
 
 It will generates an entry in Redis like this : `c1:term:-1762481778059933889`. 
 To check for it in Redis:
 ```
-redis-cli
-  6379> keys c1:term:*
+[ontoportal@appliance ~]$ redis-cli keys c1:term:*
+  1) "c1:term:-6548957943476862587"
+  2) "c1:term:-2190092711777781258"
+  3) "c1:term:-8823641121882305483"
 ```
 
-Restart mgrep with `service mgrep restart` or do a `bprestart` _check name_
+Restart mgrep with `sudo systemdctl restart mgrep` or do a `sudo oprestart` to restart the whole stack
 
 The annotator should be updated!
 
@@ -137,7 +152,9 @@ Also re-generate the dictionary for the terms prefixed by current_instance. This
 ### Generate the dictionary only
 
 To generate the dictionary from the Redis cache (terms prefixed with Redis current_instance):
-
+```diff
+! This section needs review 
+```
 ```
 /srv/ncbo/ncbo_cron/bin/ncbo_ontology_annotate_generate_dictionary
 ```
@@ -163,7 +180,7 @@ mgrep    27924     1  0 Jan27 ?        00:00:00 /usr/local/mgrep-4.0.2/mgrep --p
 You can run queries against the mgrep directly, using a telnet connection to the mgrep server
 
 ```
-telnet my-bioportal-vm 55555
+telnet localhost 55555
   ANY entity
 ```
 
