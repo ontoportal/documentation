@@ -40,7 +40,7 @@ look up the corresponding class information.
 #### Using a Redis prefix
 
 When caching data about a concept Redis use a prefix. 
-This allows the cache to be updated without interrupting the Annotator service.
+This allows the cache to be rebuild from scratch using secondary prefix without interrupting the Annotator service using primary prefix.
 
 To get the prefix used by the annotator in Redis:
 ```
@@ -55,9 +55,9 @@ To change the prefix used by the annotator in Redis:
 
 #### Totally clear the cache (optional)
 ```diff
-! This section needs review.  
-! is this still applicable since we can automatically remove existing cache when generating cache with --remove-cache
-! if not then
+! this section needs review
+! manually clearing cache is absolutley not nessesary because it can be cleared with `--remove-cache' during cache generation.
+! it could be useful for purging unneeded secondary caches to reduce memory utilization. 
 ! to clear cache is it sufficient to remove c1:terms:* or do we need to clear c1:*?
 ! if we remove c1:* then we would need to re-create current_instance which adds extra step 
 ```
@@ -68,7 +68,7 @@ but it can be useful if you have old annotations
 ```
 [ontoportal@appliance ~]$ redis-cli get current_instance
 "c1:"
-[ontoportal@appliance ~]$ redis-cli --scan --pattern c1:* | xargs redis-cli del
+[ontoportal@appliance ~]$ redis-cli --scan --pattern c2:* | xargs redis-cli del
 (integer) 129
 ```
 Clearing the cache will also delete the "current_instance", so you will have to set it:
@@ -156,7 +156,7 @@ To generate the dictionary from the Redis cache (terms prefixed with Redis curre
 ! This section needs review 
 ```
 ```
-/srv/ncbo/ncbo_cron/bin/ncbo_ontology_annotate_generate_dictionary
+/srv/ontoportal/ncbo_cron/bin/ncbo_ontology_annotate_generate_dictionary
 ```
 
 ## Troubleshooting the Annotator
