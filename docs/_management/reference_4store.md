@@ -43,10 +43,10 @@ http://data.bioontology.org/metadata/Reply
 
 ### Dump the graphs
 
-Run this command to export (dump) the metadata graphs.
+Run this command to export (dump) the metadata graphs from the 4store repo at `my_4store_repo`:
 
 ```
-4s-dump http://ncboprod-4store1:8080/sparql/ -f metadata_graphs
+4s-dump http://{my_4store_repo}:8080/sparql/ -f metadata_graphs
 ```
 
 `4s-dump` is a remote command that can run while 4s-httpd is active. 
@@ -58,7 +58,7 @@ For the given set of metadata graphs the command runs in 20 seconds on BioPortal
 
 ### Restore the graphs
 
-To restore the metadata graphs:
+To restore the metadata graphs (assumes your 4store utilities live in /usr/local/bin):
 
 * Move the data folder to the master node
 * Shut down the `4s-httpd` but leave the backend nodes running.
