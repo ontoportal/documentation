@@ -17,11 +17,11 @@ The search index is maintained continuously in Solr.
 When an ontology is submitted, the ontology is re-indexed, 
 and the new index entries replace the existing index entries for that ontology.
 
-Re-indexing of individual ontologies can be initiated via OntoPortal web Admin interface and it can also be done from linux command line interface.  If the whole index becomes corrupted or if solr schema is changed then all the ontologies must be re-indexed.
+Re-indexing of individual ontologies can be initiated via OntoPortal web Admin interface and it can also be done from the linux command line interface on the Appliance.  If the whole index becomes corrupted or if solr schema is changed then all the ontologies must be re-indexed.
 
 ## Access to the solr index
-Solr should not be be access directly exept for troubleshooting or administrative purposes. 
-solr runs on port 8983 which is blocked by local firewall because it not inteded to be accessed directly.  Most of the typical solr administrative operation can be accomplished from the appliance console using solr API.  If you need to acces solr web admin interface from outside of the applince then you will need to set ssh port fowarding. 
+
+Solr runs on port 8983 which is blocked by local firewall because it not inteded to be accessed directly.  Most of the typical solr administrative operation can be accomplished from the appliance console using solr API.  If you need to acces solr web admin interface from outside of the applince then you would need to set ssh port fowarding. 
 
 ### About the solr cores
 
