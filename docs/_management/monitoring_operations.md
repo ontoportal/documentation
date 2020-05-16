@@ -23,9 +23,6 @@ along with the monitoring types they support. Details of each system are below.
 4. Google Analytics (status)
 5. StatusCake (events, status)
 6. ELK (status)
-7. OpsView (status)
-8. awstats (status)
-9. cacti 
 
 ## Recommended configuration
 
@@ -127,28 +124,3 @@ BioPortal used this system extensively, and valued it highly
 for providing a real-time view of system performance.
 Unfortunately it requires thoughtful configuration
 and we have not been able to maintain its configuration recently.
-
-Example logs that are useful for ELK Stash to process:
-
-* API:  /srv/ncbo/ontologies_api/shared/log/unicorn.stderr.log
-* UI:  /var/log/httpd/bioportal_ui_log
-* 4store: /var/log/4store/query-ontologies_api.log
-
-A useful ELK Stash dashboard is [4 store slow queries](http://ncbo-logstash1.stanford.edu/app/kibana#/dashboard/4store_slow_queries).
-
-### Other useful logging
-
-Other logs useful for the OntoPortal software include:
-
-#### 7. OpsView (http://opsview.com)
-
-Offers integrated configuration and display of the Nagios system 
-(among dozens of others that could be integrated). 
-
-#### 8. awstats
-
-API web traffic statistics.
-
-#### 9. cacti 
-
-_To be provided._
