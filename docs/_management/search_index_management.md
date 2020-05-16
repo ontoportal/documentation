@@ -20,53 +20,52 @@ and the new index entries replace the existing index entries for that ontology.
 If the whole index becomes corrupted, all the ontologies must be re-indexed.
 
 ## Access to the solr index
-
-The solr index is hosted by the tomcat on port 8082. To access it visit:
+solr runs on port 8983; however, that port is blocked by local firewall so accessing it requires to do ssh port fowarding or port map if you are running appliance on your workstation. 
 ```
-http://{my-appliance-hostname}:8082/solr
+http://localhost:8983/solr
 ```
 ### About the solr cores
 
-There are 2 index cores:
-* core1 is used for searching operations
-* core2 is used during reindexing 
+There are 4 index cores:
+* term_search_core1 is used for term searching operations
+* prop_search_core1 is used for propery searching operations
+* term_search_core2 and prop_search_core2 are secondary non-active cores which can be optionaly used for reindexing all ontologies from scratch without interrupting search operations in OntoPortal.
 
-By using core2 during re-indexing, the search can continue working while re-indexing, 
-even if re-indexing all the ontologies in OntoPortal.
 
-To swap the 2 cores:
-* Go to core admin tab
-* Select core1
-* Hit the "Swap" button
 
 ## Re-indexing
 
 ### Re-index all ontologies
 
-The first step is to re-index all ontologies using core 2:
 ```
-bin/ncbo_ontology_index -a -l logs/reindexing_all.log -c http://{my-appliance-hostname}:8082/solr/core2
+sudo su - ontoportal
+cd /srv/ontoportal/ncbo_cron
+bin/ncbo_ontology_index -a -l logs/reindexing_all.log
 ```
-Re-indexing in core2 allows the Appliance search to continue working during the reindexing. 
+Re-indexing of all ontologies process removes existing index and starts populating it from scratch.  During this time Appliance search operations will not work as expected because of the incomplete data until it is fully populated.  If you have a large ammount of ontologies and unable to take site down for maitanence then you have an option to re-index all ontologies using alternate core and swap cores after after re-indexing is complete.
 
-After indexing, swap the cores (see 'About the solr cores' above).
+The first step is to re-index all ontologies using secondary core:
+```
+sudo su - ontoportal
+cd /srv/ontoportal/ncbo_cron
+bin/ncbo_ontology_index -a -l logs/reindexing_all.log -c http://localhost:8983/solr/term_search_core2
+
+```
+then swap cores after reindexing process is complete:
+```
+curl 'http://localhost:8983/solr/admin/cores?action=SWAP&core=term_search_core1&other=term_search_core2'
+```
+[Sorl Referende for swapping cores](https://lucene.apache.org/solr/guide/8_2/coreadmin-api.html#CoreAdminAPI-Input.4)
+
  
 ### Re-index specified ontologies
 
 You can re-index specific ontologies you specify. 
-The following example performs the operation in core2:
 
 ```
-bin/ncbo_ontology_index -o STY,SNOMED -l logs/reindexing_STY_SNOMED.log -c http://{my-appliance-hostname}:8082/solr/core2
+bin/ncbo_ontology_index -o STY,SNOMED -l logs/reindexing_STY_SNOMED.log
 ```
 
-```diff
-! How does the reindexed ontology get into core1?
-```
-
-## Reinstalling solr
-
-Instructions for re-installing Solr can be found in the [Solr Reference](../reference_solr) page.
 
 
 
