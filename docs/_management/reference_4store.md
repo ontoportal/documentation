@@ -46,7 +46,7 @@ http://data.bioontology.org/metadata/Reply
 Run this command to export (dump) the metadata graphs from the 4store repo at `my_4store_repo`:
 
 ```
-4s-dump http://{my_4store_repo}:8080/sparql/ -f metadata_graphs
+4s-dump http://localhost:8081/sparql/ -f metadata_graphs
 ```
 
 `4s-dump` is a remote command that can run while 4s-httpd is active. 
