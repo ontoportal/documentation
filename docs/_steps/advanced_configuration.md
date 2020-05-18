@@ -37,13 +37,29 @@ located in the distribution at
 
 Please note that both of those files import the `site_config.rb` file.
 
-## Deploying the code (running the Appliance)
+## Deploying the UI and API code
 
 Once the necessary configuration adjustments are made, 
 run the Appliance as follows:
 
 ```
-sudo su - ontoportal /srv/ontoportal/virtual_appliance/deployment/
+[centos@appliance ]$ sudo su - ontoportal
+[ontoportal@appliance ]$ cd /srv/ontoportal/virtual_appliance/deployment/
+[ontoportal@appliance deployment]$ ./setup_deploy_env.sh
+Setting up deployment environment
+Setting up deployment env for UI
+Cloning into 'bioportal_web_ui'...
+remote: Enumerating objects: 557, done.
+remote: Counting objects: 100% (557/557), done.
+...
+...
+HEAD is now at 751e2b9... Gemfile.lock update
+/srv/ontoportal/virtual_appliance/deployment
+[ontoportal@appliance deployment]$ ./deploy_api.sh
+[ontoportal@appliance deployment]$ ./deploy_ncbo_cron.sh
+[ontoportal@appliance deployment]$ ./deploy_ui.sh
+[ontoportal@appliance deployment]$ sudo oprestart
+
 ```
 
 ## Updating the deployment scripts
