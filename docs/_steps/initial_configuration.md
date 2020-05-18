@@ -25,15 +25,6 @@ The detailed ontology submission process is described in the <a href="../../onto
 
 To start, since you don't have any non-administration accounts, you can add an ontology using the OntoPortal Admin User at `http://{ip_address_of_appliance}/ontologies/new`.
 
-### Enabling automated ontology parsing
-
-The ncbo_cron project is configured to automatically process new ontologies every 5 minutes To see the status, stop the scheduled activities, and restart the schedule (respectively), do the following:
-
-```
-sudo systemctl status ncbo_cron
-sudo systemctl stop ncbo_cron
-sudo systemctl start ncbo_cron
-```
 
 ## Enabling emails
 
