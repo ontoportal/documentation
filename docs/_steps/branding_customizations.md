@@ -74,12 +74,15 @@ Set .navbar background color in bioportal.scss to the value you need.
  and modify line containing `tagline: your ontology repository for your ontologies`
  
 ### 1. Update footer
-1. Copy existing footer from <> to 
+1. Copy original footer from
+`/srv/ontoportal/virtual_appliance/deployment/bioportal_web_ui/views/application/./views/_footer_appliance.html.haml` to
+`/srv/ontoportal/virtual_appliance/appliance_config/bioportal_web_ui/views/application/./views/_footer_appliance.html.haml`
+
+if `/srv/ontoportal/virtual_appliance/deployment/bioportal_web_ui/` is not present then you would need to set up deployment environment by running ./setup_deploy_env.sh
 
 ### 1. Run deployment
 
-Deployment process described in 
-
+Deployment process described in <a href="advanced_configuration">Advanced Configuration</a> 
 
 
 ## Do you have some artwork I can use?
