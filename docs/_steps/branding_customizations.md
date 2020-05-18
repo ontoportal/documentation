@@ -59,7 +59,6 @@ $REST_PORT = '8080'
 $REST_URL_PREFIX = 'http://appliance.ontoportal.org'
 $UI_HOSTNAME = 'appliance.ontoportal.org'
 $SITE = 'Demo OntoPortal Appliance'
-[centos@appliance ]$ cd /srv/ontoportal/virtual_appliance
 
 ```
 
