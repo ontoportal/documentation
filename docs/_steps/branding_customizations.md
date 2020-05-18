@@ -26,9 +26,8 @@ views of your OntoPortal Appliance content.
 
 ## What gets customized? 
 
-It's up to you. A reasonable first step would be to update the header
-(the logo, and the color), and perhaps the footer. 
-
+It's up to you. A reasonable first step would be to update the URL of the site,
+header (the logo, and the color), and perhaps the footer. 
 
 It's only slight more involved to add a favicon (for the browser bar), 
 and a customized welcome and tagline on the home page.
@@ -46,13 +45,42 @@ where many elements adopt the parent color.
 
 First, review the instructions in the <a href="advanced_configuration">Advanced Configuration</a> section. Our example is based on the Advanced Customization instructions at the end of that document.
 
-For example to add your own custom logo and change the color of the header.
+### 1 set URL for appliance:
+ssh to appliance and change user to ontoportal. 
+
+```
+[centos@appliance ]$ sudo su - ontoportal
+``` 
+edit /srv/ontoportal/virtual_appliance/appliance_config/site_config.rb and set:
+
+```
+$REST_HOSTNAME = 'appliance.ontoportal.org'
+$REST_PORT = '8080'
+$REST_URL_PREFIX = 'http://appliance.ontoportal.org'
+$UI_HOSTNAME = 'appliance.ontoportal.org'
+$SITE = 'Demo OntoPortal Appliance'
+[centos@appliance ]$ cd /srv/ontoportal/virtual_appliance
+
+```
+
+### 1. Add custom logo and change the color of the header.
 
 1. Copy your custom logo file to `/srv/ontoportal/virtual_appliance/appliance_config/bioportal_web_ui/app/assets/images/logos/bioportal-logo.png`
-1. Copy the default `bioportal.scss` file to the config directory.
-`cp /srv/ontoportal/virtual_appliance/deployment/bioportal_web_ui/app/assets/stylesheets/bioportal.scss  /srv/ontoportal/virtual_appliance/appliance_config/bioportal_web_ui/app/assets/stylesheets/`
-1. Set .navbar background color in bioportal.scss to the value you need.
-1. Run `cd /srv/ontoportal/virtual_appliance/deployment && ./deploy_ui`
+1. Edit `/srv/ontoportal/virtual_appliance/appliance_config/bioportal_web_ui/app/assets/stylesheets/bioportal.scss`
+Set .navbar background color in bioportal.scss to the value you need.
+
+### 1. Update tagline on the main page: 
+1. edit `/srv/ontoportal/virtual_appliance/appliance_config/bioportal_web_ui/config/locales/en.yml`
+ and modify line containing `tagline: your ontology repository for your ontologies`
+ 
+### 1. Update footer
+1. Copy existing footer from <> to 
+
+### 1. Run deployment
+
+Deployment process described in 
+
+
 
 ## Do you have some artwork I can use?
 
