@@ -62,25 +62,26 @@ $SITE = 'Demo OntoPortal Appliance'
 
 ```
 
-### 1. Add custom logo and change the color of the header.
+### 2. Add custom logo and change the color of the header.
 
 1. Copy your custom logo file to `/srv/ontoportal/virtual_appliance/appliance_config/bioportal_web_ui/app/assets/images/logos/bioportal-logo.png`
 1. Edit `/srv/ontoportal/virtual_appliance/appliance_config/bioportal_web_ui/app/assets/stylesheets/bioportal.scss`
 Set .navbar background color in bioportal.scss to the value you need.
 
-### 1. Update tagline on the main page: 
+### 3. Update tagline on the main page: 
 1. edit `/srv/ontoportal/virtual_appliance/appliance_config/bioportal_web_ui/config/locales/en.yml`
  and modify line containing `tagline: your ontology repository for your ontologies`
  
-### 1. Update footer
+### 4. Update footer
 1. Copy original footer from
 `/srv/ontoportal/virtual_appliance/deployment/bioportal_web_ui/views/application/./views/_footer_appliance.html.haml` to
 `/srv/ontoportal/virtual_appliance/appliance_config/bioportal_web_ui/views/application/./views/_footer_appliance.html.haml`
 
 if `/srv/ontoportal/virtual_appliance/deployment/bioportal_web_ui/` is not present then you would need to set up deployment environment by running ./setup_deploy_env.sh
 
-### 1. Run deployment
+### 5. Run deployment
 
+Once all configuration changes and file overwrites are set you would need to run deployment scripts. 
 Deployment process described in <a href="advanced_configuration">Advanced Configuration</a> 
 
 
