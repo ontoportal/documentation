@@ -34,8 +34,10 @@ located in the distribution at
 `/srv/ontoportal/virtual_appliance/appliance_config/bioportal_web_ui/config/bioportal_config_appliance.rb`
 * For API:
 `/srv/ontoportal/virtual_appliance/appliance_config/ontologies_api/config/environments/appliance.rb`
+* For NCBO_CRON:
+`/srv/ontoportal/virtual_appliance/appliance_config/ncbo-cron/config/config.rb`
 
-Please note that both of those files import the `site_config.rb` file.
+Please note that both of those files import the `site_config.rb` file but would overwrite those settings if you set them in applicaiton specific configuration file. 
 
 ## Deploying the UI and API code
 
