@@ -226,7 +226,7 @@ The issue will contain comments and parsing logs (reported by the Jenkins user)
 * Annotate an ontology
 
 ```
-./bin/ncbo_ontology_annotate -h
+./bin/ncbo_ontology_annotate_generate_cache -h
 ```
 
 * Calculate and save ontology index in SOLR (see option to index all ontologies)
@@ -241,7 +241,7 @@ The issue will contain comments and parsing logs (reported by the Jenkins user)
 ./bin/ncbo_ontology_metrics -h
 ```
 
-* Generate a new annotation dictionary file (work in progress, as of March 2014)
+* Generate a new annotation dictionary file
 
 ```
 ./bin/ncbo_ontology_annotate_generate_dictionary -h
