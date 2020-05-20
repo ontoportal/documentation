@@ -45,7 +45,7 @@ This does the following operations:
 
 See below for additional ncbo-cron invocations.
 
-By default `ncbo_cron` will not process UMLS ontologies. To enable UMLS processing use `--enable-umls`. This option can trigger heavy parsing so it should be use with care.
+By default `ncbo_cron` will not process UMLS ontologies. To enable UMLS processing use `--enable-umls`. This option can trigger heavy parsing so it should be used with care.
 
 ## More information about running ncbo-cron
 
