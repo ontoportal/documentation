@@ -17,14 +17,20 @@ There are several activities involved in getting your own copy of the
    * Validation of your Appliance by entering the license certificate
 
 The first step is covered below, with subsequent steps in following pages.
+
+<!-- Not implemented yet
 Note that the Registration process can start before or in parallel with
-the other steps; you just need the Appliance ID
-(obtained during the system startup) to complete the Registration process
+the other steps, but you need the Appliance ID 
+(obtained during the system startup) to submit the Registration form
 and obtain the license for validating your Appliance.
 
-It's great if you register before you even obtain the {{site.opva}},  
-However, you can also download and evaluate the appliance first, 
+If you have registration questions or are a commercial user of OntoPortal,
+you can register before you obtain the {{site.opva}}.
+This will let you ask questions about our registration process,
+and lets us know who is interested in the Appliance (thank you!).
+Or, you can download and evaluate the appliance first, 
 and then choose whether or not you fill out the registration form.
+-->
 
 After the OntoPortal operations team has approved your completed registration,
 you will have access to your license certificate. 
@@ -47,7 +53,7 @@ Once you have your BioPortal account, log in to BioPortal and then
 visit the [Virtual Appliance page](https://bioportal.bioontology.org/virtual_appliance). 
 You will see the download on this page.
 
-OVA file can be deployed directly into your Virtualization Platform.
+The {{site.opva}} OVA file can be deployed directly into your Virtualization Platform.
 
 ### Amazon AWS AMI
 
