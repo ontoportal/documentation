@@ -58,7 +58,8 @@ The {{site.opva}} OVA file can be deployed directly into your Virtualization Pla
 ### Amazon AWS AMI
 
 For users who want to run their OntoPortal instance on Amazon Web Service cloud, 
-an Amazon Machine Instance (AMI) is available on the Publishing Pending [OntoPortal Alliance AWS Market Place](https://aws.amazon.com/marketplace/pp/B088NYWLSQ).
+an Amazon Machine Instance (AMI) is available on the [OntoPortal Alliance AWS Market Place](https://aws.amazon.com/marketplace/pp/B088NYWLSQ).
+(Our licensing approach for using this service is the same as for the VMWare Version.)
 
 ## Next steps
 

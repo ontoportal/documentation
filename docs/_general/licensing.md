@@ -24,12 +24,12 @@ and individuals working on commercial products,
 are asked to contact us to discuss the licensing terms.
 You can do so either by emailing our (public) 
 <a href="mailto:{{email-support}}">email support list</a>,
-or by pre-registering at our 
+or by registering your appliance (after you install it) at our 
 [OntoPortal License Server](https://license.ontoportal.org). 
 Your registration request will be visible 
 only to  OntoPortal Virtual Appliance license managers,
 who should take action within a working day.
-If there is a fee involved or you have provided a note with your request, 
+If there is a fee involved or you have provided a note with your licensse request, 
 you will be contacted;
 otherwise we will simply issue the requested license.
 
@@ -47,14 +47,14 @@ reminders appear at the top of most pages in the repository.
 While repository functions operate normally, 
 the Appliance is not approved for operation in this state.
 The initial distribution of the Appliance comes with a 30-day license,
-and the user is expected to download and start the Appliance
+and the user must download and start the Appliance
 before finalizing their license application.
 
 License certificates are obtained at the 
 [OntoPortal License Server](https://license.ontoportal.org). 
-To obtain the license certificate, the requestor must fill out a form
+To obtain the license certificate, the requestor fills out a form
 on the license server which indicates the planned application type.
-In order to obtain the final license, the user
+In order to obtain and deploy the final license, the user
 must provide the Appliance ID identifier from their deployed system.
 Once the certificate is issued, its (encrypted) contents are 
 copied from the License Server 
@@ -77,7 +77,7 @@ is maintained in GitHub repositories under the
 You are welcome to examine and reuse these repositories, 
 and can submit pull requests against them.
 
-Later in 2020, we plan for the [OntoPortal Alliance](https://ontoportal.org), 
+Later (possibly still in 2020), we plan for the [OntoPortal Alliance](https://ontoportal.org), 
 of which BMIR is a principal and founding member, 
 to begin maintaining OntoPortal software in the dedicated 
 [OntoPortal GitHub project](https://github.com/ontoportal).
