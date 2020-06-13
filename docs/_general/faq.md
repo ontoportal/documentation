@@ -43,19 +43,19 @@ See [Enabling emails]({{site.baseurl}}/steps/initial_configuration/#enabling-ema
 
 ### How do I add or change categories or groups?
 
-See [How do I add or change categories or groups for ontologies?]({{site.baseurl}}/ontologies/managing_ontologies/#how-do-i-add-or-change-categories-or-groups-for-ontologies/)
+See [How do I add or change categories or groups for ontologies?]({{site.baseurl}}/ontologies/managing_ontologies/#how-do-i-add-or-change-categories-or-groups-for-ontologies)
 
 ### How do I add or change slices?
 
-See [How do I add or change slices in OntoPortal]({{site.baseurl}}/ontologies/managing_ontologies/#how-do-i-add-or-change-slices-in-ontoportal/)
+See [How do I add or change slices in OntoPortal]({{site.baseurl}}/ontologies/managing_ontologies/#how-do-i-add-or-change-slices-in-ontoportal)
 
 ### How do I delete an ontology?
 
-See []({{site.baseurl}}/ontologies/managing_ontologies/#deleting-an-ontology/)
+See [Deleting an ontology]({{site.baseurl}}/ontologies/managing_ontologies/#deleting-an-ontology)
 
-### How can I migrate ontologies from BioPortal or previous NCBO Virtual Appliance versions into a new Appliance?
+### How can I migrate ontologies from BioPortal or another OntoPortal Appliance into a new Appliance?
 
-See [Copying external ontologies]({{site.baseurl}}/administration/ontologies/copying_external_ontologies/)
+See [Copying external ontologies]({{site.baseurl}}/ontologies/copying_external_ontologies/)
 
 ### How can I restrict ontology downloads via the UI or API?
 
@@ -73,26 +73,26 @@ See [Manually reparsing using the Ruby console]({{site.baseurl}}/ontologies/subm
 
 ### How can I process a UMLS ontology?
 
-See [Converting UMLS content]({{site.baseurl}}/ontologies/handling_umls/#converting-umls-content/)
+See [Converting UMLS content]({{site.baseurl}}/ontologies/handling_umls/#converting-umls-content)
 
 ### How do I know if an ontology has parsed?
 
-See [How do I know if an ontology has parsed]({{site.baseurl}}/ontologies/submitting_ontologies/#how-do-i-know-if-an-ontology-has-parsed/)
+See [How do I know if an ontology has parsed]({{site.baseurl}}/ontologies/submitting_ontologies/#how-do-i-know-if-an-ontology-has-parsed)
 
 ### Is there a log file for parsing?
 
-See [Is there a log file for parsing?]({{site.baseurl}}/ontologies/submitting_ontologies/#is-there-a-log-file-for-parsing/)
+See [Is there a log file for parsing?]({{site.baseurl}}/ontologies/submitting_ontologies/#is-there-a-log-file-for-parsing)
 
 
 ## Web User Interface
 
 ### How can I clear the memcached-based UI cache?
 
-See [Administrative Web User Interface—Caching]({{site.baseurl}}/management/routine_operations/#caching/)
+See [Administrative Web User Interface—Caching]({{site.baseurl}}/management/routine_operations/#caching)
 
 ### How can I use widgets with my Virtual Appliance?
 
-See [Setting up the widgets]({{site.baseurl}}/steps/setting_up_tools/#setting-up-the-widgets/)
+See [Setting up the widgets]({{site.baseurl}}/steps/setting_up_tools/#setting-up-the-widgets)
 
 
 ## Virtualization Environments
@@ -103,10 +103,10 @@ See [Virtualization Environments]({{site.baseurl}}/steps/virtualization_environm
 
 ### How can I use the Appliance on Amazon EC2?
 
-See [Amazon AWS AMI]({{site.baseurl}}/steps/getting_started/#amazon-aws-ami/) and 
-[AWS AMI deployent]({{site.baseurl}}/steps/initial_installation/#aws-ami-deployment/).
+See [Amazon AWS AMI]({{site.baseurl}}/steps/getting_started/#amazon-aws-ami) and 
+[AWS AMI deployent]({{site.baseurl}}/steps/initial_installation/#aws-ami-deployment).
 
 ### What is the admin password for the AWS Appliance?
 
-See [AWS AMI deployment]({{site.baseurl}}/steps/initial_installation/#aws-ami-deployment/)
+See [AWS AMI deployment]({{site.baseurl}}/steps/initial_installation/#aws-ami-deployment)
 
