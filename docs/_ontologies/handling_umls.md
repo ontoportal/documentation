@@ -21,7 +21,7 @@ To bridge this gap, we have developed a project called UMLS2RDF that transforms 
 
 ## Converting UMLS content
 
-There is no automated way to convert UMLS content to RDF.  
+There is no automated way to convert UMLS content to RDF.
 You must have your own UMLS MySQL installation 
 and an OSX/Linux/Unix machine with 8GB+ of RAM 
 in order for the conversion process to work. 

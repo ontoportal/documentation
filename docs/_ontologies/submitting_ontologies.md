@@ -37,9 +37,9 @@ or in the <a href="https://www.bioontology.org/wiki/BioPortal_Help#Submitting_an
 
 Information on submitting ontologies via the API is provided at the <a href="http://data.bioontology.org/documentation#OntologySubmission">BioPortal API documentation on submissions</a>, or in your own OntoPortal installation's API documentation.
 
-## Manually using the Ruby console
+## Manually reparsing using the Ruby console
 
-To manually parse an ontology, you will need to interact with the code using the console after switching to ontoportal user:
+To manually reparse an ontology, you will need to interact with the code using the console after switching to ontoportal user:
 
 ```
 # from the bash shell:
