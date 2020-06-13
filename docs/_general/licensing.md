@@ -9,12 +9,17 @@ status: Ready
 # License Terms
 
 The source code for the executable OntoPortal Virtual Appliance 
-is provided as open source content on a GitHub repository 
+is provided as open source content under a 2-clause BSD license on a GitHub repository 
 (see Location of Software below). 
+
+Software from other organizations, such as the AllegroGraph graph database, 
+is released using the license that applies to that software (see the [AllegroGraph web site](https://allegrograph.com) for Allegrograph licensing terms).
 
 The *packaging* we use to create the Virtual Appliance is not open source,
 and to use this packaged appliance you must obtain a license. 
-**Licenses are provided free to the following users**:
+(Members of the OntoPortal Alliance have access to and maintain the packaging software.)
+
+**Licenses to use the software are provided free to the following users**:
 * **individual users** for their own research,
 * **non-profit organizations**, and 
 * **educational institutions**. 
@@ -29,17 +34,15 @@ or by registering your appliance (after you install it) at our
 Your registration request will be visible 
 only to  OntoPortal Virtual Appliance license managers,
 who should take action within a working day.
-If there is a fee involved or you have provided a note with your licensse request, 
+
+If there is a fee involved, a clarification is needed, 
+or you have provided a note with your license request, 
 you will be contacted;
 otherwise we will simply issue the requested license.
 
-Any AllegroGraph software shipped with the Appliance 
-is provided under its own licensing terms,
-which can be found at the [AllegroGraph web site](https://allegrograph.com).
-
 # License Implementation
 
-(See above for all the people who get free licenses!)
+(See above for a list of the groups who get free licenses.)
 
 The OntoPortal Virtual Appliance requires a current license certificate 
 for licensed operation. Without a current certificate, 
