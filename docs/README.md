@@ -70,8 +70,14 @@ src="{{site.baseimgs}}/image_file_name"
 ```
 See below for image formatting and captions.
 
-(Jekyll expands the '/administration' at the beginning of those patterns 
-into the full URL of the site's administration directory.)
+A similar replacement works within markup, e.g., 
+```
+[link text]({{site.baseurl}}/general/architecture_reference)
+```
+will create a link for 'link text' to the architecture_reference page.
+
+(Jekyll expands the '/administration' at the beginning of those substituted 
+site.baseurl patterns into the full URL of the site's administration directory.)
 
 ### Figures
 
@@ -108,9 +114,9 @@ The available formats are:
 | Symbol | Effect | Used For |
 | ------ | ------ | -------- |
 | `-` | Red background | To Do, Issue, Content Needed |
-| `!` | Orange background  |  Needs Review, Help Wanted, To Be Provided |
-| `+` | Green background  | User Tip (stays), Problem Solved, Other Note (stays) |
-| `#` | Gray background  | Background Content (gray stays, once content added) |
+| `!` | Orange background |  Needs Review, Help Wanted, To Be Provided |
+| `+` | Green background | User Tip (stays), Problem Solved, Other Note (stays) |
+| `#` | Gray background | Background Content (gray stays, once content added) |
 
 ### Examples
 
