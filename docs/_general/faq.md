@@ -27,3 +27,7 @@ The software used to package the OntoPortal system for distribution
 is not publicly available. 
 Users must obtain a license to use the packaged system.
 Members of the {{site.opa}} have access to and maintain the packaging software.
+
+## How do I enable outgoing emails?
+
+See [Enabling emails]({{site.baseurl}}/steps/initial_configuration/#enabling-emails)
