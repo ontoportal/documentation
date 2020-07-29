@@ -92,7 +92,7 @@ Deploy ncbo_cron:
 It is possible to overwrite specific application files by simply dropping modified versions of those files in `/srv/ontoportal/virtual_appliance/appliance_config/bioportal_web_ui` and then running the deployment script. The deployment script will sync all files from configuration directory overwriting files in the directory from which application is deployed.
 
 ### Set up ontology analytics
-To make the ontology popularity statistics work, including the front page graphs, the browse page popularity sort order, and the search and recommender prioritizations, the Google Analytics has to be set up per the instructions on the <a href="/administration/management/google_analytics_management/">Google Analytics Management</a>  page.
+To make the ontology popularity statistics work, including the front page graphs, the browse page popularity sort order, and the search and recommender prioritizations, the Google Analytics has to be set up per the instructions on the <a href="../management/google_analytics_management/">Google Analytics Management</a>  page.
 
 ## Next step
 
