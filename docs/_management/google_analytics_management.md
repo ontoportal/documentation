@@ -61,6 +61,13 @@ You use Google Analytics to get your website's data.
  end
  ```
 
+## Enable Analytics Cron Job
+* Open the file `/srv/ncbo/ncbo_cron/config/appliance.rb` in your favorite editor
+* Inside the block `NcboCron.config do |config|`, change the parameter `config.enable_ontology_analytics` to `true`:
+```
+config.enable_ontology_analytics = true
+```
+
 ## Tests using API explorer
 
 Relevant links are
