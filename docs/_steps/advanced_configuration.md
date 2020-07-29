@@ -80,7 +80,7 @@ and run the Appliance with them, perform the following steps.
 ### Set up deployment environment
 `sh setup_deploy_env.sh` gets latest compatible for the version of the appliance you are running UI and API code and installs necessary utilities for the deployment such as Capistrano.
 
-### Deploy the user interface:
+### Deploy the user interface
 `./deploy_ui`
 Deploy API:
 `./deploy_api`
@@ -88,8 +88,11 @@ Deploy ncbo_cron:
 `./deploy_ncbo_cron`
 
 ## More advanced customization                                                                                                                                                                                                                                         
-
+### Overwrite application files
 It is possible to overwrite specific application files by simply dropping modified versions of those files in `/srv/ontoportal/virtual_appliance/appliance_config/bioportal_web_ui` and then running the deployment script. The deployment script will sync all files from configuration directory overwriting files in the directory from which application is deployed.
+
+### Set up ontology analytics
+To make the ontology popularity statistics work, including the front page graphs, the browse page popularity sort order, and the search and recommender prioritizations, the Google Analytics has to be set up per the instructions on the <a href="/administration/management/google_analytics_management/">Google Analytics Management</a>  page.
 
 ## Next step
 
