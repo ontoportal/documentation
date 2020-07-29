@@ -74,7 +74,7 @@ sudo systemctl start ncbo_cron
 ```
 By default, the Analytics refresh job is scheduled to run weekly on Mondays at 12:15am. If you need to change the frequency or the run time, you can add the parameter: `config.cron_ontology_analytics = "your cron expression"` to the `NcboCron.config do |config|` block:
 ```
-cron_ontology_analytics = "15 0 * * 1"
+config.cron_ontology_analytics = "15 0 * * 1"
 ```
 
 If you modify this setting, be sure to restart ncbo_cron services (see previous step)
