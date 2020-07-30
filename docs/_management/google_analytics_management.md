@@ -84,6 +84,8 @@ If you modify this setting, be sure to restart ncbo_cron services (see previous 
 
 If you need to manually refresh the Analytics data without having to wait for the Cron job to execute, you can run the `ncbo_ontology_analytics_rebuild` script, located in the `ncbo_cron/bin` folder:
 ```
+# sudo su - ncbo-deployer
+# cd /srv/ontoportal/ncbo_cron
 # bundle exec ruby ./bin/ncbo_ontology_analytics_rebuild
 ```
 
