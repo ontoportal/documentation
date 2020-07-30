@@ -86,7 +86,7 @@ If you need to manually refresh the Analytics data without having to wait for th
 ```
 # sudo su - ncbo-deployer
 # cd /srv/ontoportal/ncbo_cron
-# bundle exec ruby ./bin/ncbo_ontology_analytics_rebuild
+# ./bin/ncbo_ontology_analytics_rebuild
 ```
 
 The script does not require any arguments; simply execute it, and your Analytics data will get pulled from Google Analytics into the Redis datastore and will be immediately picked up by your OntoPortal services. Note that this step is optional. It should be used only when you need the absolute latest Analytics data, and you don't want to wait until the Analytics Cron job gets executed.
