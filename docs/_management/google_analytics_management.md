@@ -62,6 +62,9 @@ You use Google Analytics to get your website's data.
  ```
 
 ## Enable Analytics Cron Job
+
+The Analytics data is stored in Redis data store and is scheduled to be refreshed weekly. The refresh is done via an automatically scheduled Cron job. By default, that Cron job is disabled in the OntoPortal Appliance. Below are the steps to enable the Analytics refresh job: 
+
 * Open the file `/srv/ncbo/ncbo_cron/config/appliance.rb` in your favorite editor
 * Inside the block `NcboCron.config do |config|`, change the parameter `config.enable_ontology_analytics` to `true`:
 ```
@@ -72,12 +75,19 @@ config.enable_ontology_analytics = true
 sudo systemctl stop ncbo_cron
 sudo systemctl start ncbo_cron
 ```
-By default, the Analytics refresh job is scheduled to run weekly on Mondays at 12:15am. If you need to change the frequency or the run time, you can add the parameter: `config.cron_ontology_analytics = "your cron expression"` to the `NcboCron.config do |config|` block:
+By default, the Analytics refresh job is scheduled to run on Mondays at 12:15am. If you need to change the frequency or the run time, you can add the parameter: `config.cron_ontology_analytics = "your cron expression"` to the `NcboCron.config do |config|` block:
 ```
 config.cron_ontology_analytics = "15 0 * * 1"
 ```
 
-If you modify this setting, be sure to restart ncbo_cron services (see previous step)
+If you modify this setting, be sure to restart ncbo_cron services (see previous step).
+
+If you need to manually refresh the Analytics data without having to wait for the Cron job to execute, you can run the `ncbo_ontology_analytics_rebuild` script, located in the `ncbo_cron/bin` folder:
+```
+# bundle exec ruby ./bin/ncbo_ontology_analytics_rebuild
+```
+
+The script does not require any arguments; simply execute it, and your Analytics data will get pulled from Google Analytics into the Redis datastore and will be immediately picked up by your OntoPortal services.
 
 ## Tests using API explorer
 
