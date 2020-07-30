@@ -61,7 +61,7 @@ You use Google Analytics to get your website's data.
  end
  ```
 
-## Enable Analytics Cron Job
+## Enabling Analytics Cron Job
 
 The Analytics data is stored in Redis data store and is scheduled to be refreshed weekly. The refresh is done via an automatically scheduled Cron job. By default, that Cron job is disabled in the OntoPortal Appliance. Below are the steps to enable the Analytics refresh job: 
 
