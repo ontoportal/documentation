@@ -36,12 +36,12 @@ Use the following steps to do so.
 You use Google Analytics to get your website's data. 
 
 * Create an account at `https://www.google.com/analytics/web`
-* Add the "tracking ID" of this account in `/srv/rails/BioPortal/current/config/bioportal_config_production.rb`
+* Add the "tracking ID" of this account in ` vim /srv/ontoportal/virtual_appliance/appliance_config/site_config.rb`
   * Example: `$ANALYTICS_ID = "UA-63691424-3"`
 * Give permission to your developer credential (previously generated at the Google Developer Account step) to be able to retrieve the data
   * Admin tab > Property (typically, the website you are doing analytics on) > User Management
   * Add permissions for the google developer credential email (also generated in the previous section)
-* Add the following in `/srv/ncbo/ontologies_api/current/config/environments/appliance.rb` and `/srv/ncbo/ncbo_cron/config/appliance.rb`
+* Add the following in `/srv/ontoportal/virtual_appliance/appliance_config/ncbo_cron/config/config.rb` and `/srv/ncbo/ncbo_cron/config/appliance.rb`
 
 ```
  LinkedData.config do |config|
@@ -51,7 +51,7 @@ You use Google Analytics to get your website's data.
   config.enable_ontology_analytics = true
   config.cron_ontology_analytics   = "30 */4 * * *"
   # Google Analytics config
-  config.analytics_service_account_email_address = "account-1@mybioportal-1145.iam.gserviceaccount.com" # The email address you get when creating the google developer account
+  config.analytics_service_account_email_address = "account-1@mybioportal-1234.iam.gserviceaccount.com" # The email address you get when creating the google developer account
   config.analytics_path_to_key_file              = "/srv/agroportal-ffad56jdic91ky.p12" # you have to get this file from the first step
   config.analytics_profile_id                    = "ga:111821946" # replace with your ga view id
   config.analytics_app_name                      = "mybioportal"
