@@ -29,7 +29,7 @@ Use the following steps to do so.
 * Enable Analytics API
   * API Manager > Overview > Advertising APIs > Analytics API
 * Copy p12 keys to the appliance (in the /srv directory for example)
-  * Example: `scp mybioportal-ffad56jdic91ky.p12 {my_appliance_hostname}:/srv/`
+  * Example: `scp myontoportal-analytics.p12 {my_appliance_hostname}:/srv/ontoportal/virtual_appliance/config/ncbo_cron`
 
 ### Google Analytics Account
 
@@ -37,39 +37,39 @@ You use Google Analytics to get your website's data.
 
 * Create an account at `https://www.google.com/analytics/web`
 * Add the "tracking ID" of this account in ` vim /srv/ontoportal/virtual_appliance/appliance_config/site_config.rb`
-  * Example: `$ANALYTICS_ID = "UA-63691424-3"`
+  * Example: `$ANALYTICS_ID = "UA-12345678-1"`
 * Give permission to your developer credential (previously generated at the Google Developer Account step) to be able to retrieve the data
   * Admin tab > Property (typically, the website you are doing analytics on) > User Management
   * Add permissions for the google developer credential email (also generated in the previous section)
-* Add the following in `/srv/ontoportal/virtual_appliance/appliance_config/ncbo_cron/config/config.rb` and `/srv/ncbo/ncbo_cron/config/appliance.rb`
-
-```
- LinkedData.config do |config|
-  config.enable_ontology_analytics = true
- end
- NcboCron.config do |config|
-  config.enable_ontology_analytics = true
-  config.cron_ontology_analytics   = "30 */4 * * *"
-  # Google Analytics config
-  config.analytics_service_account_email_address = "account-1@mybioportal-1234.iam.gserviceaccount.com" # The email address you get when creating the google developer account
-  config.analytics_path_to_key_file              = "/srv/agroportal-ffad56jdic91ky.p12" # you have to get this file from the first step
-  config.analytics_profile_id                    = "ga:111821946" # replace with your ga view id
-  config.analytics_app_name                      = "mybioportal"
-  config.analytics_app_version                   = "1.0.0"
-  config.analytics_start_date                    = "2015-10-01"
-  config.analytics_filter_str                    = ""
- end
+* Modify `/srv/ontoportal/virtual_appliance/appliance_config/ncbo_cron/config/config.rb` and `/srv/ontoportal/virtual_appliance/appliance_config/ontologies_api/config/environments/appliance.rb`
+ 
  ```
+    # Google Analytics config
+    config.enable_ontology_analytics               = true
+    config.cron_ontology_analytics                 = '30 */4 * * *'
+    config.analytics_service_account_email_address = 'myontoportal@developer.gserviceaccount.com'
+    config.analytics_path_to_key_file              = 'config/myontoportal-analytics.p12'
+    config.analytics_profile_id                    = 'ga:1234567'
+    config.analytics_app_name                      = 'MyOntoPortal'
+    config.analytics_app_version                   = '1.0.0'
+    config.analytics_start_date                    = '2020-01-01'
+    config.analytics_filter_str                    = ''
+
+ ```
+* Perform deployment of UI, API and ncbo_cron which will copy configuration files to the appropriate application directories
+```
+sudo su - ontoportal
+cd /srv/ontoportal/virtual_appliance/deployment
+./setup_deploy_env.sh
+./deploy_api.sh
+./deploy_ui.sh
+./deploy_ncbo_cron.sh
+```
 
 ## Enabling Analytics Cron Job
 
 The Analytics data is stored in Redis data store and is scheduled to be refreshed weekly. The refresh is done via an automatically scheduled Cron job. By default, that Cron job is disabled in the OntoPortal Appliance. Below are the steps to enable the Analytics refresh job: 
 
-* Open the file `/srv/ncbo/ncbo_cron/config/appliance.rb` in your favorite editor
-* Inside the block `NcboCron.config do |config|`, change the parameter `config.enable_ontology_analytics` to `true`:
-```
-config.enable_ontology_analytics = true
-```
 * Restart ncbo_cron services:
 ```
 sudo systemctl stop ncbo_cron
@@ -84,7 +84,7 @@ If you modify this setting, be sure to restart ncbo_cron services (see previous 
 
 If you need to manually refresh the Analytics data without having to wait for the Cron job to execute, you can run the `ncbo_ontology_analytics_rebuild` script, located in the `ncbo_cron/bin` folder:
 ```
-# sudo su - ncbo-deployer
+# sudo su - ontoportal
 # cd /srv/ontoportal/ncbo_cron
 # ./bin/ncbo_ontology_analytics_rebuild
 ```
@@ -110,7 +110,7 @@ Relevant links are
 
 ## Removing Analytics from OntoPortal UI
 
-In `/srv/rails/BioPortal/current/app/views/home/index.html.haml` add:
+In `/srv/ontoportal/bioportal_web_ui/current/app/views/home/index.html.haml` add:
 
 ```
  display: none;
@@ -119,7 +119,7 @@ In `/srv/rails/BioPortal/current/app/views/home/index.html.haml` add:
    Ontology Visits #{"in full #{$SITE} " if at_slice?} (#{@analytics.date.strftime("%B %Y")})
 ```
 
-In `/srv/rails/BioPortal/current/app/views/ontologies/_visits.html.haml` add:
+In `/srv/ontoportal/bioportal_web_ui/current/app/views/ontologies/_visits.html.haml` add:
 
 ```
  display:none;
