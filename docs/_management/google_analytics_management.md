@@ -41,7 +41,7 @@ You use Google Analytics to get your website's data.
 * Give permission to your developer credential (previously generated at the Google Developer Account step) to be able to retrieve the data
   * Admin tab > Property (typically, the website you are doing analytics on) > User Management
   * Add permissions for the google developer credential email (also generated in the previous section)
-* Modify `/srv/ontoportal/virtual_appliance/appliance_config/ncbo_cron/config/config.rb` and `/srv/ontoportal/virtual_appliance/appliance_config/ontologies_api/config/environments/appliance.rb`
+* Modify `/srv/ontoportal/virtual_appliance/appliance_config/ncbo_cron/config/config.rb`
  
  ```
     # Google Analytics config
@@ -61,7 +61,6 @@ You use Google Analytics to get your website's data.
 sudo su - ontoportal
 cd /srv/ontoportal/virtual_appliance/deployment
 ./setup_deploy_env.sh
-./deploy_api.sh
 ./deploy_ui.sh
 ./deploy_ncbo_cron.sh
 ```
