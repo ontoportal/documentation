@@ -76,9 +76,10 @@ Virtual Operating System
 * Username: centos
 * Password: Ontoportal  
 
-You are then prompted to enter your own virtual OS password on the first boot—
-first enter the default password when prompted, 
-then you will enter your own password twice. 
+On the first boot, you will be able to change your virtual OS password.
+When you are prompted, 
+first enter the default password above. 
+Then you will get the chance to enter your own password (twice). 
 If in the reset process you enter the wrong default password, 
 the entire sequence restarts.
 
