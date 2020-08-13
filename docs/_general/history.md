@@ -13,7 +13,11 @@ status: Ready
 The Release History for Virtual Appliance versions 2.4 and 2.5 is available in the [BioPortal Virtual Appliance Release Notes](https://www.bioontology.org/wiki/BioPortal_Virtual_Appliance_Release_Notes).
 
 The Release History for Virtual Appliance version 3.0 is available in the 
-[OntoPortal Virtual Appliance Release Notes](https://www.bioontology.org/wiki/BioPortal_Virtual_Appliance_Release_Notes).
+[OntoPortal Virtual Appliance Release Notes](https://github.com/ncbo/virtual_appliance/blob/3.0/CHANGELOG.md).
+
+The Virtual Appliance code is based on the latest BioPortal code. 
+* The Release History for BioPortal is available in the [BioPortal Release Notes](https://www.bioontology.org/wiki/BioPortal_Release_Notes). 
+* Detailed release documentation for the front end (UI) repo is available in the [Bioportal_web_ui Release Notes](https://github.com/ncbo/bioportal_web_ui/releases). 
 
 ## NCBO Virtual Appliance (original release?) (pre-October 2010)
 
