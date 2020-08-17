@@ -42,18 +42,11 @@ Information on submitting ontologies via the API is provided at the <a href="htt
 To manually reparse an ontology, you will need to interact with the code using the console after switching to ontoportal user:
 
 ```
-# from the bash shell:
-cd /srv/ncbo/ncbo_cron
-bin/ncbo_cron --console
-# once in the ruby console:
-ontology = LinkedData::Models::Ontology.find("MY_ACRONYM").first
-submission = ontology.latest_submission(status: :any)
-logger = Logger.new(STDOUT)
-submission.process_submission(logger)
-# make available in annotator
-annotator = Annotator::Models::NcboAnnotator.new
-annotator.create_term_cache_for_submission(logger, submission)
-annotator.generate_dictionary_file()
+# from the shell:
+sudo su - ontoportal
+cd /srv/ontoportal/ncbo_cron
+bin/ncbo_ontology_process -o ONTOLOGY_ACRONYM 
+
 ```
 
 ## How do I know if an ontology has parsed?
