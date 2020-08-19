@@ -42,9 +42,9 @@ Information on submitting ontologies via the API is provided at the <a href="htt
 The <a href=" https://github.com/ncbo/ncbo_cron/blob/master/bin/ncbo_ontology_process">ncbo_ontology_process</a> script 
 can be used to easily submit an ontology, once the dependencies are in place.
 
-## Manually reparsing using the Ruby console
+## Manually reparsing using the ncbo_cron scripts
 
-To manually reparse an ontology, you will need to interact with the code using the console after switching to ontoportal user:
+To manually reparse an ontology, you need to ssh into the system and run ncbo_ontology_process script after switching to ontoportal user:
 
 ```
 # from the shell:
