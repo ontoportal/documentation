@@ -43,6 +43,39 @@ can now be used to perform administrative actions on the selected ontologies.
 Simply choose an administrative action from the dropdown,
 and click on the `Go` button to perform the operation(s).
 
+## Troubleshooting (very) large ontologies
+
+Ontology parsing can be a computationally expensive task, and OntoPortal is often installed in resource-limited environments.
+Computer memory (RAM) is often a limiting factor
+(because the parsing happens entirely in memory), but other constraints can also apply.
+Not only may the computer itself have limited resources (particularly RAM), 
+but the virtual machine environment used to run the Virtual Appliance will have additional memory constraints,
+which may require appropriate configuration.
+
+One limitation that the OntoPortal Appliance installations typically expose 
+is that the communication interfaces may limit acceptable files sizes.
+For example, often there is a 1 GB limit on file transfers.
+Fortunately, most ontologies can be highly compressed, 
+and OntoPortal knows how to unpack Zip files when it receives them.
+So you can compress your ontology into a Zip file, 
+and if it is under 1 GB compressed you may be able to proceed to parsing.
+
+If you see that parsing is not beginning, or can not tell from the logs that it is beginning,
+you may suspect that the size of the (unpacked) ontology file may be too large for the system.
+Ontologies larger than 1 to 2 GB (uncompressed) can require more RAM to parse
+than the OntoPortal application has available from its Virtual Machine/computer host, 
+especially as the ontology may still be buffered in memory from unpacking it 
+and parsing outputs may also be buffered.
+
+It seems that in these cases, no information may be written to the parsing log,
+as the ontology must complete parsing before the logs are closed.
+Some users have had success parsing large ontologies 
+after increasing their available memory to 24 GB or 32 GB.
+
+Obviously, for ontologies that are an order of magnitude larger or mroe—
+we are aware of ontologies that are 32 GB or more—
+we recommend acquiring computational systems with significant dedicated memory resources.
+
 ## Check the ontology: Parsing ontology other ways
 
 ### With Protege
