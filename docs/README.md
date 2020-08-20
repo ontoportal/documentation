@@ -34,7 +34,7 @@ attribute—higher weights are lower in the ordered list presented to readers.
 
 Attributes are stored in `_config.yml` at the top level of the docs/ folder.
 They can be access throughout the site with the convention `site.<attributeName>`, 
-surrounded by double squiggle brackets ({{ and }}).
+surrounded by double squiggle brackets (`{{` and `}}`).
 
 These substitutions are used to make titles, versions, and other information
 consistent (and easily changed) throughout the documentation. 
