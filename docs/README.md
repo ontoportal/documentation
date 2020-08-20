@@ -33,7 +33,7 @@ attribute—higher weights are lower in the ordered list presented to readers.
 ## Attribute expansion
 
 Attributes are stored in `_config.yml` at the top level of the docs/ folder.
-They can be access throughout the site with the convention `site.<attributeName>`, 
+They can be accessed throughout the site with the convention `site.<attributeName>`, 
 surrounded by double squiggle brackets (`{{` and `}}`).
 
 These substitutions are used to make titles, versions, and other information
@@ -41,6 +41,9 @@ consistent (and easily changed) throughout the documentation.
 For example, if we wanted to move the imgs folder elsewhere in the hierarchy,
 or the version number needed to be changed, 
 we can make the change in the _config.yml document to have it take effect site-wide.
+
+Note that attribute expansions do not take place in the saved document as seen in its source repo.
+They will take place correctly when displayed in the online web documentation.
 
 Attributes are also used within other patterns (see next section).
 
@@ -51,7 +54,7 @@ Using these consistently for readability, and to make it easy to apply custom CS
 
 ### Link referencing
 
-There are two patterns for link referencing.
+There are two patterns for link referencing. 
 
 Relative links use the position of the target document relative to the current document.
 When the target document is in the same directory as the current document, a relative link
@@ -78,6 +81,13 @@ will create a link for 'link text' to the architecture_reference page.
 
 (Jekyll expands the '/administration' at the beginning of those substituted 
 site.baseurl patterns into the full URL of the site's administration directory.)
+
+#### Email links
+
+An email link can follow a similar pattern, as this example shows:
+```
+sending email to the [OntoPortal support list](mailto:{{site.support_email}})
+```
 
 ### Figures
 
