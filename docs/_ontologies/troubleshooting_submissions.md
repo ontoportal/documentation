@@ -16,6 +16,33 @@ For troubleshooting installations, see the <a href="../../steps/troubleshooting_
 
 For troubleshooting system operations, see the <a href="../../management/troubleshooting_operations">Troubleshooting Operations</a> section.
 
+## Using the Administration page
+
+The Ontology Administration tab of the Administration page of OntoPortal provides detailed information about the latest ontology submissions.
+Typically this tab is updated manually; to make sure it is current, 
+click on the Refresh button near the top of the tab's content; the refresh may take some minutes.
+
+The default view of this tab shows only Problem Ontologies; click on View Ontologies: `All` button. 
+
+You will see the following columns in this tab: 
+`ONTOLOGY`	`ADMIN`	`FORMAT`	`DATE CREATED`	`REPORT DATE`	`URL`	`ERROR STATUS`	`MISSING STATUS`.
+Each of these is sortable, and most should be self-explanatory.
+By sorting this table, you can quickly learn assess the status of all your ontologies
+and the general health of your system. 
+
+The URL column contains 3 links: Log, REST, and Submissions.
+The Log link points to the parsing log for the latest submission of this ontology.
+The REST link points to the REST API entry for the ontology; 
+most other REST links will be displayed in OntoPortal's response.
+The Submissions link brings up a table of the submissions that OntoPortal processed for this ontology, 
+and the result of each submission's processing.
+
+What may not be obvious is that if you select one or more rows of the ontology table,
+the `Please Select` dropdown in the header (following "Apply to Selected Rows:") 
+can now be used to perform administrative actions on the selected ontologies.
+Simply choose an administrative action from the dropdown,
+and click on the `Go` button to perform the operation(s).
+
 ## Check the ontology: Parsing ontology other ways
 
 ### With Protege
