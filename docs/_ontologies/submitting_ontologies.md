@@ -62,11 +62,18 @@ In addition, you can look at the REST service directly, which will always give y
 
 `http://{your_appliance_ip_or_domain_name}:8080/ontologies/{ontology_acronym}/latest_submission?include=all`
 
-You can look for the submissionStatus attribute to get the status
+You can look for the submissionStatus attribute to get the status.
+
+If you are looking at an ontology that should have been parsed some time ago, 
+you can look at the Ontologies tab of the Administration page.
+See <a href="../troubleshooting_submissions">Troubleshooting Submissions</a> for more information.
 
 ## Is there a log file for parsing?
 
-Parsing progress is logged in the ontology submission repository folder: `/srv/ncbo/repository/{ontology acronym}/{submission id}`
+Parsing progress is logged in the ontology submission repository folder: `/srv/ncbo/repository/{ontology acronym}/{submission id}`.
+
+You can also see the latest log from the Ontologies tab of the Administration page.
+See <a href="../troubleshooting_submissions">Troubleshooting Submissions</a> for more information
 
 For further information about ontology parsing, 
 please see <a href="../parseable_ontologies">Parseable Ontologies</a>
