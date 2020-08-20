@@ -9,7 +9,7 @@ opva: OntoPortal Virtual Appliance
 opva_version: OntoPortal Virtual Appliance 3.0
 release_version: Release 3.0.0
 opa: OntoPortal Alliance
-support_email: support@ontoportal.org
+support_email: support@ontoportal.org  # for dev support only, not for end user support
 twitter_username: ontoportal
 github_username:  ontoportal
 email: jgraybeal@stanford.edu  # not sure what this is used for
