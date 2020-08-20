@@ -65,14 +65,14 @@ In addition, you can look at the REST service directly, which will always give y
 You can look for the submissionStatus attribute to get the status.
 
 If you are looking at an ontology that should have been parsed some time ago, 
-you can look at the Ontologies tab of the Administration page.
+you can look at the Ontology Administration tab of the Administration Console page.
 See <a href="../troubleshooting_submissions">Troubleshooting Submissions</a> for more information.
 
 ## Is there a log file for parsing?
 
 Parsing progress is logged in the ontology submission repository folder: `/srv/ncbo/repository/{ontology acronym}/{submission id}`.
 
-You can also see the latest log from the Ontologies tab of the Administration page.
+You can also see the latest log from the Ontology Administration tab of the Administration Console page.
 See <a href="../troubleshooting_submissions">Troubleshooting Submissions</a> for more information
 
 For further information about ontology parsing, 
