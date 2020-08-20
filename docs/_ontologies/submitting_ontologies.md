@@ -37,12 +37,10 @@ or in the <a href="https://www.bioontology.org/wiki/BioPortal_Help#Submitting_an
 
 Information on submitting ontologies via the API is provided at the <a href="http://data.bioontology.org/documentation#OntologySubmission">BioPortal API documentation on submissions</a>, or in your own OntoPortal installation's API documentation.
 
-## As a developer in the scripting environment
+## Manually reparsing (as a developer) in the scripting environment
 
 The <a href=" https://github.com/ncbo/ncbo_cron/blob/master/bin/ncbo_ontology_process">ncbo_ontology_process</a> script 
-can be used to easily submit an ontology, once the dependencies are in place.
-
-## Manually reparsing using the ncbo_cron scripts
+can be used to easily submit an ontology, if the dependencies associated with deploying the system are in place.
 
 To manually reparse an ontology, you need to ssh into the system and run ncbo_ontology_process script after switching to ontoportal user:
 
