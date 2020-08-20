@@ -58,7 +58,9 @@ add a second network card and bind it to the host-only network,
 plus set $REST_HOSTNAME to the IP on the host-only network.)
 
 Unfortunately, giving detailed advice on these configurations 
-is unfortunately beyond the scope of the OntoPortal staff.
+is beyond the scope of the OntoPortal staff at this stage.
+You may find someone else with similar experience
+by sending email to the [OntoPortal support list](mailto:{{site.support_email}}).
 
 
 
