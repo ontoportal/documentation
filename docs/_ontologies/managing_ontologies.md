@@ -8,6 +8,18 @@ status: In Progress
 
 # Managing Ontologies 
 
+## Using the Administration Console
+
+If you are logged in as an administrator,
+you will see an Admin link to the left of your profile information.
+clicking on the Admin link takes you to the OntoPortal Administration Console.
+
+Within that page, click on the Ontology Administration tab to work with ontologies.
+
+Additional information about this capability is presented in the 
+Ontology Administration tab of the Administration Console page.
+See <a href="../troubleshooting_submissions">Troubleshooting Submissions</a> for more information.
+
 ## Organizing ontologies in OntoPortal
 
 ### How do I add or change slices in OntoPortal?
