@@ -68,7 +68,10 @@ See <a href="../troubleshooting_submissions">Troubleshooting Submissions</a> for
 
 ## Is there a log file for parsing?
 
-Parsing progress is logged in the ontology submission repository folder: `/srv/ncbo/repository/{ontology acronym}/{submission id}`.
+Parsing progress is logged in the ontology submission repository folder: 
+
+OntoPortal versions 3.0 and higher: `/srv/ontoportal/data/repository/{ontology acronym}/{submission id}`<br />
+Older versions: `/srv/ncbo/repository/{ontology acronym}/{submission id}`
 
 You can also see the latest log from the Ontology Administration tab of the Administration Console page.
 See <a href="../troubleshooting_submissions">Troubleshooting Submissions</a> for more information
