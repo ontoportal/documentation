@@ -40,30 +40,3 @@ which should allow the machine to be used in a variety of environments.
 Another image is available as an Amazon Web Services Amazon Machine Instance,
 allowing for rapid deployment. 
 
-The operating system is CentOS 7.8 64-bit running:
-* Apache, Tomcat, memcached, redis (EPEL install)
-* MariaDB (EPEL install)
-* Solr 8.2
-* Java 11
-* Rails 
-* Ruby 2.5.7
-* nginx 1.17
-
-Installed applications developed by Stanford:
-* bioportal_web_ui 5.9.3
-* ontologies_api and ncbo_cron 5.16.0
-* 4store (custom build, )
-* AllegroGraph 6.4.1 (not activated)
-
-The following applications use these services/runtime environments:
-* Ontologies API
-* Annotator, AnnotatorPlus
-* Recommender
-* BioPortal Web User Interface (offering ontology visualization, Flex widgets, and access to the Annotator, AnnotatorPlus, and Recommender services)
-* Search index
-* RDF Store (4store)
-
-These are some of the underlying services:
-* Sinatra, Ruby, 4store, redis
-* Rails, memcached, mysql
-* Tomcat, Solr
