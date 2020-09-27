@@ -123,7 +123,7 @@ The available formats are:
 
 | Symbol | Effect | Used For |
 | ------ | ------ | -------- |
-| `-` | Red background | To Do, Issue, Content Needed |
+| `-` | Red background | To Do, Issue, Content Needed, Critical User Tip |
 | `!` | Orange background |  Needs Review, Help Wanted, To Be Provided |
 | `+` | Green background | User Tip (stays), Problem Solved, Other Note (stays) |
 | `#` | Gray background | Background Content (gray stays, once content added) |
