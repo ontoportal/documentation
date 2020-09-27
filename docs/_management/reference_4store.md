@@ -54,7 +54,9 @@ to your triple store.
 
 First, you could regularly copy the non-sensitive graphs in the triple store 
 into a separate user-accessible repository
-using 4s-dump and 4s-restore (see below).
+using 4s-dump and 4s-restore (see below). 
+(For even finer-grained filtering, 
+you could modify the sensitive graphs to overwrite only the sensitive data within them.)
 Few users are likely to need real-time SPARQL information,
 so a nightly job could perform this mirroring.
 It might impact the availability of the repository being accessed during the process,
