@@ -10,6 +10,65 @@ status: Preliminary
 
 This is an advanced reference document on the 4store database.
 
+## Directly querying 4store
+
+If you want external users to be able to directly query your 4store database, 
+there are considerations described under *External users querying 4store* below 
+that you must take into account.
+
+### Local user (administrator) querying 4store
+
+The 4store database is listening for SPARQL queries on port localhost:8081. 
+However, the Appliance has a local firewall in place which blocks port 8081, 
+and the default AWS security group that comes with the Appliance
+allows only http, https and SSH ports to pss through.
+
+The simplest way to access the SPARQL endpoint would be through an SSH tunnel,
+or you could open ports to a specific host. 
+
+### External users querying 4store
+
+#### Security concerns
+
+```diff
+- Please keep in mind that it is not safe to simply open port 8081 to the world. 
+```
+
+First, the 4store backend is built without any authentication,
+so anyone would be able to gain full read/write access to the triple store. 
+In addition to ontology graphs,
+this triple store contains other sensitive information 
+such as user accounts with password hashes. 
+
+Second, SPARQL is known for queries that can take a long time,
+especially on a large database. 
+If you provide direct access to the database,
+SPARQL queries from external users can fully consume the SPARQL endpoint,
+leaving limited (or zero) cycles or other resources 
+to serve your normal user interface and API queries.
+
+#### Techniques
+
+There are two methods by which you can provide external users secure access
+to your triple store.
+
+First, you could regularly copy the non-sensitive graphs in the triple store 
+into a separate user-accessible repository
+using 4s-dump and 4s-restore (see below).
+Few users are likely to need real-time SPARQL information,
+so a nightly job could perform this mirroring.
+It might impact the availability of the repository being accessed during the process,
+but for smaller repositories the problem would be small.
+It is also possible that the 4s-dump process could capture an inconsistent repository,
+if the repository is being written as the dump takes place.
+
+Alternatively you could set up a SPARQL front end or proxy 
+and filter out sensitive data from queries or responses.
+The front end or proxy server 
+could be given direct access to the endpoint,
+while providing an accessible location for users to directly access, 
+for example through https.
+
 ## Instructions to dump/restore metadata graphs from 4store
 
 These instructions use `4s-dump` and `4s-restore`, PERL scripts distributed and installed with 4store:
