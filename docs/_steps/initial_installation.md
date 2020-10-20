@@ -38,6 +38,19 @@ The results should look something like this 'vm' entry.
   <figcaption>Imported Appliance in VirtualBox</figcaption>
 </figure>
 
+Enabling the copy/paste functionality between your host and guest operating systems is a challenging task. Instead of going through a complicated task of remapping keys we recommend enabling the SSH functionality via NAT port forwarding configuration. Please follow the screenshots below:
+
+<figure>
+  <img src="{{site.baseimgs}}/nat1.png" style="width:80%"/>
+  <figcaption>Imported Appliance in VirtualBox</figcaption>
+</figure>
+
+<figure>
+  <img src="{{site.baseimgs}}/nat2.png" style="width:80%"/>
+  <figcaption>Imported Appliance in VirtualBox</figcaption>
+</figure>
+
+
 ### Run the Appliance you just imported
 
 When you press the Start button at the top of the displayed window, 
