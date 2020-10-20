@@ -42,12 +42,12 @@ Enabling the copy/paste functionality between your host and guest operating syst
 
 <figure>
   <img src="{{site.baseimgs}}/nat1.png" style="width:80%"/>
-  <figcaption>Imported Appliance in VirtualBox</figcaption>
+  <figcaption>Port Forwarding via NAT</figcaption>
 </figure>
 
 <figure>
   <img src="{{site.baseimgs}}/nat2.png" style="width:80%"/>
-  <figcaption>Imported Appliance in VirtualBox</figcaption>
+  <figcaption>Enable SSH via Port Forwarding</figcaption>
 </figure>
 
 
