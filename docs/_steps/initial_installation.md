@@ -50,6 +50,17 @@ Enabling the copy/paste functionality between your host and guest operating syst
   <figcaption>Enable SSH via Port Forwarding</figcaption>
 </figure>
 
+Reboot your Appliance, open your favorite terminal app in your host OS and connect to the Appliance via SSH:
+
+```
+$ssh -p 2222 centos@localhost
+```
+
+Make sure your SSH service runs on the Appliance startup by running this command in your Appliance:
+
+```
+sudo systemctl enable sshd
+```
 
 ### Run the Appliance you just imported
 
