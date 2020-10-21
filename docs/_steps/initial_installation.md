@@ -99,28 +99,24 @@ We call the IP address for your virtual operating system
 the `{ip_address_of_appliance}` in the commands we list here.
 This is where you can access the {{site.opva}} running inside your Appliance.
 
-Enabling the copy/paste functionality between your host and guest operating systems is a challenging task. Instead of going through a complicated procedure of remapping keys we recommend enabling the SSH functionality via NAT port forwarding configuration. Please follow the screenshots below:
-
-<figure>
-  <img src="{{site.baseimgs}}/nat1.png" style="width:80%"/>
-  <figcaption>Port Forwarding via NAT</figcaption>
-</figure>
-
-<figure>
-  <img src="{{site.baseimgs}}/nat2.png" style="width:80%"/>
-  <figcaption>Enable SSH via Port Forwarding</figcaption>
-</figure>
-
-Reboot your Appliance, open your favorite terminal app in your host OS and connect to the Appliance via SSH:
-
-```
-$ssh -p 2222 centos@localhost
-```
+Enabling the copy/paste functionality between your host and guest operating systems is a challenging task. Instead of going through a complicated procedure of remapping keys we recommend using SSH from your host machine.
 
 Make sure your SSH service runs on the Appliance startup by running this command in your Appliance:
 
 ```
 sudo systemctl enable sshd
+```
+
+Get your guest VM IP address. Run this command in the guest VM terminal:
+
+```
+ip address show dev eth0 | awk '/inet / {print $2}' | cut -d/ -f1
+```
+
+Open your favorite terminal app in your host OS and connect to the Appliance via SSH:
+
+```
+$ssh centos@<IP address from the ip command>
 ```
 
 ### Obtaining the IP address
