@@ -106,8 +106,6 @@ This time, you should see the following page instead of the login prompt:
   <figcaption>AllegroGraph WebView</figcaption>
 </figure>
 
-
-
 ### Update OntoPortal configuration files
 
 ```
@@ -173,7 +171,9 @@ Save the file and exit.
 
 ### Run Deployment Script and Restart Ontoportal
 
-In order for the changes to the configuration files to propogate to the running VA, we need to execute the deployment script.
+In order for the changes to the configuration files to propogate to the running VA, we need to execute a set of deployment scripts.
+
+#### Setup Deployment Environment
 
 ```
 [ontoportal@localhost environments]$ cd /srv/ontoportal/virtual_appliance/deployment/
@@ -181,15 +181,41 @@ In order for the changes to the configuration files to propogate to the running 
 Setting up deployment environment
 Setting up deployment env for UI
 ...
+```
+
+#### Deploy Ontoportal API
+
+```
+[ontoportal@localhost deployment]$ ./deploy_api.sh
+deploying ontologies_api from v5.18.1 branch
+copying site overides file
+...
+```
+
+#### Deploy NCBO Cron
+
+```
+ontoportal@localhost deployment]$ ./deploy_ncbo_cron.sh
+deploying ncbo_cron from v5.18.1 branch
+/srv/ontoportal/ncbo_cron /srv/ontoportal/virtual_appliance/deployment
+...
+```
+
+#### Restart Appliance Services
+
+```
 [ontoportal@localhost deployment]$ sudo oprestart
+```
 
+### `touch /srv/ontoportal/firstboot` and Reboot the Appliance
 
-
-
-
-
-
-
+```
+[ontoportal@localhost deployment]$ touch /srv/ontoportal/firstboot
+[ontoportal@localhost deployment]$ touch /srv/ontoportal/firstboot
+[ontoportal@localhost deployment]$ exit
+logout
+[centos@localhost deployment]$ sudo reboot
+```
 
 
 
