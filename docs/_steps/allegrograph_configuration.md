@@ -65,7 +65,62 @@ Next, on your host OS, open your favorite browser and navigate to:
 
 http://localhost:10035
 
-You should see a page requiring AllegroGraph Username and Password. Ignore the login prompt for the moment. All we needed to make sure is that the AllegroGraph server is up and running.
+You should see a page requiring AllegroGraph Username and Password. Ignore the login prompt for the moment. All we needed at this point is to ensure that the AllegroGraph server is up and running.
+
+#### Login to VA as `ontoportal` user
+
+```
+[centos@localhost ~]$ sudo su - ontoportal
+[ontoportal@localhost ~]$
+```
+
+#### Run the AllegroGraph Bootstrapping Script
+
+```
+[ontoportal@localhost ~]$ cd /srv/ontoportal/virtual_appliance/utils/bootstrap/
+[ontoportal@localhost bootstrap]$ sh bootstrap_AG.sh
+Starting agraph (via systemctl):                           [  OK  ]
+uri: http://localhost:10035/repositories/ontoportal
+relativeUri: repositories/ontoportal
+id: ontoportal
+title: ontoportal
+readable: true
+writable: true
+replication: no
+distributed: false
+...
+```
+
+Note that this script may take a few minutes to execute. Please wait unit it finishes.
+
+#### Navigate to AllegroGraph WebView
+
+Open your browser on the host machine and once again navigate to:
+
+http://localhost:10035
+
+This time, you should see the following page instead of the login prompt:
+
+<figure>
+  <img src="{{site.baseimgs}}/ag-webview.png" style="width:80%"/>
+  <figcaption>AllegroGraph WebView</figcaption>
+</figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 Update the configuration file inside your Virtual Appliance (VA)
 
