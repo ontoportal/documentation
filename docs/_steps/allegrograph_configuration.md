@@ -13,32 +13,59 @@ as its backend.
 
 ## Replacing 4store with AllegroGraph
 
-Your {{site.opva}} can use either 4store or (new with version 3.0) AllegroGraph 
-as its RDF backend store. 
+Your {{site.opva}} can use either 4store or (new with version 3.0) AllegroGraph as its RDF backend store. 
 The 4store is the default RDF store for the system, as we have much more experience with it to date. 
 
-The configuration can be changed at any time by shutting down BioPortal,
-resetting the backend store configuration attribute, 
-and restarting BioPortal. 
-However, the Annotator and search index data will not change when you switch the backend, so it isn't really feasible to go back and forth—you'll 
-want to pick your backend system at the beginning,
-or be prepared to re-index your databases with each switch.
+The configuration can be changed at any time by shutting down BioPortal, resetting the backend store configuration attribute, and restarting BioPortal. However, the Annotator and search index data will not change when you switch the backend, so it isn't really feasible to go back and forth—you'll want to pick your backend system at the beginning, or be prepared to re-index your databases with each switch.
 
 ### What's included?
 
-We included a version of AllegroGraph with your Appliance
-that is tested to work with this version of the Appliance.
-The included AllegroGraph is not necessarily the most recent version of the AllegroGraph software. 
+We included a version of AllegroGraph with your Appliance that is tested to work with this version of the Appliance. The included AllegroGraph is not necessarily the most recent version of the AllegroGraph software. 
 
-If you want to upgrade your AllegroGraph software to the most recent version,
-you can obtain that from the Franz, Inc. website. 
-However, we can not guarantee the compatibility of the Appliance
-with the latest AllegroGraph version.
+If you want to upgrade your AllegroGraph software to the most recent version, you can obtain that from the Franz, Inc. website. However, we can not guarantee the compatibility of the Appliance with the latest AllegroGraph version.
 
 ### How to switch the Configuration
 
-The AllegroGraph was shipped in the distribution pre-configured to support 
-the settings described here.
+The AllegroGraph was shipped in the distribution pre-configured to support the settings described here.
+
+#### Stop and Disable 4store services
+
+```
+[centos@localhost ~]$ sudo systemctl stop 4s-httpd
+[centos@localhost ~]$ sudo systemctl disable 4s-httpd
+Removed symlink /etc/systemd/system/multi-user.target.wants/4s-httpd.service.
+```
+
+#### Enable and Start AllegroGraph services
+
+```
+[centos@localhost ~]$ sudo systemctl enable agraph
+agraph.service is not a native service, redirecting to /sbin/chkconfig.
+Executing /sbin/chkconfig agraph on
+[centos@localhost ~]$ sudo /sbin/service agraph start
+Starting agraph (via systemctl):                           [  OK  ]
+```
+
+#### Verify that AllegroGraph is running
+
+The local version of AllegroGraph bundled with the Virtual Appliance (VA) sits behind a firewall, and thus, cannot be accessed from an outside system (such as your Host operating system). To get around that restriction, we can create an SSH tunnel that allows this access. Open your favorite terminal app in your host OS and run the following command:
+
+```
+ssh -N -L localhost:10035:localhost:10035 centos@<IP address of your VA>
+```
+
+For example:
+
+<figure>
+  <img src="{{site.baseimgs}}/ssh-tunnel.png" style="width:80%"/>
+  <figcaption>SSH tunnel to AllegroGraph</figcaption>
+</figure>
+
+Next, on your host OS, open your favorite browser and navigate to:
+
+http://localhost:10035
+
+You should see a page requiring AllegroGraph Username and Password. Ignore the login prompt for the moment. All we needed to make sure is that the AllegroGraph server is up and running.
 
 Update the configuration file inside your Virtual Appliance (VA)
 
@@ -51,7 +78,7 @@ Update the configuration file inside your Virtual Appliance (VA)
 
 	    config.goo_backend_name  = 'AG'
 	    config.goo_host          = 'localhost' # or your server name
-	    config.goo_port          = 10035
+	    config.goo_port          = 10035in 
 	    config.goo_path_query    = '/repositories/ontoportal' # the last fragment must match the name of the repository you created in Step 3.
 	    config.goo_path_data     = '/repositories/ontoportal/statements'
 	    config.goo_path_update   = '/repositories/ontoportal/statements'
