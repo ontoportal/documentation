@@ -28,14 +28,6 @@ If you want to upgrade your AllegroGraph software to the most recent version, yo
 
 The AllegroGraph was shipped in the distribution pre-configured to support the settings described here. Follow the steps below to convert your system from 4store to AllegroGraph backend store.
 
-#### Stop and Disable 4store services
-
-```
-[centos@localhost ~]$ sudo systemctl stop 4s-httpd
-[centos@localhost ~]$ sudo systemctl disable 4s-httpd
-Removed symlink /etc/systemd/system/multi-user.target.wants/4s-httpd.service.
-```
-
 #### Enable and Start AllegroGraph services
 
 ```
@@ -61,7 +53,7 @@ For example:
   <figcaption>SSH tunnel to AllegroGraph</figcaption>
 </figure>
 
-Next, on your host OS, open your favorite browser and navigate to:
+Next, on your host OS, open a browser and navigate to:
 
 http://localhost:10035
 
@@ -88,7 +80,7 @@ drwxrwxr-x  7 ontoportal ontoportal  228 Oct 22 16:36 ontologies_linked_data
 -rw-r--r--. 1 ontoportal ontoportal 1716 Aug  3 23:24 site_config.rb.default
 ```
 
-You will need to update the configuration files in the following directories: `ncbo_cron`, `ontologies_api`.
+You will need to update the configuration files in the following directories: `ncbo_cron`, `ontologies_api` per the instructions below.
 
 #### Update NCBO Cron configuration files
 
@@ -138,57 +130,7 @@ The values are case-sensitive. Make sure you use the uppercase 'AG'.
 
 Save the file and exit.
 
-### Run Deployment Script and Restart Ontoportal
-
-In order for the changes to the configuration files to propogate to the running VA, we need to execute a set of deployment scripts.
-
-#### Setup Deployment Environment
-
-```
-[ontoportal@localhost environments]$ cd /srv/ontoportal/virtual_appliance/deployment/
-[ontoportal@localhost deployment]$ ./setup_deploy_env.sh
-Setting up deployment environment
-Setting up deployment env for UI
-...
-```
-
-#### Deploy Ontoportal API
-
-```
-[ontoportal@localhost deployment]$ ./deploy_api.sh
-deploying ontologies_api from v5.18.1 branch
-copying site overides file
-...
-```
-
-#### Deploy NCBO Cron
-
-```
-ontoportal@localhost deployment]$ ./deploy_ncbo_cron.sh
-deploying ncbo_cron from v5.18.1 branch
-/srv/ontoportal/ncbo_cron /srv/ontoportal/virtual_appliance/deployment
-...
-```
-
-#### Restart Appliance Services
-
-```
-[ontoportal@localhost deployment]$ sudo oprestart
-```
-
-
-
-
-
-
-
-
-
-
-
-
-
-#### Run the AllegroGraph Bootstrapping Script
+### Run the AllegroGraph Bootstrapping Script
 
 ```
 [ontoportal@localhost ~]$ cd /srv/ontoportal/virtual_appliance/utils/bootstrap/
@@ -207,7 +149,13 @@ distributed: false
 
 Note that this script may take a few minutes to execute. Please wait unit it finishes.
 
-#### Navigate to AllegroGraph WebView
+### Restart Appliance Services
+
+```
+[ontoportal@localhost deployment]$ sudo oprestart
+```
+
+### Navigate to AllegroGraph WebView
 
 Open your browser on the host machine and once again navigate to:
 
@@ -219,6 +167,8 @@ This time, you should see the following page instead of the login prompt:
   <img src="{{site.baseimgs}}/ag-webview.png"/>
   <figcaption>AllegroGraph WebView</figcaption>
 </figure>
+
+Click on the `ontoportal` repository link. You should see some records in the repository: `Repository ontoportal — 890 statements`.
 
 ### `touch /srv/ontoportal/firstboot` and Reboot the Appliance
 
