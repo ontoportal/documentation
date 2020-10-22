@@ -103,7 +103,7 @@ and replace it with:
 GOO_BACKEND_NAME = 'AG'
 ```
 
-Save the file and exit.
+The values are case-sensitive. Make sure you use the uppercase 'AG' as the value. Save the file and exit.
 
 #### Update Ontologies API configuration files
 
@@ -126,9 +126,7 @@ and replace it with:
 GOO_BACKEND_NAME = 'AG'
 ```
 
-The values are case-sensitive. Make sure you use the uppercase 'AG'. 
-
-Save the file and exit.
+The values are case-sensitive. Make sure you use the uppercase 'AG' as the value. Save the file and exit.
 
 ### Run the AllegroGraph Bootstrapping Script
 
