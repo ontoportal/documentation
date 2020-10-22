@@ -74,38 +74,6 @@ You should see a page requiring AllegroGraph Username and Password. Ignore the l
 [ontoportal@localhost ~]$
 ```
 
-#### Run the AllegroGraph Bootstrapping Script
-
-```
-[ontoportal@localhost ~]$ cd /srv/ontoportal/virtual_appliance/utils/bootstrap/
-[ontoportal@localhost bootstrap]$ sh bootstrap_AG.sh
-Starting agraph (via systemctl):                           [  OK  ]
-uri: http://localhost:10035/repositories/ontoportal
-relativeUri: repositories/ontoportal
-id: ontoportal
-title: ontoportal
-readable: true
-writable: true
-replication: no
-distributed: false
-...
-```
-
-Note that this script may take a few minutes to execute. Please wait unit it finishes.
-
-#### Navigate to AllegroGraph WebView
-
-Open your browser on the host machine and once again navigate to:
-
-http://localhost:10035
-
-This time, you should see the following page instead of the login prompt:
-
-<figure>
-  <img src="{{site.baseimgs}}/ag-webview.png"/>
-  <figcaption>AllegroGraph WebView</figcaption>
-</figure>
-
 ### Update OntoPortal configuration files
 
 ```
@@ -208,7 +176,53 @@ deploying ncbo_cron from v5.18.1 branch
 [ontoportal@localhost deployment]$ sudo oprestart
 ```
 
+
+
+
+
+
+
+
+
+
+
+
+
+#### Run the AllegroGraph Bootstrapping Script
+
+```
+[ontoportal@localhost ~]$ cd /srv/ontoportal/virtual_appliance/utils/bootstrap/
+[ontoportal@localhost bootstrap]$ sh bootstrap_AG.sh
+Starting agraph (via systemctl):                           [  OK  ]
+uri: http://localhost:10035/repositories/ontoportal
+relativeUri: repositories/ontoportal
+id: ontoportal
+title: ontoportal
+readable: true
+writable: true
+replication: no
+distributed: false
+...
+```
+
+Note that this script may take a few minutes to execute. Please wait unit it finishes.
+
+#### Navigate to AllegroGraph WebView
+
+Open your browser on the host machine and once again navigate to:
+
+http://localhost:10035
+
+This time, you should see the following page instead of the login prompt:
+
+<figure>
+  <img src="{{site.baseimgs}}/ag-webview.png"/>
+  <figcaption>AllegroGraph WebView</figcaption>
+</figure>
+
 ### `touch /srv/ontoportal/firstboot` and Reboot the Appliance
+
+This step is required in order to re-initialize the system for AllegroGraph backend.
 
 ```
 [ontoportal@localhost deployment]$ touch /srv/ontoportal/firstboot
