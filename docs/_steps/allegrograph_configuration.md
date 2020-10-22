@@ -97,7 +97,7 @@ Find the following line:
 GOO_BACKEND_NAME = '4store'
 ```
 
-and replace it with
+and replace it with:
 
 ```
 GOO_BACKEND_NAME = 'AG'
@@ -120,7 +120,7 @@ Find the following line:
 GOO_BACKEND_NAME = '4store'
 ```
 
-and replace it with
+and replace it with:
 
 ```
 GOO_BACKEND_NAME = 'AG'
