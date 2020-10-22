@@ -24,7 +24,7 @@ We included a version of AllegroGraph with your Appliance that is tested to work
 
 If you want to upgrade your AllegroGraph software to the most recent version, you can obtain that from the Franz, Inc. website. However, we can not guarantee the compatibility of the Appliance with the latest AllegroGraph version.
 
-### Start AllegroGraph Server and Bootstrap OntoPortal Triple Store
+### Start AllegroGraph Server
 
 The AllegroGraph was shipped in the distribution pre-configured to support the settings described here. Follow the steps below to convert your system from 4store to AllegroGraph backend store.
 
@@ -132,6 +132,8 @@ Save the file and exit.
 
 ### Run the AllegroGraph Bootstrapping Script
 
+The bootstrapping script creates the initial triple records and lookup data which is required for Ontoportal to operate properly. It also deploys the updated configuration files to the server.
+
 ```
 [ontoportal@localhost ~]$ cd /srv/ontoportal/virtual_appliance/utils/bootstrap/
 [ontoportal@localhost bootstrap]$ sh bootstrap_AG.sh
@@ -170,7 +172,7 @@ This time, you should see the following page instead of the login prompt:
 
 Click on the `ontoportal` repository link. You should see some records in the repository: `Repository ontoportal — 890 statements`.
 
-### `touch /srv/ontoportal/firstboot` and Reboot the Appliance
+### Create the `firstboot` File and Reboot the Appliance
 
 This step is required in order to re-initialize the system for AllegroGraph backend.
 
@@ -181,6 +183,16 @@ logout
 [centos@localhost deployment]$ sudo reboot
 ```
 
+Your Virtual Appliance is now pointing to AllegroGraph as the backend. Next, check the web UI and the REST services to make sure they are up and running.
+
+### Accessing the web UI
+
+From your host operating system's browser (not in the virtual environment), the Appliance Web UI can be accessed at `http://{ip_address_of_appliance}`. 
+
+### Accessing REST services
+
+REST services are available at the following location:
+* `http://{ip_address_of_appliance}:8080`
 
 
 
@@ -189,31 +201,14 @@ logout
 
 
 
+## (OPTIONAL) Running your own version of AllegroGraph
 
+If you would like to install your own version of AllegroGraph, ignoring the one bundled with the appliance, follow the steps below. You will need to point the configuration files from the step `Update OntoPortal configuration files` to your own server in addition to switching `GOO_BACKEND_NAME` to `AG`.
 
-Update the configuration file inside your Virtual Appliance (VA)
-
-	a) replace the following lines:
 ```
-		config.goo_host          = 'localhost'
-    	config.goo_port          = 8081
+LinkedData.config do |config|
+  config.goo_host                   = 'localhost'
 ```
-       with:
-
-	    config.goo_backend_name  = 'AG'
-	    config.goo_host          = 'localhost' # or your server name
-	    config.goo_port          = 10035in 
-	    config.goo_path_query    = '/repositories/ontoportal' # the last fragment must match the name of the repository you created in Step 3.
-	    config.goo_path_data     = '/repositories/ontoportal/statements'
-	    config.goo_path_update   = '/repositories/ontoportal/statements'
-
-Restart your Virtual Appliance (see step 2 below). Your server is now pointing to AllegroGraph as the backend. 
-
-
-
-
-
-## Obtaining and starting AllegroGraph
 
 ### 1. Install AllegroGraph
 
@@ -254,7 +249,7 @@ Under "Create new repository" type in a name for your new repository to be used 
 Once created, you should be able to navigate to your new repository via:
 
 ```
-	http://<your server name>:10035/#/repositories/ontoportal
+http://<your server name>:10035/#/repositories/ontoportal
 ```
 
 From this view, you can run SPARQL queries against your data, add or delete records, export the repository in a number of formats, and run reports on the use of your data store.
