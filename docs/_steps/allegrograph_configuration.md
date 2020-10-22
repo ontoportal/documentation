@@ -129,8 +129,8 @@ You will need to update the configuration files in the following directories: `n
 Navigate to NCBO Cron config directory and open `config.rb` in your favorite Linux editor:
 
 ```
-[ontoportal@localhost appliance_config]$ cd ncbo_cron/config
-[ontoportal@localhost config]$ nano site_config.rb
+[ontoportal@localhost config]$ cd /srv/ontoportal/virtual_appliance/appliance_config/ncbo_cron/config/
+[ontoportal@localhost config]$ nano config.rb
 ```
 
 Find the following line:
@@ -144,6 +144,50 @@ and replace it with
 ```
 GOO_BACKEND_NAME = 'ag'
 ```
+
+Save the file and exit.
+
+#### Update Ontologies API configuration files
+
+Navigate to Ontologies API config directory and open `appliance.rb` in your favorite Linux editor:
+
+```
+[ontoportal@localhost config]$ cd /srv/ontoportal/virtual_appliance/appliance_config/ontologies_api/config/environments
+[ontoportal@localhost config]$ nano appliance.rb
+```
+
+Find the following line:
+
+```
+GOO_BACKEND_NAME = '4store'
+```
+
+and replace it with
+
+```
+GOO_BACKEND_NAME = 'ag'
+```
+
+Save the file and exit.
+
+
+### Run Deployment Script and Restart Ontoportal
+
+In order for the changes to the configuration files to propogate to the running VA, we need to execute the deployment script.
+
+```
+[ontoportal@localhost environments]$ cd /srv/ontoportal/virtual_appliance/deployment/
+[ontoportal@localhost deployment]$ ./setup_deploy_env.sh
+Setting up deployment environment
+Setting up deployment env for UI
+...
+[ontoportal@localhost deployment]$ sudo oprestart
+
+
+
+
+
+
 
 
 
