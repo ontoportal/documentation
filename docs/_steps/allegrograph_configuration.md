@@ -24,9 +24,9 @@ We included a version of AllegroGraph with your Appliance that is tested to work
 
 If you want to upgrade your AllegroGraph software to the most recent version, you can obtain that from the Franz, Inc. website. However, we can not guarantee the compatibility of the Appliance with the latest AllegroGraph version.
 
-### How to switch the Configuration
+### Start AllegroGraph Server and Bootstrap OntoPortal Triple Store
 
-The AllegroGraph was shipped in the distribution pre-configured to support the settings described here.
+The AllegroGraph was shipped in the distribution pre-configured to support the settings described here. Follow the steps below to convert your system from 4store to AllegroGraph backend store.
 
 #### Stop and Disable 4store services
 
@@ -57,7 +57,7 @@ ssh -N -L localhost:10035:localhost:10035 centos@<IP address of your VA>
 For example:
 
 <figure>
-  <img src="{{site.baseimgs}}/ssh-tunnel.png" style="width:80%"/>
+  <img src="{{site.baseimgs}}/ssh-tunnel.png"/>
   <figcaption>SSH tunnel to AllegroGraph</figcaption>
 </figure>
 
@@ -102,13 +102,48 @@ http://localhost:10035
 This time, you should see the following page instead of the login prompt:
 
 <figure>
-  <img src="{{site.baseimgs}}/ag-webview.png" style="width:80%"/>
+  <img src="{{site.baseimgs}}/ag-webview.png"/>
   <figcaption>AllegroGraph WebView</figcaption>
 </figure>
 
 
 
+### Update OntoPortal configuration files
 
+```
+[ontoportal@localhost bootstrap]$ cd /srv/ontoportal/virtual_appliance/appliance_config/
+[ontoportal@localhost appliance_config]$ ls -l
+total 8
+drwxr-xr-x. 5 ontoportal ontoportal   45 Aug  3 23:24 bioportal_web_ui
+drwxr-xr-x. 3 ontoportal ontoportal   20 Aug  3 23:24 ncbo_cron
+drwxr-xr-x. 3 ontoportal ontoportal   20 Aug  3 23:24 ontologies_api
+drwxrwxr-x  7 ontoportal ontoportal  228 Oct 22 16:36 ontologies_linked_data
+-rw-r--r--. 1 ontoportal ontoportal 1712 Oct 14 13:07 site_config.rb
+-rw-r--r--. 1 ontoportal ontoportal 1716 Aug  3 23:24 site_config.rb.default
+```
+
+You will need to update the configuration files in the following directories: `ncbo_cron`, `ontologies_api`.
+
+#### Update NCBO Cron configuration files
+
+Navigate to NCBO Cron config directory and open `config.rb` in your favorite Linux editor:
+
+```
+[ontoportal@localhost appliance_config]$ cd ncbo_cron/config
+[ontoportal@localhost config]$ nano site_config.rb
+```
+
+Find the following line:
+
+```
+GOO_BACKEND_NAME = '4store'
+```
+
+and replace it with
+
+```
+GOO_BACKEND_NAME = 'ag'
+```
 
 
 
@@ -139,6 +174,10 @@ Update the configuration file inside your Virtual Appliance (VA)
 	    config.goo_path_update   = '/repositories/ontoportal/statements'
 
 Restart your Virtual Appliance (see step 2 below). Your server is now pointing to AllegroGraph as the backend. 
+
+
+
+
 
 ## Obtaining and starting AllegroGraph
 
