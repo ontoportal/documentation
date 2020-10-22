@@ -211,7 +211,6 @@ deploying ncbo_cron from v5.18.1 branch
 
 ```
 [ontoportal@localhost deployment]$ touch /srv/ontoportal/firstboot
-[ontoportal@localhost deployment]$ touch /srv/ontoportal/firstboot
 [ontoportal@localhost deployment]$ exit
 logout
 [centos@localhost deployment]$ sudo reboot
