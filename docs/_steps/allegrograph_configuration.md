@@ -182,7 +182,17 @@ logout
 
 Your Virtual Appliance is now pointing to AllegroGraph as the backend. Next, check the web UI and the REST services to make sure they are up and running.
 
-### Accessing the Web UI
+### Stop and Disable 4store Services	
+
+You can now stop and disable the defunct 4store service:
+
+```	
+[centos@localhost ~]$ sudo systemctl stop 4s-httpd
+[centos@localhost ~]$ sudo systemctl disable 4s-httpd
+Removed symlink /etc/systemd/system/multi-user.target.wants/4s-httpd.service.	
+```
+
+### Access the Web UI
 
 From your host operating system's browser (not in the virtual environment), the Appliance Web UI can be accessed at `http://{ip_address_of_appliance}`. 
 
@@ -193,7 +203,7 @@ If the AllegroGraph switch completed successfully, clicking on the `Ontologies` 
   <figcaption>Ontologies Page</figcaption>
 </figure>
 
-### Accessing REST Services
+### Access REST Services
 
 REST services are available at the following location:
 * `http://{ip_address_of_appliance}:8080`
