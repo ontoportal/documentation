@@ -169,9 +169,9 @@ This time, you should see the following page instead of the login prompt:
 
 Click on the `ontoportal` repository link. You should see some records in the repository: `Repository ontoportal — 890 statements`.
 
-### Create the `firstboot` File and Reboot the Appliance
+### Create the `firstboot` File and Reboot the Appliance <= IMPORTANT!!!
 
-This step is required in order to re-initialize the system for AllegroGraph backend.
+This is a very important step, which is required in order to re-initialize the system for AllegroGraph backend.
 
 ```
 [ontoportal@localhost deployment]$ touch /srv/ontoportal/firstboot
