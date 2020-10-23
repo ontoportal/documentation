@@ -186,6 +186,13 @@ Your Virtual Appliance is now pointing to AllegroGraph as the backend. Next, che
 
 From your host operating system's browser (not in the virtual environment), the Appliance Web UI can be accessed at `http://{ip_address_of_appliance}`. 
 
+If the AllegroGraph switch completed successfully, clicking on the `Ontologies` link at the top should bring up this page with a single ontology, Semantic Types Ontology (STY):
+
+<figure>
+  <img src="{{site.baseimgs}}/ontologies-page.png" style="width:80%" />
+  <figcaption>Ontologies Page</figcaption>
+</figure>
+
 ### Accessing REST services
 
 REST services are available at the following location:
