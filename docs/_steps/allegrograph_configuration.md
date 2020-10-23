@@ -207,7 +207,7 @@ REST services are available at the following location:
 
 ## (OPTIONAL) Running Your Own Version of AllegroGraph
 
-If you would like to install your own version of AllegroGraph, ignoring the one bundled with the appliance, follow the steps below. You will need to point the configuration files from the step [Update OntoPortal configuration files](https://redis.io/topics/rediscli) to your own server in addition to switching `GOO_BACKEND_NAME` to `AG`.
+If you would like to install your own version of AllegroGraph, ignoring the one bundled with the appliance, follow the steps below. You will need to point the configuration files from the step [Update OntoPortal configuration files](#update-ontoportal-configuration-files) to your own server in addition to switching `GOO_BACKEND_NAME` to `AG`.
 
 ```
 LinkedData.config do |config|
