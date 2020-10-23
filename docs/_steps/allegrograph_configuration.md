@@ -207,6 +207,8 @@ LinkedData.config do |config|
   config.goo_host                   = 'localhost'
 ```
 
+Set `config.goo_host` to the IP address of your AllegroGraph server.
+
 ### 1. Install AllegroGraph
 
 If not already present in a current version, install the AllegroGraph (AG) server using the instructions on this page:
@@ -223,11 +225,13 @@ An example from this page of commands to start and stop AllegroGraph:
 Note that the last few lines of the script show how to start and stop AllegroGraph on your server. These lines will be similar to this example:
 
 You can start AllegroGraph by running:  
-/sbin/service agraph start  
+sudo /sbin/service agraph start  
  
 You can stop AllegroGraph by running:  
-/sbin/service agraph stop 
+sudo /sbin/service agraph stop 
 ```
+
+You need to run these commands as `centos` user, NOT `ontoportal` user!
 
 ### 3. Navigate to AllegroGraph console
 
@@ -239,7 +243,7 @@ http://<your server name>:10035/#
 
 ### 4. Create your backend repository
 
-Under "Create new repository" type in a name for your new repository to be used for OntoPortal and click "Create". For Example: ontoportal
+Under `Create new repository` type in a name for your new repository to be used for OntoPortal and click `Create`. For Example: `ontoportal`
 
 ### 5. Navigate to your repository
 
