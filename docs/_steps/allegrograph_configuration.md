@@ -13,14 +13,13 @@ as its backend.
 
 ## Replacing 4store with AllegroGraph
 
-Your {{site.opva}} can use either 4store or (new with version 3.0) AllegroGraph as its RDF backend store. 
-The 4store is the default RDF store for the system, as we have much more experience with it to date. 
+Your {{site.opva}} can use either 4store or (new with version 3.0) AllegroGraph as its RDF backend store. The 4store is the default RDF store for the system, as we have much more experience with it to date. 
 
-The configuration can be changed at any time by shutting down BioPortal, resetting the backend store configuration attribute, and restarting BioPortal. However, the Annotator and search index data will not change when you switch the backend, so it isn't really feasible to go back and forth—you'll want to pick your backend system at the beginning, or be prepared to re-index your databases with each switch.
+The configuration can be changed at any time by shutting down BioPortal, resetting the backend store configuration attribute, and restarting BioPortal. However, the Annotator and search index data will not change when you switch the backend, so it isn't really feasible to go back and forth — you'll want to pick your backend system at the beginning, or be prepared to re-index your databases with each switch.
 
 ### What's included?
 
-We included a version of AllegroGraph with your Appliance that is tested to work with this version of the Appliance. The included AllegroGraph is not necessarily the most recent version of the AllegroGraph software. 
+We included a version of AllegroGraph with your Virtual Appliance (VA) that is tested to work with this version of the Appliance. The included AllegroGraph is not necessarily the most recent version of the AllegroGraph software. 
 
 If you want to upgrade your AllegroGraph software to the most recent version, you can obtain that from the Franz, Inc. website. However, we can not guarantee the compatibility of the Appliance with the latest AllegroGraph version.
 
