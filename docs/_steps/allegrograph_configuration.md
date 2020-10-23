@@ -17,7 +17,7 @@ Your {{site.opva}} can use either 4store or (new with version 3.0) AllegroGraph 
 
 The configuration can be changed at any time by shutting down BioPortal, resetting the backend store configuration attribute, and restarting BioPortal. However, the Annotator and search index data will not change when you switch the backend, so it isn't really feasible to go back and forth — you'll want to pick your backend system at the beginning, or be prepared to re-index your databases with each switch.
 
-### What's included?
+### What's Included?
 
 We included a version of AllegroGraph with your Virtual Appliance (VA) that is tested to work with this version of the Appliance. The included AllegroGraph is not necessarily the most recent version of the AllegroGraph software. 
 
@@ -27,7 +27,7 @@ If you want to upgrade your AllegroGraph software to the most recent version, yo
 
 The AllegroGraph was shipped in the distribution pre-configured to support the settings described here. Follow the steps below to convert your system from 4store to AllegroGraph backend store.
 
-#### Enable and Start AllegroGraph services
+#### Enable and Start AllegroGraph Services
 
 ```
 [centos@localhost ~]$ sudo systemctl enable agraph
@@ -37,7 +37,7 @@ Executing /sbin/chkconfig agraph on
 Starting agraph (via systemctl):                           [  OK  ]
 ```
 
-#### Verify that AllegroGraph is running
+#### Verify That AllegroGraph is Running
 
 The local version of AllegroGraph bundled with the Virtual Appliance (VA) sits behind a firewall, and thus, cannot be accessed from an outside system (such as your Host operating system). To get around that restriction, we can create an SSH tunnel that allows this access. Open your favorite terminal app in your host OS and run the following command:
 
@@ -58,14 +58,14 @@ http://localhost:10035
 
 You should see a page requiring AllegroGraph Username and Password. Ignore the login prompt for the moment. All we needed at this point is to ensure that the AllegroGraph server is up and running.
 
-#### Login to VA as `ontoportal` user
+#### Login to VA as `ontoportal` User
 
 ```
 [centos@localhost ~]$ sudo su - ontoportal
 [ontoportal@localhost ~]$
 ```
 
-### Update OntoPortal configuration files
+### Update OntoPortal Configuration Files
 
 ```
 [ontoportal@localhost bootstrap]$ cd /srv/ontoportal/virtual_appliance/appliance_config/
@@ -81,7 +81,7 @@ drwxrwxr-x  7 ontoportal ontoportal  228 Oct 22 16:36 ontologies_linked_data
 
 You will need to update the configuration files in the following directories: `ncbo_cron`, `ontologies_api` per the instructions below.
 
-#### Update NCBO Cron configuration files
+#### Update NCBO Cron Configuration Files
 
 Navigate to NCBO Cron config directory and open `config.rb` in your favorite Linux editor:
 
@@ -104,7 +104,7 @@ GOO_BACKEND_NAME = 'AG'
 
 The values are case-sensitive. Make sure you use the uppercase 'AG' as the value. Save the file and exit.
 
-#### Update Ontologies API configuration files
+#### Update Ontologies API Configuration Files
 
 Navigate to Ontologies API config directory and open `appliance.rb` in your favorite Linux editor:
 
@@ -182,7 +182,7 @@ logout
 
 Your Virtual Appliance is now pointing to AllegroGraph as the backend. Next, check the web UI and the REST services to make sure they are up and running.
 
-### Accessing the web UI
+### Accessing the Web UI
 
 From your host operating system's browser (not in the virtual environment), the Appliance Web UI can be accessed at `http://{ip_address_of_appliance}`. 
 
@@ -193,7 +193,7 @@ If the AllegroGraph switch completed successfully, clicking on the `Ontologies` 
   <figcaption>Ontologies Page</figcaption>
 </figure>
 
-### Accessing REST services
+### Accessing REST Services
 
 REST services are available at the following location:
 * `http://{ip_address_of_appliance}:8080`
@@ -205,9 +205,9 @@ REST services are available at the following location:
 
 
 
-## (OPTIONAL) Running your own version of AllegroGraph
+## (OPTIONAL) Running Your Own Version of AllegroGraph
 
-If you would like to install your own version of AllegroGraph, ignoring the one bundled with the appliance, follow the steps below. You will need to point the configuration files from the step `Update OntoPortal configuration files` to your own server in addition to switching `GOO_BACKEND_NAME` to `AG`.
+If you would like to install your own version of AllegroGraph, ignoring the one bundled with the appliance, follow the steps below. You will need to point the configuration files from the step [Update OntoPortal configuration files](https://redis.io/topics/rediscli) to your own server in addition to switching `GOO_BACKEND_NAME` to `AG`.
 
 ```
 LinkedData.config do |config|
@@ -240,7 +240,7 @@ sudo /sbin/service agraph stop
 
 You need to run these commands as `centos` user, NOT `ontoportal` user!
 
-### 3. Navigate to AllegroGraph console
+### 3. Navigate to AllegroGraph Console
 
 Once AllegroGraph is running, navigate to the AG Admin console. By default it runs on port 10035:
 
@@ -248,11 +248,11 @@ Once AllegroGraph is running, navigate to the AG Admin console. By default it ru
 http://<your server name>:10035/#
 ```
 
-### 4. Create your backend repository
+### 4. Create Your Backend Repository
 
 Under `Create new repository` type in a name for your new repository to be used for OntoPortal and click `Create`. For Example: `ontoportal`
 
-### 5. Navigate to your repository
+### 5. Navigate to Your Repository
 
 Once created, you should be able to navigate to your new repository via:
 
