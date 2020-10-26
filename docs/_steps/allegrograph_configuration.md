@@ -209,11 +209,42 @@ REST services are available at the following location:
 * `http://{ip_address_of_appliance}:8080`
 
 
+## (OPTIONAL) Upgrading Built-in Version of AllegroGraph
 
+### Download the New Version of AllegroGraph
 
+Run the command below as the `centos` user. Replace the link below with the correct link to the RPM file.
 
+```
+[centos@localhost ~]$ sudo curl -O https://franz.com/ftp/pri/acl/ag/ag<version>/linuxamd64.64/agraph-<version>.x86_64.rpm
+```
 
+### Stop AllegroGraph Service
 
+```
+[centos@localhost ~]$ sudo /sbin/service agraph stop
+Stopping agraph (via systemctl):                           [  OK  ]
+```
+
+### Run the Installer
+
+```
+[centos@localhost ~]$ sudo rpm -U agraph-<version>.x86_64.rpm
+```
+
+If you are downgrading from a newer verson, run the command below instead:
+
+```
+[centos@localhost ~]$ sudo rpm -U --oldpackage agraph-<version>.x86_64.rpm
+```
+
+### Reload AllegroGraph Daemon and Start the Service
+
+```
+[centos@localhost ~]$ sudo systemctl daemon-reload
+[centos@localhost ~]$ sudo /sbin/service agraph start
+Starting agraph (via systemctl):                           [  OK  ]
+```
 
 ## (OPTIONAL) Running Your Own Version of AllegroGraph
 
