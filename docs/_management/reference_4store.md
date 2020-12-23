@@ -1,20 +1,23 @@
 ---
-title: 4store Reference
+title: 4store Reference 
 layout: default
 description: Advanced information about 4store
 weight: 120
-status: Preliminary
+status: Ready
 ---
 
 # Introduction
 
 This is an advanced reference document on the 4store database.
 
-## Directly querying 4store
+## Directly querying 4store via SPARQL
 
 If you want external users to be able to directly query your 4store database, 
 there are considerations described under *External users querying 4store* below 
 that you must take into account.
+ 
+A recipe for making the SPARQL endpoint publicly accessible 
+is available in the <a href="../reference_sparql_endpoint">SPARQL Endpoint Reference</a>.
 
 ### Local user (administrator) querying 4store
 
@@ -35,7 +38,7 @@ or you could open ports to a specific host.
 ```
 
 First, the 4store backend is built without any authentication,
-so anyone would be able to gain full read/write access to the triple store. 
+so anyone with access to it can gain full read/write access to the triple store. 
 In addition to ontology graphs,
 this triple store contains other sensitive information 
 such as user accounts with password hashes. 
@@ -44,8 +47,13 @@ Second, SPARQL is known for queries that can take a long time,
 especially on a large database. 
 If you provide direct access to the database,
 SPARQL queries from external users can fully consume the SPARQL endpoint,
-leaving limited (or zero) cycles or other resources 
+leaving insufficient system resources (e.g., few or no CPU cycles) 
 to serve your normal user interface and API queries.
+
+Finally, modifications to the triple store run the risk of changing its content
+in ways that make part or all of the OntoPortal user interface stop functioning.
+It is relatively painful to troubleshoot such inconsistencies,
+and you might need to revert the triple store to an earlier version with consistent content.
 
 #### Techniques
 
@@ -59,12 +67,12 @@ using 4s-dump and 4s-restore (see below).
 you could modify the sensitive graphs to overwrite only the sensitive data within them.)
 Few users are likely to need real-time SPARQL information,
 so a nightly job could perform this mirroring.
-It might impact the availability of the repository being accessed during the process,
-but for smaller repositories the problem would be small.
+The copying might impact the availability of the repository during the process,
+but for smaller repositories this problem would be rare.
 It is also possible that the 4s-dump process could capture an inconsistent repository,
 if the repository is being written as the dump takes place.
 
-Alternatively you could set up a SPARQL front end or proxy 
+Alternatively, you could set up a SPARQL front end or proxy 
 and filter out sensitive data from queries or responses.
 The front end or proxy server 
 could be given direct access to the endpoint,
