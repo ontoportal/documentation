@@ -41,7 +41,7 @@ or you could open ports to a specific host.
 From your machine open SSH Tunnel to remote ontoportal server:
 
 ```
-ssh 8081:localhost:8081 centos@[REMOTE_ONTOPORTAL_IP_ADDRESS]
+ssh -L 8081:localhost:8081 centos@[REMOTE_ONTOPORTAL_IP_ADDRESS]
 ```
 next you can open browser and check 4store sparql test page http://localhost:8001/test/
 or connect your favorite sparql client to http://localhost:8081:/sparql/
