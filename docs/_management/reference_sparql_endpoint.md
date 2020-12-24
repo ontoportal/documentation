@@ -46,6 +46,8 @@ ssh -L 8081:localhost:8081 centos@[REMOTE_ONTOPORTAL_IP_ADDRESS]
 next you can open browser and check 4store sparql test page http://localhost:8001/test/
 or connect your favorite sparql client to http://localhost:8081:/sparql/
 
+for more info on SSH tunneling please see [how-to-setup-ssh-tunneling](https://linuxize.com/post/how-to-setup-ssh-tunneling)
+
 ### Opening the SPARQL endpoint port
 
 The OntoPortal Appliance uses iptables as a local firewall, 
@@ -77,11 +79,11 @@ is not a maintained service for BioPortal.
 The system may not be up, and its content is taken from the main BioPortal system
 several years ago.
 
-Examples of useful SPARQL queries may be found at our <a href="http://sparql.bioontology.org/examples">SPARQL examples page</a>,
-and considerable background information is available at our <a href="https://www.bioontology.org/wiki/SPARQL_BioPortal">SPARQL documentation page</a>.
+Examples of useful SPARQL queries may be found at our [SPARQL examples page](http://sparql.bioontology.org/examples),
+and considerable background information is available at our [SPARQL documentation page](https://www.bioontology.org/wiki/SPARQL_BioPortal).
 (Some of the SPARQL queries may not work on the OntoPortal Appliance.) 
 
-You can also test your own queries against some example content at our <a href="http://sparql.bioontology.org/">SPARQL test page</a>.
+You can also test your own queries against some example content at our [SPARQL test page](http://sparql.bioontology.org/).
 
 
 
