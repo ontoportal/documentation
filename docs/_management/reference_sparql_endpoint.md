@@ -30,32 +30,21 @@ if you want to allow external users to directly query your 4store database.
 
 The 4store database listens for SPARQL queries on port localhost:8081. 
 However, the Appliance has a local firewall in place which blocks port 8081, 
-and the default AWS security group that comes with the Appliance
-allows only http, https and SSH ports to pss through.
+and the default AWS security policy that comes with the Appliance
+allows only http, https and SSH ports to pass through.
 
 The simplest way to access the SPARQL endpoint is through an SSH tunnel,
 or you could open ports to a specific host. 
 
-### Using an SSH tunnel
+### Using an SSH tunnel (Port Forwarding)
 
-While on your machine that has 4store installed, enter
-
-```
-ssh localhost:8081
-```
-
-to create a direct link for SPARQL commands.
-
-If you are on another machine—including on your host environment 
-when running the triple store in the Virtual Appliance—
-you will need to specify the domain name of your computer in the command:
+From your machine open SSH Tunnel to remote ontoportal server:
 
 ```
-ssh accountName@yourhostmachine.org:8081
+ssh 8081:localhost:8081 centos@[REMOTE_ONTOPORTAL_IP_ADDRESS]
 ```
-
-In this case, you must provide the account password for yourhostmachine
-to complete the connection.
+next you can open browser and check 4store sparql test page http://localhost:8001/test/
+or connect your favorite sparql client to http://localhost:8081:/sparql/
 
 ### Opening the SPARQL endpoint port
 
