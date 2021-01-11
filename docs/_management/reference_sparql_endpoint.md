@@ -6,7 +6,9 @@ weight: 125
 status: Preliminary
 ---
 
-# Introduction
+# SPARQL Endpoint Reference
+
+## Introduction
 
 This is an advanced reference document on setting up your SPARQL endpoint 
 so that it can be queried directly, either by you as the machine administrator,
@@ -43,10 +45,12 @@ From your machine open SSH Tunnel to remote ontoportal server:
 ```
 ssh -L 8081:localhost:8081 centos@[REMOTE_ONTOPORTAL_IP_ADDRESS]
 ```
-next you can open browser and check 4store sparql test page http://localhost:8001/test/
+
+Next you can open your machine's browser and check 
+the [4store sparql test page](http://localhost:8001/test/),
 or connect your favorite sparql client to http://localhost:8081:/sparql/
 
-for more info on SSH tunneling please see [how-to-setup-ssh-tunneling](https://linuxize.com/post/how-to-setup-ssh-tunneling)
+For more info on SSH tunneling please see [how-to-setup-ssh-tunneling](https://linuxize.com/post/how-to-setup-ssh-tunneling).
 
 ### Opening the SPARQL endpoint port
 
