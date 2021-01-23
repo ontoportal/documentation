@@ -75,7 +75,9 @@ umls2rdf has two configuration files:
 
 * `conf.py` where the database configuration (host,name,user and password) needs to be specified. Also the output folder.
 * `umls.conf` where one can specified the UMLS ontologies to be extracted. This is a comma-separated file with the following 3 fields:
-  * A prefix code for the ontology. (For most OntoPortal ontologies, the acronym of the ontology in the repository.) 
+  * A prefix code for the ontology as defined in UMLS. 
+    * For most OntoPortal ontologies, the acronym of the ontology in UMLS matches the acronym in the repository, so that one code is sufficient.
+    * If the UMLS acronym for the ontology is different than the acronym in the repository (in case of an acronym conflict, for example), the UMLS acronym is followed by a semicolon (;) and the repository acronym.
   * Output file name.
   * Conversion strategy: Accepted values are `load_on_codes`, `load_on_cuis`.
     * With load_on_codes the original source of the ontology will be used as strategy. The Class IDs will be constructed with the MRCONSO_CODE field. 
