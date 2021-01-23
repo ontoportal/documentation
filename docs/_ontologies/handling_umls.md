@@ -8,6 +8,10 @@ status: Ready
 
 # Submitting UMLS Content
 
+This document describes the process of submitting UMLS content to BioPortal.
+
+You may also wish to review the README documentation in the repository https://github.com/ncbo/umls2rdf.
+
 ## About UMLS content
 
 The National Institutes of Health National Library of Medicine 
@@ -46,7 +50,8 @@ Please select UMLS as the format for these ontologies.
 
 ### Install UMLS MySQL
 
-To import UMLS ontologies, a local installation of the UMLS MySQL release needs to be available. Please refer to the UMLS documentation for instructions on how to install the UMLS MySQL distribution.
+To import UMLS ontologies, a local installation of the UMLS MySQL release needs to be available. 
+Please refer to the UMLS documentation for instructions on how to install the UMLS MySQL distribution.
 
 ### Install umls2rdf
 
@@ -70,15 +75,11 @@ umls2rdf has two configuration files:
 
 * `conf.py` where the database configuration (host,name,user and password) needs to be specified. Also the output folder.
 * `umls.conf` where one can specified the UMLS ontologies to be extracted. This is a comma separated file with the following 4 fields:
-  * SAB: This is legacy. Any value works.
+  * A prefix code for the ontology. (For most OntoPortal ontologies, the acronym of the ontology in the repository.) 
   * Output file name.
   * Conversion strategy: Accepted values are `load_on_codes`, `load_on_cuis`.
     * With load_on_codes the original source of the ontology will be used as strategy. The Class IDs will be constructed with the MRCONSO.CODE field. 
     * If load_on_cuis is selected then the strategy to transform the ontology will use CUIs to construct the Class IDs.
-    
-```diff
-! Only 3 fields specified above?
-```
 
 In our configuration file, you can see the settings used by our production system. These are all the UMLS ontologies that are publicly available in BioPortal.
 
