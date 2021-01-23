@@ -74,12 +74,12 @@ pip install MySQL-python
 umls2rdf has two configuration files:
 
 * `conf.py` where the database configuration (host,name,user and password) needs to be specified. Also the output folder.
-* `umls.conf` where one can specified the UMLS ontologies to be extracted. This is a comma separated file with the following 4 fields:
+* `umls.conf` where one can specified the UMLS ontologies to be extracted. This is a comma-separated file with the following 3 fields:
   * A prefix code for the ontology. (For most OntoPortal ontologies, the acronym of the ontology in the repository.) 
   * Output file name.
   * Conversion strategy: Accepted values are `load_on_codes`, `load_on_cuis`.
-    * With load_on_codes the original source of the ontology will be used as strategy. The Class IDs will be constructed with the MRCONSO.CODE field. 
-    * If load_on_cuis is selected then the strategy to transform the ontology will use CUIs to construct the Class IDs.
+    * With load_on_codes the original source of the ontology will be used as strategy. The Class IDs will be constructed with the MRCONSO_CODE field. 
+    * If load_on_cuis is selected then the strategy to transform the ontology will use CUIs (from the MRCONSO_CUI field) to construct the Class IDs.
 
 In our configuration file, you can see the settings used by our production system. These are all the UMLS ontologies that are publicly available in BioPortal.
 
