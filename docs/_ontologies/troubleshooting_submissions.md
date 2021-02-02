@@ -81,7 +81,8 @@ we recommend acquiring computational systems with significant dedicated memory r
 ### With Protege
 
 If you open the ontology with the Protégé desktop application, 
-it will indicate any problems with the ontology.
+it will indicate in its log file any problems with the ontology.
+(Note you must open the log file to see these problems!)
 Since Protégé uses the same OWLAPI interface as OntoPortal,
 this is an excellent validation step to make sure your ontology parses correctly.
 
