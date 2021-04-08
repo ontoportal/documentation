@@ -27,7 +27,12 @@ grep 'ERROR' /srv/ontoportal/ncbo_cron/logs/scheduler-pull.log
 # get a list of errors with 20 lines of traceback for each
 grep -A20 'ERROR' /srv/ontoportal/ncbo_cron/logs/scheduler-pull.log
 ```
-
+# Check processing queue
+```
+redis-cli hgetall parseQueue
+1) "sub:http://data.bioontology.org/ontologies/STY/submissions/1"
+2) "{\"process_rdf\":true,\"index_search\":true,\"index_properties\":true,\"run_metrics\":true,\"process_annotator\":true,\"diff\":true}"
+```
 # Run ncbo-cron jobs
 
 ## Default production job
