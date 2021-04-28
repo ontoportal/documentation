@@ -18,6 +18,8 @@ For troubleshooting system operations, see the <a href="../../management/trouble
 
 ## Using the Administration page
 
+### Ontology Administration
+
 The Ontology Administration tab of the Administration page of OntoPortal provides detailed information about the latest ontology submissions.
 Typically this tab is updated manually; to make sure it is current, 
 click on the Refresh button near the top of the tab's content; the refresh may take some minutes.
@@ -31,7 +33,7 @@ By sorting this table, you can quickly learn assess the status of all your ontol
 and the general health of your system. 
 
 The URL column contains 3 links: Log, REST, and Submissions.
-The Log link points to the parsing log for the latest submission of this ontology.
+The Log link points to the processing log for the latest submission of this ontology.
 The REST link points to the REST API entry for the ontology; 
 most other REST links will be displayed in OntoPortal's response.
 The Submissions link brings up a table of the submissions that OntoPortal processed for this ontology, 
@@ -42,6 +44,33 @@ the `Please Select` dropdown in the header (following "Apply to Selected Rows:")
 can now be used to perform administrative actions on the selected ontologies.
 Simply choose an administrative action from the dropdown,
 and click on the `Go` button to perform the operation(s).
+
+### Cache management
+
+After any changes that you make in an attempt to diagnose ontology issues in OntoPortal, 
+you may want to clear caches. 
+The controls for clearing OntoPortal caches are in the Site Administration tab 
+of the Administration page.
+
+You should definitely clear at least the GOO cache to make sure old triple store data are not persisted.
+To do this, use the `Flush GOO Cache` button on the Administrative page to force OntoPortal to see the changes.
+
+You may wish to flush the other caches on that page as well, so that all the systems are synchronized for all users.
+(And you may also need to flush your browser cache for the OntoPortal UI, if it retains any problematic data.)
+
+## Ontology processing logs
+
+In addition to the log entries shown for the specific ontology,
+you may want to review the entire ontology processing context.
+Many general processing logs can be found in `/srv/ncbo/ncbo_cron/logs`.
+
+In particular, the log from the overnight ontology processing
+(for ontologies that are checked for changes each night)
+can be found at `/srv/ncbo/ncbo_cron/logs/schedule_pull.log`, 
+and similarly named archival logs. 
+
+These logs are helpful when you want to understand why an ontology
+may not be updating overnight when it is expected to do so.
 
 ## Troubleshooting (very) large ontologies
 
@@ -76,15 +105,32 @@ Obviously, for ontologies that are an order of magnitude larger or mroe—
 we are aware of ontologies that are 32 GB or more—
 we recommend acquiring computational systems with significant dedicated memory resources.
 
-## Check the ontology: Parsing ontology other ways
+## Check the ontology: Other ways to validate an ontology
 
-### With Protege
+### With Protégé
 
 If you open the ontology with the Protégé desktop application, 
-it will indicate in its log file any problems with the ontology.
+it will indicate in its log file any problems that it detects with the ontology.
 (Note you must open the log file to see these problems!)
 Since Protégé uses the same OWLAPI interface as OntoPortal,
 this is an excellent validation step to make sure your ontology parses correctly.
+
+### With an RDF validator
+
+On some occasions Protégé will see an error with the ontology, 
+but do its best to resolve the issue and move on. Typically Protégé logs these errors.
+
+In some other cases Protégé may not detect an error with the ontology,
+for example if a QName contains some unacceptable characters (e.g., `/`, `:`, `,`, `&`).
+OntoPortal can be unexpectedly strict about some of these issues.
+One way to detect these issues ahead of time is to submit your ontology
+to an online validator, for example at [RDF Playground](http://rdfplayground.dcc.uchile.cl/).
+
+Such tools can help find more obscure issues without going to the trouble of 
+downloading a dedicated parser or validator. 
+In general, when using such tools, to see the root cause 
+you may need to review the line flagged with a problem, 
+the one immediately following it, or some lines preceding it.
 
 ### With rapper
 
@@ -105,7 +151,7 @@ rapper: Error - URI file:///Users/manuelso/work/tmp/ontologies_linked_data/test/
 rapper: Parsing returned 1326 triples
 ```
 
-## ID already exists
+## Problem: ID already exists
 
 If you see the following error when creating a new submission:
 
@@ -135,6 +181,8 @@ curl -i -d 'update=DELETE+{+<http://data.bioontology.org/ontologies/GO/submissio
 
 ### Clear the GOO cache
 
-Use the Clear GOO cache button on the Administrative page.
+At a minimum after these triple store changes, clear the GOO cache as described in the Cache management section above.
+
+
 
 
