@@ -151,7 +151,9 @@ rapper: Error - URI file:///Users/manuelso/work/tmp/ontologies_linked_data/test/
 rapper: Parsing returned 1326 triples
 ```
 
-## Problem: ID already exists
+## Specific Problems
+
+### Problem: ID already exists
 
 If you see the following error when creating a new submission:
 
