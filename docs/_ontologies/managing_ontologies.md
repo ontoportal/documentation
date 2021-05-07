@@ -73,7 +73,7 @@ group.acronym = "MY_GRP"
 group.save
 ```
 
-How do I add an ontology to a group?
+### How do I add an ontology to a group?
 
 There is no user interface to perform this task.
 
@@ -81,7 +81,9 @@ There is no user interface to perform this task.
 ! Why does GOO cache have to be enabled?
 ```
 
-#GOO CACHE must be enabled in settings.
+The GOO CACHE must be enabled in settings.
+
+```
 po = LinkedData::Models::Ontology.find("PO").first
 po.bring_remaining
 obo_f = LinkedData::Models::Group.find("OBO_Foundry").first
@@ -91,12 +93,9 @@ group << obo_f
 po.group = group
 po.valid?
 po.save
+```
 
 ## Deleting an ontology
-
-```diff
-! Verify these instructions
-```
 
 You can delete an ontology on the Admin page (as the admin user). 
 Click on the row (or rows) of the ontology you want to delete,
@@ -104,6 +103,10 @@ select the Group Action "Delete ontology", and press the Execute button.
 
 Deleting also can be done using a console 
 after logging into the Appliance as the ontoportal user.
+
+```diff
+! Verify these instructions
+```
 
 From the bash shell:
 
@@ -150,7 +153,9 @@ Here is an example structure for the cache:
       - submissions
       - notes
 
-Invalidating the cache is a cascading action, meaning that higher-level caches will get invalidated automatically when invalidating lower-level caches. For example, invalidating the SNOMEDCT ontology instance will also invalidate the ontologies collection cache (the list of all ontologies).
+Invalidating the cache is a cascading action, 
+meaning that higher-level caches will get invalidated automatically when invalidating lower-level caches. 
+For example, invalidating the SNOMEDCT ontology instance will also invalidate the ontologies collection cache (the list of all ontologies).
 
 #### Example of cache invalidation
 
