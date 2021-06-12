@@ -8,7 +8,8 @@ status: Ready
 
 # Parseable Ontologies
 
-The OntoPortal accepts OWL, OBO, and SKOS ontologies via our UI or our REST endpoint. 
+Like the original BioPortal repository, 
+the OntoPortal accepts OWL, OBO, and SKOS ontologies via our UI or our REST endpoint. 
 
 We also import a set of UMLS ontologies from the National Library of Medicine,
 but this is a complex process that converts the UMLS content into RDF.
