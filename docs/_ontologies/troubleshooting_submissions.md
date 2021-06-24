@@ -16,6 +16,17 @@ For troubleshooting installations, see the <a href="../../steps/troubleshooting_
 
 For troubleshooting system operations, see the <a href="../../management/troubleshooting_operations">Troubleshooting Operations</a> section.
 
+## Overview
+
+There are 4 main steps to troubleshoot submissions:
+* confirming your ontology is parseable;
+* inspect the ontology parsing logs;
+* retry the parsing processes that previously failed, using the administration page; and
+* understanding OntoPortal's limits on the ontology size.
+
+Below we introduce the general knowledge first, including the operation of the Administration page,
+and then speak to the other steps you may need to pursue.
+
 ## Using the Administration page
 
 ### Ontology Administration
@@ -29,21 +40,23 @@ The default view of this tab shows only Problem Ontologies; click on View Ontolo
 You will see the following columns in this tab: 
 `ONTOLOGY`	`ADMIN`	`FORMAT`	`DATE CREATED`	`REPORT DATE`	`URL`	`ERROR STATUS`	`MISSING STATUS`.
 Each of these is sortable, and most should be self-explanatory.
-By sorting this table, you can quickly learn assess the status of all your ontologies
+By sorting this table, you can quickly assess the status of all your ontologies
 and the general health of your system. 
 
 The URL column contains 3 links: Log, REST, and Submissions.
 The Log link points to the processing log for the latest submission of this ontology.
 The REST link points to the REST API entry for the ontology; 
-most other REST links will be displayed in OntoPortal's response.
+most other related REST API commands will be displayed in OntoPortal's response.
 The Submissions link brings up a table of the submissions that OntoPortal processed for this ontology, 
 and the result of each submission's processing.
 
-What may not be obvious is that if you select one or more rows of the ontology table,
+If you select one or more rows of the ontology table,
 the `Please Select` dropdown in the header (following "Apply to Selected Rows:") 
 can now be used to perform administrative actions on the selected ontologies.
 Simply choose an administrative action from the dropdown,
 and click on the `Go` button to perform the operation(s).
+This menu lets you re-run any of the ontology processing steps performed by OntoPortal,
+as well as deleting the ontology.
 
 ### Cache management
 
@@ -96,16 +109,21 @@ than the OntoPortal application has available from its Virtual Machine/computer 
 especially as the ontology may still be buffered in memory from unpacking it 
 and parsing outputs may also be buffered.
 
-It seems that in these cases, no information may be written to the parsing log,
+It seems that in these cases, the parsing log may not provide any clues,
 as the ontology must complete parsing before the logs are closed.
 Some users have had success parsing large ontologies 
 after increasing their available memory to 24 GB or 32 GB.
 
-Obviously, for ontologies that are an order of magnitude larger or mroe—
+Obviously, for ontologies that are larger than 1 to 2 GB—
 we are aware of ontologies that are 32 GB or more—
 we recommend acquiring computational systems with significant dedicated memory resources.
 
-## Check the ontology: Other ways to validate an ontology
+## Check the ontology: Ways to pre-validate an ontology
+
+A good basic test is to make sure the ontology is correctly formatted. 
+Here are several tools you can use to check the ontology is validly formatted.
+(For a list of parseable ontology types, see [Parseable Ontologies](../parseable_ontologies/).)
+
 
 ### With Protégé
 
@@ -164,7 +182,7 @@ ERROR -- : Unable to create a new submission in OntologyPull:
 
 ... you need to manually delete the corresponding orphan graph entries from the triple store, as follows.
 
-### Check for the orphan records
+#### Check for the orphan records
 
 ```
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -175,7 +193,7 @@ SELECT * WHERE {
 } LIMIT 2000
 ```
 
-### Delete the orphan records
+#### Delete the orphan records
 
 ```
 curl -i -d 'update=DELETE+{+<http://data.bioontology.org/ontologies/GO/submissions/1558>+?p+?o+}+WHERE+{+<http://data.bioontology.org/ontologies/GO/submissions/1558>+?p+?o+}' 'http://ncboprod-4store1.stanford.edu:8080/update/'
