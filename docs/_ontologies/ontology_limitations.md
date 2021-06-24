@@ -19,6 +19,9 @@ We have found that converting the ontology to TTL format
 can reduce its size, and makes some ontologies manageable 
 that otherwise can not be processed.
 
+We provide further information on troubleshooting submissions of large ontologies
+in the [Troubleshooting Submissions](../troubleshooting_submissions/#troubleshooting-very-large-ontologies) page.
+
 ## Root classes and ontology shape
 
 An ontology that does not have easily discovered root classes—for example,
