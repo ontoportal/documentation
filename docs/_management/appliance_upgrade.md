@@ -9,7 +9,7 @@ status: Pending
 
 ## Upgrading a 3.0.2 or later OntoPortal Appliance
 
-To upgrade an OntoPortal Appliance with a version 3.0.1 or later, 
+To upgrade an OntoPortal Appliance with a version 3.0.2 or later, 
 you can SSH to the appliance as a centos user and execute the following.
 
 ```
@@ -21,9 +21,9 @@ cd /srv/ontoportal/virtual_appliance/deployment
 ./deploy_all.sh
 ```
 
-## Upgrading a pre-3.0.1 OntoPortal Appliance
+## Upgrading a pre 3.0.2 OntoPortal Appliance
 
-If you are running an Ontoportal Appliance with a version < 3.0.1 
+If you are running an Ontoportal Appliance with a version < 3.0.2 
 then updating the Appliance can be a complicated procedure, 
 so we recommend to deploy the latest appliance from scratch.  
 
