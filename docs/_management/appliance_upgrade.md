@@ -7,7 +7,7 @@ status: Pending
 ---
 # Upgrading Your Appliance
 
-## Upgrading a 3.0.1 or later OntoPortal Appliance
+## Upgrading a 3.0.2 or later OntoPortal Appliance
 
 To upgrade an OntoPortal Appliance with a version 3.0.1 or later, 
 you can SSH to the appliance as a centos user and execute the following.
