@@ -53,14 +53,15 @@ There is no user interface to perform this task.
 Categories and groups can be added using a console 
 after logging into the Appliance as the ontoportal user.
 
-```diff
-! This answer needs review to confirm its accuracy
+use ncbo_cron rake task:
 ```
-
-From the bash shell:
+cd /srv/ontoportal/ncbo_cron
+bundle exec rake group:create['UMLS','Unified Medical Language System']
+```
+or use ncbo_cron console:
 
 ```
-cd /srv/ncbo/ncbo_cron
+cd /srv/ontoportal/ncbo_cron
 bin/ncbo_cron --console
 # once in the ruby console:
 category = LinkedData::Models::Category.new
