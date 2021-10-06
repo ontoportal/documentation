@@ -133,7 +133,7 @@ The bootstrapping script creates the initial triple records and lookup data whic
 
 ```
 [ontoportal@localhost ~]$ cd /srv/ontoportal/virtual_appliance/utils/bootstrap/
-[ontoportal@localhost bootstrap]$ sh bootstrap_AG.sh
+[ontoportal@localhost bootstrap]$ sudo sh bootstrap_AG.sh
 Starting agraph (via systemctl):                           [  OK  ]
 uri: http://localhost:10035/repositories/ontoportal
 relativeUri: repositories/ontoportal
