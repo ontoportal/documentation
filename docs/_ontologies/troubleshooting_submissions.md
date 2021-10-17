@@ -3,7 +3,7 @@ title: Troubleshooting Submissions
 layout: default
 description: Figuring out why your submission didn't work
 weight: 80
-status: In progress
+status: Ready
 ---
 
 # Troubleshooting Submissions
@@ -47,7 +47,7 @@ The URL column contains 3 links: Log, REST, and Submissions.
 The Log link points to the processing log for the latest submission of this ontology.
 The REST link points to the REST API entry for the ontology; 
 most other related REST API commands will be displayed in OntoPortal's response.
-The Submissions link brings up a table of the submissions that OntoPortal processed for this ontology, 
+The Submissions link pops up a table of the submissions that OntoPortal processed for this ontology, 
 and the result of each submission's processing.
 
 If you select one or more rows of the ontology table,
@@ -55,8 +55,10 @@ the `Please Select` dropdown in the header (following "Apply to Selected Rows:")
 can now be used to perform administrative actions on the selected ontologies.
 Simply choose an administrative action from the dropdown,
 and click on the `Go` button to perform the operation(s).
-This menu lets you re-run any of the ontology processing steps performed by OntoPortal,
+This menu lets you re-run most of the ontology processing steps performed by OntoPortal,
 as well as deleting the ontology.
+The `Process` selection queues the ontology for processing,
+and then performs the same processing steps as OntoPortal performs.
 
 ### Cache management
 
@@ -94,7 +96,7 @@ Not only may the computer itself have limited resources (particularly RAM),
 but the virtual machine environment used to run the Virtual Appliance will have additional memory constraints,
 which may require appropriate configuration.
 
-One limitation that the OntoPortal Appliance installations typically expose 
+One limitation that the OntoPortal Appliance installations can expose 
 is that the communication interfaces may limit acceptable files sizes.
 For example, often there is a 1 GB limit on file transfers.
 Fortunately, most ontologies can be highly compressed, 
@@ -124,7 +126,6 @@ A good basic test is to make sure the ontology is correctly formatted.
 Here are several tools you can use to check the ontology is validly formatted.
 (For a list of parseable ontology types, see [Parseable Ontologies](../parseable_ontologies/).)
 
-
 ### With Protégé
 
 If you open the ontology with the Protégé desktop application, 
@@ -152,22 +153,22 @@ the one immediately following it, or some lines preceding it.
 
 ### With rapper
 
-```diff
-- Confirm this is possible on OntoPortal
-```
+[Rapper](https://librdf.org/raptor/rapper.html) is an ontology parser used to reprocess
+the xmlrdf ontology produced by previous steps in the ontology parsing process.
+Rapper is more strict than many ontology parsers (like BioPortal's),
+as it is not designed to "do the best it can" when it encounters an error.
 
 The following commands may help diagnose an issue with ontology submission, 
-as they perform the transformation OntoPortal performs after the parsing has been performed.
+as they imitate what OntoPortal performs after the parsing has been performed.
 
 ```
 #transform the file into ntriples
 rapper -i rdfxml -o ntriples owlapi.xrdf > owlapi.ntriples
 #reparse again
 rapper -i owlapi.ntriples
-#error
-rapper: Error - URI file:///Users/manuelso/work/tmp/ontologies_linked_data/test/data/ontology_files/repo/EXOTEST/43/x.nt:19 column 81 - URI 'http://purl.obolibrary.org/obo/interacts_with_an_exposure_stressor_via ExO' contains bad character(s)
-rapper: Parsing returned 1326 triples
 ```
+
+The next lines may contain an error message; some of these are described below. 
 
 ## Specific Problems
 
@@ -182,7 +183,7 @@ ERROR -- : Unable to create a new submission in OntologyPull:
 
 ... you need to manually delete the corresponding orphan graph entries from the triple store, as follows.
 
-#### Check for the orphan records
+##### Check for the orphan records
 
 ```
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -193,16 +194,52 @@ SELECT * WHERE {
 } LIMIT 2000
 ```
 
-#### Delete the orphan records
+##### Delete the orphan records
 
 ```
 curl -i -d 'update=DELETE+{+<http://data.bioontology.org/ontologies/GO/submissions/1558>+?p+?o+}+WHERE+{+<http://data.bioontology.org/ontologies/GO/submissions/1558>+?p+?o+}' 'http://ncboprod-4store1.stanford.edu:8080/update/'
 ```
 
-### Clear the GOO cache
+#### Clear the GOO cache
 
 At a minimum after these triple store changes, clear the GOO cache as described in the Cache management section above.
 
+### Rapper: Syntax error at '<'
 
+If rapper detects a syntax error in the input file, the problem often has occurred just preceding the error detection.
+In the log snippet below, an error is reported at line 5, with 4 triples successfully parsed.
+Since 4 triples were parsed, we can infer that one of the '<' characters begins a new IRI,
+but the preceding IRI likely was not closed yet.
+With 4 triples successfully parsed, the beginning of line 5 is suspect.
 
+In this case, this is very early in the triples file, typically where local 'configuration triples' begin.
+These are the triples that set up custom declarations,
+like which identifier is used for the definition or prefLabel in the ontology. 
+This can be tricky to troubleshoot in the running system,
+because those configurations are not visible by default in the submission page—
+you must click on the `Add Custom Property`box to see them.
+If the user as not entered well-defined triples in these custom properties,
+rapper will be the first to catch and report this error.
 
+```
+E, [2021-06-21T12:32:44.220770 #17470] ERROR -- : ["Exception: Rapper cannot parse turtle file at /tmp/data_triple_store20210621-17470-17dzhud: rapper: Parsing URI file:///tmp/data_triple_store20210621-17470-17dzhud with parser turtle
+rapper: Serializing with serializer ntriples
+rapper: Error - URI file:///tmp/data_triple_store20210621-17470-17dzhud:5 - syntax error at '<'
+rapper: Parsing returned 4 triples
+```
+
+### Rapper: Bad characters
+
+When rapper reports bad characters, this is almost always cause by an IRI that has unusual characters
+(foreign language or symbolic characters) that are not encoded. 
+While many tools consider these characters valid, one standard does not allow them in certain contexts.
+Reviewing the file for non-ASCII characters will usually uncover the issue.
+
+Another scenario that can produce this error is when a preceding triple or term is malformed,
+and the parser is looking for the wrong type of content.
+Check the precediing content to make sure it looks valid.
+
+```
+rapper: Error - URI file:///Users/manuelso/work/tmp/ontologies_linked_data/test/data/ontology_files/repo/EXOTEST/43/x.nt:19 column 81 - URI 'http://purl.obolibrary.org/obo/interacts_with_an_exposure_stressor_via ExO' contains bad character(s)
+rapper: Parsing returned 1326 triples
+```
