@@ -108,3 +108,10 @@ and make sure that $BIOMIXER_URL contains `//` instead of `http://`
 `$BIOMIXER_URL = "//#{$UI_HOSTNAME}/BioMixer"`
 ## Finally run deployment of UI and API.
 
+# Other considerations
+- SSL/TLS certificate used by API has to be validatable by the UI.  If self-generated SSL certificate or a private certificate authority is used then that root CA certificate has to be added to the system's certificate authority trust.  On CentOS 7 its accomplished:
+1. copy the CA pem file to /etc/pki/ca-trust/source/anchors/
+2. run `update-ca-trust`
+3. make sure that `ENV['SSL_CERT_FILE'] = '/etc/pki/tls/cert.pem'` is added in the UI's config.   
+
+
