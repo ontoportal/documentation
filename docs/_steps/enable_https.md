@@ -29,6 +29,7 @@ sudo certbot certonly --standalone -d test.ontoportal.org  -m your_email@example
 This will create `/etc/letsencrypt/live/<your_domain_name>` directory with certificates which we will use in apache and nginx configs.
 ## Update Apache configuration:
 1. Add the following to `/etc/nginx/sites-enabled/ontologies_api.conf`
+
 ```
 server {
   listen       *:8443 ssl default_server;
@@ -62,8 +63,10 @@ server {
   }
 }
 ```
+
 ## Update nginx configuraion
 1. edit `/etc/httpd/conf.d/10-appliance.ontoportal.org_tls.conf` and add change
+
 ```
  SSLCertificateFile      "/etc/pki/tls/certs/localhost.crt"
  SSLCertificateKeyFile   "/etc/pki/tls/private/localhost.key"
@@ -75,6 +78,7 @@ server {
  SSLCertificateKeyFile   "/etc/letsencrypt/live/test.ontoportal.org/privkey.pem"
  SSLCertificateChainFile "/etc/letsencrypt/live/test.ontoportal.org/chain.pem"
  ```
+
 ## Open firewall port 8433 
 1. Open port 8443 on host based firewall (iptables)
 ```
