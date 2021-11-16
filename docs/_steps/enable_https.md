@@ -19,16 +19,16 @@ This section offers information on how to configure HTTPS for your {{site.opva}}
 ## Deploy TLS/SSL certificate on the appliance
 For this documentation we will use TLS certificate provideded by LetsEncrypt certificate authority.  Appliance needs to be accessible from the outside world.
 
-1. install certbot utility for obtaining and managing TLS certificates:
+1. Install certbot utility for obtaining and managing TLS certificates:
 `sudo yum install certbot`
-1. get certificate. 
+1. Get certificate. 
 ```
 sudo opstop
 sudo certbot certonly --standalone -d test.ontoportal.org  -m your_email@example.org  --agree-tos
 ```
 This will create `/etc/letsencrypt/live/<your_domain_name>` directory with certificates which we will use in apache and nginx configs.
 ## Update Apache configuration:
-1. add the following to `/etc/nginx/sites-enabled/ontologies_api.conf`
+1. Add the following to `/etc/nginx/sites-enabled/ontologies_api.conf`
 ```
 server {
   listen       *:8443 ssl default_server;
@@ -92,13 +92,12 @@ $UI_HOSTNAME = 'test.ontoportal.org'
 $REST_URL = "https://#{$REST_HOSTNAME}:#{$REST_PORT}"
 ```
 
-
 1. Modify `/srv/rails/bioportal_web_ui/current/config/bioportal_config_appliance.rb` by adding or verifying that the following lines exist:
 ```
 # temporary fix for https://github.com/ncbo/bioportal_web_ui/issues/176 on CentOS7
 ENV['SSL_CERT_FILE'] = '/etc/pki/tls/cert.pem'
 ```
-and make sure that $BIOMIXER_URL contains `//' instead of 'http://'
+and make sure that $BIOMIXER_URL contains `//` instead of `http://`
 `$BIOMIXER_URL = "//#{$UI_HOSTNAME}/BioMixer"`
 ## Finally run deployment of UI and API.
 
