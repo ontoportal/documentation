@@ -22,13 +22,16 @@ For this documentation we will use TLS certificate provideded by LetsEncrypt cer
 1. Install certbot utility for obtaining and managing TLS certificates:
 `sudo yum install certbot`
 1. Get certificate. 
+
 ```
 sudo opstop
 sudo certbot certonly --standalone -d test.ontoportal.org  -m your_email@example.org  --agree-tos
 ```
+
 This will create `/etc/letsencrypt/live/<your_domain_name>` directory with certificates which we will use in apache and nginx configs.
+
 ## Update Apache configuration:
-1. Add the following to `/etc/nginx/sites-enabled/ontologies_api.conf`
+1. Add the following to `/etc/nginx/sites-enabled/ontologies_api.conf` file
 
 ```
 server {
