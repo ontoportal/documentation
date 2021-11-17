@@ -17,7 +17,7 @@ This section offers information on how to configure HTTPS for your {{site.opva}}
 
 # Steps:
 ## Deploy TLS/SSL certificate on the appliance
-For this documentation we will use TLS certificate provideded by LetsEncrypt certificate authority.  Appliance needs to be accessible from the outside world.
+For this documentation we will use TLS certificate provideded by LetsEncrypt certificate authority so appliance has to be accessible from the outside world to complete HTTP-01 challenge.
 
 1. Install certbot utility for obtaining and managing TLS certificates:
 `sudo yum install certbot`
@@ -107,6 +107,7 @@ ENV['SSL_CERT_FILE'] = '/etc/pki/tls/cert.pem'
 and make sure that $BIOMIXER_URL contains `//` instead of `http://`
 `$BIOMIXER_URL = "//#{$UI_HOSTNAME}/BioMixer"`
 ## Finally run deployment of UI and API.
+## set up cron job to automatically renew certificates
 
 # Other considerations
 - SSL/TLS certificate used by API has to be validatable by the UI.  If self-generated SSL certificate or a private certificate authority is used then that root CA certificate has to be added to the system's certificate authority trust.  On CentOS 7 its accomplished:
