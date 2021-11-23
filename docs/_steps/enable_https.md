@@ -99,7 +99,7 @@ $UI_HOSTNAME = 'test.ontoportal.org'
 $REST_URL = "https://#{$REST_HOSTNAME}:#{$REST_PORT}"
 ```
 
-1. Modify `/srv/rails/bioportal_web_ui/current/config/bioportal_config_appliance.rb` by adding or verifying that the following lines exist:
+1. Modify `/srv/ontoportal/virtual_appliance/appliance_config/bioportal_web_ui/config/bioportal_config_appliance.rb` by adding or verifying that the following lines exist:
 ```
 # temporary fix for https://github.com/ncbo/bioportal_web_ui/issues/176 on CentOS7
 ENV['SSL_CERT_FILE'] = '/etc/pki/tls/cert.pem'
