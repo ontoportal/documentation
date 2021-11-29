@@ -114,7 +114,7 @@ It's highly recommended that you automatically renew any private or public certi
 
 # Validating self-generated or privately issued certificates
 The SSL/TLS certificate used by the API has to be validatable by the UI. If self-generated SSL certificate or a private certificate authority is used, then that root CA certificate has to be added to the system's certificate authority trust.  On CentOS 7 it's accomplished as follows:
-1. copy the CA pem file to /etc/pki/ca-trust/source/anchors/
+1. copy the root Certificate Autority (CA) pem file to /etc/pki/ca-trust/source/anchors/
 2. run `update-ca-trust`
 3. make sure that `ENV['SSL_CERT_FILE'] = '/etc/pki/tls/cert.pem'` is added in the UI's config.   
 
