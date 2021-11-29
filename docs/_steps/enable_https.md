@@ -85,7 +85,7 @@ server {
 ## Open firewall port 8433 
 1. Open port 8443 on host based firewall (iptables)
 ```
-sudo iptables -A INPUT -p tcp –dport 8443 -j ACCEPT
+sudo iptables -A INPUT -p tcp –-dport 8443 -j ACCEPT
 sudo service iptables save
 ```
 1. Open port 8443 in your cloud/on-prem Network Access Control List
@@ -104,12 +104,16 @@ $REST_URL = "https://#{$REST_HOSTNAME}:#{$REST_PORT}"
 # temporary fix for https://github.com/ncbo/bioportal_web_ui/issues/176 on CentOS7
 ENV['SSL_CERT_FILE'] = '/etc/pki/tls/cert.pem'
 ```
-and make sure that $BIOMIXER_URL contains `//` instead of `http://`
+1. If your certificate is locally or privately generated, see also `Validating self-generated or privately issued certificates` section below
+1. Make sure that $BIOMIXER_URL contains `//` instead of `http://`
 `$BIOMIXER_URL = "//#{$UI_HOSTNAME}/BioMixer"`
-## Finally run deployment of UI and API.
-## set up cron job to automatically renew certificates
 
-# Other considerations
+## Finally run deployment of UI and API.
+## Set up cron job to automatically renew certificates
+
+It's highly recommended that you automatically renew any private or public certificate for your system. [Let's Encrypt](letsencrypt.org) has detailed instructions.
+
+# Validating self-generated or privately issued certificates
 - SSL/TLS certificate used by API has to be validatable by the UI.  If self-generated SSL certificate or a private certificate authority is used then that root CA certificate has to be added to the system's certificate authority trust.  On CentOS 7 its accomplished:
 1. copy the CA pem file to /etc/pki/ca-trust/source/anchors/
 2. run `update-ca-trust`
