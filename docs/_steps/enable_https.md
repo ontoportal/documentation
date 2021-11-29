@@ -113,10 +113,14 @@ ENV['SSL_CERT_FILE'] = '/etc/pki/tls/cert.pem'
 
 It's highly recommended that you automatically renew any private or public certificate for your system. [Let's Encrypt](letsencrypt.org) has detailed instructions.
 
-# Validating self-generated or privately issued certificates
-The SSL/TLS certificate used by the API has to be validatable by the UI. If self-generated SSL certificate or a private certificate authority is used, then that root CA certificate has to be added to the system's certificate authority trust.  On CentOS 7 it's accomplished as follows:
+# Using self-signed or privately issued certificates
+Extra steps must be taken when using self-signed or private cerficiate becuase the SSL/TLS certificate used by the API has to be validatable by the UI.  A private certificate authority (CA) has to be added to the system's certificate authority trust.  If you choose to use a self-signed certificate then you need to generate a custom CA first and then sign your certificate with it.   
+https://gist.github.com/fntlnz/cf14feb5a46b2eda428e000157447309#file-self-signed-certificate-with-custom-ca-md
+
+To add a self-signed/private root Certificate Autority (CA) On CentOS 7 you would need to do the following:
 1. copy the root Certificate Autority (CA) pem file to /etc/pki/ca-trust/source/anchors/
 2. run `update-ca-trust`
 3. make sure that `ENV['SSL_CERT_FILE'] = '/etc/pki/tls/cert.pem'` is added in the UI's config.   
+
 
 
