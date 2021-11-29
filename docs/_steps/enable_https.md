@@ -88,7 +88,7 @@ server {
 sudo iptables -A INPUT -p tcp –-dport 8443 -j ACCEPT
 sudo service iptables save
 ```
-1. Open port 8443 in your cloud/on-prem Network Access Control List
+2. Open port 8443 in your cloud/on-prem Network Access Control List
 ## Modify ontoportal configuration files
 1. Modify `/srv/ontoportal/virtual_appliance/appliance_config/site_config.rb` by setting $REST_HOSTNAME, $REST_PORT, $REST_URL_PREFIX and $REST_URL variables
 ```
@@ -98,23 +98,22 @@ $REST_URL_PREFIX = 'https://test.ontoportal.org:8443'
 $UI_HOSTNAME = 'test.ontoportal.org'
 $REST_URL = "https://#{$REST_HOSTNAME}:#{$REST_PORT}"
 ```
-
-1. Modify `/srv/ontoportal/virtual_appliance/appliance_config/bioportal_web_ui/config/bioportal_config_appliance.rb` by adding or verifying that the following lines exist:
+2. Modify `/srv/ontoportal/virtual_appliance/appliance_config/bioportal_web_ui/config/bioportal_config_appliance.rb` by adding or verifying that the following lines exist:
 ```
 # temporary fix for https://github.com/ncbo/bioportal_web_ui/issues/176 on CentOS7
 ENV['SSL_CERT_FILE'] = '/etc/pki/tls/cert.pem'
 ```
-1. If your certificate is locally or privately generated, see also `Validating self-generated or privately issued certificates` section below
-1. Make sure that $BIOMIXER_URL contains `//` instead of `http://`
+3. If your certificate is locally or privately generated, see also the `Validating self-generated or privately issued certificates` section below.
+4. Make sure that $BIOMIXER_URL contains `//` instead of `http://`
 `$BIOMIXER_URL = "//#{$UI_HOSTNAME}/BioMixer"`
 
-## Finally run deployment of UI and API.
+## Run deployment of UI and API.
 ## Set up cron job to automatically renew certificates
 
 It's highly recommended that you automatically renew any private or public certificate for your system. [Let's Encrypt](letsencrypt.org) has detailed instructions.
 
 # Validating self-generated or privately issued certificates
-- SSL/TLS certificate used by API has to be validatable by the UI.  If self-generated SSL certificate or a private certificate authority is used then that root CA certificate has to be added to the system's certificate authority trust.  On CentOS 7 its accomplished:
+The SSL/TLS certificate used by the API has to be validatable by the UI. If self-generated SSL certificate or a private certificate authority is used, then that root CA certificate has to be added to the system's certificate authority trust.  On CentOS 7 it's accomplished as follows:
 1. copy the CA pem file to /etc/pki/ca-trust/source/anchors/
 2. run `update-ca-trust`
 3. make sure that `ENV['SSL_CERT_FILE'] = '/etc/pki/tls/cert.pem'` is added in the UI's config.   
