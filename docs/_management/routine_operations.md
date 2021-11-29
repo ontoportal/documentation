@@ -29,7 +29,8 @@ If you are logged in as the admin user, simply visit http://{your_appliance_ip_o
 
 To reset the API key of a user (if it has been exposed or abused):
 ```
-rake user:apikey:reset[username,apikey]    # reset APIKEY for the user to random value or to specified value if API key is provided
+cd /srv/ontoportal/ncbo_cron
+bundle exec rake user:apikey:reset[username,apikey]    # reset APIKEY for the user to random value or to specified value if API key is provided
 ```
 
 ## Grant administrative privileges to a BioPortal user
