@@ -25,6 +25,13 @@ and reparsing ontologies.
 
 If you are logged in as the admin user, simply visit http://{your_appliance_ip_or_domain_name}/admin and click the "Flush Memcache" button. There should be a response indicating success or failure.
 
+## Reset user's API key
+
+To reset the API key of a user (if it has been exposed or abused):
+```
+rake user:apikey:reset[username,apikey]    # reset APIKEY for the user to random value or to specified value if API key is provided
+```
+
 ## Grant administrative privileges to a BioPortal user
 
 ```diff
