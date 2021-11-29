@@ -89,6 +89,7 @@ sudo iptables -A INPUT -p tcp –-dport 8443 -j ACCEPT
 sudo service iptables save
 ```
 2. Open port 8443 in your cloud/on-prem Network Access Control List
+
 ## Modify ontoportal configuration files
 1. Modify `/srv/ontoportal/virtual_appliance/appliance_config/site_config.rb` by setting $REST_HOSTNAME, $REST_PORT, $REST_URL_PREFIX and $REST_URL variables
 ```
