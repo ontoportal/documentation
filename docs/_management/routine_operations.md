@@ -27,9 +27,48 @@ If you are logged in as the admin user, simply visit http://{your_appliance_ip_o
 
 ## Reset user's API key
 
-To reset the API key of a user (if it has been exposed or abused):
+OntoPortal provides a Rake task to easily reset the API key of a user (if it has been exposed or abused).
+
+Optionally view the list of available Rake tasks with their descriptions:
+
 ```
-rake user:apikey:reset[username,apikey]    # reset APIKEY for the user to random value or to specified value if API key is provided
+$ cd /srv/ontoportal/ncbo_cron
+$ bundle exec rake -T
+rake cache:clear                                         # Clear HTTP cache (redis and Rack::Cache)
+rake group:add_ontology[group_acronym,ontology_acronym]  # Add ontology to a group
+rake group:create[acronym,name]                          # Create a new ontology group
+rake test                                                # Run tests
+rake user:adminify[username]                             # Add administrator role to the user
+rake user:apikey:get[username]                           # get APIKEY for the user
+rake user:apikey:reset[username,apikey]                  # reset APIKEY for the user to random value or to specified value if API key is provided
+rake user:artifacts[username]                            # Show all artifacts administrered by the user
+rake user:create[username,email,password]                # Create a new user
+rake user:resetpassword[username]                        # Reset password to a random value for the user
+rake user:resetroles[username]                           # Reset all roles to LIBRARIAN for the user
+```
+
+Reset a user's API key to a randomly generated value: 
+
+```
+$ cd /srv/ontoportal/ncbo_cron
+$ bundle exec rake user:apikey:reset[username]
+```
+
+If a specific API key is desired, use an IRB session to generate a UUID (OntoPortal uses UUIDs for API keys):
+
+```
+$ irb
+irb(main):001:0> require 'securerandom'
+=> true
+irb(main):002:0> SecureRandom.uuid
+=> "8aae101c-fabe-4215-9f12-cdac288f17c5"
+```
+
+... and then use the Rake task with the newly generated UUID:
+
+```
+$ cd /srv/ontoportal/ncbo_cron
+$ bundle exec rake user:apikey:reset[username,8aae101c-fabe-4215-9f12-cdac288f17c5]
 ```
 
 ## Grant administrative privileges to a BioPortal user
