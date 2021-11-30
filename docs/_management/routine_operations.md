@@ -54,21 +54,13 @@ $ cd /srv/ontoportal/ncbo_cron
 $ bundle exec rake user:apikey:reset[username]
 ```
 
-If a specific API key is desired, use an IRB session to generate a UUID (OntoPortal uses UUIDs for API keys):
+OntoPortal uses UUID for API keys which can be generated with `uuidgen` command line untility and can be explicitly set when reseting API keys:
 
 ```
-$ irb
-irb(main):001:0> require 'securerandom'
-=> true
-irb(main):002:0> SecureRandom.uuid
-=> "8aae101c-fabe-4215-9f12-cdac288f17c5"
-```
-
-... and then use the Rake task with the newly generated UUID:
-
-```
+$ uuidgen
+cf304210-4715-424a-a48d-7ec04fc8924f
 $ cd /srv/ontoportal/ncbo_cron
-$ bundle exec rake user:apikey:reset[username,8aae101c-fabe-4215-9f12-cdac288f17c5]
+$ bundle exec rake user:apikey:reset[username,cf304210-4715-424a-a48d-7ec04fc8924f]
 ```
 
 ## Grant administrative privileges to a BioPortal user
