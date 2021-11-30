@@ -1,6 +1,8 @@
-
 .DS_Store
 administration.bbprojectd/jgraybeal.bbprojectsettings
 *.bbprojectdata
 administration.bbprojectd/Scratchpad.txt
 administration.bbprojectd/Unix Worksheet.worksheet
+
+# Ruby
+Gemfile.lock
