@@ -30,7 +30,7 @@ sudo certbot certonly --standalone -d test.ontoportal.org  -m your_email@example
 
 This will create `/etc/letsencrypt/live/<your_domain_name>` directory with certificates which we will use in apache and nginx configs.
 
-## Update Apache configuration:
+## Update Apache configuration:ipta
 1. Add the following to `/etc/nginx/sites-enabled/ontologies_api.conf` file
 
 ```
@@ -84,10 +84,11 @@ server {
 
 ## Open firewall port 8433 
 1. Open port 8443 on host based firewall (iptables)
-```
-sudo iptables -A INPUT -p tcp –-dport 8443 -j ACCEPT
-sudo service iptables save
-```
+
+edit `/etc/sysconfig/iptables` file and add `-A INPUT -p tcp --dport 8443 -j ACCEPT` after `A INPUT -p tcp -m state --state NEW -m tcp --dport 22 -j ACCEPT` but before `-A INPUT -j REJECT --reject-with icmp-host-prohibited` 
+then restart iptables service: 
+`sudo systemctl restart iptables`
+
 2. Open port 8443 in your cloud/on-prem Network Access Control List
 
 ## Modify ontoportal configuration files
