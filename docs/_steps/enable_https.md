@@ -30,7 +30,7 @@ sudo certbot certonly --standalone -d test.ontoportal.org  -m your_email@example
 
 This will create `/etc/letsencrypt/live/<your_domain_name>` directory with certificates which we will use in apache and nginx configs.
 
-## Update Apache configuration:ipta
+## Update Apache configuration:
 1. Add the following to `/etc/nginx/sites-enabled/ontologies_api.conf` file
 
 ```
