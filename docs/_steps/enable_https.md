@@ -30,7 +30,7 @@ sudo certbot certonly --standalone -d test.ontoportal.org  -m your_email@example
 
 This will create `/etc/letsencrypt/live/<your_domain_name>` directory with certificates which we will use in apache and nginx configs.
 
-## Update Apache configuration:
+## Update nginx configuraion:
 1. Add the following to `/etc/nginx/sites-enabled/ontologies_api.conf` file
 
 ```
@@ -67,7 +67,7 @@ server {
 }
 ```
 
-## Update nginx configuraion
+## Update Apache configuration:
 1. edit `/etc/httpd/conf.d/10-appliance.ontoportal.org_tls.conf` and add change
 
 ```
@@ -83,9 +83,8 @@ server {
  ```
 
 ## Open firewall port 8433 
-1. Open port 8443 on host based firewall (iptables)
-
-edit `/etc/sysconfig/iptables` file and add `-A INPUT -p tcp --dport 8443 -j ACCEPT` after `A INPUT -p tcp -m state --state NEW -m tcp --dport 22 -j ACCEPT` but before `-A INPUT -j REJECT --reject-with icmp-host-prohibited` 
+1. Open port 8443 on host based firewall (iptables) 
+On appliance v3.0.5 and ealier edit `/etc/sysconfig/iptables` file and add `-A INPUT -p tcp --dport 8443 -j ACCEPT` after `A INPUT -p tcp -m state --state NEW -m tcp --dport 22 -j ACCEPT` but before `-A INPUT -j REJECT --reject-with icmp-host-prohibited` 
 then restart iptables service: 
 `sudo systemctl restart iptables`
 
@@ -96,10 +95,12 @@ then restart iptables service:
 ```
 $REST_HOSTNAME = 'test.ontoportal.org'
 $REST_PORT = '8443'
-$REST_URL_PREFIX = 'https://test.ontoportal.org:8443'
+$REST_URL_PREFIX = 'https://test.ontoportal.org:8443'. # Port number must be included for ports other than 80 or 443
 $UI_HOSTNAME = 'test.ontoportal.org'
 $REST_URL = "https://#{$REST_HOSTNAME}:#{$REST_PORT}"
 ```
+NOTE:  port other than 80 or 443 has to be included in the $REST_URL_PREFIX.
+
 2. Modify `/srv/ontoportal/virtual_appliance/appliance_config/bioportal_web_ui/config/bioportal_config_appliance.rb` by adding or verifying that the following lines exist:
 ```
 # temporary fix for https://github.com/ncbo/bioportal_web_ui/issues/176 on CentOS7
