@@ -91,7 +91,7 @@ OntoPortal Admin User
 
 For the AWS AMI, the Operating System SSH login is centos
 
-For the AWS AMI, the default OntoPortal application administrator is 'admin' and the initial password is the Instance ID of the ec2 instance.
+For the AWS AMI, the default OntoPortal application administrator is 'admin' and the initial password is the Instance ID of the ec2 instance.  Instance ID is a string starting with `i-` followed by alpha-numeric string.  You can find instance ID in the AWS EC2 console or you can get it by running `wget -q -O - http://169.254.169.254/latest/meta-data/instance-id` on the command line after sshing into the appliance.
 
 ## Accessing the system
 
