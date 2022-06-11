@@ -216,7 +216,7 @@ REST services are available at the following location:
 Run the command below as the `centos` user. Replace the link below with the correct link to the RPM file.
 
 ```
-[centos@localhost ~]$ sudo curl -O https://franz.com/ftp/pri/acl/ag/ag<version>/linuxamd64.64/agraph-<version>.x86_64.rpm
+[centos@localhost ~]$ sudo curl https://franz.com/ftp/pri/acl/ag/ag<version>/linuxamd64.64/agraph-<version>.x86_64.rpm --output agraph-<version>.x86_64.rpm
 ```
 
 ### Stop AllegroGraph Service
