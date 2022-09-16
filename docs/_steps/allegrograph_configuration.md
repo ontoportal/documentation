@@ -23,7 +23,39 @@ We included a version of AllegroGraph with your Virtual Appliance (VA) that is t
 
 If you want to upgrade your AllegroGraph software to the most recent version, you can obtain that from the Franz, Inc. website. However, we can not guarantee the compatibility of the Appliance with the latest AllegroGraph version.
 
-### Start AllegroGraph Server
+### Install AllegroGraph
+
+If not already present in a current version, install the AllegroGraph (AG) server using the instructions on this page:
+
+`https://franz.com/agraph/support/documentation/current/server-installation.html`
+
+We recommend reviewing these instructions, which cover a number of different installation scenarios.
+
+#### Download AllegroGraph Distribution
+
+```
+[centos@localhost ~]$ mkdir tmp
+[centos@localhost ~]$ cd tmp
+[centos@localhost tmp]$ wget https://franz.com/ftp/pri/acl/ag/ag7.3.0/linuxamd64.64/agraph-7.3.0-1.x86_64.rpm
+--2022-09-16 22:03:07--  https://franz.com/ftp/pri/acl/ag/ag7.3.0/linuxamd64.64/agraph-7.3.0-1.x86_64.rpm
+Resolving franz.com (franz.com)... 192.235.120.131
+Connecting to franz.com (franz.com)|192.235.120.131|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 143240952 (137M) [application/x-rpm]
+Saving to: ‘agraph-7.3.0-1.x86_64.rpm’
+
+100%[========================================================================================>] 143,240,952 5.10MB/s   in 16s
+
+2022-09-16 22:03:24 (8.36 MB/s) - ‘agraph-7.3.0-1.x86_64.rpm’ saved [143240952/143240952]
+```
+
+#### Install AllegroGraph
+
+```
+[centos@localhost tmp]$ sudo rpm -i agraph-7.3.0-1.x86_64.rpm
+```
+
+#### Start AllegroGraph Server
 
 The AllegroGraph was shipped in the distribution pre-configured to support the settings described here. Follow the steps below to convert your system from 4store to AllegroGraph backend store.
 
