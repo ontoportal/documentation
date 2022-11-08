@@ -1,13 +1,13 @@
 ---
-title: Appliance Upgrade v2.5 to v3.0.5+
+title: Appliance Upgrade v2.5 to v3.1
 layout: default
-description: Procedure for upgrading Appliance from v2.5 to v3.0.x
+description: Procedure for upgrading Appliance from v2.5 to v3.1
 weight: 80
 status: Pending
 ---
 # Upgrading Your Appliance
 
-Upgrading virtual appliance from v2.5 to v3 requires deploying a new v3 instace of the appliance and peforming data migration.
+Upgrading virtual appliance from v2.5 to v3.1 requires deploying a new v3.1 instace of the appliance and peforming data migration.
 
 ## Procedure:
 ### 1. Deploy and configure a new instance of v3 appliance.
