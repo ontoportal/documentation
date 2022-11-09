@@ -77,5 +77,5 @@ cd /srv/ontoportal/virtual_appliance/deployment
 
 ## See also
 
-You may also wish to see [Appliance upgrade v2.5 to 3.0](../appliance_upgrade_v25_to_30)
+You may also wish to see [Appliance upgrade v2.5 to 3.1](../appliance_upgrade_v25_to_31)
 
