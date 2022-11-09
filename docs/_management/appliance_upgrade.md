@@ -60,7 +60,6 @@ for your particular situation.
 1. update rbenv version of ruby to v2.7.x
 2. rename redis service instance
 3. checkout the updated branch of the virtual_appliance project:
-
 ```
 sudo su – ontoportal
 cd /srv/ontoportal/virtual_appliance/
