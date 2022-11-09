@@ -75,3 +75,7 @@ cd /srv/ontoportal/virtual_appliance/deployment
 ./deploy_all.sh
 ```
 
+## See also
+
+You may also wish to see [Appliance upgrade v2.5 to 3.0](../appliance_upgrade_v25_to_30)
+
