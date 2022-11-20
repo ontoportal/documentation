@@ -6,7 +6,7 @@ status: Pending
 nav_order: 4
 parent: Managing Ontologies in OntoPortal
 grand_parent: Administration Guide
-permalink: /administration/configuring_ontology_permissions
+permalink: /administration/ontologies/configuring_ontology_permissions
 ---
 
 # Configuring Ontology Permissions 

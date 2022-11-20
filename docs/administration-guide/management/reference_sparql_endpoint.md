@@ -6,7 +6,7 @@ status: Preliminary
 nav_order: 13
 parent: Managing Your System
 grand_parent: Administration Guide
-permalink: /administration/reference_sparql_endpoint
+permalink: /administration/management/reference_sparql_endpoint
 ---
 
 # SPARQL Endpoint Reference

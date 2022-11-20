@@ -6,7 +6,7 @@ status: Ready
 nav_order: 6
 parent: General Information
 grand_parent: Administration Guide
-permalink: /administration/history
+permalink: /administration/general/history
 ---
 
 # History of the Virtual Appliance

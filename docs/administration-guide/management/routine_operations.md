@@ -6,7 +6,7 @@ status: In progress
 nav_order: 2
 parent: Managing Your System
 grand_parent: Administration Guide
-permalink: /administration/routine_operations
+permalink: /administration/management/routine_operations
 ---
 
 # Routine Operations

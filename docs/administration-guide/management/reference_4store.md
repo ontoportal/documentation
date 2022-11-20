@@ -6,7 +6,7 @@ status: Ready
 nav_order: 11
 parent: Managing Your System
 grand_parent: Administration Guide
-permalink: /administration/reference_4store
+permalink: /administration/management/reference_4store
 ---
 
 # Introduction

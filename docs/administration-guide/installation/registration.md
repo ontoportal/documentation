@@ -6,7 +6,7 @@ status: Ready
 nav_order: 5
 parent: Installing OntoPortal
 grand_parent: Administration Guide
-permalink: /administration/registration
+permalink: /administration/steps/registration
 ---
 
 # Registration Process

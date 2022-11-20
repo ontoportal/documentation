@@ -6,7 +6,7 @@ status: In progress
 nav_order: 7
 parent: Installing OntoPortal
 grand_parent: Administration Guide
-permalink: /administration/branding-customizations
+permalink: /administration/steps/branding-customizations
 ---
 
 # Branding Customizations

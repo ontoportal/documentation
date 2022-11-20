@@ -6,7 +6,7 @@ status: Preliminary
 nav_order: 1
 parent: Managing Your System
 grand_parent: Administration Guide
-permalink: /administration/monitoring_operations
+permalink: /administration/management/monitoring_operations
 ---
 
 # Monitoring Operations

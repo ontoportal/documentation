@@ -6,7 +6,7 @@ status: Ready
 nav_order: 3
 parent: General Information
 grand_parent: Administration Guide
-permalink: /administration/licensing
+permalink: /administration/general/licensing
 ---
 
 # License Terms

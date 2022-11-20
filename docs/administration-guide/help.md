@@ -4,7 +4,7 @@ layout: default
 summary: Key things to know about maintaining this documentation
 status: Needs revision
 parent: Administration Guide
-permalink: /readme
+permalink: /administration/help
 nav_order: 5
 ---
 

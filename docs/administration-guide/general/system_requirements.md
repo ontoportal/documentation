@@ -6,7 +6,7 @@ status: Ready
 nav_order: 2
 parent: General Information
 grand_parent: Administration Guide
-permalink: /administration/system_requirements
+permalink: /administration/general/system_requirements
 ---
 
 # System Requirements

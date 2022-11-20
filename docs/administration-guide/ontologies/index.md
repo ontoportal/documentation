@@ -5,7 +5,7 @@ summary: Working with ontologies in the OntoPortal Appliance
 parent: Administration Guide
 nav_order: 3
 has_children: true
-permalink: /administration/ontologies
+permalink: /administration/ontologies/
 ---
 
 # Managing Ontologies in OntoPortal

@@ -6,7 +6,7 @@ status: In progress
 nav_order: 5
 parent: General Information
 grand_parent: Administration Guide
-permalink: /administration/architecture_reference
+permalink: /administration/general/architecture_reference
 ---
 
 # Architecture Reference

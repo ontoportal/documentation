@@ -6,7 +6,7 @@ status: In progress
 nav_order: 4
 parent: Installing OntoPortal
 grand_parent: Administration Guide
-permalink: /administration/advanced_configuration
+permalink: /administration/steps/advanced_configuration
 ---
 
 # Overview
