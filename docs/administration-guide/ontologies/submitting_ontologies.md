@@ -6,7 +6,7 @@ status: Ready
 nav_order: 1
 parent: Managing Ontologies in OntoPortal
 grand_parent: Administration Guide
-permalink: /administration/submitting_ontologies
+permalink: /administration/ontologies/submitting_ontologies
 ---
 
 # Submitting Ontologies

@@ -6,7 +6,7 @@ status: Preliminary
 nav_order: 9
 parent: Managing Your System
 grand_parent: Administration Guide
-permalink: /administration/ncbo_cron
+permalink: /administration/management/ncbo_cron
 ---
 
 # Introduction

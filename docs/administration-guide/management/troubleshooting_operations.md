@@ -6,7 +6,7 @@ status: In progress
 nav_order: 6
 parent: Managing Your System
 grand_parent: Administration Guide
-permalink: /administration/troubleshooting_operations
+permalink: /administration/management/troubleshooting_operations
 ---
 
 # Troubleshooting Operations

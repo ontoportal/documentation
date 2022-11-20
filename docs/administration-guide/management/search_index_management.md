@@ -6,7 +6,7 @@ status: Ready
 nav_order: 4
 parent: Managing Your System
 grand_parent: Administration Guide
-permalink: /administration/search_index_management
+permalink: /administration/management/search_index_management
 ---
 
 # Search Index Management

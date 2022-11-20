@@ -6,7 +6,7 @@ status: In progress
 nav_order: 5
 parent: Installing OntoPortal
 grand_parent: Administration Guide
-permalink: /administration/enable_https
+permalink: /administration/steps/enable_https
 ---
 
 # Overview

@@ -6,7 +6,7 @@ status: Preliminary
 nav_order: 5
 parent: Managing Your System
 grand_parent: Administration Guide
-permalink: /administration/google_analytics_management
+permalink: /administration/management/google_analytics_management
 ---
 
 # Google Analytics Management

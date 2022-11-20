@@ -6,7 +6,7 @@ status: Pending
 nav_order: 7
 parent: Managing Your System
 grand_parent: Administration Guide
-permalink: /administration/appliance_upgrade
+permalink: /administration/management/appliance_upgrade
 ---
 # Upgrading Your Appliance
 

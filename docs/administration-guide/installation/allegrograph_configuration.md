@@ -6,7 +6,7 @@ status: Needs revision
 nav_order: 11
 parent: Installing OntoPortal
 grand_parent: Administration Guide
-permalink: /administration/allegrograph_configuration
+permalink: /administration/steps/allegrograph_configuration
 ---
 
 # AllegroGraph Configuration

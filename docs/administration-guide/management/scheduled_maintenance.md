@@ -6,7 +6,7 @@ status: Pending
 nav_order: 3
 parent: Managing Your System
 grand_parent: Administration Guide
-permalink: /administration/scheduled_maintenance
+permalink: /administration/management/scheduled_maintenance
 ---
 
 # Scheduled Maintenance

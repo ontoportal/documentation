@@ -6,7 +6,7 @@ status: Ready
 nav_order: 5
 parent: Managing Ontologies in OntoPortal
 grand_parent: Administration Guide
-permalink: /administration/parseable_ontologies
+permalink: /administration/ontologies/parseable_ontologies
 ---
 
 # Parseable Ontologies

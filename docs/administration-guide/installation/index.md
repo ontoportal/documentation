@@ -5,7 +5,7 @@ summary: Key steps to install the OntoPortal Appliance
 parent: Administration Guide
 nav_order: 2
 has_children: true
-permalink: /administration/steps
+permalink: /administration/steps/
 ---
 
 # Installation Steps

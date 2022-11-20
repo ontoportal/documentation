@@ -6,7 +6,7 @@ status: Ready
 nav_order: 2
 parent: Managing Ontologies in OntoPortal
 grand_parent: Administration Guide
-permalink: /administration/copying_external_ontologies
+permalink: /administration/ontologies/copying_external_ontologies
 ---
 
 # Mirroring external ontologies

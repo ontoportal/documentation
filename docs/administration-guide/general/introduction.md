@@ -6,7 +6,7 @@ status: Preliminary
 nav_order: 1
 parent: General Information
 grand_parent: Administration Guide
-permalink: /administration/introduction
+permalink: /administration/general/introduction
 ---
 
 # Introduction

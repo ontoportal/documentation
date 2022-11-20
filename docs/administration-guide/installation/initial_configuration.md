@@ -6,7 +6,7 @@ status: Needs Revision
 nav_order: 3
 parent: Installing OntoPortal
 grand_parent: Administration Guide
-permalink: /administration/initial_configuration
+permalink: /administration/steps/initial_configuration
 ---
 
 # General Instruction

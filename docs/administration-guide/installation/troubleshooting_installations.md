@@ -6,7 +6,7 @@ status: In progress
 nav_order: 8
 parent: Installing OntoPortal
 grand_parent: Administration Guide
-permalink: /administration/troubleshooting_installations
+permalink: /administration/steps/troubleshooting_installations
 ---
 
 # Troubleshooting Installations
