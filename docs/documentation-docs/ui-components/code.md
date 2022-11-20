@@ -1,0 +1,264 @@
+---
+layout: default
+title: Code
+parent: UI Components
+grand_parent: Documentation configuration
+nav_order: 6
+---
+
+# Code
+{: .no_toc }
+
+## Table of contents
+{: .no_toc .text-delta }
+
+1. TOC
+{:toc}
+
+---
+
+## Inline code
+
+Code can be rendered inline by wrapping it in single back ticks.
+
+<div class="code-example" markdown="1">
+Lorem ipsum dolor sit amet, `<inline code snippet>` adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+## Heading with `<inline code snippet>` in it.
+{: .no_toc }
+</div>
+```markdown
+Lorem ipsum dolor sit amet, `<inline code snippet>` adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+## Heading with `<inline code snippet>` in it.
+```
+
+---
+
+## Syntax highlighted code blocks
+
+Use Jekyll's built-in syntax highlighting with Rouge for code blocks by using three backticks, followed by the language name:
+
+<div class="code-example" markdown="1">
+```js
+// Javascript code with syntax highlighting.
+var fun = function lang(l) {
+  dateformat.i18n = require('./lang/' + l)
+  return true;
+}
+```
+</div>
+{% highlight markdown %}
+```js
+// Javascript code with syntax highlighting.
+var fun = function lang(l) {
+  dateformat.i18n = require('./lang/' + l)
+  return true;
+}
+```
+{% endhighlight %}
+
+---
+
+## Code blocks with rendered examples
+
+To demonstrate front end code, sometimes it's useful to show a rendered example of that code. After including the styles from your project that you'll need to show the rendering, you can use a `<div>` with the `code-example` class, followed by the code block syntax. If you want to render your output with Markdown instead of HTML, use the `markdown="1"` attribute to tell Jekyll that the code you are rendering will be in Markdown format... This is about to get meta...
+
+<div class="code-example" markdown="1">
+
+<div class="code-example" markdown="1">
+
+[Link button](http://example.com/){: .btn }
+
+</div>
+```markdown
+[Link button](http://example.com/){: .btn }
+```
+
+</div>
+{% highlight markdown %}
+<div class="code-example" markdown="1">
+
+[Link button](http://example.com/){: .btn }
+
+</div>
+```markdown
+[Link button](http://example.com/){: .btn }
+```
+{% endhighlight %}
+
+---
+
+## Mermaid diagram code blocks
+
+[Mermaid](https://mermaid-js.github.io/mermaid/) allows you to add diagrams and visualizations using Markdown code blocks. **It is disabled by default**. However, you can turn on support for mermaid by adding a `mermaid` key to your `_config.yml`.
+
+The minimum configuration requires a `version` key (matching a version in [jsDelivr](https://cdn.jsdelivr.net/npm/mermaid/)):
+
+```yaml
+mermaid:
+  # Version of mermaid library
+  # Pick an available version from https://cdn.jsdelivr.net/npm/mermaid/
+  version: "9.1.3"
+```
+
+Additional configuration options are loaded through `_includes/mermaid_config.js`. By default, the contents of the file are the empty object:
+
+```js
+// _includes/mermaid_config.js
+{}
+```
+
+This loads the default settings.
+
+The contents of this object should follow [mermaid's configuration API](https://mermaid-js.github.io/mermaid/#/./Setup?id=configuration). For example, to override the theme, change `_includes/mermaid_config.js` to:
+
+```js
+// _includes/mermaid_config.js
+{
+  theme: "forest"
+}
+```
+
+Once mermaid is installed, it can be used in markdown files. The markdown for a simple flowchart example might look like the following:
+
+{% highlight markdown %}
+```mermaid
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+```
+{% endhighlight %}
+
+which renders:
+
+```mermaid
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+```
+
+*Note: for demonstration purposes, we've enabled mermaid on this site. It is still disabled by default, and users need to opt-in to use it.*
+
+# Code snippets with line numbers
+
+The default settings for HTML compression are incompatible with the HTML
+produced by Jekyll (4.1.1 or earlier) for line numbers from highlighted code
+-- both when using Kramdown code fences and when using Liquid highlight tags.
+
+To avoid non-conforming HTML and unsatisfactory layout, HTML compression
+can be turned off by using the following configuration option:
+
+{% highlight yaml %}
+compress_html:
+ignore:
+envs: all
+{% endhighlight %}
+
+When using Kramdown code fences, line numbers are turned on globally by the
+following configuration option:
+
+{% highlight yaml %}
+kramdown:
+syntax_highlighter_opts:
+block:
+line_numbers: true
+{% endhighlight %}
+
+Line numbers can then be suppressed locally using Liquid tags (_without_ the
+`linenos` option) instead of fences:
+
+{% highlight yaml %}
+{% raw %}{% highlight some_language %}
+Some code
+{% endhighlight %}{% endraw %}
+{% endhighlight %}
+
+## Workarounds
+
+To use HTML compression together with line numbers, all highlighted code
+needs to be wrapped using one of the following workarounds.
+(The variable name `some_var` can be changed to avoid clashes; it can also
+be replaced by `code` -- but note that `code=code` cannot be removed).
+
+### Code fences (three backticks)
+
+{% highlight default %}
+{% raw %}{% capture some_var %}
+```some_language
+Some code
+```
+{% endcapture %}
+{% assign some_var = some_var | markdownify %}
+{% include fix_linenos.html code=some_var %}{% endraw %}
+{% endhighlight %}
+
+### Liquid highlighting
+
+{% highlight default %}
+{% raw %}{% capture some_var %}
+{% highlight some_language linenos %}
+Some code
+{% endhighlight %}
+{% endcapture %}
+{% include fix_linenos.html code=some_var %}{% endraw %}
+{% endhighlight %}
+
+_Credit:_ The original version of the above workaround was suggested by
+Dmitry Hrabrov at
+<https://github.com/penibelst/jekyll-compress-html/issues/71#issuecomment-188144901>.
+
+## Examples
+
+✅ Using code fences + workaround (will only show line numbers if enabled globally in `_config.yml`):
+
+{% capture code_fence %}
+```js
+// Javascript code with syntax highlighting in fences
+var fun = function lang(l) {
+  dateformat.i18n = require('./lang/' + l)
+  return true;
+}
+```
+{% endcapture %}
+{% assign code_fence = code_fence | markdownify %}
+{% include fix_linenos.html code=code_fence %}
+
+✅ Using liquid highlighting + workaround:
+
+{% capture code %}
+{% highlight ruby linenos %}
+# Ruby code with syntax highlighting and fixed line numbers using Liquid
+GitHubPages::Dependencies.gems.each do |gem, version|
+s.add_dependency(gem, "= #{version}")
+end
+{% endhighlight %}
+{% endcapture %}
+{% include fix_linenos.html code=code %}
+{% assign code = nil %}
+
+Narrow code stays close to the line numbers:
+
+{% capture code %}
+{% highlight ruby linenos %}
+def foo
+puts 'foo'
+end
+{% endhighlight %}
+{% endcapture %}
+{% include fix_linenos.html code=code %}
+{% assign code = nil %}
+
+❌ With the compression options used for the theme docs, the following example illustrates
+the **incorrect** formatting arising from the incompatibility of HTML compression
+and the non-conforming HTML produced by Jekyll for line numbers:
+
+{% highlight ruby linenos %}
+def foo
+puts 'foo'
+end
+{% endhighlight %}
