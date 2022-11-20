@@ -15,7 +15,7 @@
 # in the templates via {{ site.myvariable }}.
 version: 0.7.0
 url: "https://ontoportal.github.io" # the base hostname & protocol for your site
-baseimgs: "/assets/images/ontoportal"
+baseimgs: "/documentation/assets/images/ontoportal"
 opva: OntoPortal Virtual Appliance
 opva_version: OntoPortal Virtual Appliance 3.0
 release_version: Release 3.0.0
