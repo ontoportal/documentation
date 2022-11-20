@@ -27,7 +27,7 @@ email: jgraybeal@stanford.edu  # not sure what this is used for
 
 title: Ontoportal documentation
 description: The official installation and maintenance documentation for OntoPortal
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/documentation" # the subpath of your site, e.g. /blog
 
 # Set a path/url to a logo that will be displayed instead of the title
 logo: "/assets/images/ontoportal/OntoPortal-Logo-Circle.png"
