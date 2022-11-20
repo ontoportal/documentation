@@ -3,6 +3,14 @@ administration.bbprojectd/jgraybeal.bbprojectsettings
 *.bbprojectdata
 administration.bbprojectd/Scratchpad.txt
 administration.bbprojectd/Unix Worksheet.worksheet
-
-# Ruby
+*.gem
+.bundle
+.ruby-version
+.jekyll-cache
+.sass-cache
+.idea
+*.iml
+.vscode
+_site
 Gemfile.lock
+node_modules
