@@ -10,10 +10,10 @@ permalink: /administration
 
 This is the official installation and maintenance documentation for {{site.opva_version}}.
 You can find
-<a href="general">general information</a> about the {{site.opva}}
+<a href="{{site.baseurl}}/administration/general">general information</a> about the {{site.opva}}
 and its installation process, including descriptions
-of the <a href="steps">installation steps</a> as well as
-<a href="ontologies">managing ontologies</a>.
+of the <a href="{{site.baseurl}}/administration/steps">installation steps</a> as well as
+<a href="{{site.baseurl}}/administration/ontologies">managing ontologies</a>.
 
 To learn how to use a running {{site.opva}}, please visit the existing
 <a href="https://www.bioontology.org/wiki/BioPortal_Help">user documentation for BioPortal</a>,
