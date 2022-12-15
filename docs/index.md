@@ -45,14 +45,6 @@ This site uses [Just the Docs] for its template.
 
 If [Jekyll] is installed on your computer, you can build and preview the created site *locally*. This lets you test changes before committing them, and avoids waiting for GitHub Pages.[^2] And you will be able to deploy your local build to a different platform than GitHub Pages.
 
-More specifically, the created site:
-- uses a gem-based approach, i.e. uses a `Gemfile` and loads the `just-the-docs` gem
-- uses the [GitHub Pages / Actions workflow] to build and publish the site on GitHub Pages
-
-{: .note }
-See the theme [README][Just the Docs README] for how to use the theme as a gem without creating a new site.
-Just the Docs is a theme for generating static websites with [Jekyll]. You can write source files for your web pages using [Markdown], the [Liquid] templating language, and HTML.[^1] Jekyll builds your site by converting all files that have [front matter] to HTML. Your [Jekyll configuration] file determines which theme to use, and sets general parameters for your site, such as the URL of its home page.
-
 ----
 
 [^1]: The [source file for this page] uses all three markup languages.
