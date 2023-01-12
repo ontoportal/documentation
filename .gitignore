@@ -12,5 +12,4 @@ administration.bbprojectd/Unix Worksheet.worksheet
 *.iml
 .vscode
 _site
-Gemfile.lock
 node_modules
