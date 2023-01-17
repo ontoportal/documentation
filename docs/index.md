@@ -43,13 +43,11 @@ View our [Code of Conduct](https://github.com/ncbo/bioportal-project/blob/master
 
 This site uses [Just the Docs] for its template.
 
-If [Jekyll] is installed on your computer, you can build and preview the created site *locally*. This lets you test changes before committing them, and avoids waiting for GitHub Pages.[^2] And you will be able to deploy your local build to a different platform than GitHub Pages.
+If [Jekyll] is installed on your computer, you can build and preview the created site *locally*. This lets you test changes before committing them, and avoids waiting for GitHub Pages. And you will be able to deploy your local build to a different platform than GitHub Pages.
+
+See the [How to configure the documentation](configuration), to find key things to know about maintaining and contributing to this documentation 
 
 ----
-
-[^1]: The [source file for this page] uses all three markup languages.
-
-[^2]: [It can take up to 10 minutes for changes to your site to publish after you push the changes to GitHub](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/creating-a-github-pages-site-with-jekyll#creating-your-site).
 
 [Jekyll]: https://jekyllrb.com
 [Markdown]: https://daringfireball.net/projects/markdown/
