@@ -4,6 +4,7 @@ title: Documentation configuration
 nav_order: 4
 has_children: true
 permalink: /configuration
+nav_exclude: true
 ---
 
 # How to configure the documentation
