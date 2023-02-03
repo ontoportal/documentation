@@ -6,5 +6,5 @@ has_children: true
 permalink: /developers
 ---
 
-# Developers Guide 
+# Welcome to the OntoPortal Appliance Developers Guide
 
