@@ -101,7 +101,7 @@ https://analytics.google.com
 
 Google requires insertion of code into the pages being monitored.
 OntoPortal contains this code, which can activated following 
-the instructions in [Google Analytics Management](../google_analytics_management).
+the instructions in [Google Analytics Management]({{site.baseurl}}/administration/management/google_analytics_management).
 
 Google provides tremendous analytics of the general use of pages on a web site,
 including breakdown by unique users and many other statistics.

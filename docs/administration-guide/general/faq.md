@@ -15,7 +15,7 @@ permalink: /administration/general/faq
 
 ### Under what license is the OntoPortal Virtual Appliance released?
 
-See [License Terms]({{site.baseurl}}general/licensing/)
+See [License Terms]({{site.baseurl}}/general/licensing/)
 
 ### Can I use the Annotator and Recommender on their own?
 

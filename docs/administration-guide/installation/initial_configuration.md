@@ -19,12 +19,12 @@ Your {{site.opva}} can use either 4store or (new with version 3.0) AllegroGraph
 as its RDF backend storage. 
 We use 4store as the default RDF store for the system, as we have much more experience with it to date. If you want to use the AllegroGraph RDF store
 instead of the default 4store RDF store,
-visit the <a href="../allegrograph_configuration">AllegroGraph Configuration</a>
+visit the <a href="{{site.baseurl}}/administration/steps/allegrograph_configuration">AllegroGraph Configuration</a>
 page before you begin adding ontologies.
 
 ## Adding ontologies
 
-The detailed ontology submission process is described in the <a href="../../ontologies/submitting_ontologies">Submitting Ontologies</a> section.
+The detailed ontology submission process is described in the <a href="{{site.baseurl}}/administration/ontologies/submitting_ontologies">Submitting Ontologies</a> section.
 
 To start, since you don't have any non-administration accounts, you can add an ontology using the OntoPortal Admin User at `http://{ip_address_of_appliance}/ontologies/new`.
 
@@ -59,5 +59,5 @@ by running the command
 ## Next step
 
 If you haven't yet registered your system, 
-go to the <a href="../registration">Registration Process</a> step 
+go to the <a href="{{site.baseurl}}/administration/steps/registration">Registration Process</a> step 
 for detailed instructions.

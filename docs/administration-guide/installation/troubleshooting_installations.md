@@ -17,9 +17,9 @@ As with all the troubleshooting sections,
 this section will be enhanced based on experiences 
 with the deployed OntoPortal systems.
 
-For troubleshooting ontology submissions, see the <a href="../../ontologies/troubleshooting_submissions">Troubleshooting Submissions</a> section.
+For troubleshooting ontology submissions, see the <a href="{{site.baseurl}}/administration/ontologies/troubleshooting_submissions">Troubleshooting Submissions</a> section.
 
-For troubleshooting system operations, see the <a href="../../troubleshooting_operations">Troubleshooting Operations</a> section.
+For troubleshooting system operations, see the <a href="{{site.baseurl}}/administration/management/troubleshooting_operations">Troubleshooting Operations</a> section.
 
 ## Nothing appears in the browser when accessing the UI
 

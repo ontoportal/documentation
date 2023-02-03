@@ -21,7 +21,7 @@ Within that page, click on the Ontology Administration tab to work with ontologi
 
 Additional information about this capability is presented in the 
 Ontology Administration tab of the Administration Console page.
-See <a href="../troubleshooting_submissions">Troubleshooting Submissions</a> for more information.
+See <a href="{{site.baseurl}}/administration/ontologies/troubleshooting_submissions">Troubleshooting Submissions</a> for more information.
 
 ## Organizing ontologies in OntoPortal
 

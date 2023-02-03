@@ -13,7 +13,7 @@ permalink: /administration/ontologies/submitting_ontologies
 
 You can add an ontology using the OntoPortal Admin User at `http://{ip_address_of_appliance}/ontologies/new`.
 The ncbo_cron project is configured to automatically process any new ontologies 
-every 5 minutes (see the <a href="../../steps/initial_installation">documentation for enabling the scheduler</a>). 
+every 5 minutes (see the <a href="{{site.baseurl}}/administration/steps/initial_installation">documentation for enabling the scheduler</a>). 
 
 The ontology processing includes:
 * Parsing any new, unparsed ontologies
@@ -67,7 +67,7 @@ You can look for the submissionStatus attribute to get the status.
 
 If you are looking at an ontology that should have been parsed some time ago, 
 you can look at the Ontology Administration tab of the Administration Console page.
-See <a href="../troubleshooting_submissions">Troubleshooting Submissions</a> for more information.
+See <a href="{{site.baseurl}}/administration/ontologies/troubleshooting_submissions">Troubleshooting Submissions</a> for more information.
 
 ## Is there a log file for parsing?
 
@@ -77,9 +77,9 @@ OntoPortal versions 3.0 and higher: `/srv/ontoportal/data/repository/{ontology a
 Older versions: `/srv/ncbo/repository/{ontology acronym}/{submission id}`
 
 You can also see the latest log from the Ontology Administration tab of the Administration Console page.
-See <a href="../troubleshooting_submissions">Troubleshooting Submissions</a> for more information
+See <a href="{{site.baseurl}}/administration/ontologies/troubleshooting_submissions">Troubleshooting Submissions</a> for more information
 
 For further information about ontology parsing, 
-please see <a href="../parseable_ontologies">Parseable Ontologies</a>
-and <a href="../troubleshooting_submissions">Troubleshooting Submissions</a>
+please see <a href="{{site.baseurl}}/administration/ontologies/parseable_ontologies">Parseable Ontologies</a>
+and <a href="{{site.baseurl}}/administration/ontologies/troubleshooting_submissions">Troubleshooting Submissions</a>
 

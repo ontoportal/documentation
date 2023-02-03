@@ -15,9 +15,9 @@ Here we describe how to troubleshoot issues with ontology submissions.
 As with all the troubleshooting sections, 
 this section will be enhanced based on experiences with the deployed OntoPortal systems.
 
-For troubleshooting installations, see the <a href="../../steps/troubleshooting_installations">Troubleshooting Installations</a> section.
+For troubleshooting installations, see the <a href="{{site.baseurl}}/administration/steps/troubleshooting_installations">Troubleshooting Installations</a> section.
 
-For troubleshooting system operations, see the <a href="../../troubleshooting_operations">Troubleshooting Operations</a> section.
+For troubleshooting system operations, see the <a href="{{site.baseurl}}/administration/management/troubleshooting_operations">Troubleshooting Operations</a> section.
 
 ## Overview
 
@@ -127,7 +127,7 @@ we recommend acquiring computational systems with significant dedicated memory r
 
 A good basic test is to make sure the ontology is correctly formatted. 
 Here are several tools you can use to check the ontology is validly formatted.
-(For a list of parseable ontology types, see [Parseable Ontologies](../parseable_ontologies/).)
+(For a list of parseable ontology types, see [Parseable Ontologies]({{site.baseurl}}/administration/ontologies/parseable_ontologies).)
 
 ### With Protégé
 

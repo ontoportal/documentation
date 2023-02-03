@@ -22,7 +22,7 @@ or by external users that have access to your OntoPortal machine.
 ```
 
 Before performing the steps in this reference, we strongly recommend 
-that you read the information in the <a href="../reference_4store">4Store Reference</a>
+that you read the information in the <a href="{{site.baseurl}}/administration/management/reference_4store">4Store Reference</a>
 section of the manual, particularly the *External users querying 4store* section.
 These considerations are particularly important 
 if you want to allow external users to directly query your 4store database. 
