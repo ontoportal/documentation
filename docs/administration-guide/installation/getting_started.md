@@ -67,7 +67,7 @@ an Amazon Machine Instance (AMI) is available on the [OntoPortal Alliance AWS Ma
 ## Next steps
 
 After installing a Virtual Appliance following the above steps,
-proceed to the <a href="../initial_installation">Initial Installation</a> step.
+proceed to the <a href="{{site.baseurl}}/administration/steps/initial_installation">Initial Installation</a> step.
 
 You may also wish to begin registering your Appliance, 
-as described in the <a href="../registration">Registration Process</a> step.
+as described in the <a href="{{site.baseurl}}/administration/steps/registration">Registration Process</a> step.

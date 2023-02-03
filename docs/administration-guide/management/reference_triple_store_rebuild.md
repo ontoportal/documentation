@@ -34,7 +34,7 @@ if you plan to do that step.
 
 The UMLS steps are only required if we have a new version of UMLS.
 
-See [Handling UMLS](../../ontologies/handling_umls) section for
+See [Handling UMLS]({{site.baseurl}}/administration/ontologies/handling_umls) section for
 directions on generating and uploading UMLS ontologies using umls2rdf.
 
 Note 1: This step takes a lot of time, during which you can perform
@@ -292,7 +292,7 @@ Next you will need to swap solr cores
 * User: `ncbo-deployer`
 * pwd: `/srv/ncbo/ncbo_cron`
 
-See [Annotator Management](../annotator_management) for details.
+See [Annotator Management]({{site.baseurl}}/administration/management/annotator_management) for details.
 
 ## NCBO-Cron
 

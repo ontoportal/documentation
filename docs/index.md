@@ -27,7 +27,7 @@ in our [Contributing Guide](https://github.com/ncbo/bioportal-project/blob/maste
 
 OntoPortal Alliance is committed to fostering a welcoming community.
 
-View our [Code of Conduct](https://github.com/ncbo/bioportal-project/blob/master/contributing.md#code-of-conduct) (soon to be updated from the BioPortal source). 
+View our [Code of Conduct](https://github.com/ncbo/bioportal-project/blob/master/contributing.md#code-of-conduct) (to be updated from the BioPortal source). 
 
 #### Thank you to the contributors of this documentation!
 

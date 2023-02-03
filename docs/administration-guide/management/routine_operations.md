@@ -15,10 +15,10 @@ permalink: /administration/management/routine_operations
 
 ### Troubleshoot ontology submissions: Ontologies tab
 
-See the [Troubleshooting Submissions](../../ontologies/troubleshooting_submissions) page
+See the [Troubleshooting Submissions]({{site.baseurl}}/administration/ontologies/troubleshooting_submissions) page
 for detailed instructions on troubleshooting ontology submissions.
 
-See the [Managing Ontologies](../../ontologies/managing_ontologies) page 
+See the [Managing Ontologies]({{site.baseurl}}/administration/ontologies/managing_ontologies) page 
 to learn more about basic operations like updating ontology metadata, deleting ontologies,
 and reparsing ontologies.
 

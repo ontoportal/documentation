@@ -12,7 +12,7 @@ permalink: /administration/management/appliance_upgrade_v25_to_31
 
 Upgrading virtual appliance from v2.5 to v3.1 requires deploying a new v3.1 instance of the appliance and peforming data migration. 
 
-You may also wish to visit the migration information at [Appliance Upgrade](../appliance_upgrade)
+You may also wish to visit the migration information at [Appliance Upgrade]({{site.baseurl}}/administration/management/appliance_upgrade)
 
 ## Procedure:
 ### 1. Deploy and configure a new instance of v3 appliance.

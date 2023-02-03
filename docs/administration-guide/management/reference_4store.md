@@ -20,7 +20,7 @@ there are considerations described under *External users querying 4store* below
 that you must take into account.
  
 A recipe for making the SPARQL endpoint publicly accessible 
-is available in the <a href="../reference_sparql_endpoint">SPARQL Endpoint Reference</a>.
+is available in the <a href="{{site.baseurl}}/administration/management/reference_sparql_endpoint">SPARQL Endpoint Reference</a>.
 
 ### Local user (administrator) querying 4store
 
