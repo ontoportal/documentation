@@ -11,7 +11,7 @@ permalink: /administration/management/annotator_management
 
 # Annotator Management
 
-Reference the <a href="{{site.baseurl}}/architecture_reference">Architecture</a> page 
+Reference the <a href="{{site.baseurl}}/docs/devlopers-docs/global_architecture">Architecture</a> page 
 for a diagram of the OntoPortal system components.
 
 See major section below for AnnotatorPlus information.

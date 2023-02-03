@@ -21,9 +21,9 @@ for cases where the system is severely misbehaving;
 until we make part of this document, 
 contact us if you think you need this information.
 
-For troubleshooting installations, see the <a href="{{site.baseurl}}/steps/troubleshooting_installations">Troubleshooting Installations</a> section.
+For troubleshooting installations, see the <a href="{{site.baseurl}}/administration/steps/troubleshooting_installations">Troubleshooting Installations</a> section.
 
-For troubleshooting ontology submissions, see the <a href="{{site.baseurl}}/ontologies/troubleshooting_submissions">Troubleshooting Submissions</a> section.
+For troubleshooting ontology submissions, see the <a href="{{site.baseurl}}/administration/ontologies/troubleshooting_submissions">Troubleshooting Submissions</a> section.
 
 ## General conditions
 
@@ -78,7 +78,7 @@ http://{my-appliance-hostname}:8080/solr/
 
 In those interfaces, use the 'Core Selector' to choose 'Collection1' (likely the only choice available).  In the 'Query' utility that appears, enter parameters such as 'q' text field entry: 'submissionAcronym:AERO'.
 
-To re-index an ontology, follow the instructions in [Search Index Management](../search_index_management)
+To re-index an ontology, follow the instructions in [Search Index Management]({{site.baseurl}}/administration/management/search_index_management)
 
 ```
 https://github.com/ncbo/ncbo_cron/blob/master/bin/ncbo_ontology_index
@@ -100,7 +100,7 @@ The file has to be owned by ncbobp:ncbobp and to have permission 666
 
 ### Troubleshooting ncbo_cron
 
-See [ncbo-cron Reference](../reference_ncbo-cron) for details.
+See [ncbo-cron Reference]({{site.baseurl}}/administration/management/ncbo_cron) for details.
 
 
 

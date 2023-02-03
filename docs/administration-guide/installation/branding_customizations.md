@@ -46,7 +46,7 @@ where many elements adopt the parent color.
 
 ## How do I do it?
 
-First, review the instructions in the <a href="../advanced_configuration">Advanced Configuration</a> section. Our example is based on the Advanced Customization instructions at the end of that document.
+First, review the instructions in the <a href="{{site.baseurl}}/administration/steps/advanced_configuration">Advanced Configuration</a> section. Our example is based on the Advanced Customization instructions at the end of that document.
 
 ### 1 set URL for appliance:
 ssh to appliance and change user to ontoportal. 
@@ -86,7 +86,7 @@ if `/srv/ontoportal/virtual_appliance/deployment/bioportal_web_ui/` is not prese
 ### 5. Run deployment
 
 Once all configuration changes and file overwrites are set you would need to run deployment scripts. 
-Deployment process described in <a href="../advanced_configuration">Advanced Configuration</a> 
+Deployment process described in <a href="{{site.baseurl}}/administration/steps/advanced_configuration">Advanced Configuration</a> 
 
 
 ## Do you have some artwork I can use?
