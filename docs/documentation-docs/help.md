@@ -1,11 +1,10 @@
 ---
-title: Maintaining the Administration documentation
+title: Maintaining the  documentation
 layout: default
 summary: Key things to know about maintaining this documentation
 status: Needs revision
-parent: Administration Guide
-permalink: /administration/help
-nav_order: 5
+parent: Documentation configuration
+nav_order: 2
 ---
 
 # Introduction
