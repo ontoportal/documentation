@@ -121,6 +121,8 @@ $NCBO_API_KEY = "4a5011ea-75fa-4be6-8e89-f45c8c84844e"
 # Unique string representing the UI's id for use with the BioPortal Core
 $API_KEY = "72c72cba-ad45-4785-b94e-483fa55cdddb"
 
+$NOT_DOWNLOADABLE = []
+
 ```
 
 ## Build the docker application
