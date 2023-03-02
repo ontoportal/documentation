@@ -151,6 +151,13 @@ Run the docker environment
 docker compose up
 ```
 
+Setup database
+
+```bash
+docker compose exec web sh -c "bin/setup"
+```
+
+
 Run the rails server
 
 ```bash
