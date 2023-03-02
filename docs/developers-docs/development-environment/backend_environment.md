@@ -46,6 +46,8 @@ Where you add the following ports to forward:
 
 ![Backend infrastructure port forwarding]({{site.baseimgs}}/developers/virtual-box-nat-configuration.png)
 
+{: .important  }
+If mapping SSH to port 22 didn't work, you can use a different port port (e.g 2222)
 
 Finally start the appliance and connect to the appliance with this command line: `ssh centos@127.0.0.1`
 
