@@ -1,12 +1,13 @@
 ---
-title: Getting Started
+title: Debugging Ontoportal
+summary: Debug and Test your Ontoportal installation code
 layout: default
-summary: Key things to know about debugging and running our code
 status: Draft
 parent: Developers Guide
+nav_order: 4
 ---
 
-# Debugging BioPortal
+# Debugging Ontoportal
 
 The first edition of this guide assumes that one is running Linux and that the IDE of choice is RubyMine.  As more than one person edits this document will become more generic and where it is known it will be indicated that a given solution is RubyMine or Linux specific.I also tend to favour running the Infrastructure in docker to avoid lengthy installs to seeup a developement environment.
 
@@ -18,7 +19,7 @@ Tests for a project are often run as rake tasks:
 ```
 		bundler exex rake test
 ```
-The ncbo project has a bunch of other useful rake tasks that we will find documentatioin for later.
+The ncbo project has a bunch of other useful rake tasks that we will find documentation for later.
 
 The ontologies rest services are run via rackup from the ontologies_api project:
 ```
