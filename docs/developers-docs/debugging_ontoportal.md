@@ -3,7 +3,7 @@ title: Debugging Ontoportal
 summary: Debug and Test your Ontoportal installation code
 layout: default
 status: Draft
-parent: Developers Guide
+parent: Developer Guide
 nav_order: 4
 ---
 

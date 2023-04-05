@@ -3,7 +3,7 @@ title: Getting Started
 layout: default
 summary: The first page to see if you want to go beyond a sample installation of Ontoportal
 status: Draft
-parent: Developers Guide
+parent: Developer Guide
 nav_order: 1
 ---
 # Getting Started 

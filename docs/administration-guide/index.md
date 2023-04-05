@@ -8,24 +8,17 @@ permalink: /administration
 
 # OntoPortal Administration Guide
 
-This is the official installation and maintenance documentation for {{site.opva_version}}.
+Installation and maintenance documentation for OntoPortal (currently {{site.release_version}}).
 You can find
 <a href="{{site.baseurl}}/administration/general">general information</a> about the {{site.opva}}
 and its installation process, including descriptions
 of the <a href="{{site.baseurl}}/administration/steps">installation steps</a> as well as
 <a href="{{site.baseurl}}/administration/ontologies">managing ontologies</a>.
 
-To learn how to use a running {{site.opva}}, please visit the existing
-<a href="https://www.bioontology.org/wiki/BioPortal_Help">user documentation for BioPortal</a>,
-or the documentation generated at your running appliance(found at `https://{my_appliance_hostname}/documentation`).
+To learn how to use a running {{site.opva}}, see the <a href="{{site.baseurl}}/user_guide"> User Guide </a>,
+or to use the API of your own appliance see the documentation generated at (found at `https://{my_appliance_hostname:8080}/documentation`).
 
-The {{site.opva}} is provided by the Stanford Center for Biomedical Informatics Research and the {{site.opa}}.
-The documentation for the current release ({{site.release_version}})
-focuses on system administration of the Appliance.
-In coming months, working with the {{site.opa}},
-we will add documentation on how to use the {{site.opva}}.
-We will also add information about the {{site.opa}}—how
-it collaborates to maintain the Appliance and how you can help.
+The {{site.opva}} is provided by [Stanford BMIR](https://bmir.stanford.edu/) which keeps trace of all the uses and assigns free licenses. 
 
-You are welcome to make pull requests for improvements to this documentation,
-or to submit your questions to the support list at {{site.support_email}}.
+The documentation is for the current {{site.release_version}}. It 
+focuses on system administration.
