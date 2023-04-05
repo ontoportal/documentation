@@ -28,6 +28,8 @@ See the section [How to configure the documentation](configuration), to know abo
 
 When contributing to this documentation, for significant changes, please first discuss the changes via issue, email, or any other method with the owners of this repository. You can also use pull requests on the corresponding GitHub repository.
 
+OntoPortal support email list: {{site.support_email}}.
+
 Read more about becoming a contributor (for the moment, in our BioPortal repository) in our [Contributing Guide](https://github.com/ncbo/bioportal-project/blob/master/contributing.md).
 
 ### Code of conduct

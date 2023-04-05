@@ -17,7 +17,7 @@ version: 0.7.0
 url: "https://ontoportal.github.io" # the base hostname & protocol for your site
 baseimgs: "/documentation/assets/images/ontoportal"
 opva: OntoPortal Virtual Appliance
-opva_version: OntoPortal Virtual Appliance 3.0
+opva_version: Virtual Appliance 3.0
 release_version: Release 3.0.0
 opa: OntoPortal Alliance
 support_email: support@ontoportal.org  # for dev support only, not for end user support
@@ -124,7 +124,7 @@ nav_external_links:
 back_to_top: true
 back_to_top_text: "Back to top"
 
-footer_content: "Copyright &copy; 2023 Ontoportal"
+footer_content: "Copyright &copy; 2023 OntoPortal Alliance"
 
 # Footer last edited timestamp
 last_edit_timestamp: true # show or hide edit time - page must have `last_modified_date` defined in the frontmatter
