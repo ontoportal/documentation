@@ -22,13 +22,15 @@ See [OntoPortal Alliance](https://ontoportal.org) website for examples of ontolo
 This documentation is provided freely for any use by the public (formal license citation pending).
 For License about the OntoPortal software, see each code repositories. 
 
-### Contributing & code of conduct
+### Contributing
 
 See the section [How to configure the documentation](configuration), to know about maintaining and contributing to this documentation. 
 
 When contributing to this documentation, for significant changes, please first discuss the changes via issue, email, or any other method with the owners of this repository. You can also use pull requests on the corresponding GitHub repository.
 
 Read more about becoming a contributor (for the moment, in our BioPortal repository) in our [Contributing Guide](https://github.com/ncbo/bioportal-project/blob/master/contributing.md).
+
+### Code of conduct
 
 OntoPortal Alliance is committed to fostering a welcoming community. View our [Code of Conduct](https://github.com/ncbo/bioportal-project/blob/master/contributing.md#code-of-conduct) (to be updated from the BioPortal source). 
 
