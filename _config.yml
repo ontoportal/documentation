@@ -25,8 +25,8 @@ twitter_username: ontoportal
 github_username:  ontoportal
 email: jgraybeal@stanford.edu  # not sure what this is used for
 
-title: Ontoportal documentation
-description: The official installation and maintenance documentation for OntoPortal
+title: OntoPortal Documentation
+description: Official installation, maintenance, usage and contribution documentation for OntoPortal.
 baseurl: "/documentation" # the subpath of your site, e.g. /blog
 
 # Set a path/url to a logo that will be displayed instead of the title
