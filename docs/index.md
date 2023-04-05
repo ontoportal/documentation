@@ -6,7 +6,9 @@ summary: "This OntoPortal documentation home page hosts all the separate OntoPor
 permalink: /
 ---
 
-## About the project
+# Welcome to the OntoPortal Documentation
+
+### About us
 
 [OntoPortal](https://ontoportal.org) (formerly known as the NCBO Virtual Appliance or BioPortal Virtual Appliance) is
 the community-maintained distribution of the BioPortal software (from the Stanford Center for Biomedical Informatics Research).
@@ -23,7 +25,7 @@ email, or any other method with the owners of this repository before making a ch
 Read more about becoming a contributor (for the moment, in our BioPortal repository)
 in our [Contributing Guide](https://github.com/ncbo/bioportal-project/blob/master/contributing.md).
 
-### Code of Conduct
+### Code of conduct
 
 OntoPortal Alliance is committed to fostering a welcoming community.
 

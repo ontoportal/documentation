@@ -6,7 +6,7 @@ has_children: true
 permalink: /administration
 ---
 
-# Welcome to the OntoPortal Appliance Administration Guide
+# OntoPortal Administration Guide
 
 This is the official installation and maintenance documentation for {{site.opva_version}}.
 You can find

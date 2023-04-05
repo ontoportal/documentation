@@ -1,15 +1,15 @@
 ---
 layout: default
-title: Users Guide
+title: User Guide
 nav_order: 2
 has_children: true
-permalink: /users_guide
+permalink: /user_guide
 ---
 
-# Users Guide
+# OntoPortal User Guide
 
 Please see 
-- NCBO docs: [NCBO wiki](https://www.bioontology.org/wiki/Main_Page) and  [Bioportal Help](https://www.bioontology.org/wiki/BioPortal_Help)
+- NCBO docs: [NCBO wiki](https://www.bioontology.org/wiki/Main_Page) and  [BioPortal Help](https://www.bioontology.org/wiki/BioPortal_Help)
 - [Our Scientific papers](https://github.com/ontoportal/literature) 
 - [API documentation](http://data.agroportal.lirmm.fr/documentation) 
-- [Ecoportal docs](https://github.com/lifewatch-eric/documentation/wiki/EcoTools) 
+- [EcoPortal docs](https://github.com/lifewatch-eric/documentation/wiki/EcoTools) 
