@@ -11,7 +11,7 @@ permalink: /
 ### About us
 
 OntoPortal (formerly known as the NCBO Virtual Appliance or BioPortal Virtual Appliance or NCBO technology) is
-the community-maintained distribution of the BioPortal software (originally developped by the [Stanford Center for Biomedical Informatics Research](https://bmir.stanford.edu/)).
+the community-maintained distribution of the BioPortal software (originally developed by the [Stanford Center for Biomedical Informatics Research](https://bmir.stanford.edu/)).
 
 The [OntoPortal Alliance](https://ontoportal.org) is the community that maintains this software. It is a consortium of research and infrastructure teams (and one SME) dedicated to promoting the development of ontology repositories –in science and more– based on the collaboratively developed OntoPortal open-source software.
 
