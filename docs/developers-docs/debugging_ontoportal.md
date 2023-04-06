@@ -1,13 +1,13 @@
 ---
-title: Debugging Ontoportal
-summary: Debug and Test your Ontoportal installation code
+title: Debugging OntoPortal
+summary: Debug and Test your OntoPortal installation code
 layout: default
 status: Draft
 parent: Developer Guide
 nav_order: 4
 ---
 
-# Debugging Ontoportal
+# Debugging OntoPortal
 
 The first edition of this guide assumes that one is running Linux and that the IDE of choice is RubyMine.  As more than one person edits this document will become more generic and where it is known it will be indicated that a given solution is RubyMine or Linux specific.I also tend to favour running the Infrastructure in docker to avoid lengthy installs to seeup a developement environment.
 
