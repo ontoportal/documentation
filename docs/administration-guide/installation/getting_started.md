@@ -50,7 +50,7 @@ Each of the methods is described below.
 
 To obtain the Appliance in an Open Virtual Appliance (OVA), 
 you will need a BioPortal account.
-If you don't have a BioPortal account, you can <a href="http://bit.ly/bioportal-account">create one</a>.
+If you don't have a BioPortal account, you can <a href="https://bioportal.bioontology.org/accounts/new">create one</a>.
 
 Once you have your BioPortal account, log in to BioPortal and then 
 visit the [Virtual Appliance page](https://bioportal.bioontology.org/virtual_appliance). 
