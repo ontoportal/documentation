@@ -3,7 +3,7 @@ title: Development Environment
 summary: Set up a development environment for your own Ontoportal installation
 layout: default
 status: Draft
-parent: Developers Guide
+parent: Developer Guide
 has_children: true
 nav_order: 3
 ---

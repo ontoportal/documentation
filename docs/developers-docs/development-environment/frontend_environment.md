@@ -4,7 +4,7 @@ summary: A guide of how to run a development environment for the frontend
 layout: default
 status: Draft
 parent:  Development Environment
-grand_parent: Developers Guide
+grand_parent: Developer Guide
 nav_order: 1
 ---
 
