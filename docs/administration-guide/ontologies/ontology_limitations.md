@@ -23,7 +23,7 @@ can reduce its size, and makes some ontologies manageable
 that otherwise can not be processed.
 
 We provide further information on troubleshooting submissions of large ontologies
-in the [Troubleshooting Submissions]({{site.baseurl}}/administration/ontologies/troubleshooting_submissions/#troubleshooting-very-large-ontologies) page.
+in the [Troubleshooting Submissions]({{site.baseurl}}/administration/ontologies/troubleshooting_submissions#troubleshooting-very-large-ontologies) page.
 
 ## Root classes and ontology shape
 
