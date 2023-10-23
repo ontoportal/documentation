@@ -38,7 +38,7 @@ The `master` branch represent the [Bioportal version](https://bioportal.bioontol
 You have to merge the `ontoportal-lirmm` branch to your `master`, by doing so `git merge ontoportal-lirmm master`
 
 {: .important }
-For Windows users using Docker with WSL 2, it is recommended to clone your repository directly in your home directory of your WSL distribution. Cloning it in any Windows folder that is mounted by default in `/mnt/<drive letter>` would result in very poor performance.
+For Windows users with Docker Desktop using the WSL 2, it is recommended to clone your repository directly in your home directory of your WSL distribution. Cloning it in any Windows folder that is mounted by default in `/mnt/<drive letter>` would result in very poor performance.
 You can access the WSL file system from the Windows explorer by typing `explorer.exe .` in the terminal for any setup with your IDE.
 
 ## Setting up the development config files
