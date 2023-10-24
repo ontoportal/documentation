@@ -30,12 +30,16 @@ First fork the [ontoportal_web_ui](https://github.com/ontoportal/ontoportal_web_
 
 Then clone your forked repository locally
 ```bash
-  git clone https://github.com/your_organization/ontportal_web_ui.git
+  git clone https://github.com/your_organization/ontoportal_web_ui.git
 ```
 
 {: .important }
 The `master` branch represent the [Bioportal version](https://bioportal.bioontology.org/), if you want to have the [Agroportal version](https://agroportal.lirmm.fr/).
 You have to merge the `ontoportal-lirmm` branch to your `master`, by doing so `git merge ontoportal-lirmm master`
+
+{: .important }
+For Windows users with Docker Desktop using the WSL 2, it is recommended to clone your repository directly in your home directory of your WSL distribution. Cloning it in any Windows folder that is mounted by default in `/mnt/<drive letter>` would result in very poor performance.
+Open your WSL terminal and navigate to your home directory with `cd ~`. If you have git installed, you can directly use `git clone https://github.com/your_organization/ontoportal_web_ui.git`. If you want to use Git from Windows instead, you can get the path with `explorer.exe .` while in your home directory. This will open the Windows explorer from which you can use your favorite Git tool and setup your IDE for development.
 
 ## Setting up the development config files
 
