@@ -44,29 +44,61 @@ You use Google Analytics to get your website's data.
 * Give permission to your developer credential (previously generated at the Google Developer Account step) to be able to retrieve the data
   * Admin tab > Property (typically, the website you are doing analytics on) > User Management
   * Add permissions for the google developer credential email (also generated in the previous section)
-* Modify `/srv/ontoportal/virtual_appliance/appliance_config/ncbo_cron/config/config.rb`
- 
- ```
-    # Google Analytics config
-    config.enable_ontology_analytics               = true
-    config.cron_ontology_analytics                 = '30 */4 * * *'
-    config.analytics_service_account_email_address = 'myontoportal@developer.gserviceaccount.com'
-    config.analytics_path_to_key_file              = 'config/myontoportal-analytics.p12'
-    config.analytics_profile_id                    = 'ga:1234567'
-    config.analytics_app_name                      = 'MyOntoPortal'
-    config.analytics_app_version                   = '1.0.0'
-    config.analytics_start_date                    = '2020-01-01'
-    config.analytics_filter_str                    = ''
 
- ```
-* Perform deployment of UI, API and ncbo_cron which will copy configuration files to the appropriate application directories
+### Google Analytics Configuration  
+
+  * Modify `/srv/ontoportal/virtual_appliance/appliance_config/ncbo_cron/config/config.rb`
+    * Set up configuration for Google Analytics Data (GA4) 
+    ```
+      # Google Analytics CRON config
+      config.enable_ontology_analytics         = true
+      config.cron_ontology_analytics           = '30 */4 * * *'
+      # GA4 Key file used for authentication with Google
+      config.analytics_path_to_key_file        = "config/myontoportal_analytics_key.json"
+      # your GA4 property ID    
+      config.analytics_property_id             = "111111111"
+      # path to the file that stores your Universal Analytics (UA) data (if exists)
+      config.analytics_path_to_ua_data_file    = "data/op_ua_data.json"
+      # path to the file that will store your entire Google Analytics Data
+      # it's a backup copy of your data in addtion to storing it in Redis
+      # this file will be auto-created if it doesn't exist already
+      config.analytics_path_to_ga_data_file    = "data/op_ga_data.json"
+    ```
+    * OPTIONAL: Set up configuration for Universal Analytics access (if you need to import the existing data). **This data are available till July 1st, 2024**. 
+    ```
+      config.analytics_service_account_email_address = 'myontoportal@developer.gserviceaccount.com'
+      config.analytics_path_to_key_file              = 'config/myontoportal-analytics.p12'
+      config.analytics_profile_id                    = 'ga:1234567'
+      config.analytics_app_name                      = 'MyOntoPortal'
+      config.analytics_app_version                   = '1.0.0'
+      config.analytics_start_date                    = '2020-01-01'
+      config.analytics_filter_str                    = ''
+    ```
+  * Perform deployment of UI, API and ncbo_cron which will copy configuration files to the appropriate application directories
+    ```
+    sudo su - ontoportal
+    cd /srv/ontoportal/virtual_appliance/deployment
+    ./setup_deploy_env.sh
+    ./deploy_ui.sh
+    ./deploy_ncbo_cron.sh
+    ```
+## OPTIONAL: Importing Existing Universal Analytics (UA) Data
+
+If you have existing Google Analytics data that you have been collecting till now, you can import it from Google (**available till July 1st, 2024**) so it's merged with your Google Analytics Data (GA4) data and displayed in OntoPortal.
+
+* Make sure your Universal Analytics configuration is set up properly (see above)
+* Run the following script:
 ```
-sudo su - ontoportal
-cd /srv/ontoportal/virtual_appliance/deployment
-./setup_deploy_env.sh
-./deploy_ui.sh
-./deploy_ncbo_cron.sh
+# sudo su - ontoportal
+# cd /srv/ontoportal/ncbo_cron
+# bundle exec ruby ./bin/generate_ua_analytics_file.rb
 ```
+At the end of the run, the script will generate the file that you specified in:
+```
+config.analytics_path_to_ua_data_file    = "data/op_ua_data.json"
+```
+This file needs to be generated ONLY ONCE, and it will be used by your Google Analytics CRON job to merge the "old" data with the new data from GA4. Once this file is generated, you can safely delete the section of the configuration related to Universal Analytics.
+
 
 ## Enabling Analytics Cron Job
 
