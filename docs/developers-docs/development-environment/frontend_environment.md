@@ -171,3 +171,35 @@ docker compose exec web sh -c "bin/rails s -b 0.0.0.0"
 ## Opening in browser
 
 See [http://localhost:3000](http://localhost:3000)
+
+## Enbaling the Recaptcha in Ontoportal
+
+To enable the Recaptcha in Ontoportal, you need to get a recaptcha site key and secret key from [https://www.google.com/recaptcha/admin/create](https://www.google.com/recaptcha/admin/create)
+
+The recaptcha type needed for this configuration is V2 (challenge), with the "i'm not a robot" checkbox.
+
+![Recaptcha type]({{site.baseimgs}}/developers/recaptcha_type.png)
+
+once you have the keys, you need to add them to the `config/bioportal_config_development.rb` file
+
+```ruby
+ENV['USE_RECAPTCHA'] ||= 'true' #set use recaptcha to true to enable it
+ENV['RECAPTCHA_PUBLIC_KEY'] ||= 'site_key'
+ENV['RECAPTCHA_PRIVATE_KEY'] ||= 'secret_key'
+```
+
+in the root of the bioportal_web_ui project run the following command
+
+```bash
+RAILS_ENV="development" EDITOR="nano" bin/rails credentials:edit --environment development
+```
+
+it will open an editor (linux nano in this case), add the following lines
+
+```yaml
+ recaptcha:
+       site_key:  <site_key>
+       secret_key:  <secret_key>
+```
+
+save the file and exit, now you can run the rails server again, and the recaptcha will be available in both the register and the feedback forms
