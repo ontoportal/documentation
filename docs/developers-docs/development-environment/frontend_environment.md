@@ -171,3 +171,4 @@ docker compose exec web sh -c "bin/rails s -b 0.0.0.0"
 ## Opening in browser
 
 See [http://localhost:3000](http://localhost:3000)
+
