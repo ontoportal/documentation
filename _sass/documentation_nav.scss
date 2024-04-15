@@ -1,0 +1,12 @@
+.ontoportal-tabs{
+    display: flex;
+}
+
+.ontoportal-tabs > a{
+    color: gray;
+    margin-right: 20px;
+    cursor: pointer;
+}
+.ontoportal-tabs > .active{
+    color: #2c84fa;
+}

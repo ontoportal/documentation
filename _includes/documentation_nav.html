@@ -1,0 +1,33 @@
+<!-- _includes/documentation_nav.html -->
+
+<div class="ontoportal-tabs" id="ontoportal_tabs">
+    {% if include.portal == 'ontoportal' %}
+        <a class="tab-item active" href="ontoportal">
+            Ontoportal
+        </a>
+    {% else %}
+        <a class="tab-item" href="ontoportal">
+            Ontoportal
+        </a>
+    {% endif %}
+
+    {% if include.portal == 'agroportal' %}
+        <a class="tab-item active" href="agroportal">
+            AgroPortal
+        </a>
+    {% else %}
+        <a class="tab-item" href="agroportal">
+            AgroPortal
+        </a>
+    {% endif %}
+
+    {% if include.portal == 'ecoportal' %}
+        <a class="tab-item active" href="ecoportal">
+            EcoPortal
+        </a>
+    {% else %}
+        <a class="tab-item" href="ecoportal">
+            EcoPortal
+        </a>
+    {% endif %}
+</div>
