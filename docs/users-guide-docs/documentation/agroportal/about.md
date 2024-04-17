@@ -8,8 +8,3 @@ nav_order: 1
 {% include documentation_nav.html portal="agroportal" %}
 
 {% include shared_doc/about.md portal="AgroPortal" %}
-
-# Agroportal section 1
-Agroportal section 1
-### Agroportal section 1
-Agroportal section 1

@@ -1,15 +1,15 @@
 ---
-title: Agroportal tools
+title: Agroportal platform overview
 summary: Tools page
 layout: default
 parent: Documentation
-permalink: user_guide/tools/agroportal
+permalink: user_guide/platform_overview/agroportal
 has_children: true
 nav_order: 3
 ---
 
 {% include documentation_nav.html portal="agroportal" %}
 
-### Agroportal tools
+### Agroportal platform overview
 
-Agroportal tools overview
+platform overview

@@ -16,6 +16,7 @@
 version: 0.7.0
 url: "https://ontoportal.github.io" # the base hostname & protocol for your site
 baseimgs: "/documentation/assets/images/ontoportal"
+figures_link: "/documentation/assets/images/figures"
 opva: OntoPortal Virtual Appliance
 opva_version: OntoPortal Virtual Appliance 3.0
 release_version: Release 3.0.0

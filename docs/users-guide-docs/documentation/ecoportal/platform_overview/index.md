@@ -1,15 +1,15 @@
 ---
-title: Ecoportal tools
+title: Ecoportal platform overview
 summary: Tools page
 layout: default
 parent: Documentation
-permalink: user_guide/tools/ecoportal
+permalink: user_guide/platform_overview/ecoportal
 has_children: true
 nav_order: 3
 ---
 
 {% include documentation_nav.html portal="ecoportal" %}
 
-### Ecoportal tools
+### ecoportal platform overview
 
-Ecoportal tools overview
+platform overview
