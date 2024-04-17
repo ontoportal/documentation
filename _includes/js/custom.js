@@ -22,6 +22,9 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         
         console.log('execute')
+    } else {
+        document.querySelector(".breadcrumb-nav").style.display = 'block'
+        
     }
 
 });

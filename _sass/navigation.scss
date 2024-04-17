@@ -214,6 +214,7 @@
   @include mq(md) {
     margin-top: -$sp-4;
   }
+  display: none;
 }
 
 .breadcrumb-nav-list {
