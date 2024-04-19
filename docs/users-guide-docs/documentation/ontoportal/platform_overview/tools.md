@@ -9,4 +9,5 @@ nav_order: 1
 ---
 {% include documentation_nav.html portal="ontoportal" %}
 
-{% include shared_doc/platform_overview/tools.md portal="OntoPortal" %}
+{% include shared_doc/platform_overview/tools/index.md portal="OntoPortal" %}
+{% include shared_doc/platform_overview/tools/browse.md portal="OntoPortal" %}
