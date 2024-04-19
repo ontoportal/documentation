@@ -2,31 +2,37 @@
 
 <div class="ontoportal-tabs" id="ontoportal_tabs">
     {% if include.portal == 'ontoportal' %}
-        <a class="tab-item active" href="ontoportal">
+        <a class="tab-item active ontoportal" href="ontoportal">
+            {% include ontoportal_logo.svg %}
             Ontoportal
         </a>
     {% else %}
-        <a class="tab-item" href="ontoportal">
+        <a class="tab-item ontoportal" href="ontoportal">
+            {% include ontoportal_logo.svg %}
             Ontoportal
         </a>
     {% endif %}
 
     {% if include.portal == 'agroportal' %}
-        <a class="tab-item active" href="agroportal">
+        <a class="tab-item active agroportal" href="agroportal">
+            {% include ontoportal_logo.svg %}
             AgroPortal
         </a>
     {% else %}
-        <a class="tab-item" href="agroportal">
+        <a class="tab-item agroportal" href="agroportal">
+            {% include ontoportal_logo.svg %}
             AgroPortal
         </a>
     {% endif %}
 
     {% if include.portal == 'ecoportal' %}
-        <a class="tab-item active" href="ecoportal">
+        <a class="tab-item active ecoportal" href="ecoportal">
+            {% include ontoportal_logo.svg %}
             EcoPortal
         </a>
     {% else %}
-        <a class="tab-item" href="ecoportal">
+        <a class="tab-item ecoportal" href="ecoportal">
+            {% include ontoportal_logo.svg %}
             EcoPortal
         </a>
     {% endif %}
