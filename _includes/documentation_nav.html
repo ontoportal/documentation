@@ -1,39 +1,19 @@
 <!-- _includes/documentation_nav.html -->
 
 <div class="ontoportal-tabs" id="ontoportal_tabs">
-    {% if include.portal == 'ontoportal' %}
-        <a class="tab-item active ontoportal" href="ontoportal">
-            {% include ontoportal_logo.svg %}
-            Ontoportal
-        </a>
-    {% else %}
-        <a class="tab-item ontoportal" href="ontoportal">
-            {% include ontoportal_logo.svg %}
-            Ontoportal
-        </a>
-    {% endif %}
-
-    {% if include.portal == 'agroportal' %}
-        <a class="tab-item active agroportal" href="agroportal">
-            {% include ontoportal_logo.svg %}
-            AgroPortal
-        </a>
-    {% else %}
-        <a class="tab-item agroportal" href="agroportal">
-            {% include ontoportal_logo.svg %}
-            AgroPortal
-        </a>
-    {% endif %}
-
-    {% if include.portal == 'ecoportal' %}
-        <a class="tab-item active ecoportal" href="ecoportal">
-            {% include ontoportal_logo.svg %}
-            EcoPortal
-        </a>
-    {% else %}
-        <a class="tab-item ecoportal" href="ecoportal">
-            {% include ontoportal_logo.svg %}
-            EcoPortal
-        </a>
-    {% endif %}
+    {% assign portals = 'ontoportal,agroportal,ecoportal' | split: ',' %}
+    {% for portal in portals %}
+        {% capture portal_class %}{{ portal }}{% endcapture %}
+        {% if include.portal == portal %}
+            <a class="tab-item active {{ portal_class }}" href="{{ portal }}">
+                {% include ontoportal_logo.svg %}
+                {{ portal | capitalize }}
+            </a>
+        {% else %}
+            <a class="tab-item {{ portal_class }}" href="{{ portal }}">
+                {% include ontoportal_logo.svg %}
+                {{ portal | capitalize }}
+            </a>
+        {% endif %}
+    {% endfor %}
 </div>
