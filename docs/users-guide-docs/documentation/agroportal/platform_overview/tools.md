@@ -3,7 +3,7 @@ title: Agroportal tools
 summary: Agroportal tools
 layout: default
 parent:  Agroportal platform overview
-grand_parent: Documentation
+grand_parent: Users guide
 permalink: user_guide/platform_overview/tools/agroportal
 nav_order: 1
 ---

@@ -3,7 +3,7 @@ title: ontoportal tools
 summary: ontoportal tools
 layout: default
 parent:  Ontoportal platform overview
-grand_parent: Documentation
+grand_parent: Users guide
 permalink: user_guide/platform_overview/tools/ontoportal
 nav_order: 1
 ---

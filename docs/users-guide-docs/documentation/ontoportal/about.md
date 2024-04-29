@@ -2,7 +2,7 @@
 layout: default
 title: About
 permalink: user_guide/ontoportal
-parent: Documentation
+parent: Users guide
 nav_order: 1
 ---
 {% include documentation_nav.html portal="ontoportal" %}
