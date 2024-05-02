@@ -1,13 +1,3 @@
-## Files structure
-The files are structured as follows:
-
-- Shared content across all portals is located in the folder: `_includes/shared_doc`
-- Each portal has its own folder named with the name of the portal in: `docs/users-guide-docs/documentation`
-- From each portal's specific file, we can include the shared documentation to add to it or incorporate specific content.
-
-![files structure]({{site.baseimgs}}/files_structure.png)
-
-
 ## How to contribute
 
 ### How to add a new shared section?
@@ -56,6 +46,14 @@ The files are structured as follows:
 
 [How to contribute on github](../../documentation/docs/documentation-docs/how-to-contribute-doc/)
 
+## Files structure
+The files are structured as follows:
+
+- Shared content across all portals is located in the folder: `_includes/shared_doc`
+- Each portal has its own folder named with the name of the portal in: `docs/users-guide-docs/documentation`
+- From each portal's specific file, we can include the shared documentation to add to it or incorporate specific content.
+
+![files structure]({{site.baseimgs}}/files_structure.png)
 
 
 
