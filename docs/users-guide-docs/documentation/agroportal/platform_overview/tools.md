@@ -4,10 +4,10 @@ summary: Agroportal tools
 layout: default
 parent:  Agroportal platform overview
 grand_parent: Users guide
-permalink: user_guide/platform_overview/tools/agroportal
+permalink: user_guide/platform_overview/tools/AgroPortal
 nav_order: 1
 ---
-{% include documentation_nav.html portal="agroportal" %}
+{% include documentation_nav.html portal="AgroPortal" %}
 
 {% include shared_doc/platform_overview/tools/index.md portal="AgroPortal" %}
 {% include shared_doc/platform_overview/tools/browse.md portal="AgroPortal" %}

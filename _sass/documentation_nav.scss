@@ -12,22 +12,22 @@
     padding: 0 10px 10px 10px;
     opacity: 80%
 }
-.ontoportal-tabs > .ontoportal{
+.ontoportal-tabs > .OntoPortal{
     color: $ontoportal-color;
 }
-.ontoportal-tabs > .agroportal{
+.ontoportal-tabs > .AgroPortal{
     color: $agroportal-color;
 }
-.ontoportal-tabs > .ecoportal{
+.ontoportal-tabs > .EcoPortal{
     color: $ecoportal-color;
 }
-.ontoportal-tabs > .ontoportal svg path{
+.ontoportal-tabs > .OntoPortal svg path{
     fill: $ontoportal-color;
 }
-.ontoportal-tabs > .agroportal svg path{
+.ontoportal-tabs > .AgroPortal svg path{
     fill: $agroportal-color;
 }
-.ontoportal-tabs > .ecoportal svg path{
+.ontoportal-tabs > .EcoPortal svg path{
     fill: $ecoportal-color;
 }
 .ontoportal-tabs > a svg{
@@ -37,12 +37,12 @@
     opacity: 100%;
     font-weight: 500; 
 }
-.ontoportal-tabs > .active.ontoportal{
+.ontoportal-tabs > .active.OntoPortal{
     border-bottom: 2px solid $ontoportal-color;
 }
-.ontoportal-tabs > .active.agroportal{
+.ontoportal-tabs > .active.AgroPortal{
     border-bottom: 2px solid $agroportal-color;
 }
-.ontoportal-tabs > .active.ecoportal{
+.ontoportal-tabs > .active.EcoPortal{
     border-bottom: 2px solid $ecoportal-color;
 }
