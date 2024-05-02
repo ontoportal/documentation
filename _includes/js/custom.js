@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Extract the selected portal from the url
         let portal = parts.pop();
         if(portal == ''){
-            portal = 'ontoportal'
+            portal = 'OntoPortal'
         }
 
         let nav_items = document.getElementById('site-nav').children[0].children[1].querySelectorAll('li');
