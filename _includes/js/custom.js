@@ -7,12 +7,13 @@ document.addEventListener('DOMContentLoaded', function() {
         const parts = currentUrl.split('/');
         
         // Extract the selected portal from the url
-        let portal = parts.pop();
-        if(portal == ''){
+        let portal = parts[parts.length-1];
+        if((portal === '') || (portal === 'user_guide')){
             portal = 'OntoPortal'
         }
 
-        let nav_items = document.getElementById('site-nav').children[0].children[1].querySelectorAll('li');
+        let nav_items = document.querySelector('.nav-list-item a[href="/documentation/user_guide"]').parentNode.querySelectorAll('li');
+
         for(let i = 0; i<nav_items.length; i++){
             const links = nav_items[i].querySelectorAll('a')
             const item_link = links[links.length-1].href
