@@ -22,15 +22,16 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         
         // Remove the logo of the portal from the nav if it doesn't have the current page
-        const nav_links = document.getElementById('ontoportal_tabs').querySelectorAll('a')
-        for(let i = 0; i<nav_links.length; i++){
-            fetch(nav_links[i].href)
-            .then(response => {
-                if (response.status === 404) {
-                    nav_links[i].remove()
-                }
-            });
-        }
+        const navLinks = Array.from(document.getElementById('ontoportal_tabs').querySelectorAll('a'));
+        navLinks.forEach(navLink => {
+            fetch(navLink.href)
+                .then(response => {
+                    if (response.status === 404) {
+                        navLink.remove();
+                    }
+                });
+        });
+
     } else {
         document.querySelector(".breadcrumb-nav").style.display = 'block'
     }
