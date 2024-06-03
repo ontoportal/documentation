@@ -1,10 +1,13 @@
-{{ include.portal }} provides different tools to access, use and manage semantic artefacts including:
-- browse the semantic artefacts;
-- search for a term across multiple semantic artefacts;
-- browse mappings among terms in different semantic artefacts;
-- receive recommendations on which semantic artefacts are most relevant for a given
-corpus;
-- annotate text with terms from semantic artefacts;
+---
+title: Ontoportal tools
+summary: Tools page
+layout: default
+parent: Users guide
+permalink: user_guide/tools/OntoPortal
+has_children: true
+nav_order: 4
+---
 
-All information available through the {{ include.portal }} website is also available through the REST
-API documentation.
+{% include documentation_nav.html portal="OntoPortal" %}
+
+{% include shared_doc/Tools/tools.md portal="OntoPortal"%}

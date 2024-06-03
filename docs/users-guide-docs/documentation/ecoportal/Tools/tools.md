@@ -10,4 +10,4 @@ nav_order: 4
 
 {% include documentation_nav.html portal="EcoPortal" %}
 
-{% include shared_doc/Tools/tools.md %}
+{% include shared_doc/Tools/tools.md portal="EcoPortal"%}
