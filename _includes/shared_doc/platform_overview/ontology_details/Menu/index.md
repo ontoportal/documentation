@@ -1,2 +1,0 @@
-## Menu
-The menu area enables you to explore classes, properties, notes, mappings, and available widgets through tabs. When the chosen resource is a thesaurus, three distinct tabs emerge: the "Classes" tab is substituted with "Concepts," "Schemes," and "Collections".
