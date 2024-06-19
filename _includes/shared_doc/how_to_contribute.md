@@ -44,6 +44,8 @@
 
 - To use a variable inside your text, you need to put it inside &#123; include.VAR_NAME &#125;
 
+- Documentation pages sharing the same title with other portals should be identified as specific to your portal by adding a space followed by @ and the name of your portal: ` @PortalName`. The full title including the identifier will then be used to designate it at the parent when writing children pages: `parent: My title @PortalName`.
+
 [How to contribute on github](../../documentation/docs/documentation-docs/how-to-contribute-doc/)
 
 ## Files structure
