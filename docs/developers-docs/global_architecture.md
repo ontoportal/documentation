@@ -3,7 +3,7 @@ title: Ontoportal Architecture
 summary: A global overview of how Ontoportal works
 layout: default
 status: Draft
-parent: Developers Guide
+parent: Developer Guide
 nav_order: 2
 ---
 

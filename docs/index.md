@@ -6,28 +6,39 @@ summary: "This OntoPortal documentation home page hosts all the separate OntoPor
 permalink: /
 ---
 
-## About the project
+# Welcome to the OntoPortal Documentation
 
-[OntoPortal](https://ontoportal.org) (formerly known as the NCBO Virtual Appliance or BioPortal Virtual Appliance) is
-the community-maintained distribution of the BioPortal software (from the Stanford Center for Biomedical Informatics Research).
-The [OntoPortal Alliance](https://ontoportal.org) is the community that maintains this software.
+### About us
+
+OntoPortal (formerly known as the NCBO Virtual Appliance or BioPortal Virtual Appliance or NCBO technology) is
+the community-maintained distribution of the BioPortal software (originally developed by the [Stanford Center for Biomedical Informatics Research](https://bmir.stanford.edu/)).
+
+The [OntoPortal Alliance](https://ontoportal.org) is the community that maintains this software. It is a consortium of research and infrastructure teams (and one SME) dedicated to promoting the development of ontology repositories –in science and more– based on the collaboratively developed OntoPortal open-source software.
+
+See [OntoPortal Alliance](https://ontoportal.org) website for examples of ontology repositories running this software.
 
 ### License
 
-This documentation is provided freely for any use by the public. (Formal license citation pending.)
+This documentation is provided freely for any use by the public (formal license citation pending).
+For License about the OntoPortal software, see each code repositories. 
 
 ### Contributing
 
-When contributing to this repository, please first discuss the change you wish to make via issue,
-email, or any other method with the owners of this repository before making a change.
-Read more about becoming a contributor (for the moment, in our BioPortal repository)
-in our [Contributing Guide](https://github.com/ncbo/bioportal-project/blob/master/contributing.md).
+See the section [How to configure the documentation](configuration), to know about maintaining and contributing to this documentation. 
 
-### Code of Conduct
+When contributing to this documentation, for significant changes, please first discuss the changes via issue, email, or any other method with the owners of this repository. You can also use pull requests on the corresponding GitHub repository.
 
-OntoPortal Alliance is committed to fostering a welcoming community.
+OntoPortal support email list: {{site.support_email}}.
 
-View our [Code of Conduct](https://github.com/ncbo/bioportal-project/blob/master/contributing.md#code-of-conduct) (to be updated from the BioPortal source). 
+Read more about becoming a contributor (for the moment, in our BioPortal repository) in our [Contributing Guide](https://github.com/ncbo/bioportal-project/blob/master/contributing.md).
+
+### Code of conduct
+
+OntoPortal Alliance is committed to fostering a welcoming community. View our [Code of Conduct](https://github.com/ncbo/bioportal-project/blob/master/contributing.md#code-of-conduct) (to be updated from the BioPortal source). 
+
+### Background on technology
+(to come)
+
 
 #### Thank you to the contributors of this documentation!
 
@@ -39,15 +50,6 @@ View our [Code of Conduct](https://github.com/ncbo/bioportal-project/blob/master
 {% endfor %}
 </ul>
 
-### Background on technology
-
-This site uses [Just the Docs] for its template.
-
-If [Jekyll] is installed on your computer, you can build and preview the created site *locally*. This lets you test changes before committing them, and avoids waiting for GitHub Pages. And you will be able to deploy your local build to a different platform than GitHub Pages.
-
-See the [How to configure the documentation](configuration), to find key things to know about maintaining and contributing to this documentation 
-
-----
 
 [Jekyll]: https://jekyllrb.com
 [Markdown]: https://daringfireball.net/projects/markdown/
