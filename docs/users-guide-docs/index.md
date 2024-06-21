@@ -8,12 +8,16 @@ permalink: /user_guide
 
 # OntoPortal User Guide
 
-We are currently building a unique shared (and specilaized when needed) user guide. This is work in progress; for the moment, we point our users to the different and multiples docs made in the context of different projects. 
+Welcome to the official OntoPortal User Guide for each portal within the OntoPortal alliance. Please select a chapter or section from the menu to get started.
 
-Please see: 
-- [NCBO wiki](https://www.bioontology.org/wiki/Main_Page)
-- [BioPortal Help](https://www.bioontology.org/wiki/BioPortal_Help)
-- [Related scientific articles](https://github.com/ontoportal/literature) 
-- [BioPortal API documentation](http://data.bioontology.org/documentation)
--  [AgroPortal documentation](https://github.com/agroportal/project-management)
-- [EcoPortal documentation](https://github.com/lifewatch-eric/documentation/wiki/EcoTools) 
+
+In the following sections, you will find straightforward description of how to contribute to this user guide, edit shared files between the portals in the alliance, and add or edit specific content for each portal.
+
+{% include shared_doc/how_to_contribute.md%}
+
+links:
+- NCBO docs: [NCBO wiki](https://www.bioontology.org/wiki/Main_Page) and  [Bioportal Help](https://www.bioontology.org/wiki/BioPortal_Help)
+- [Our Scientific papers](https://github.com/ontoportal/literature) 
+- [API documentation](http://data.agroportal.lirmm.fr/documentation) 
+- [Ecoportal docs](https://github.com/lifewatch-eric/documentation/wiki/EcoTools) 
+

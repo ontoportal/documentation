@@ -2,6 +2,7 @@
 // stylelint-disable selector-no-type, max-nesting-depth, selector-max-compound-selectors, selector-max-type, selector-max-specificity
 
 .nav-list {
+  display: none;
   padding: 0;
   margin-top: 0;
   margin-bottom: 0;
@@ -213,6 +214,7 @@
   @include mq(md) {
     margin-top: -$sp-4;
   }
+  display: none;
 }
 
 .breadcrumb-nav-list {

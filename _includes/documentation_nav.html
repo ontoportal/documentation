@@ -1,0 +1,19 @@
+<!-- _includes/documentation_nav.html -->
+
+<div class="ontoportal-tabs" id="ontoportal_tabs">
+    {% assign portals = 'OntoPortal,AgroPortal,EcoPortal,EarthPortal' | split: ',' %}
+    {% for portal in portals %}
+        {% capture portal_class %}{{ portal }}{% endcapture %}
+        {% if include.portal == portal %}
+            <a class="tab-item active {{ portal_class }}" href="{{ portal }}">
+                {% include ontoportal_logo.svg %}
+                {{ portal }}
+            </a>
+        {% else %}
+            <a class="tab-item {{ portal_class }}" href="{{ portal }}">
+                {% include ontoportal_logo.svg %}
+                {{ portal }}
+            </a>
+        {% endif %}
+    {% endfor %}
+</div>

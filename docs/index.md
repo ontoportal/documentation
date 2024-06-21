@@ -50,7 +50,6 @@ OntoPortal Alliance is committed to fostering a welcoming community. View our [C
 {% endfor %}
 </ul>
 
-----
 
 [Jekyll]: https://jekyllrb.com
 [Markdown]: https://daringfireball.net/projects/markdown/
