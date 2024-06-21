@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Users guide
+title: User Guide
 nav_order: 2
 has_children: true
 permalink: /user_guide
@@ -20,3 +20,4 @@ links:
 - [Our Scientific papers](https://github.com/ontoportal/literature) 
 - [API documentation](http://data.agroportal.lirmm.fr/documentation) 
 - [Ecoportal docs](https://github.com/lifewatch-eric/documentation/wiki/EcoTools) 
+

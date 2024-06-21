@@ -1,7 +1,8 @@
-# administration
+# Documentation
 
-Instructions for administering the OntoPortal Virtual Appliance (3.0 and later)
+This repository hosts the OntoPortal website and product instructions for administering the OntoPortal Appliance (3.0 and later).
 
-The documentation is maintained in the docs folder, and is visible on the web at https://ontoportal.github.io/administration.
+The documentation is maintained in the docs folder, and is visible on line at:
+<h2> https://ontoportal.github.io/documentation </h2>
 
-Information about how to maintain the documents is in the [README.md](https://github.com/OntoPortal/administration/tree/master/docs/README.md) for the /administration/docs folder.
+This project is open source as eveything in the OntoPortal AllIance. To contribute, see https://ontoportal.github.io/documentation/docs/documentation-docs/how-to-contribute-doc/

@@ -161,9 +161,17 @@
     {%- unless node.nav_exclude -%}
       <li class="nav-list-item{% if page.collection == include.key and page.url == node.url or page.grand_parent == node.title or page.parent == node.title and page.grand_parent == nil %} active{% endif %}">
         {%- if node.has_children -%}
-          <a href="#" class="nav-list-expander" aria-label="toggle links in {{ node.title }} category">
-            <svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg>
-          </a>
+          {%- if node.title == "Users guide" -%}
+            {%- if page.title == node.title or page.grand_parent == node.title or page.parent == node.title and page.grand_parent == nil -%}
+              <a href="#" class="nav-list-expander" aria-label="toggle links in {{ node.title }} category">
+                <svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg>
+              </a>
+            {%- endif -%}
+          {%- else -%}
+            <a href="#" class="nav-list-expander" aria-label="toggle links in {{ node.title }} category">
+              <svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg>
+            </a>
+          {%- endif -%}
         {%- endif -%}
         <a href="{{ node.url | relative_url }}" class="nav-list-link{% if page.url == node.url %} active{% endif %}">{{ node.title }}</a>
         {%- if node.has_children -%}
@@ -181,7 +189,8 @@
                   <svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg>
                 </a>
               {%- endif -%}
-              <a href="{{ child.url | relative_url }}" class="nav-list-link{% if page.url == child.url %} active{% endif %}">{{ child.title }}</a>
+              {% assign child_title = child.title | split: ' @' | first %}
+              <a href="{{ child.url | relative_url }}" class="nav-list-link{% if page.url == child.url %} active{% endif %}">{{ child_title }}</a>
               {%- if child.has_children -%}
                 {%- assign grand_children_list = third_level_pages
                       | where: "parent", child.title
@@ -192,8 +201,9 @@
                 <ul class="nav-list">
                 {%- for grand_child in grand_children_list -%}
                   {%- unless grand_child.nav_exclude -%}
+                  {% assign grand_child_title = grand_child.title | split: ' @' | first %}
                   <li class="nav-list-item {% if page.url == grand_child.url %} active{% endif %}">
-                    <a href="{{ grand_child.url | relative_url }}" class="nav-list-link{% if page.url == grand_child.url %} active{% endif %}">{{ grand_child.title }}</a>
+                    <a href="{{ grand_child.url | relative_url }}" class="nav-list-link{% if page.url == grand_child.url %} active{% endif %}">{{ grand_child_title }}</a>
                   </li>
                   {%- endunless -%}
                 {%- endfor -%}

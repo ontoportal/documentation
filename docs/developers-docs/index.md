@@ -1,10 +1,10 @@
 ---
 layout: default
-title: Developers Guide 
+title: Developer Guide 
 nav_order: 3
 has_children: true
-permalink: /developers
+permalink: /developer
 ---
 
-# Welcome to the OntoPortal Appliance Developers Guide
+# OntoPortal Developer Guide
 

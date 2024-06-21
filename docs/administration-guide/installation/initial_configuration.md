@@ -33,7 +33,7 @@ To start, since you don't have any non-administration accounts, you can add an o
 
 To let the system send emails for lost passwords, notes, and ontology processing reports, 
 you need to provide a valid mail server (smtp) configuration. 
-The configuration should be provided in the `/srv/ncbo/ontologies_api/current/config/environments/production.rb` file.
+The configuration should be provided in the `/srv/ontoportal/ontologies_api/current/config/environments/appliance.rb` file.
 
 Here are the available settings:
 

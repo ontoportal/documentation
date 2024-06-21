@@ -31,6 +31,12 @@ grep 'ERROR' /srv/ontoportal/ncbo_cron/logs/scheduler-pull.log
 grep -A20 'ERROR' /srv/ontoportal/ncbo_cron/logs/scheduler-pull.log
 ```
 # Check processing queue
+
+To show cron queued jobs:
+`bundle exec bin/ncbo_cron --view-queue`
+
+Alternatively you can check parseQueue key directly in redis:
+
 ```
 redis-cli hgetall parseQueue
 1) "sub:http://data.bioontology.org/ontologies/STY/submissions/1"
