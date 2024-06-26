@@ -1,6 +1,6 @@
 ---
 layout: default
-title: User Guide
+title: Users guide
 nav_order: 2
 has_children: true
 permalink: /user_guide

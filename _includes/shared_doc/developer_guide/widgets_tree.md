@@ -1,17 +1,17 @@
-#### {{ include.portal }} Ontology Tree Widget
-Developers can put a widget on their website that displays the {{ include.atom }} tree, or a part of it, with the same result obtained in the "Visualize" tab in {{ include.portal }}.
+#### {{ page.portal }} Ontology Tree Widget
+Developers can put a widget on their website that displays the {{ page.atom }} tree, or a part of it, with the same result obtained in the "Visualize" tab in {{ page.portal }}.
 
 **Description**
-The {{ include.atom }} tree widget is an embeddable Flex application that allows users to interact with a tree to browse {{ include.atoms }}. The widget can be configured to display a list of all the EcoPortal {{ include.atoms }}, allowing users to select which one to view, or can be set to view a particular {{ include.atom }}. Moreover, there are several JavaScript helper functions for the widget, allowing it to be used as a fully functional component in other applications.
+The {{ page.atom }} tree widget is an embeddable Flex application that allows users to interact with a tree to browse {{ page.atoms }}. The widget can be configured to display a list of all the EcoPortal {{ page.atoms }}, allowing users to select which one to view, or can be set to view a particular {{ page.atom }}. Moreover, there are several JavaScript helper functions for the widget, allowing it to be used as a fully functional component in other applications.
 
 **Location**
 To use the tree widget, you have to add the following files:
-- http://{{ include.portalURL }}/widgets/jquery.ncbo.tree.css
-- http://{{ include.portalURL }}/widgets/jquery.ncbo.tree-2.0.2.js
+- http://{{ page.portalURL }}/widgets/jquery.ncbo.tree.css
+- http://{{ page.portalURL }}/widgets/jquery.ncbo.tree-2.0.2.js
 
 or the minified versions:
-- http://{{ include.portalURL }}/widgets/minified/jquery.ncbo.tree.min.css
-- http://{{ include.portalURL }}/widgets/minified/jquery.ncbo.tree-2.0.2.min.js
+- http://{{ page.portalURL }}/widgets/minified/jquery.ncbo.tree.min.css
+- http://{{ page.portalURL }}/widgets/minified/jquery.ncbo.tree-2.0.2.min.js
 
 **Setup**
 jQuery is required in order to use the tree widget. If jQuery is not still in your project, you have to include it as follows:
@@ -29,7 +29,7 @@ initialise the tree with the following JavaScript code:
 var tree = $("#tree").NCBOTree({apikey: "YOUR_API_KEY",ontology: "ACRONYM"});
 ```
 
-The div you created will contain a tree showing the roots of the ACRONYM {{ include.atom }}. Additional setup options include:
+The div you created will contain a tree showing the roots of the ACRONYM {{ page.atom }}. Additional setup options include:
 - **autoclose**: to close other branches of the tree when expanding a new one;
 - **treeClass**: the class to identify the tree;
 - **autocompleteClass**: the class to identify the autocomplete (search) input;
@@ -74,4 +74,4 @@ Once you have the tree instance, you can call the following methods:
 - **tree.selectedClass()**: returns an object that represents the currently-selected class. The object includes attributes for ID, prefLabel, and URL. URL is the REST location of the class, and performing an HTTP GET on that URL will provide a JSON representation of the class;
 - **tree.selectClass(classId)**: activates the class in the tree with the matching URI (classId). This will only work if the class is already visible;
 - **tree.jumpToClass(classId)**: replaces the current tree with a version that is expanded with a path from the root to the given class. This method is triggered when selecting a class from the search field. The provided class will be selected in the tree when the tree returns;
-- **tree.changeOntology(ontologyAcronym)**: replaces the current tree with the roots from the given {{ include.atom }}.
+- **tree.changeOntology(ontologyAcronym)**: replaces the current tree with the roots from the given {{ page.atom }}.

@@ -183,3 +183,37 @@ compress_html:
   profile: false
   # ignore:
   #   envs: all
+
+defaults:
+  - 
+    scope:
+      path: "docs/users-guide-docs/documentation/ontoportal"
+      type: "pages"
+    values:
+      portal: "OntoPortal"
+      atom: "ontology"
+      atoms: "ontologies"
+  - 
+    scope:
+      path: "docs/users-guide-docs/documentation/agroportal"
+      type: "pages"
+    values:
+      portal: "AgroPortal"
+      atom: "semantic artefact"
+      atoms: "semantic artefacts"
+  - 
+    scope:
+      path: "docs/users-guide-docs/documentation/ecoportal"
+      type: "pages"
+    values:
+      portal: "EcoPortal"
+      atom: "semantic artefact"
+      atoms: "semantic artefacts"
+  - 
+    scope:
+      path: "docs/users-guide-docs/documentation/earthportal"
+      type: "pages"
+    values:
+      portal: "EarthPortal"
+      atom: "semantic artefact"
+      atoms: "semantic artefacts"

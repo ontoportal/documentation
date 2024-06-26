@@ -4,8 +4,11 @@ title: About
 permalink: user_guide/EcoPortal
 parent: Users guide
 nav_order: 1
+portal: "EcoPortal"
+atom: "semantic artefact"
+atoms: "semantic artefacts"
 ---
-{% include documentation_nav.html portal="EcoPortal" %}
+{% include documentation_nav.html portal="EcoPortal" portal="EcoPortal"  %}
 
 # About EcoPortal
 

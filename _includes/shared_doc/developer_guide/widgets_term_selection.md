@@ -4,16 +4,16 @@ Developers can add a text field to their web form that will allow users to enter
 **What does the term-selection field do?**
 Auto-complete the text field so that user don't need to type the whole term
 The controlled vocabulary provides consistency in the manner in which different users use a specific term
-When a new version of your controlled vocabulary becomes available in {{ include.portal }}, the widget will automatically use that new version.
-To add a field to a web form that allows users to retrieve a term from the {{ include.atom }} of interest, do the following:
+When a new version of your controlled vocabulary becomes available in {{ page.portal }}, the widget will automatically use that new version.
+To add a field to a web form that allows users to retrieve a term from the {{ page.atom }} of interest, do the following:
 - download the form_complete.js file and put it on your server;
 - in the header of the page where want the field, include the form_complete.js file;
 - in the form, specify the field class in the following format: bp_form_complete-{semantic_resource_acronym_list}-{value} 
   - Note: In addition to single ontology IDs, you can use a list:
-bp_form_complete-FISHTRAITS, ENVTHES-uri OR you can use 'all' to search across all {{ include.portal }} {{ include.atom }}: bp_form_complete-all-uri 
+bp_form_complete-FISHTRAITS, ENVTHES-uri OR you can use 'all' to search across all {{ page.portal }} {{ page.atom }}: bp_form_complete-all-uri 
 - Developers can use the following parameters to select which value will be placed into the user-visible input field: 
   - uri: the complete URI of the term;
-  - shortid: the short ID of the term, as used in {{ include.portal }};
+  - shortid: the short ID of the term, as used in {{ page.portal }};
   - name: the preferred name of the term;
 
 **Auto-generated hidden form elements**
@@ -21,10 +21,10 @@ In addition to the input element you defined, there are four hidden form element
 ```
 <input type="text" name="a" class="bp_form_complete-all-uri" size="100"/> 
 The 'name' attribute is used to create the four following fields (note how the 'a' from the name attribute is appended to the id attribute:
- <input type="hidden" id="a_{{ include.portal }}_preferred_name">
- <input type="hidden" id="a_{{ include.portal }}_concept_id">
- <input type="hidden" id="a_{{ include.portal }}_ontology_id">
- <input type="hidden" id="a_{{ include.portal }}_full_id">
+ <input type="hidden" id="a_{{ page.portal }}_preferred_name">
+ <input type="hidden" id="a_{{ page.portal }}_concept_id">
+ <input type="hidden" id="a_{{ page.portal }}_ontology_id">
+ <input type="hidden" id="a_{{ page.portal }}_full_id">
 ```
 
 **Optional attributes**

@@ -8,4 +8,4 @@ has_children: true
 nav_order: 1
 ---
 
-{% include documentation_nav.html portal="EarthPortal" %}
+{% include documentation_nav.html portal="EarthPortal"  %}
