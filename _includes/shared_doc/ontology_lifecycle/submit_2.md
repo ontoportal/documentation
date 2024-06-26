@@ -1,0 +1,1 @@
+Once the {{include.atom}} is submitted, users can immediately access the metadata, whereas  the classes/properties indexing takes place asynchronously and it might be scheduled overnight. The whole submission should be completed by the next day (Pacific Time); if not, please send an email to the support team.
