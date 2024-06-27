@@ -1,0 +1,13 @@
+---
+title: Semantic artefacts lifecycle @OntoPortal
+summary: Describes how to manage ontologies on the portal
+layout: default
+parent: Users guide
+permalink: user_guide/ontology_lifecycle/OntoPortal
+has_children: true
+nav_order: 4
+---
+
+{% include documentation_nav.html portal="OntoPortal"  %}
+
+This section contains guidelines for managing {{page.atoms}}.
