@@ -1,0 +1,3 @@
+### Give feedback on {{ page.atoms }}
+{{ page.portal }} includes some community-oriented features such as: (ii) notes that can be attached in a forum-like mode to a specific artefact or class/concept, in order to discuss the ontology (its design, use, or evolution) or allow users to propose changes. (iii) change requests can be submitted, and in some cases directly transferred to external systems such as a GitHub issue tracker.
+Administrators encourage the users to engage in giving feedback on {{ page.atoms }} since each input is valuable in developing and publishing community-approved artefacts.

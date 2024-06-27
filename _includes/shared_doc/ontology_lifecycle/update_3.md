@@ -1,0 +1,5 @@
+**Add submission**
+
+From this section, located at the bottom left corner, the {{ page.atom }} manager(s) can upload a new version of the existing {{ page.atom }} and update the metadata using one of the following two options:
+- If in the original submission was set up an automatic update of the resource from a source URL, {{ page.portal }} examines the content of this URL nightly, and re-submits the content if it has changed . If the updated submission does not parse, the {{ page.atom }} manager(s) will be notified via email;
+- If in the original submission was not set up an automatic update of the resource, or if the {{ page.atom }} manager(s) want to immediately update the {{ page.atom }}, they can upload the new version directly by selecting a local file. The upload process starts and the {{ page.atom }} will be parsed shortly thereafter. {{ page.atom }} manager(s) can at this point also change the settings and enable the automatic update of the resource. The {{ page.atom }} parsing is completed within an hour maximum with the exception of large {{ page.atoms }}, whereas {{ page.atom }} indexing and automatic mapping occur overnight (Pacific Time).
