@@ -1,0 +1,1 @@
+// write about BioPortal metadata schema
