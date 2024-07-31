@@ -16,5 +16,5 @@ associated resources (see Figure 24). Select the desired class/concept to view a
 table with the same information as shown here.
 
 To access mappings programmatically please see our Mappings REST API documentation.
-![Mappings Page]({{site.figures_link}}/{{include.portal}}/mappings.png)
-![Mappings Search]({{site.figures_link}}/{{include.portal}}/mappings_search.png)
+![Mappings Page]({{site.figures_link}}/{{page.portal}}/mappings.png)
+![Mappings Search]({{site.figures_link}}/{{page.portal}}/mappings_search.png)

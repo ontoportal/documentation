@@ -9,10 +9,10 @@ In order to publish a {{ page.atom }}, you need to sign up for an account. Logge
 - *Groups*: select the groups to which the resources belong. Groups associate ontologies from the same project or organisation, for better identification of the provenance
 - *View*: check "this {{ page.atom }} is a view of" to create a new {{ page.atom }} as a view of a {{ page.atom }} selected from the drop-down field.
 
-Check the "Subscribe to email notifications for new notes" box to receive updates from users of the {{include.portal}} community. 
+Check the "Subscribe to email notifications for new notes" box to receive updates from users of the {{page.portal}} community. 
 
-![Wizard for the submission of a new {{ page.atom }}]({{site.figures_link}}/{{include.portal}}/submission.png)
+![Wizard for the submission of a new {{ page.atom }}]({{site.figures_link}}/{{page.portal}}/submission.png)
 
 Once the form is completed, click on the "Create {{ page.atom }}" button in order to generate the summary page of the {{ page.atom }} and move to the “Add new submission” page to enter the metadata. Switch off the “Required only” button to see all the metadata fields or, keep it on to fill just mandatory fields.
 
-![Wizard for adding a new for {{ page.atoms }}]({{site.figures_link}}/{{include.portal}}/submission_add.png)
+![Wizard for adding a new for {{ page.atoms }}]({{site.figures_link}}/{{page.portal}}/submission_add.png)
