@@ -6,4 +6,4 @@ The types of widgets available in {{ page.portal }} are:
 - **Visualization**: display a visualisation for a given class/concept in the selected {{ page.atom }};
 - **Tree Widget**: display a tree for classes in the selected {{ page.atom }} with a search field.
 
-![View widgets of a specific {{ page.atom }}]({{site.figures_link}}/{{include.portal}}/menu_widgets.png)
+![View widgets of a specific {{ page.atom }}]({{site.figures_link}}/{{page.portal}}/menu_widgets.png)

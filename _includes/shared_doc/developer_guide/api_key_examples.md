@@ -1,6 +1,6 @@
 Use of the {{ page.portal }} REST APIs requires an API key. The API key can be found in the Account Settings of logged in users.
 
-![How to retrieve your API key]({{site.figures_link}}/{{include.portal}}/find_apikey.png)
+![How to retrieve your API key]({{site.figures_link}}/{{page.portal}}/find_apikey.png)
 
 1. Using the api key query string parameter: `'https://{{include.resturl}}/{media types}/{acronym}?apikey=your api key'`
 
