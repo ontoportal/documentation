@@ -202,6 +202,10 @@ layout: table_wrappers
               <p><a href="#top" id="back-to-top">{{ site.back_to_top_text }}</a></p>
             {% endif %}
 
+            {% if page.display_ontoportal_icons == true %}
+              {% include documentation_nav.html %}
+            {% endif %}
+
             {{ footer_custom }}
 
             {% if site.last_edit_timestamp or site.gh_edit_link %}
