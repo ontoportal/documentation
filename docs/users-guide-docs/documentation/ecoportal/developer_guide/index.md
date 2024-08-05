@@ -8,7 +8,7 @@ has_children: true
 nav_order: 5
 ---
 
-{% include documentation_nav.html portal="EcoPortal"  %}
+
 
 ## Developer guide
 {% include shared_doc/developer_guide/index.md  %}

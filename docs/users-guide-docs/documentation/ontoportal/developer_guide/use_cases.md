@@ -8,6 +8,6 @@ permalink: user_guide/developer_guide/use_cases_OntoPortal/OntoPortal
 nav_order: 2
 ---
 
-{% include documentation_nav.html portal="OntoPortal"  %}
+
 
 {% include shared_doc/developer_guide/usecases.md  %}

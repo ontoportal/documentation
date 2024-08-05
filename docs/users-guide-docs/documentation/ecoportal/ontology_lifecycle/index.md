@@ -8,6 +8,5 @@ has_children: true
 nav_order: 4
 ---
 
-{% include documentation_nav.html %}
 
 This section contains guidelines for managing {{page.atoms}}.
