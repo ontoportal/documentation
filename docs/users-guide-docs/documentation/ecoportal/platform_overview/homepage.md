@@ -8,7 +8,7 @@ permalink: user_guide/platform_overview/homepage/EcoPortal
 nav_order: 1
 ---
 
-{% include documentation_nav.html portal="EcoPortal"  %}
+
 
 {% include shared_doc/platform_overview/homepage/index.md  %}
 

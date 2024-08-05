@@ -8,4 +8,4 @@ portal: "OntoPortal"
 atom: "ontology"
 atoms: "ontologies"
 ---
-{% include documentation_nav.html portal="OntoPortal" %}
+

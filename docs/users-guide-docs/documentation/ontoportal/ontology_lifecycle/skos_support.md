@@ -8,7 +8,7 @@ permalink: user_guide/ontology_lifecycle/skos_support/OntoPortal
 nav_order: 4
 ---
 
-{% include documentation_nav.html portal="OntoPortal"  %}
+
 
 {% include shared_doc/ontology_lifecycle/skos_support_1.md  %}
 {% include shared_doc/ontology_lifecycle/skos_support_2.md  %}

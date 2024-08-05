@@ -8,7 +8,7 @@ permalink: user_guide/platform_overview/tools/EcoPortal
 nav_order: 2
 ---
 
-{% include documentation_nav.html portal="EcoPortal"  %}
+
 
 {% include shared_doc/platform_overview/tools/tools.md  %}
 
@@ -23,11 +23,11 @@ nav_order: 2
 ### Annotator
 {% include shared_doc/platform_overview/tools/annotator/annotator.md  %}
 
-### Mappings
-{% include shared_doc/platform_overview/tools/mapping/mappings.md  %}
-{% include shared_doc/platform_overview/tools/mapping/sources.md  %}
-
 ### Recommender
 {% include shared_doc/platform_overview/tools/recommender/recommender.md  %}
 
 {% include shared_doc/platform_overview/tools/vocbench/vocbench.md  %}
+
+### Mappings
+{% include shared_doc/platform_overview/tools/mapping/mappings.md  %}
+{% include shared_doc/platform_overview/tools/mapping/sources.md  %}

@@ -7,5 +7,5 @@ permalink: user_guide/metadata_schema/EarthPortal
 nav_order: 3
 ---
 
-{% include documentation_nav.html portal="EarthPortal"  %}
+
 {% include shared_doc/metadata_schema/MOD.md  %}

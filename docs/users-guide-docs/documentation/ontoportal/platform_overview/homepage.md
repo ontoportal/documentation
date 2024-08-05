@@ -8,7 +8,7 @@ permalink: user_guide/platform_overview/homepage/OntoPortal
 nav_order: 1
 ---
 
-{% include documentation_nav.html portal="OntoPortal"  %}
+
 
 {% include shared_doc/platform_overview/homepage/index.md  %}
 

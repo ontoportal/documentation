@@ -7,5 +7,5 @@ permalink: user_guide/metadata_schema/EcoPortal
 nav_order: 3
 ---
 
-{% include documentation_nav.html portal="EcoPortal"  %}
+
 {% include shared_doc/metadata_schema/MOD.md  %}

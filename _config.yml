@@ -193,6 +193,7 @@ defaults:
       portal: "OntoPortal"
       atom: "ontology"
       atoms: "ontologies"
+      display_ontoportal_icons: true
   - 
     scope:
       path: "docs/users-guide-docs/documentation/agroportal"
@@ -201,6 +202,7 @@ defaults:
       portal: "AgroPortal"
       atom: "semantic artefact"
       atoms: "semantic artefacts"
+      display_ontoportal_icons: true
   - 
     scope:
       path: "docs/users-guide-docs/documentation/ecoportal"
@@ -209,6 +211,7 @@ defaults:
       portal: "EcoPortal"
       atom: "semantic artefact"
       atoms: "semantic artefacts"
+      display_ontoportal_icons: true
   - 
     scope:
       path: "docs/users-guide-docs/documentation/earthportal"
@@ -217,3 +220,4 @@ defaults:
       portal: "EarthPortal"
       atom: "semantic artefact"
       atoms: "semantic artefacts"
+      display_ontoportal_icons: true

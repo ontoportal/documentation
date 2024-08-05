@@ -8,7 +8,7 @@ permalink: user_guide/ontology_lifecycle/update/EcoPortal
 nav_order: 4
 ---
 
-{% include documentation_nav.html portal="EcoPortal"  %}
+
 
 {% include shared_doc/ontology_lifecycle/update_1.md  %}
 {% include shared_doc/ontology_lifecycle/update_2.md  %}

@@ -8,7 +8,7 @@ permalink: user_guide/developer_guide/api_key/EcoPortal
 nav_order: 1
 ---
 
-{% include documentation_nav.html portal="EcoPortal"  %}
+
 
 {% include shared_doc/developer_guide/api_key.md  %}
 {% include shared_doc/developer_guide/api_key_examples.md  %}
