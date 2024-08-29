@@ -8,7 +8,6 @@ portal: "EcoPortal"
 atom: "semantic artefact"
 atoms: "semantic artefacts"
 ---
-{% include documentation_nav.html portal="EcoPortal" portal="EcoPortal"  %}
 
 # About EcoPortal
 

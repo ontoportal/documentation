@@ -8,6 +8,6 @@ permalink: user_guide/ontology_lifecycle/feedback/EcoPortal
 nav_order: 5
 ---
 
-{% include documentation_nav.html portal="EcoPortal"  %}
+
 
 {% include shared_doc/ontology_lifecycle/feedback.md  %}

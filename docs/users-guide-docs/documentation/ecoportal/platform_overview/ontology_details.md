@@ -8,7 +8,7 @@ permalink: user_guide/platform_overview/ontology_details/EcoPortal
 nav_order: 3
 ---
 
-{% include documentation_nav.html portal="EcoPortal"  %}
+
 
 ## Semantic Artefact details
 {% include shared_doc/platform_overview/ontology_details/sa_details_main.md  %}

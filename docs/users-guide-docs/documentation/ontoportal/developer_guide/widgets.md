@@ -8,7 +8,7 @@ permalink: user_guide/developer_guide/widgets/OntoPortal
 nav_order: 3
 ---
 
-{% include documentation_nav.html portal="OntoPortal"  %}
+
 
 {% include shared_doc/developer_guide/widgets_intro.md  %}
 {% include shared_doc/developer_guide/widgets_search.md  %}

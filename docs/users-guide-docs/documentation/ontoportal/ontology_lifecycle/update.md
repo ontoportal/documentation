@@ -8,7 +8,7 @@ permalink: user_guide/ontology_lifecycle/update/OntoPortal
 nav_order: 2
 ---
 
-{% include documentation_nav.html portal="OntoPortal"  %}
+
 
 {% include shared_doc/ontology_lifecycle/update_1.md  %}
 {% include shared_doc/ontology_lifecycle/update_2.md  %}
