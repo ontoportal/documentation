@@ -208,6 +208,10 @@ layout: table_wrappers
 
             {{ footer_custom }}
 
+            {% if page.title == "Users guide" or page.parent == "Users guide" or page.grand_parent == "Users guide" %}
+              <p class="text-small"><a href="/documentation/user_guide/contribute">How to contribute to user documentation</a></p>
+            {% endif %}
+            
             {% if site.last_edit_timestamp or site.gh_edit_link %}
               <div class="d-flex mt-2">
                 {% if site.last_edit_timestamp and site.last_edit_time_format and page.last_modified_date %}

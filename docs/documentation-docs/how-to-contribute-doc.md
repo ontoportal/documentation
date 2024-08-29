@@ -44,3 +44,27 @@ At the bottom of each page, you will find a link that will take you to the corre
 ### Make your change and submit a commit
 ![image](https://user-images.githubusercontent.com/29259906/207832629-ba36a90d-376e-4705-ab10-b3513eec0660.png)
 
+## How to add images
+
+### Fork the project
+You can't upload a file directly to the repository. Instead, you need to fork the project:
+![image]({{site.baseimgs}}/contribute-fork.png)
+If you already forked the project, you can click the "Sync fork" button in your repository to make sure it is up to date with the current state of the documentation.
+
+### Upload an image, commit and open a pull request
+Navigate to `assets/images/ontoportal` (or `assets/images/ontoportal/figures/PortalName` for user documentation figures) and click "Add file":
+![image]({{site.baseimgs}}/contribute-upload.png)
+
+
+Drag and drop or select your file and then commit into a new branch:
+![image]({{site.baseimgs}}/contribute-upload-commit.png)
+
+
+Open a pull request onto the original repository. Click "compare across forks" to access it:
+![image]({{site.baseimgs}}/contribute-compare-forks.png)
+
+
+Select `base repository: ontoportal/documentation` and `base: master`
+You can now create the pull request:
+![image]({{site.baseimgs}}/contribute-open-pr.png)
+Note: you can also add and modify documentation pages in the new branch before creating a pull request.
