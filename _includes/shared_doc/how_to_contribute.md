@@ -22,7 +22,7 @@
 
 ### How to use a variable portal name in shared files texts?
 
-1. Inside the shared file, instead of writing the name of the portal, for example AgroPortal, you replace it by the variable `include.portal`
+1. Inside the shared file, instead of writing the name of the portal, for example AgroPortal, you replace it by the variable `page.portal`
 ![shared_file_var_usage]({{site.baseimgs}}/shared_file_var_usage.png)
 2. When you include this file, you need to pass the value of the portal variable like this:  `include shared_doc/chapter_name/section_name/sub_section_name.md portal="AgroPortal"`
 

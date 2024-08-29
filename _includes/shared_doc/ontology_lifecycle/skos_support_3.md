@@ -1,6 +1,6 @@
 **Hierarchy in SKOS vocabularies**
 
-The only semantic relationship in SKOS vocabularies that {{include.portal}} uses to construct and display concept hierarchies is the skos:broader property.
+The only semantic relationship in SKOS vocabularies that {{page.portal}} uses to construct and display concept hierarchies is the skos:broader property.
 
 ```
 ex:mammals rdf:type skos:Concept;

@@ -3,4 +3,4 @@ The system matches words in the text to terms from the semantic artefacts availa
 To generate annotations programmatically, see the REST API documentation.
 For more details about the Annotator tool, please read Shah et al., 2009
 
-![Annotator Page]({{site.figures_link}}/{{include.portal}}/annotator.png)
+![Annotator Page]({{site.figures_link}}/{{page.portal}}/annotator.png)

@@ -5,7 +5,7 @@ The Search tool allows users to find a term across semantic artefacts by enterin
 
 Users can also narrow the search by selecting “exact matches” and/or “classes with definitions”. In addition, it is possible to refine the search by selecting one or more categories and/or semantic artefacts using the "Categories" and "Ontologies" fields.
 
-![Search Page]({{site.figures_link}}/{{include.portal}}/search.png)
+![Search Page]({{site.figures_link}}/{{page.portal}}/search.png)
 
 To allow better performances, the search results are limited to the top 100 matches. The search result will display the matched terms and their associated semantic artefact. For each search result it is also shown (links in blue):
 - details: a window with the associated properties of the searched term;

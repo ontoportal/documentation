@@ -5,4 +5,4 @@ The {{ page.portal }} homepage consists of:
 - two search bars and some statistical information as plain content;
 - a footer containing all the support information.
 
-![Homepage]({{site.figures_link}}/{{include.portal}}/homepage.png)
+![Homepage]({{site.figures_link}}/{{page.portal}}/homepage.png)
