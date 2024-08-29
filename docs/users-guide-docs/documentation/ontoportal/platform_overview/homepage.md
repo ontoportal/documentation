@@ -15,9 +15,6 @@ nav_order: 1
 ### Search and Metrics
 {% include shared_doc/platform_overview/homepage/search_and_metrics.md  %}
 
-### O'FAIRe tool
-{% include shared_doc/platform_overview/homepage/ofaire.md  %}
-
 ### Account settings
 {% include shared_doc/platform_overview/homepage/account_settings.md  %}
 
