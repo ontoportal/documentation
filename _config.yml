@@ -196,6 +196,15 @@ defaults:
       display_ontoportal_icons: true
   - 
     scope:
+      path: "docs/users-guide-docs/documentation/bioportal"
+      type: "pages"
+    values:
+      portal: "BioPortal"
+      atom: "ontology"
+      atoms: "ontologies"
+      display_ontoportal_icons: true
+  - 
+    scope:
       path: "docs/users-guide-docs/documentation/agroportal"
       type: "pages"
     values:

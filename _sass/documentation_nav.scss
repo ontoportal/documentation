@@ -20,6 +20,10 @@
     color: $ontoportal-color;
     border-bottom: 1px solid #e7e7e7;
 }
+.ontoportal-tabs > .BioPortal{
+    color: $bioportal-color;
+    border-bottom: 1px solid #e7e7e7;
+}
 .ontoportal-tabs > .AgroPortal{
     color: $agroportal-color;
     border-bottom: 1px solid #e7e7e7;
@@ -34,6 +38,9 @@
 }
 .ontoportal-tabs > .OntoPortal svg path{
     fill: $ontoportal-color;
+}
+.ontoportal-tabs > .BioPortal svg path{
+    fill: $bioportal-color;
 }
 .ontoportal-tabs > .AgroPortal svg path{
     fill: $agroportal-color;
@@ -53,6 +60,9 @@
 }
 .ontoportal-tabs > .active.OntoPortal{
     border-bottom: 2px solid $ontoportal-color;
+}
+.ontoportal-tabs > .active.BioPortal{
+    border-bottom: 2px solid $bioportal-color;
 }
 .ontoportal-tabs > .active.AgroPortal{
     border-bottom: 2px solid $agroportal-color;

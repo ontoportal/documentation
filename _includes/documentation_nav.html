@@ -4,7 +4,7 @@
 </div>
 
 <div class="ontoportal-tabs" id="ontoportal_tabs">
-    {% assign portals = 'OntoPortal,EcoPortal,EarthPortal' | split: ',' %}
+    {% assign portals = 'OntoPortal,BioPortal,EcoPortal,EarthPortal' | split: ',' %}
     {% for portal in portals %}
         {% capture portal_class %}{{ portal }}{% endcapture %}
         {% if page.portal == portal %}
