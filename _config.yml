@@ -19,7 +19,7 @@ baseimgs: "/documentation/assets/images/ontoportal"
 figures_link: "/documentation/assets/images/ontoportal/figures"
 opva: OntoPortal Virtual Appliance
 opva_version: Virtual Appliance 3.0
-release_version: Release 3.0.0
+release_version: Release 3.2.2
 opa: OntoPortal Alliance
 support_email: support@ontoportal.org  # for dev support only, not for end user support
 twitter_username: ontoportal
