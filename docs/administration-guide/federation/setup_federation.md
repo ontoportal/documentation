@@ -11,4 +11,17 @@ permalink: /administration/federation/setup_federation
 
 # Setup Federation
 
+
+## Setup the UI
+(to come from https://doc.jonquetlab.lirmm.fr/doc/federation-configuration-ahUNACCvwW)
+
+## Setup the API
+(to come from https://doc.jonquetlab.lirmm.fr/doc/federation-configuration-ahUNACCvwW)
+
+
+## Setup API keys
 (to come)
+
+## Duplicate management
+(to come)
+
