@@ -3,7 +3,7 @@ title: Submit new semantic artefacts
 summary: How to submit a new semantic artefact
 layout: default
 parent: Semantic artefacts lifecycle @EarthPortal
-grand_parent: Users guide
+grand_parent: User Guide
 permalink: user_guide/ontology_lifecycle/submit/EarthPortal
 nav_order: 1
 ---

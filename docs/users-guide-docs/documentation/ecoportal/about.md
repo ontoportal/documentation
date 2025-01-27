@@ -2,7 +2,7 @@
 layout: default
 title: About
 permalink: user_guide/EcoPortal
-parent: Users guide
+parent: User Guide
 nav_order: 1
 portal: "EcoPortal"
 atom: "semantic artefact"

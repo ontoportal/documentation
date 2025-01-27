@@ -3,7 +3,7 @@ title: SKOS Support
 summary: How is SKOS supported in OntoPortal
 layout: default
 parent: Semantic artefacts lifecycle @OntoPortal
-grand_parent: Users guide
+grand_parent: User Guide
 permalink: user_guide/ontology_lifecycle/skos_support/OntoPortal
 nav_order: 4
 ---

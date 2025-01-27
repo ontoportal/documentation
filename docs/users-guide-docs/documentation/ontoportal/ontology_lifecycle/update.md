@@ -3,7 +3,7 @@ title: Update
 summary: How to update a submitted ontology
 layout: default
 parent: Semantic artefacts lifecycle @OntoPortal
-grand_parent: Users guide
+grand_parent: User Guide
 permalink: user_guide/ontology_lifecycle/update/OntoPortal
 nav_order: 2
 ---

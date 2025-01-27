@@ -3,7 +3,7 @@ title: Use cases
 summary: Few examples on what to use OntoPortal for
 layout: default
 parent: Developer guide @OntoPortal
-grand_parent: Users guide
+grand_parent: User Guide
 permalink: user_guide/developer_guide/use_cases_OntoPortal/OntoPortal
 nav_order: 2
 ---

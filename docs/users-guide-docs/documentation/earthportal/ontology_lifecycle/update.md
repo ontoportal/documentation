@@ -3,7 +3,7 @@ title: Update
 summary: How to update a submitted semantic artefact
 layout: default
 parent: Semantic artefacts lifecycle @EarthPortal
-grand_parent: Users guide
+grand_parent: User Guide
 permalink: user_guide/ontology_lifecycle/update/EarthPortal
 nav_order: 2
 ---

@@ -3,7 +3,7 @@ title: Create and edit
 summary: How to export semantic artefacts from VocBench
 layout: default
 parent: Semantic artefacts lifecycle @EcoPortal
-grand_parent: Users guide
+grand_parent: User Guide
 permalink: user_guide/ontology_lifecycle/vocbench_create/EcoPortal
 nav_order: 1
 ---

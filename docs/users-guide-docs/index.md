@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Users guide
+title: User Guide
 nav_order: 2
 has_children: true
 has_toc: false
