@@ -3,7 +3,7 @@ title: API Key
 summary: How to fetch your API key and use it
 layout: default
 parent: Developer guide @EarthPortal
-grand_parent: Users guide
+grand_parent: User Guide
 permalink: user_guide/developer_guide/api_key/EarthPortal
 nav_order: 1
 ---

@@ -3,7 +3,7 @@ title: Homepage
 summary: EcoPortal homepage
 layout: default
 parent:  EcoPortal overview
-grand_parent: Users guide
+grand_parent: User Guide
 permalink: user_guide/platform_overview/homepage/EcoPortal
 nav_order: 1
 ---

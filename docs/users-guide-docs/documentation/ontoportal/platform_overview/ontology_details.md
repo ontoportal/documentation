@@ -3,7 +3,7 @@ title: Details page
 summary: Details page of ontologies
 layout: default
 parent:  OntoPortal overview
-grand_parent: Users guide
+grand_parent: User Guide
 permalink: user_guide/platform_overview/ontology_details/OntoPortal
 nav_order: 3
 ---

@@ -3,7 +3,7 @@ title: Tools
 summary: EcoPortal tools
 layout: default
 parent:  EcoPortal overview
-grand_parent: Users guide
+grand_parent: User Guide
 permalink: user_guide/platform_overview/tools/EcoPortal
 nav_order: 2
 ---

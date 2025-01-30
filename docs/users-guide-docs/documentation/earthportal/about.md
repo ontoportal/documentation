@@ -2,7 +2,7 @@
 layout: default
 title: About
 permalink: user_guide/EarthPortal
-parent: Users guide
+parent: User Guide
 id: user_guide
 nav_order: 1
 ---

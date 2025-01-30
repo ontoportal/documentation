@@ -3,7 +3,7 @@ title: Homepage
 summary: EarthPortal homepage
 layout: default
 parent:  EarthPortal overview
-grand_parent: Users guide
+grand_parent: User Guide
 permalink: user_guide/platform_overview/homepage/EarthPortal
 nav_order: 1
 ---

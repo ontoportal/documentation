@@ -3,7 +3,7 @@ title: Tools
 summary: EarthPortal tools
 layout: default
 parent:  EarthPortal overview
-grand_parent: Users guide
+grand_parent: User Guide
 permalink: user_guide/platform_overview/tools/EarthPortal
 nav_order: 2
 ---

@@ -3,7 +3,7 @@ title: Widgets
 summary: How to implement EarthPortal widgets in your projects
 layout: default
 parent: Developer guide @EarthPortal
-grand_parent: Users guide
+grand_parent: User Guide
 permalink: user_guide/developer_guide/widgets/EarthPortal
 nav_order: 3
 ---
