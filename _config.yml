@@ -230,3 +230,4 @@ defaults:
       atom: "semantic artefact"
       atoms: "semantic artefacts"
       display_ontoportal_icons: true
+      genericuribase: "https://w3id.org/earthsemantics"
