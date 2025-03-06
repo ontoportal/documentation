@@ -13,9 +13,9 @@ nav_order: 2
 To facilitate the publication of semantic artefacts in EcoPortal, a direct deployer from VocBench has been constructed. Users have to access the “Global Data Management” menu and click on “Export data”.
 
 The “Export data” panel consists of three sections as shown in Figure 41:
-- Graphs to export: this section allows the selection of the graph to export. The default selection just contains the graph of the selected project, named with the base URI, which contains the data being edited.
-- Data transformations: this section allows the configuration of a sequence of RDF Transformers, which can be used to manipulate the data being exported (e.g. selecting a specific ConceptScheme, add triples, replace triples, etc.)
-- Deployment: this section allows the configuration of the data destination. Users can choose from a dropdown menu whether the data will be saved to file, exported to a triple store, or sent to a custom destination. The target of the EcoPortal Deployer is considered a triple store.
+- _Graphs to export_: this section allows the selection of the graph to export. The default selection just contains the graph of the selected project, named with the base URI, which contains the data being edited.
+- _Data transformations_: this section allows the configuration of a sequence of RDF Transformers, which can be used to manipulate the data being exported (e.g. selecting a specific ConceptScheme, add triples, replace triples, etc.)
+- _Deployment_: this section allows the configuration of the data destination. Users can choose from a dropdown menu whether the data will be saved to file, exported to a triple store, or sent to a custom destination. The target of the EcoPortal Deployer is considered a triple store.
 
 
 ![Global Data Management export]({{site.figures_link}}/{{page.portal}}/Figure41.png)
