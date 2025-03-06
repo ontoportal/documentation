@@ -26,4 +26,4 @@ If a federated search is performed, for each search result it is shown:
  - <_number_> _more from this semantic resource_;
  - the badge of the OntoPortal instance in which the result can be found.
 
-Search can be done using the API directly. To learn more, see our [Search REST API documentation]({{ site.baseurl }}{% link docs/users-guide-docs/documentation/ecoportal/developer_guide/rest_api_documentation.md %}).
+Search can be done using the API directly. To learn more, see our [Search REST API documentation]({{ site.baseurl }}{% link docs/users-guide-docs/documentation/ecoportal/developer_guide/api_key.md %}).
