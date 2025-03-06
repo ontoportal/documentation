@@ -5,7 +5,7 @@ The FAIR score displayed as “Total score” is specific for the semantic artef
 ![Details view of the o’FAIRe tool]({{site.figures_link}}/{{page.portal}}/Figure13.png)
 {: .text-center }
 
-_Figure 13: Details view of the o’FAIRe tool_
+_Figure 13: Details view of the O’FAIRe tool_
 {: .text-center }
 
 ![Credits and metadata used properties of a question]({{site.figures_link}}/{{page.portal}}/Figure14.png)

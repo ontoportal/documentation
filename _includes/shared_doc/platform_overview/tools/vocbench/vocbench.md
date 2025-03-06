@@ -1,4 +1,4 @@
-VocBench is a web-based, multilingual, collaborative development platform, designed to meet the needs of semantic web and linked data environments. It allows to manage [OWL](https://www.w3.org/TR/owl2-overview/) ontologies, [SKOS(/XL)](https://www.w3.org/TR/skos-reference/) thesauri, [Ontolex-lemon](https://www.w3.org/2016/05/ontolex/) lexicons and generic RDF datasets. VocBench business and data access layers are realised by [Semantic Turkey](http://semanticturkey.uniroma2.it/), an open-source platform for Knowledge Acquisition and Management realised by the [ART Research Group](http://art.uniroma2.it/) at the [University of Rome Tor Vergata](http://www.uniroma2.it/). EcoPortal uses VocBench as an editor tool for managing semantic artefacts with a customised version (v. 12.2.0).
+VocBench is a web-based, multilingual, collaborative development platform, designed to meet the needs of semantic web and linked data environments. It allows to manage [OWL](https://www.w3.org/TR/owl2-overview/) ontologies, [SKOS(/XL)](https://www.w3.org/TR/skos-reference/) thesauri, [Ontolex-lemon](https://www.w3.org/2016/05/ontolex/) lexicons and generic RDF datasets. VocBench business and data access layers are realised by [Semantic Turkey](http://semanticturkey.uniroma2.it/), an open-source platform for Knowledge Acquisition and Management realised by the [ART Research Group](http://art.uniroma2.it/) at the [University of Rome Tor Vergata](http://www.uniroma2.it/). EcoPortal uses VocBench as an editor tool for managing semantic artefacts with a customised version (v. 13).
 
 
 #### User Interface
@@ -42,6 +42,6 @@ In the menu section (Figure 10.b), users can access:
 - [SPARQL](https://vocbench.uniroma2.it/doc/user/sparql.jsf) enable users to access to the SPARQL query editor of the resource;
 - [Tools](https://vocbench.uniroma2.it/doc/user/tools.jsf) with a drop down menu showing some tools that expand the VocBench core capabilities.
 
-The official VocBench documentation can be found at the following [link](http://vocbench.uniroma2.it/doc/). For a detailed description of the VocBench version developed within EcoPortal, please refer to the following [page]({{ site.baseurl }}{% link docs/users-guide-docs/documentation/ecoportal/ontology_lifecycle/submit.md %}).
+The official VocBench documentation can be found at the following [link](http://vocbench.uniroma2.it/doc/). For a detailed description of the VocBench version developed within EcoPortal, please refer to the following [section]({{ site.baseurl }}{% link docs/users-guide-docs/documentation/ecoportal/ontology_lifecycle/submit.md %}).
 
 Note: At the moment, users must register separately to access VocBench and other {{ page.portal }} services.

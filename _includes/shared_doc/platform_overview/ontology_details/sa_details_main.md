@@ -9,7 +9,7 @@ Once the selected semantic artefact has been opened, the summary page shows the 
 - [submissions](#submissions).
 
 On the right are displayed:
-- link to the REST API JSON entry: to access the JSON entry users must be logged in;
+- link to the REST API JSON entry: to access JSON entry users must be logged in;
 - watch button, to stay updated on the status of the semantic artefact;
 - other metadata information including identifiers, dates, projects and usage information, methodology and provenance, community and more content information.
 - a downloadable visits graph showing the monthly number of visualisations of the semantic artefact;

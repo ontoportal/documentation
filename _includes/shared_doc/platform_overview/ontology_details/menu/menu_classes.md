@@ -1,5 +1,5 @@
 ### Classes/Concepts
-On the summary page of the semantic artefact, by clicking on tab “Classes/Concepts”, it is shown:
+On the summary page of the semantic artefact, by clicking on the tab “Classes/Concepts”, it is shown:
 - on the left side, classes/concepts can be displayed using a “Hierarchical view”, in which classes/concepts are organised in a tree-like structure, and a “Date view”, which displays classes/concepts based on their creation and modification dates (if these were defined). In the case of a thesaurus (Figure 18) the “Collection view” will also be available. In addition, close to the search bar, there is a filter to select different schemes or collections eventually available within the thesaurus;
 - on the right side, an area containing Details, Visualization, Notes and Mappings related to the selected class/concept is displayed:
   - **Details**: tab showing properties and relationships associated with the selected class/concept (Figure 17-18). Properties like ID, Preferred Name, Definition, and Type can be shown together with other properties,  depending on the resource’s representation model (SKOS; OWL; UMLS; OBO) and on the properties included in the selected semantic artefact. 

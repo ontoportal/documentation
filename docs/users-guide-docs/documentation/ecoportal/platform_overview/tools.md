@@ -11,7 +11,7 @@ nav_order: 2
 ## EcoPortal Tools
 EcoPortal provides different tools to access, use and manage semantic artefacts including:
 - [browse](#browse) the semantic artefacts;
-- [search](#search) specific class or concepts;
+- [search](#search) for specific classes or concepts;
 - [browse mappings](#mappings) among terms in different semantic artefacts;
 - [receive recommendations](#recommender) on which semantic artefacts are most relevant for a given corpus;
 - [annotate text](#annotator) with terms from semantic artefacts;

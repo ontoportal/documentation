@@ -1,5 +1,5 @@
 An API Key is required to access any API call. It can be provided in three ways:
-- Using the api key query string parameter
+- Using the API key query string parameter
 ```
 #python code example
 import requests
@@ -14,7 +14,7 @@ print(Ontology_name, Ontology_id)
 result : LifeWatch ERIC Upper Ontology https://data.ecoportal.lifewatch.eu/ontologies/LUPO
 ```
 
-- Providing an Authorization header:
+- Providing an authorization header:
 
 Authorization: apikey token=your_apikey
 
@@ -46,4 +46,4 @@ print(name, id)
 result : LifeWatch ERIC Upper Ontology https://data.ecoportal.lifewatch.eu/ontologies/LUPO
 ```
 
-- When using a web browser to explore the API, if you provide your API Key once using method 1, it will be stored in a cookie for subsequent requests. You can override this by providing a different API Key in a new call.
+- When using a web browser to explore the API, if you provide your API key once using method 1, it will be stored in a cookie for subsequent requests. You can override this by providing a different API key in a new call.
