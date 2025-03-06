@@ -14,13 +14,16 @@ _Figure 4: The search tool_
 {: .text-center }
 
 To allow better performances, the search result is limited to the top 100 matches.
-The search result within EcoPortal will display the matched terms and their associated semantic artefact. For each search result it is also shown:
-- details: a window with the associated properties of the searched term;
-- visualize: the graph with the nodes of the terms and the path to the root;
-- <number> more from this semantic resource: other similar terms within the semantic artefact are shown.
 
-If a federated search is performed, for each search result it is shown: 
- - <number> more from this semantic resource;
+The search result within EcoPortal will display the matched terms and their associated semantic artefact. For each search result it is also shown:
+
+- _details_: a window with the associated properties of the searched term;
+- _visualize_: the graph with the nodes of the terms and the path to the root;
+- <_number_>  _more from this semantic resource_: other similar terms within the semantic artefact are shown.
+
+
+If a federated search is performed, for each search result it is shown:
+ - <_number_> _more from this semantic resource_;
  - the badge of the OntoPortal instance in which the result can be found.
 
-Search can be done using the API directly. To learn more, see our [Search REST API documentation]().
+Search can be done using the API directly. To learn more, see our [Search REST API documentation]({{ site.baseurl }}{% link docs/users-guide-docs/documentation/ecoportal/developer_guide/rest_api_documentation.md %}).
