@@ -1,1 +1,1 @@
-The menu area enables you to explore classes, properties, notes, mappings, and available widgets through tabs. When the chosen resource is a thesaurus, three distinct tabs emerge: the "Classes" tab is substituted with "Concepts," "Schemes," and "Collections".
+The menu area enables users to explore classes/concepts, properties, instances/schemes, collections (if available), notes, mappings, and available widgets through different tabs, according to the semantic artefact’s formality level (Figure 17 Ontology view; Figure 18 Thesaurus view). 

@@ -9,4 +9,4 @@ nav_order: 4
 ---
 
 
-This section contains guidelines for managing {{page.atoms}}.
+This section contains guidelines for managing semantic artefacts. EcoPortal tools enable users to handle the entire lifecycle of their semantic artefact, from the creation on VocBench to the publication on EcoPortal.

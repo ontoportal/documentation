@@ -12,4 +12,3 @@ nav_order: 1
 
 {% include shared_doc/ontology_lifecycle/submit_1.md  %}
 {% include shared_doc/ontology_lifecycle/submit_2.md  %}
-{% include shared_doc/ontology_lifecycle/uri.md %}
