@@ -4,7 +4,7 @@ In order to publish a {{page.atom}}, you need to sign up for an account at the {
 - Login {{ page.portal }}: [link]({{page.purl}}login)
 - Registration {{ page.portal }}: [link]({{page.purl}}accounts/new)
 
-Logged in users can navigate to the [Browse page]({{page.purl}}ontologies) and click the [Submit a {{page.atom}}]({{page.purl}}ontologies/new) button. The submission form requires to fill out some [metadata]({{ site.baseurl }}/docs/users-guide-docs/documentation/{{page.sportal}}/metadata_schema.md ) about the submitted {{page.atom}} as shown in Figure 43:
+Logged in users can navigate to the [Browse page]({{page.purl}}ontologies) and click the [Submit a {{page.atom}}]({{page.purl}}ontologies/new) button. The submission form requires to fill out some [metadata]({{ site.baseurl }}{% link docs/users-guide-docs/documentation/ecoportal/metadata_schema.md %}) about the submitted {{page.atom}} as shown in Figure 43:
 
 - *Name*: name of the {{ page.atom }}.
 - *Acronym*: {{ page.atom }} acronym (**NOTE**: It is not possible to change the {{ page.atom }} acronym afterwards).
@@ -12,7 +12,7 @@ Logged in users can navigate to the [Browse page]({{page.purl}}ontologies) and c
 - *Viewing restriction*: choose if the submitted resource is public (all users, even unregistered users, can see it) or private. 
 - *Categories*: select the categories to which the resource belongs to improve the search tools.
 - *Groups*: select the groups to which the resources belong. Groups associate ontologies from the same project or organisation, for better identification of the provenance
-- *View*: check "this {{page.atom}} is a view of" to create a new {{page.atom}} as a [view]({{ site.baseurl }}/docs/users-guide-docs/documentation/{{page.sportal}}/platform_overview/ontology_details.md ) of a {{page.atom}} selected from the drop-down field.
+- *View*: check "this {{page.atom}} is a view of" to create a new {{page.atom}} as a [view]({{ site.baseurl }}{% link docs/users-guide-docs/documentation/{{page.sportal}}/platform_overview/ontology_details.md %}) of a {{page.atom}} selected from the drop-down field.
 - *URI*: The URI of the {{page.atom}} which is described by this metadata.
 - *Description*: description of the {{page.atom}}.
 - *Representation* language: the model used to create the {{page.atom}} (e.g. SKOS, OWL, OBO).
