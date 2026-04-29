@@ -1,10 +1,10 @@
 ## Submit new {{ page.atoms }}
 
 In order to publish a {{page.atom}}, you need to sign up for an account at the {{ page.portal }} website:
-- Login {{ page.portal }}: [link]({{page.url}}login)
-- Registration {{ page.portal }}: [link]({{page.url}}accounts/new)
+- Login {{ page.portal }}: [link]({{page.purl}}login)
+- Registration {{ page.portal }}: [link]({{page.purl}}accounts/new)
 
-Logged in users can navigate to the [Browse page]({{page.url}}ontologies) and click the [Submit a {{page.atom}}]({{page.url}}ontologies/new) button. The submission form requires to fill out some [metadata]({{ site.baseurl }}/docs/users-guide-docs/documentation/{{page.sportal}}/metadata_schema.md ) about the submitted {{page.atom}} as shown in Figure 43:
+Logged in users can navigate to the [Browse page]({{page.purl}}ontologies) and click the [Submit a {{page.atom}}]({{page.purl}}ontologies/new) button. The submission form requires to fill out some [metadata]({{ site.baseurl }}/docs/users-guide-docs/documentation/{{page.sportal}}/metadata_schema.md ) about the submitted {{page.atom}} as shown in Figure 43:
 
 - *Name*: name of the {{ page.atom }}.
 - *Acronym*: {{ page.atom }} acronym (**NOTE**: It is not possible to change the {{ page.atom }} acronym afterwards).

@@ -192,7 +192,7 @@ defaults:
     values:
       portal: "OntoPortal"
       sportal: "ontoportal"
-      url: "https://demo.ontoportal.org/"
+      purl: "https://demo.ontoportal.org/"
       atom: "ontology"
       atoms: "ontologies"
       display_ontoportal_icons: true
@@ -221,7 +221,7 @@ defaults:
     values:
       portal: "EcoPortal"
       sportal: "ecoportal"
-      url: "https://ecoportal.lifewatch.eu/"
+      purl: "https://ecoportal.lifewatch.eu/"
       atom: "semantic artefact"
       atoms: "semantic artefacts"
       display_ontoportal_icons: true
@@ -232,7 +232,7 @@ defaults:
     values:
       portal: "EarthPortal"
       sportal: "earthportal"
-      url: "https://earthportal.eu/"
+      purl: "https://earthportal.eu/"
       atom: "semantic artefact"
       atoms: "semantic artefacts"
       display_ontoportal_icons: true

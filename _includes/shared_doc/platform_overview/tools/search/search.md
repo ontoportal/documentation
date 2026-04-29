@@ -1,4 +1,4 @@
-The [Search]({{page.url}}search) option allows users to find a term across semantic artefacts by clicking on the arrow pointing to the right in the home page search box and entering free text in the “Enter a term” bar. The system looks for matches in the term name, synonyms, term IDs, and in property values.
+The [Search]({{page.purl}}search) option allows users to find a term across semantic artefacts by clicking on the arrow pointing to the right in the home page search box and entering free text in the “Enter a term” bar. The system looks for matches in the term name, synonyms, term IDs, and in property values.
 
 The advanced search options can be used to add (Figure 4):
 - _Property values_: named association between two entities. Examples are "definition" (a relationship between a class and some text) and "part of" (a relationship between two classes). 
