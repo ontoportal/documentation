@@ -12,7 +12,7 @@ nav_order: 1
 [VocBench](https://vocbench.lifewatchitaly.eu/vocbench3/) is a service that enables the creation, editing and publishing of semantic artefacts. 
 To create a new project or edit an existing project in **VocBench** there are two options:
 1. **Not registered users** must register to VocBench at the following [link](https://vocbench.lifewatchitaly.eu/vocbench3/)(Figure 29).
-   Within the registration form, it is possible to request editing permission of a semantic artefact published in EcoPortal by adding the full resource name and acronym (e.g., [Fish Traits Thesaurus (FISHTRAITS)](http://ecoportal.lifewatchitaly.eu/ontologies/FISHTRAITS)) into the box “Existing semantic artefact?”. By default, the last version on EcoPortal is loaded, otherwise users have to specify the version from which to start editing in VocBench. **NOTE**: Only the semantic artefact owner can request editing permission of that resource. 
+   Within the registration form, it is possible to request editing permission of a semantic artefact published in EcoPortal by adding the full resource name and acronym (e.g., [Fish Traits Thesaurus (FISHTRAITS)](http://ecoportal.lifewatch.eu/ontologies/FISHTRAITS)) into the box “Existing semantic artefact?”. By default, the last version on EcoPortal is loaded, otherwise users have to specify the version from which to start editing in VocBench. **NOTE**: Only the semantic artefact owner can request editing permission of that resource. 
 
    To create a new semantic artefact users must specify:
     - *New semantic artefact*: the name of the project, e.g., Fish Traits Thesaurus. It is recommended to add the full name of the resource that will appear in EcoPortal;

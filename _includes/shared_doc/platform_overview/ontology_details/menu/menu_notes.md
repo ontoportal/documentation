@@ -1,7 +1,7 @@
 ### Notes
 In the Notes tab users can see all the comments or proposals issued by other registered {{ page.portal }} users (Figure 21).
 
-![View notes of a specific semantic artefact]({{site.figures_link}}/{{page.portal}}/Figure21.png)
+![View notes of a specific semantic artefact]({{site.figures_link}}/{{page.portal}}/menu_notes.png)
 {: .text-center }
 
 _Figure 21: View notes of a specific semantic artefact_

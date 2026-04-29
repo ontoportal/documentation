@@ -11,6 +11,6 @@ nav_order: 1
 
 
 
-{% include shared_doc/platform_overview/homepage/index.md  %}
+{% include shared_doc/platform_overview/homepage/index-ecoportal.md  %}
 
 

@@ -5,7 +5,7 @@
 
 **Note**: Some OWL ontologies declare the SKOS namespace to facilitate minimal use of SKOS constructs for things like labels (e.g., skos:prefLabel, skos:altLabel) or mappings (e.g., skos:exactMatch, skos:broaderMatch). In these cases, the proper format for new ontology submissions is OWL, not SKOS.
 
-- **skos:ConceptScheme** and **skos:hasTopConcept**. For every semantic artefact entry in EcoPortal, the application provides a tabbed interface with various views of the semantic artefact data, e.g., a "Classes" tab with a tree structure to graphically depict the hierarchical collection of semantic artefact classes.
+- **skos:ConceptScheme** and **skos:hasTopConcept**. For every {{include.atom}} entry in {{ page.portal }}, the application provides a tabbed interface with various views of the {{include.atom}} data, e.g., a "Classes" tab with a tree structure to graphically depict the hierarchical collection of {{include.atom}} classes.
 In the case of SKOS vocabularies, {{ page.portal }} determines which concepts to display as roots in the concept tree by querying vocabulary content for occurrences of skos:hasTopConcept property assertions. Top concepts are the most general concepts contained in SKOS concept schemes (an aggregation of one or more SKOS concepts).
 The following example, taken from the SKOS System Primer, shows how to define a concept scheme and link it to the most general concepts it contains:
 

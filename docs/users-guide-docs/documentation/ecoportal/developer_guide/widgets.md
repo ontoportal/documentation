@@ -13,8 +13,8 @@ nav_order: 3
 ### {{ page.portal }} widgets: how to use them
 {{ page.portal }} widgets are snippets of HTML or JavaScript code that users can embed in their website/web form to use the {{ page.portal }} functionalities. Using {{ page.portal }} widgets is just one of the ways in which users can use {{ page.portal }} technologies on your website/application.
 Developers can add any {{ page.portal }} widget to their HTML page or web form by following these steps:
-- find the semantic artefact that users are interested in by browsing the list of [EcoPortal semantic artefacts](http://ecoportal.lifewatchitaly.eu/ontologies) (e.g., Fish Traits Thesaurus);
-- click on the semantic artefact name to get to the page with [Details for that semantic artefact](http://ecoportal.lifewatchitaly.eu/ontologies/FISHTRAITS) (e.g., the details for Fish Traits Thesaurus);
+- find the semantic artefact that users are interested in by browsing the list of [EcoPortal semantic artefacts](http://ecoportal.lifewatch.eu/ontologies) (e.g., Fish Traits Thesaurus);
+- click on the semantic artefact name to get to the page with [Details for that semantic artefact](http://ecoportal.lifewatch.eu/ontologies/FISHTRAITS) (e.g., the details for Fish Traits Thesaurus);
 - in the {{ page.atom }} details page, go to the “Widgets” tab;
 - select the widget that want to use;
 - click the button below the widget to get usage instructions.
@@ -33,7 +33,7 @@ __Example use case:__ suppose that a developer is running a tissue microarray da
 
 To add a field to a web form that allows users to retrieve a term from the semantic artefact of interest, do the following:
 
-- download the [form_complete.js](http://ecoportal.lifewatchitaly.eu/javascripts/widgets/form_complete.js) file and put it on your server;
+- download the [form_complete.js](http://ecoportal.lifewatch.eu/javascripts/widgets/form_complete.js) file and put it on your server;
 - in the header of the page where want the field, include the form_complete.js file;
 - in the form, specify the field class in the following format: `bp_form_complete-{semantic_resource_acronym_list}-{value}`
   - **Example:** `bp_form_complete-FISHTRAITS-uri` will use FISH TRAITS Thesaurus (the acronym is FISHTRAITS) and will put the term URI in the field after the user selects the term from the pull-down list.
@@ -113,12 +113,12 @@ To display definitions with the list of terms that are returned, include the fol
 
 ### Semantic artefact visualisation widget
 
-Developers can put a widget on their website that shows semantic artefact of interest, or a part of it, and obtain the same result as in the ["Visualize" tab in EcoPortal](http://ecoportal.lifewatchitaly.eu/ontologies/STY/?p=classes&conceptid=http%3A%2F%2Fpurl.bioontology.org%2Fontology%2FSTY%2FT071#visualization).
+Developers can put a widget on their website that shows semantic artefact of interest, or a part of it, and obtain the same result as in the ["Visualize" tab in EcoPortal](http://ecoportal.lifewatch.eu/ontologies/STY/?p=classes&conceptid=http%3A%2F%2Fpurl.bioontology.org%2Fontology%2FSTY%2FT071#visualization).
 
 To add a widget visualising your semantic artefact in your HTML page, copy the code from the Widget page of your semantic artefact of interest. Here is an example:
 
 ```
-<iframe src="http://ecoportal.lifewatchitaly.eu/widgets/visualization/?ontology=FISHTRAITS&class=SELECT_CLASS&apikey=YOUR_API_KEY"frameborder="0">
+<iframe src="http://ecoportal.lifewatch.eu/widgets/visualization/?ontology=FISHTRAITS&class=SELECT_CLASS&apikey=YOUR_API_KEY"frameborder="0">
 </iframe>
 ```
 
@@ -132,12 +132,12 @@ The semantic artefact tree widget is an embeddable Flex application that allows 
 **Location**
 
 To use the tree widget, you have to add the following files:
-- http://ecoportal.lifewatchitaly.eu/widgets/jquery.ncbo.tree.css
-- http://ecoportal.lifewatchitaly.eu/widgets/jquery.ncbo.tree-2.0.2.js
+- http://ecoportal.lifewatch.eu/widgets/jquery.ncbo.tree.css
+- http://ecoportal.lifewatch.eu/widgets/jquery.ncbo.tree-2.0.2.js
 
 or the minified versions:
-- http://ecoportal.lifewatchitaly.eu/widgets/minified/jquery.ncbo.tree.min.css
-- http://ecoportal.lifewatchitaly.eu/widgets/minified/jquery.ncbo.tree-2.0.2.min.js
+- http://ecoportal.lifewatch.eu/widgets/minified/jquery.ncbo.tree.min.css
+- http://ecoportal.lifewatch.eu/widgets/minified/jquery.ncbo.tree-2.0.2.min.js
 
 
 **Setup**
