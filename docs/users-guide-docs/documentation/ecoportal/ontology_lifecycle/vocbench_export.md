@@ -27,8 +27,8 @@ _Figure 41:  Global Data Management export_
 After selecting “Deploy to a triple store” in the Deployment dropdown, the Deployer dropdown list will appear. Here users have to select “OntoPortal Deployer” and the item labelled EcoPortal to enable the specific characteristics of the deployer (e.g., additional configuration parameters) dedicated to EcoPortal.
 
 The warning sign on the right of the widget associated with the EcoPortal Deployer indicates that it requires further configuration. A click on the “Configure” button will open the dialog shown in Figure 40 to edit the chosen configuration. Below is presented a summary of the EcoPortal configuration, which consists of several fields:
-- _API Base URL_: the base URL of the EcoPortal REST API. If this parameter is omitted, the users can paste the following deployer defaults to the official base URL of EcoPortal: http://ecoportal.lifewatch.eu:8080/.
-- _API key (mandatory)_: the API key that will be used to authorise the semantic artefact submission. User API key can be found in the [user account page]({{ site.baseurl }}{% link docs/users-guide-docs/documentation/ecoportal/platform_overview/homepage/index.md %}).
+- _API Base URL_: the base URL of the EcoPortal REST API. If this parameter is omitted, the users can paste the following deployer defaults to the official base URL of EcoPortal: http://ecoportal.lifewatch.eu/.
+- _API key (mandatory)_: the API key that will be used to authorise the semantic artefact submission. User API key can be found in the [user account page]({{ site.baseurl }}{% link docs/users-guide-docs/documentation/ecoportal/platform_overview/homepage.md %}).
 - _Acronym (mandatory)_: the acronym that identifies the semantic artefact for which the submission is being made.
 - _Description_: a textual description of the semantic artefact.
 - _Version_: the version of the semantic artefact.
