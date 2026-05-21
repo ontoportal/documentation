@@ -191,6 +191,8 @@ defaults:
       type: "pages"
     values:
       portal: "OntoPortal"
+      sportal: "ontoportal"
+      purl: "https://demo.ontoportal.org/"
       atom: "ontology"
       atoms: "ontologies"
       display_ontoportal_icons: true
@@ -218,6 +220,8 @@ defaults:
       type: "pages"
     values:
       portal: "EcoPortal"
+      sportal: "ecoportal"
+      purl: "https://ecoportal.lifewatch.eu/"
       atom: "semantic artefact"
       atoms: "semantic artefacts"
       display_ontoportal_icons: true
@@ -227,7 +231,8 @@ defaults:
       type: "pages"
     values:
       portal: "EarthPortal"
+      sportal: "earthportal"
+      purl: "https://earthportal.eu/"
       atom: "semantic artefact"
       atoms: "semantic artefacts"
       display_ontoportal_icons: true
-      genericuribase: "https://w3id.org/earthsemantics"
