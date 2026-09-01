@@ -37,14 +37,15 @@ ANALYTICS_REQUIRE_CONSENT=true
 
 With this setting, the Web UI does not render tracking code until the visitor accepts analytics cookies. Visitors can reject optional cookies or reopen **Manage cookie preferences** from the footer. Rejecting a previous choice prevents subsequent tracking and asks Matomo to clear its consent and first-party analytics cookies.
 
-The default consent cookie is `analytics_consent`. These optional settings change its name and scope:
+The consent cookie name is fixed as `analytics_consent`. Its optional domain is configured with:
 
 ```bash
-ANALYTICS_CONSENT_COOKIE_NAME=analytics_consent
 ANALYTICS_CONSENT_COOKIE_DOMAIN=.stage.matportal.org
 ```
 
-Leave the domain unset for a host-only cookie. Set a parent domain when the main portal and slice subdomains should share one decision.
+Leave the domain unset for a host-only cookie. A configured domain is used only when it case-insensitively matches the current host exactly or is a parent of it. An invalid or unrelated domain is ignored, so the response uses a host-only cookie. Set a matching parent domain when the main portal and slice subdomains should share one decision.
+
+When that parent-domain cookie is shared, a rejected (`false`) consent decision suppresses later tracking on every slice under the parent. On rejection or revocation, active Matomo cookie deletion covers only identifiers visible to the current host; sibling slices' host-only identifiers remain inactive until they expire or the sibling host is visited, when they can be deleted there.
 
 ## Settings file alternative
 
@@ -55,7 +56,6 @@ shared:
   analytics:
     provider: matomo
     require_consent: true
-    consent_cookie_name: analytics_consent
     consent_cookie_domain: .stage.matportal.org
     matomo:
       url: https://analytics.example.org/matomo
@@ -77,7 +77,8 @@ After restarting the Web UI, use a clean browser profile to verify:
 3. Accepting analytics loads `matomo.js` and produces a `matomo.php` request.
 4. Rejecting or revoking analytics stops those requests after navigation.
 5. **Manage cookie preferences** remains available after either choice.
-6. For portal slices, the consent cookie has the configured parent domain, `Secure` where applicable, and path `/`.
+6. On the main portal and a matching slice, confirm the consent cookie has the configured parent domain, `Secure` where applicable, and path `/`.
+7. Configure an unrelated cookie domain and confirm the response has no foreign `Domain` attribute; make a second request on the same host and confirm the host-only consent decision is still applied.
 
 ## Disable or roll back
 
