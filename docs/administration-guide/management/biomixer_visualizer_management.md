@@ -38,6 +38,8 @@ helm upgrade --install ontoportal chart/ontoportal \
   -f values/addons/biomixer-visualizer.yaml
 ```
 
+Before enabling a container deployment, verify that the configured image is pullable. For a registry requiring authentication, configure `global.imagePullSecrets`; alternatively, run the source-build plan to an accessible registry and set `images.ontopanel` to that image. Do not assume an unverified public image.
+
 Use an immutable container tag or digest for production deployments.
 
 ## Enable the replacement
@@ -48,4 +50,4 @@ Verify both the class visualization tab and the public visualization widget. Bro
 
 ## Rollback
 
-Disable the `biomixer_replacement` feature to return to the existing BioMixer configuration. The legacy `$BIOMIXER_URL`, `$BIOMIXER_PUBLIC_APIKEY`, and `$USE_LEGACY_BIOMIXER` settings remain available during migration.
+Disable the `biomixer_replacement` feature to restore the existing BioMixer path and Web UI configuration.
