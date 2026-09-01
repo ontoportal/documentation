@@ -7,13 +7,13 @@
   "bugs": "https://github.com/just-the-docs/just-the-docs/issues",
   "devDependencies": {
     "prettier": "^3.8.4",
-    "stylelint": "^14.16.1",
-    "stylelint-config-prettier-scss": "0.0.1",
-    "stylelint-config-standard-scss": "^6.1.0",
-    "stylelint-prettier": "^3.0.0"
+    "stylelint": "^17.14.1",
+    "stylelint-config-prettier-scss": "1.0.0",
+    "stylelint-config-standard-scss": "^17.0.0",
+    "stylelint-prettier": "^5.0.3"
   },
   "scripts": {
-    "test": "stylelint '**/*.scss'",
+    "test": "stylelint '_sass/custom/**/*.scss' && node --check _includes/js/custom.js && node --check _includes/mermaid_config.js",
     "format": "prettier --write '**/*.{scss,js,json}'",
     "stylelint-check": "stylelint-config-prettier-check"
   }
