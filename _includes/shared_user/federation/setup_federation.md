@@ -1,7 +1,7 @@
 # Setup Federation
 ## Context
 
-The OntoPortal federation enables users to browse ontologies and search for classes and concepts across multiple federated portals. This federated features were firdt made available as a joint release with AgroPortal, EcoPortal, EarthPortal and BiodivPortal i.e., each portal is now connected to each other and displays some content from the others.
+The OntoPortal federation enables users to browse ontologies and search for classes and concepts across multiple federated portals. These federated features were first made available as a joint release with AgroPortal, EcoPortal, EarthPortal and BiodivPortal i.e., each portal is now connected to each other and displays some content from the others.
 
 Technically speaking, this federation is done “at the user interface level” as the backends and APIs of each portal are already the same. The federation architecture is rather simple, based on the project Ontology API Ruby Client which has been changed to query and aggregate the results from multiple backends (as illustrated). The user interfaces have been significantly changed to handle the results coming from different portals while helping users to understand what is going on and addressing performance issues.
 
@@ -17,10 +17,10 @@ By convention:
 - The name of the account shall be the name of the querying portal in small letters.
 - The email of the account shall allow to reach out to the administrator of the querying portal.
 - The APIkey of this user must be used in the UI and API settings (see below).
-- The APIkey of this user must be used for the pull locations for duplicates (see bellow).
+- The APIkey of this user must be used for the pull locations for duplicates (see below).
 
 ## Setup the UI
-In  the configuration file `config/bioportal_config_appliance.rb`  add/update `$PORTAL_INSTANCES` variable, all items with a present apikey will be federate with.
+In the configuration file `config/bioportal_config_appliance.rb`, add or update the `$PORTALS_INSTANCES` variable: all items with an `apikey` will be federated with.
 ```ruby 
 $PORTALS_INSTANCES = [
   {
@@ -44,7 +44,7 @@ $PORTALS_INSTANCES = [
   {
     name: 'EcoPortal',
     ui: 'https://ecoportal.lifewatch.eu/',
-    color: '[#0F4E8A](https://www.notion.so/Note-de-travail-135e345b8027803686b1d77de11cceac?pvs=21)',
+    color: '#0F4E8A',
     api: 'https://data.ecoportal.lifewatch.eu',
     apikey: 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
     'light-color': '#F0F5F6'
@@ -175,10 +175,10 @@ config.federated_portals = {
 
 ## Duplicate management
 
-Considering that the same ontology could be found on multiple federated portals, the OntoPortal federation entails some collaborative conventions to properly manage those duplicates to ease both the work of the portal adminstrators and the life of the original ontology developer interested in sharing his/her ontologies in an OntoPortal. 
+Considering that the same ontology could be found on multiple federated portals, the OntoPortal federation entails some collaborative conventions to properly manage those duplicates to ease both the work of the portal administrators and the life of the original ontology developer interested in sharing his/her ontologies in an OntoPortal. 
 
-- Duplicates are identified by acronyms. Therefore, it's important to use the same acronym than the other portals when loading an ontology already strored somewhere in the federation. If a discrepency is found or you think another acronym shoudl be used, contact the portal concerned to discuss and harmonize.
-- The OntoPortal federation relies on a "canonical portal" for each duplicates ontologies. The canonical portal is decided after a discussion betweem the adminstrators of the OntoPortal federation. Only the canonical portal shall pull the source file from an external resource (e.g., GitHub or any other URLs) or get the file manually uploaded. The other federated portals must then use the canonical portal to "connect" (via the pull location mechanism) their portals to the canonical one.
+- Duplicates are identified by acronyms. Therefore, it's important to use the same acronym as the other portals when loading an ontology already stored somewhere in the federation. If a discrepancy is found or you think another acronym should be used, contact the portal concerned to discuss and harmonize.
+- The OntoPortal federation relies on a "canonical portal" for each duplicated ontology. The canonical portal is decided after a discussion between the administrators of the OntoPortal federation. Only the canonical portal shall pull the source file from an external resource (e.g., GitHub or any other URLs) or get the file manually uploaded. The other federated portals must then use the canonical portal to "connect" (via the pull location mechanism) their portals to the canonical one.
 
 Duplicates and canonical portals are [currently available here](https://docs.google.com/spreadsheets/d/163_6fJs_SDIQR09I4RUK70DgtTPtt4WpXIOXzb1I0Ug/edit?gid=161217279#gid=161217279).
 
