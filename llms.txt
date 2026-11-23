@@ -1,0 +1,59 @@
+---
+layout: none
+permalink: /llms.txt
+sitemap: false
+---
+{%- comment -%}
+  Generated llms.txt (https://llmstxt.org): an index of this documentation for LLMs and agents.
+  Built from each page's front matter (title, summary), so it never goes stale.
+  Pages tagged `version: "v41"` are the Virtual Appliance 4.1 variant of a page; the default is 3.2.
+  Per-portal customized User Guides (EcoPortal, EarthPortal, AgroPortal) are listed under "Optional".
+{%- endcomment -%}
+{%- assign all = site.pages | where_exp: "p", "p.path contains 'docs/'" | where_exp: "p", "p.title" | sort: "path" -%}
+{%- assign core = all | where_exp: "p", "p.path != 'docs/index.md'" | where_exp: "p", "p.version != 'v41'" -%}
+# {{ site.title }}
+
+> {{ site.description }} OntoPortal is an open-source software stack for building ontology and semantic artefact repositories (catalogues), maintained by the OntoPortal Alliance. The documentation has three guides: the User Guide (browse, search and use portals), the Administration Guide (install, configure and maintain an OntoPortal appliance) and the Developer Guide (APIs, widgets, contributing).
+
+Notes for agents:
+- Base URL: {{ site.url }}{{ site.baseurl }}/ . Every link below is a rendered HTML page.
+- Administration Guide pages exist in two appliance versions: {{ site.opva }} 3.2 (default) and 4.1. The 4.1 variants are listed under "Optional" and their URL ends with `/v41`.
+- Source code: <https://github.com/ontoportal>. Alliance website: <https://ontoportal.org>.
+
+## User Guide
+
+{% for p in core -%}
+{%- if p.path contains 'docs/user-guide/' -%}
+{%- unless p.path contains 'documentation/ecoportal/' or p.path contains 'documentation/earthportal/' or p.path contains 'documentation/agroportal/' -%}
+- [{{ p.title }}{% if p.parent %} ({{ p.parent }}){% endif %}]({{ p.url | absolute_url }}){% if p.summary %}: {{ p.summary | strip_newlines | strip }}{% endif %}
+{% endunless -%}
+{%- endif -%}
+{%- endfor %}
+## Administration Guide
+
+{% for p in core -%}
+{%- if p.path contains 'docs/administration-guide/' -%}
+- [{{ p.title }}{% if p.parent %} ({{ p.parent }}){% endif %}]({{ p.url | absolute_url }}){% if p.summary %}: {{ p.summary | strip_newlines | strip }}{% endif %}
+{% endif -%}
+{%- endfor %}
+## Developer Guide
+
+{% for p in core -%}
+{%- if p.path contains 'docs/developer-guide/' -%}
+- [{{ p.title }}{% if p.parent %} ({{ p.parent }}){% endif %}]({{ p.url | absolute_url }}){% if p.summary %}: {{ p.summary | strip_newlines | strip }}{% endif %}
+{% endif -%}
+{%- endfor %}
+## Optional
+
+Secondary content: version-specific variants and portal-specific copies of the User Guide.
+
+{% for p in all -%}
+{%- if p.version == 'v41' -%}
+- [{{ p.title }} ({{ site.opva }} 4.1)]({{ p.url | absolute_url }}){% if p.summary %}: {{ p.summary | strip_newlines | strip }}{% endif %}
+{% endif -%}
+{%- endfor -%}
+{%- for p in all -%}
+{%- if p.path contains 'documentation/ecoportal/' or p.path contains 'documentation/earthportal/' or p.path contains 'documentation/agroportal/' -%}
+- [{{ p.portal }} User Guide: {{ p.title }}{% if p.parent %} ({{ p.parent }}){% endif %}]({{ p.url | absolute_url }}){% if p.summary %}: {{ p.summary | strip_newlines | strip }}{% endif %}
+{% endif -%}
+{%- endfor -%}
