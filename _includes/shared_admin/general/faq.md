@@ -54,7 +54,7 @@ See [Submitting Ontologies]({{site.baseurl}}/administration-guide/ontologies/sub
 
 ### How do I manually parse an ontology?
 
-See [Manually reparsing using the Ruby console]({{site.baseurl}}/administration-guide/ontologies/submitting_ontologies#manually-reparsing-using-the-ruby-console)
+See [Manually reparsing (as a developer) in the scripting environment]({{site.baseurl}}/administration-guide/ontologies/submitting_ontologies#manually-reparsing-as-a-developer-in-the-scripting-environment)
 
 ### How can I process a UMLS ontology?
 
