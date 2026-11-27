@@ -4,7 +4,7 @@ title: Administration Guide
 nav_order: 2
 has_children: true
 has_toc: false
-permalink: /administration-guide
+permalink: /administration-guide/
 version: "v32"
 ---
 
