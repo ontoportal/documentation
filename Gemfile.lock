@@ -20,9 +20,13 @@ GEM
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0)
     eventmachine (1.2.7)
+    ffi (1.17.4-arm64-darwin)
     ffi (1.17.4-x86_64-darwin)
     ffi (1.17.4-x86_64-linux-gnu)
     forwardable-extended (2.6.0)
+    google-protobuf (4.33.6-arm64-darwin)
+      bigdecimal
+      rake (>= 13)
     google-protobuf (4.33.6-x86_64-darwin)
       bigdecimal
       rake (>= 13)
@@ -51,6 +55,8 @@ GEM
       safe_yaml (~> 1.0)
       terminal-table (>= 1.8, < 4.0)
       webrick (~> 1.7)
+    jekyll-redirect-from (0.17.0)
+      jekyll (>= 3.3, < 5.0)
     jekyll-sass-converter (3.1.0)
       sass-embedded (~> 1.75)
     jekyll-seo-tag (2.9.0)
@@ -79,6 +85,8 @@ GEM
     rexml (3.4.4)
     rouge (4.7.0)
     safe_yaml (1.0.5)
+    sass-embedded (1.100.0-arm64-darwin)
+      google-protobuf (~> 4.31)
     sass-embedded (1.100.0-x86_64-darwin)
       google-protobuf (~> 4.31)
     sass-embedded (1.100.0-x86_64-linux-gnu)
@@ -89,11 +97,13 @@ GEM
     webrick (1.9.2)
 
 PLATFORMS
+  arm64-darwin-22
   x86_64-darwin-21
   x86_64-linux
 
 DEPENDENCIES
   bundler
+  jekyll-redirect-from (~> 0.16)
   just-the-docs!
   webrick (~> 1.9)
 

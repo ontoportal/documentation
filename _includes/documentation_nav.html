@@ -1,22 +1,63 @@
 <!-- _includes/documentation_nav.html -->
+{%- assign portals = 'OntoPortal,EcoPortal,EarthPortal' | split: ',' -%}
+
+{%- comment -%} Base path = current page URL without its trailing portal segment {%- endcomment -%}
+{%- assign url_segments = page.url | split: '/' -%}
+{%- assign last_index = url_segments.size | minus: 1 -%}
+{%- assign base = '' -%}
+{%- for seg in url_segments -%}
+  {%- unless forloop.index0 == last_index -%}
+    {%- if forloop.index0 == 0 -%}
+      {%- assign base = seg -%}
+    {%- else -%}
+      {%- assign base = base | append: '/' | append: seg -%}
+    {%- endif -%}
+  {%- endunless -%}
+{%- endfor -%}
+
+{%- comment -%} Set of all existing page URLs, delimited by | for safe lookup {%- endcomment -%}
+{%- assign all_urls = '|' -%}
+{%- for p in site.pages -%}
+  {%- assign all_urls = all_urls | append: p.url | append: '|' -%}
+{%- endfor -%}
+
+{%- comment -%}
+  OntoPortal is the default view (always shown in the side menu); it is never
+  rendered as a tab. Keep only the *other* portals that have a portal-specific
+  page for this URL. The switcher is shown only when at least one such
+  portal-specific version exists.
+{%- endcomment -%}
+{%- assign default_portal = 'OntoPortal' -%}
+{%- assign available = '' -%}
+{%- for portal in portals -%}
+  {%- unless portal == default_portal -%}
+    {%- assign target = base | append: '/' | append: portal -%}
+    {%- assign needle = '|' | append: target | append: '|' -%}
+    {%- if portal == page.portal or all_urls contains needle -%}
+      {%- assign available = available | append: portal | append: ',' -%}
+    {%- endif -%}
+  {%- endunless -%}
+{%- endfor -%}
+{%- assign available_portals = available | split: ',' -%}
+
+{%- if available_portals.size > 0 -%}
 <div>
     This page is available for these portals:<br>
 </div>
 
 <div class="ontoportal-tabs" id="ontoportal_tabs">
-    {% assign portals = 'OntoPortal,BioPortal,EcoPortal,EarthPortal' | split: ',' %}
-    {% for portal in portals %}
-        {% capture portal_class %}{{ portal }}{% endcapture %}
-        {% if page.portal == portal %}
-            <a class="button active {{ portal_class }}" href="{{ portal }}">
+    {%- for portal in available_portals -%}
+        {%- if page.portal == portal -%}
+            <a class="button active {{ portal }}" href="{{ portal }}">
                 {% include ontoportal_logo.svg %}
                 {{ portal }}
             </a>
-        {% else %}
-            <a class="button {{ portal_class }}" href="{{ portal }}">
+        {%- else -%}
+            <a class="button {{ portal }}" href="{{ portal }}">
                 {% include ontoportal_logo.svg %}
                 {{ portal }}
             </a>
-        {% endif %}
-    {% endfor %}
+        {%- endif -%}
+    {%- endfor -%}
 </div>
+{%- endif -%}

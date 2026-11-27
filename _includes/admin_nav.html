@@ -1,0 +1,53 @@
+<!-- _includes/admin_nav.html -->
+{%- assign versions = "v32,v41" | split: "," -%}
+{%- assign version_labels = "Appliance v3.2,Appliance v4.1" | split: "," -%}
+
+{%- comment -%} Compute the URL of the equivalent page in the other appliance version {%- endcomment -%}
+{%- assign alt_url = "" -%}
+{%- if page.version == "v32" -%}
+  {%- if page.v41_url -%}
+    {%- assign alt_url = page.v41_url -%}
+  {%- else -%}
+    {%- assign last_char = page.permalink | slice: -1 -%}
+    {%- if last_char == "/" -%}
+      {%- assign alt_url = page.permalink | append: "v41" -%}
+    {%- else -%}
+      {%- assign alt_url = page.permalink | append: "/v41" -%}
+    {%- endif -%}
+  {%- endif -%}
+{%- elsif page.version == "v41" -%}
+  {%- if page.v32_url -%}
+    {%- assign alt_url = page.v32_url -%}
+  {%- else -%}
+    {%- assign alt_url = page.permalink | remove: "/v41" -%}
+  {%- endif -%}
+{%- endif -%}
+
+{%- comment -%} Only show the version switcher when the equivalent page actually exists {%- endcomment -%}
+{%- assign alt_exists = false -%}
+{%- if alt_url != "" -%}
+  {%- for p in site.pages -%}
+    {%- if p.url == alt_url -%}
+      {%- assign alt_exists = true -%}
+      {%- break -%}
+    {%- endif -%}
+  {%- endfor -%}
+{%- endif -%}
+
+{%- if alt_exists -%}
+<div>
+    This page is available for these appliance versions:<br>
+</div>
+
+<div class="ontoportal-tabs" id="ontoportal_tabs">
+    {%- for i in (0..1) -%}
+        {%- assign v = versions[i] -%}
+        {%- assign label = version_labels[i] -%}
+        {%- if page.version == v -%}
+            <a class="button active">{{ label }}</a>
+        {%- else -%}
+            <a class="button" href="{{ site.baseurl }}{{ alt_url }}">{{ label }}</a>
+        {%- endif -%}
+    {%- endfor -%}
+</div>
+{%- endif -%}
