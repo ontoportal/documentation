@@ -1,3 +1,0 @@
-## Give feedback on {{ page.atoms }}
-{{ page.portal }} includes some community-oriented features in the [notes]({{ site.baseurl }}{% link docs/users-guide-docs/documentation/ecoportal/platform_overview/ontology_details.md %}) such as: (i) comments that can be attached in a forum-like mode to a specific artefact or class/concept, in order to discuss different specifications of the {{ page.atom }} (its design, use, or evolution) or allow users to propose changes, and (ii) proposals that can be submitted within the portal.
-Administrators encourage the users to engage in giving feedback on {{ page.atoms }} since each input is valuable in developing and publishing community-approved resources.

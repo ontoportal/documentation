@@ -1,0 +1,1 @@
+The information contained in this page is consistent with the information provided during the submission of the semantic artefact, which adheres to the MOD 2.0. For further insight into the metadata schema, click [here]({{ site.baseurl }}{% link docs/user-guide/documentation/ecoportal/metadata_schema.md %}).

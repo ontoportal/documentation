@@ -173,6 +173,10 @@ layout: table_wrappers
       </div>
 
       <div id="main-content" class="main-content" role="main">
+        {% if page.display_ontoportal_icons == true %}
+          {% include documentation_nav.html %}
+        {% endif %}
+
         {% if site.heading_anchors != false %}
           {% include vendor/anchor_headings.html html=content beforeHeading="true" anchorBody="<svg viewBox=\"0 0 16 16\" aria-hidden=\"true\"><use xlink:href=\"#svg-link\"></use></svg>" anchorClass="anchor-heading" anchorAttrs="aria-labelledby=\"%html_id%\"" %}
         {% else %}
@@ -200,10 +204,6 @@ layout: table_wrappers
           <footer>
             {% if site.back_to_top %}
               <p><a href="#top" id="back-to-top">{{ site.back_to_top_text }}</a></p>
-            {% endif %}
-
-            {% if page.display_ontoportal_icons == true %}
-              {% include documentation_nav.html %}
             {% endif %}
 
             {{ footer_custom }}
