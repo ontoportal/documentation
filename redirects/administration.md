@@ -1,5 +1,5 @@
 ---
 permalink: /administration
-redirect_to: /administration-guide
+redirect_to: /administration-guide/
 sitemap: false
 ---

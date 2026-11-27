@@ -1,5 +1,5 @@
 ---
 permalink: /user_guide
-redirect_to: /user-guide
+redirect_to: /user-guide/
 sitemap: false
 ---
