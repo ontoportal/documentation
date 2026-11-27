@@ -1,16 +1,14 @@
 ---
-title: Installing OntoPortal
+title: Installation Steps
 layout: default
 summary: Key steps to install the OntoPortal Appliance
 parent: Administration Guide
-nav_order: 2
+nav_order: 3
 has_children: true
-permalink: /administration/steps/
+permalink: /administration-guide/steps/
+version: "v32"
 ---
 
-# Installation Steps
+{% include admin_nav.html %}
 
-Installing OntoPortal software requires a number of steps, which may vary depending on your target platform.  
-The standard {{site.opva}} steps are described in more detail below, beginning with an overview of the Appiance.
-Steps that are specific to a target platform will contain that platform name.
-
+{% include shared_admin/installation/index.md %}

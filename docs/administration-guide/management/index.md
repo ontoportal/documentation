@@ -1,16 +1,14 @@
 ---
-title: Managing Your System
+title: System Management
 layout: default
 summary: Keeping your OntoPortal Virtual Appliance running smoothly
 parent: Administration Guide
-nav_order: 4
+nav_order: 5
 has_children: true
-permalink: /administration/management/
+permalink: /administration-guide/management/
+version: "v32"
 ---
 
-# Managing Your System
+{% include admin_nav.html %}
 
-The {{site.opva}} requires some routine operational monitoring,
-occasional troubleshooting or corrective actions (more often if heavily used),
-and occasional tasks at very infrequent intervals.
-In this section we describe how to perform these tasks for the Appliance.
+{% include shared_admin/management/index.md %}
