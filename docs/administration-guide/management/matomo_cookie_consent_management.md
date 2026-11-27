@@ -4,9 +4,9 @@ layout: default
 summary: Configuring optional Matomo page-view tracking and analytics consent
 status: Preliminary
 nav_order: 12
-parent: Managing Your System
+parent: System Management
 grand_parent: Administration Guide
-permalink: /administration/management/matomo_cookie_consent_management
+permalink: /administration-guide/management/matomo_cookie_consent_management
 ---
 
 # Matomo Analytics and Cookie Consent
