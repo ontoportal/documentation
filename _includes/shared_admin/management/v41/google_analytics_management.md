@@ -1,5 +1,7 @@
 # Google Analytics Management
 
+For optional browser-side Matomo tracking and active analytics cookie consent, see [Matomo Analytics and Cookie Consent]({{ site.baseurl }}{% link docs/administration-guide/management/matomo_cookie_consent_management.md %}).
+
 ## Adding Google Analytics to the {{site.opva}}
 
 BioPortal uses the Google API to process our website data.
