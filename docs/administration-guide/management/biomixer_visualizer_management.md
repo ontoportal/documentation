@@ -3,9 +3,9 @@ title: BioMixer Replacement Visualizer
 layout: default
 summary: Deploying and enabling the maintained OntoPortal ontology visualizer
 nav_order: 9
-parent: Managing Your System
+parent: System Management
 grand_parent: Administration Guide
-permalink: /administration/management/biomixer_visualizer_management/
+permalink: /administration-guide/management/biomixer_visualizer_management
 ---
 
 # BioMixer Replacement Visualizer
